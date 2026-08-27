@@ -1,0 +1,36 @@
+INFO    : Since no target was supplied, we will use "course".
+
+INFO    : Building target course
+INFO    : XSL conversion of /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/source/main.ptx by /Users/waltondb/.ptx/2.50.0/core/xsl/utilities/pretext-enhanced-source.xsl
+INFO    : successful application of /Users/waltondb/.ptx/2.50.0/core/xsl/utilities/pretext-enhanced-source.xsl
+WARNING : PreTeXt source did not pass schema validation (12 messages); unexpected output may result. Continuing anyway.
+WARNING :   Messages: /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/logs/schema-errors.log
+WARNING :   Line numbers refer to the assembled source: /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/logs/schema-assembled-source.xml
+WARNING :   Run `pretext validate` for a report that names the source files.
+INFO    : discovering source file's directory name: /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/source
+INFO    : verifying and expanding input directory: /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/source/../assets
+INFO    : input directory expanded to absolute path: /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/assets
+INFO    : Generating any needed assets.
+INFO    : Creating temporary dynamic exercise setup JSON: /var/folders/x9/k93j0vv53_z04hnlg69hmc4w0000gr/T/ptx-dc113ivp/dynamic-setup.json
+INFO    : XSL conversion of /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/source/main.ptx by /Users/waltondb/.ptx/2.50.0/core/xsl/extract-dynamic.xsl
+INFO    : successful application of /Users/waltondb/.ptx/2.50.0/core/xsl/extract-dynamic.xsl
+INFO    : Generating substitutions.
+ERROR   : PTX:ERROR:   the setup of dynamic exercise "P1_Linear_Modeling" (assembly id: P1_Linear_Modeling) failed, so its content cannot be generated for static output.  halfS0 is not defined
+ERROR   : PTX:ERROR:   1 problem(s) occurred generating dynamic substitutions.  The affected substitutions read "[ERROR generating substitution]" in static output.
+ERROR   : Some dynamic substitutions could not be generated.  The affected exercises will read "[ERROR generating substitution]" in static output.  See the messages above.
+INFO    : Removing temporary directory /var/folders/x9/k93j0vv53_z04hnlg69hmc4w0000gr/T/ptx-dc113ivp
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/output/course.
+INFO    : XSL conversion of /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/source/main.ptx by /Users/waltondb/.ptx/2.50.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /Users/waltondb/.ptx/2.50.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 8.2.7
+INFO    : Downloading Runestone Services, version 8.2.7
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-denver
+INFO    : converting /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/source/main.ptx to HTML in /var/folders/x9/k93j0vv53_z04hnlg69hmc4w0000gr/T/ptx-f4m2xejn
+INFO    : XSL conversion of /Users/waltondb/Library/CloudStorage/OneDrive-JamesMadisonUniversity/Teaching/231-1268-Fall26/pretext/source/main.ptx by /Users/waltondb/.ptx/2.50.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing (prefaced with a *):
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of /Users/waltondb/.ptx/2.50.0/core/xsl/pretext-html.xsl

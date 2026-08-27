@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL activity: proportionality, slope as average rate of change, point-slope form -->
+<worksheet xml:id="activity-linear-relations-slope">
+  <title>Building Linear Relations from Change</title>
+
+  <objectives xml:id="obj-linear-relations-slope">
+    <ul>
+      <li><p>Recognize a proportional relationship between two variables and identify its proportionality constant.</p></li>
+      <li><p>Calculate slope as an average rate of change, and explain why it does not depend on which two data points are used to compute it.</p></li>
+      <li><p>Write the equation of a linear relation in point-slope form, understood as a starting value plus an amount of change.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Today's activity is our first as a class using this format. You will work in your assigned
+      group, moving through the questions together rather than racing ahead individually &#8212; the
+      goal is that everyone in the group can explain <em>why</em> an answer is correct, not just what
+      the answer is.
+    </p>
+
+    <p>Each group member takes one of the following roles for the activity:</p>
+
+    <tabular>
+      <row header="yes" bottom="minor">
+        <cell>Role</cell>
+        <cell>Responsibility</cell>
+      </row>
+      <row>
+        <cell>Manager</cell>
+        <cell>
+          Keeps the group on task and on pace; makes sure everyone has spoken before the group
+          moves on; asks the instructor for help if the group is stuck after trying on its own.
+        </cell>
+      </row>
+      <row>
+        <cell>Recorder</cell>
+        <cell>
+          Writes the group's agreed-on answers, in the group's own words; notes any question the
+          group could not resolve.
+        </cell>
+      </row>
+      <row>
+        <cell>Spokesperson</cell>
+        <cell>
+          Speaks for the group during whole-class discussion and can explain <em>why</em> the group
+          answered as it did, not just what was written.
+        </cell>
+      </row>
+      <row>
+        <cell>Reflector</cell>
+        <cell>
+          Checks in periodically on whether everyone understands, not just whether the group is
+          moving forward; leads a short end-of-activity check-in on what worked.
+        </cell>
+      </row>
+    </tabular>
+
+    <p>
+      In a group of three, the Manager also takes on the Reflector's check-in duties.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-model1-gas-pump" workspace="0in">
+    <title>Model 1: Paying at the Pump</title>
+    <introduction>
+      <p>
+        Gasoline at a particular station costs <m>\$3.25</m> per gallon. The table below shows the
+        price paid for several purchase amounts. Fill in the two missing entries before answering
+        the questions.
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          <cell>Gallons purchased</cell>
+          <cell>4</cell>
+          <cell>7</cell>
+          <cell>10</cell>
+          <cell>15</cell>
+        </row>
+        <row>
+          <cell>Price paid ($)</cell>
+          <cell>13.00</cell>
+          <cell/>
+          <cell>32.50</cell>
+          <cell/>
+        </row>
+      </tabular>
+    </introduction>
+    <task workspace="1in">
+      <statement><p>For each column, compute (price paid) &#247; (gallons purchased). What do you notice?</p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>
+        Pick two different columns and compute (change in price) &#247; (change in gallons) between
+        them. Then try a different pair of columns. Does the pair you choose matter? Explain.
+      </p></statement>
+    </task>
+    <task workspace="0.75in">
+      <statement><p>
+        Write a sentence describing price in terms of gallons purchased, using the constant you
+        found (for example, &#8220;price is ___ times the number of gallons&#8221;).
+      </p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>
+        If a customer purchased <m>0</m> gallons, what would they pay? Why must this be true for
+        this kind of relationship between two variables?
+      </p></statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-model1-checkpoint" workspace="0in">
+    <title>Checkpoint: A Different Rate</title>
+    <introduction>
+      <p>
+        A veterinarian prescribes a medication at a fixed rate of <m>5</m> mg per kilogram of the
+        animal's body weight.
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          <cell>Body weight (kg)</cell>
+          <cell>6</cell>
+          <cell>10</cell>
+          <cell>18</cell>
+        </row>
+        <row>
+          <cell>Dose (mg)</cell>
+          <cell>30</cell>
+          <cell/>
+          <cell>90</cell>
+        </row>
+      </tabular>
+    </introduction>
+    <task workspace="0.75in">
+      <statement><p>Fill in the missing dose. What is the proportionality constant here, and what does it mean physically?</p></statement>
+    </task>
+    <task workspace="0.75in">
+      <statement><p>Without adding a new column to the table, predict the dose for a 25 kg animal.</p></statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-model2-mile-marker" workspace="0in">
+    <title>Model 2: Mile Markers on the Highway</title>
+    <introduction>
+      <p>
+        A car is driving on a highway at a constant speed. A passenger records the mile marker the
+        car is passing at several clock times, along with how many minutes have passed since
+        1:00 pm.
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          <cell>Clock time</cell>
+          <cell>1:15 pm</cell>
+          <cell>1:30 pm</cell>
+          <cell>2:10 pm</cell>
+          <cell>2:30 pm</cell>
+        </row>
+        <row bottom="minor">
+          <cell>Minutes after 1:00 pm (<m>T</m>)</cell>
+          <cell>15</cell>
+          <cell>30</cell>
+          <cell>70</cell>
+          <cell>90</cell>
+        </row>
+        <row>
+          <cell>Mile marker (<m>M</m>)</cell>
+          <cell>42</cell>
+          <cell>60</cell>
+          <cell>84</cell>
+          <cell>132</cell>
+        </row>
+      </tabular>
+    </introduction>
+    <task workspace="1in">
+      <statement><p>
+        Using the <m>T</m> row, find the change in time and the change in mile marker between the
+        1:15 pm and 1:30 pm readings. Express this as a rate in miles per minute.
+      </p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Repeat using the 2:10 pm and 2:30 pm readings, and again using the 1:15 pm and 2:10 pm
+        readings. Do you still get the same rate? What everyday word describes this rate, and
+        what is it in miles per hour?
+      </p></statement>
+    </task>
+    <task workspace="1.5in">
+      <statement><p>
+        The 1:15 pm reading has <m>T = 15</m>, and the 2:30 pm reading has <m>T = 90</m> &#8212;
+        exactly six times as much elapsed time since 1:00 pm. Is the mile marker at 2:30 pm six
+        times the mile marker at 1:15 pm? Compute both and compare. Is the mile marker proportional
+        to <m>T</m>? Compare this to what you found about the price of gas in Model 1, and explain
+        the difference.
+      </p></statement>
+    </task>
+    <task workspace="1.5in">
+      <statement><p>
+        Using the 1:15 pm reading (<m>T=15</m>, <m>M=42</m>) and the rate you found, write an
+        equation relating <m>M</m> and <m>T</m> using the structure
+        <em>(mile marker) = (mile marker at <m>T=15</m>) + (rate) &#215; (<m>T</m> &#8722; 15)</em>.
+      </p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Use your equation to predict the mile marker when <m>T = 0</m>, that is, at 1:00 pm. Was
+        this a point you had already recorded in the table? What does this predicted value
+        represent?
+      </p></statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-slope-point-slope">
+    <statement>
+      <p>
+        The constant rate you found in Model 2 is called the <term>slope</term> of the relation,
+        or its <term>average rate of change</term>. The equation you built in Task 4 has the same
+        structure as
+        <me>y = y_1 + m(x - x_1),</me>
+        called <term>point-slope form</term>, where <m>(x_1, y_1)</m> is any known point on the
+        relation and <m>m</m> is the slope. It says exactly what you wrote: a new value equals a
+        starting value plus the slope times how far you've moved from that starting point.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-application-plant" workspace="0in">
+    <title>Applying the Idea: A Growing Plant</title>
+    <introduction>
+      <p>
+        A plant is measured twice after it is potted: it is <m>4</m> inches tall after <m>2</m>
+        weeks, and <m>10</m> inches tall after <m>5</m> weeks. Assume it grows at a constant rate.
+      </p>
+    </introduction>
+    <task workspace="1in">
+      <statement><p>Find the plant's growth rate, in inches per week.</p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Using one of the two given measurements, write an equation for the plant's height
+        <m>h</m> in terms of the number of weeks <m>w</m> since it was potted, in point-slope
+        form.
+      </p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Use your equation to find the plant's height when <m>w = 0</m>. Does it make sense for a
+        newly potted plant to already have some height? Was the plant's height proportional to the
+        number of weeks since potting? Explain.
+      </p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Rewrite your equation in the form <m>h = mw + b</m>. What does <m>b</m> represent in this
+        situation? Was it one of the two measurements you were originally given?
+      </p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>Predict the plant's height at <m>w = 8</m> weeks.</p></statement>
+    </task>
+  </exercise>
+
+</worksheet>

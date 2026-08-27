@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week-01">
+  <title>Week 1 and Week 2</title>
+
+  <introduction>
+    <p>
+      The first two weeks of class focus on some prerequisite understanding necessary for our later conversations about functions and their analysis.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>P1 Linear Modeling</title>
+
+    <p>
+      I can calculate a slope as a rate of change and use it with the point-slope equation of a line to model a linear relation between two variables.
+    </p>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            <em>Conceptual</em>: A <term>slope</term> is a <term>proportionality constant</term> relating the change in a dependent variable with respect to the change in an independent variable, usually written <m>\Delta y = m \cdot \Delta x</m>, where <m>m</m> represents the slope, <m>\Delta x</m> represents the increment of change in the independent variable <m>x</m>, and <m>\Delta y</m> represents the increment of change in the dependent variable <m>y</m>.
+          </p>
+          <p>
+            The variables <m>x</m> and <m>y</m> represent abstract placeholders for more physically relevant variables. you will need to be able to use other variables.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Computational</em>: Calculate the slope between two points, <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> as 
+            <md>
+              m = \frac{\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1}.
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Modeling</em>: Although you likely currently feel most comfortable with the slope-intercept equation of a line <m>y=mx+b</m>, I am asking you to begin thinking in terms of the <term>point-slope</term> equation of a line given by <m>y = y_1 + m \cdot(x-x_1)</m> where <m>m</m> represents the known slope and <m>(x_1,y_1)</m> represents a known point on the line.
+          </p>
+          <p>
+            This model of a line physically thinks through the process as follows. We know when <m>x=x_1</m>, the value of <m>y</m> starts at <m>y=y_1</m> (because it is on the line). As <m>x</m> changes to any other value, the value of <m>y</m> <em>also</em> changes, and the slope gives the proportional amount of change:
+            <md>
+              <mrow>y \amp = y_1 + \Delta y </mrow>
+              <mrow> \amp = y_1 + m \cdot \Delta x </mrow>
+              <mrow> \amp = y_1 + m \cdot (x-x_1) </mrow>
+            </md>
+          </p>
+          <p>
+            It is <em>this</em> idea that generalizes later in calculus to the idea of a <term>definite integral</term> measuring the change <m>\Delta y</m> when the rate of change or slope <m>f'(t)</m> is <em>not</em> constant:
+            <md>
+              y = y_1 + \int_{x_1}^{x} f'(t) \, dt
+            </md>.
+            You are not expected to understand this bit yet -- it is a preview to the future.
+          </p>
+        </li>
+      </ul>
+    </p>
+    
+    <exercise label="P1_Linear_Modeling">
+      <statement>
+        <p>
+          When a company sets the price of its product at $<eval obj="p0"/>, it is able to sell <eval obj="S0"/> items per day. When it changes the price to $<eval obj="p1"/>, it is able to sell <eval obj="S1"/> items per day. Create a linear model using the point-slope equation for the number of items sold per day <m>S</m> as a function of the company's price <m>p</m>.
+        </p>
+        <p>
+          <m>S</m> = <fillin name="linear_model" width="12"  mode="math" ansobj="model_eqn" />
+        </p>
+        <p><md><eval obj="model_eqn"/></md></p>
+      </statement>
+      <setup seed="1123">
+        <de-object name="p0" context="number">
+          <de-random distribution="discrete" min="15" max="40" by="5"/>
+        </de-object>
+        <de-object name="S0" context="number">
+          <de-random distribution="discrete" min="100" max="500" by="10"/>
+        </de-object>
+        <de-object name="delta_p" context="number">
+          <de-random distribution="discrete" min="5" max="40" by="5"/>
+        </de-object>
+        <de-object name="halfS0" context="number">
+          <de-number>S0 / 2</de-number>
+        </de-object>
+        <de-object name="delta_S" context="number">
+          <de-random distribution="discrete" min="10" max="v.halfS0" by="5"/>
+        </de-object>
+        <de-object name="p1" context="number">
+          <de-number>p0+delta_p</de-number>
+        </de-object>
+        <de-object name="S1" context="number">
+          <de-number>S0-delta_S</de-number>
+        </de-object>
+        <de-object name="model_eqn" context="formula">
+          <de-expression mode="formula">
+            S0 - (delta_S / delta_p)*(p - p0)
+          </de-expression>
+        </de-object>
+      </setup>
+      <evaluation>
+        <evaluate name="linear_model">
+          <test correct="yes">
+            <mathcmp use-answer="yes" />
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>P2 Intervals and Set Operations</title>
+
+    <p>
+      I can translate a graphical representation of a set of numbers back and forth to interval notation and compute unions and intersections of multiple such sets.
+    </p>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            A collection of real numbers is a <term>set</term>. Simple sets with a finite number of values can be expressed using curly braces listing the numbers separated by commas, such as <m>\{-3,2,5/}</m>, which is a set including the values of -3, 2, and 5.
+          </p>
+        </li>
+        <li>
+          <p>
+            We often deal with sets formed by <term>intervals</term>, which are sets that include <em>all</em> of the values between two endpoints, and possibly the endpoints as well.
+          </p>
+          <p>
+            A <em>single</em> interval <m>(a,b)</m>, where <m>a</m> and <m>b</m> represent any real numbers with <m>a \lt b</m> (or possibly <m>-\infty</m> or <m>\infty</m>), describes the set of values <em>between</em> <m>a</m> and <m>b</m>. It corresponds to the set of values <m>x</m> such that <m>a \lt x \lt b</m>, which in set constructor notation is
+            <md>
+              (a,b) = \{x : a \lt x \lt b\}
+            </md>.
+            This type of interval where the endpoints are <em>not</em> included is called an <term>open interval</term>.
+          </p>
+          <p>
+            In order to describe an interval where the endpoint <em>is</em> included, we change the round parenthesis into a square bracket on the endpoint that is included.
+            <md>
+              <mrow> [a,b) = \{x : a \le x \lt b\} </mrow>
+              <mrow> (a,b] = \{x : a \lt x \le b\} </mrow>
+              <mrow> [a,b] = \{x : a \le x \le b\} </mrow>             
+            </md>
+            When <em>both</em> endpoints are included, the interval is called a <term>closed interval</term>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The <term>graphical representation</term> of an interval is created by drawing a <term>line segment</term> between the endpoints, and marking the endpoints themselves with either open circles (if <em>not included</em>) or closed circles (if <em>included</em>).
+            If the interval extends to infinity, instead of putting a circle on that end, we put an arrow to indicate it continues indefinitely.
+          </p>
+        </li>
+        <li>
+          <p>
+            When a set includes values coming from multiple disconnected or <term>disjoint</term> intervals, we describe the set as a <term>union</term> of the component intervals. A single isolated number <m>a</m> can also be included as a set <m>\{a\}</m>.
+          </p>
+          <p>
+            Suppose my set <m>S</m> has component intervals or isolated values that can be described individually as <m>S_1</m>, <m>S_2</m>, <m>S_3</m>, etc.
+            Then we would write
+            <md>
+              S = S_1 \cup S_2 \cup S_3 \cup \cdots
+            </md>
+            Using the union operation <m>\cup</m> creates a <em>single</em> set from many component pieces.
+          </p>
+        </li>
+        <li>
+          <p>
+            Given two sets <m>A</m> and <m>B</m>, the <term>union</term> is a new set <m>A \cup B</m> that consists of all values in <em>at least one of</em> the two sets (could be in just one or both).
+          </p>
+          <p>
+            Given two sets <m>A</m> and <m>B</m>, the <term>intersection</term> is a new set <m>A \cap B</m> that consists of all values in <em>both</em> the two sets (must be in both). This is the values in the <em>overlap</em>
+          </p>
+          <p>
+            After you identify the values in a set, you then identify the new component intervals and possible isolated values to rewrite the set using interval notation. 
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+
+
+  <subsection>
+    <title>Friday 8/26</title>
+
+    <p>
+    </p>
+  </subsection>
+</section>

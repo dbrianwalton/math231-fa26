@@ -1,0 +1,628 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- This is the main course file for ... . It is used to generate all the public facing course materials so those can be hosted online.  --><pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- Include common macros etc: -->
+  <docinfo>
+
+  <directories external="../assets"/>
+
+  <!-- macros for defining latex math shortcuts. It is good practice -->
+  <!-- to define these semantically, so that the macro relates to what-->
+  <!-- it defines. -->
+  <macros>
+    \newcommand{\N}{\mathbb N}
+    \newcommand{\Z}{\mathbb Z}
+    \newcommand{\Q}{\mathbb Q}
+    \newcommand{\R}{\mathbb R}
+  </macros>
+
+  <!-- If you put any latex-image elements you can include preambles -->
+  <!-- for those in the next element. -->
+  <latex-image-preamble>
+    \usepackage{tikz, pgfplots}
+    \usetikzlibrary{positioning,matrix,arrows}
+    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+    \usetikzlibrary{decorations.markings}
+  </latex-image-preamble>
+
+  <!-- It is possible to rename elements: -->
+  <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
+
+  <!-- Specify the default type of cross reference: -->
+  <!-- <cross-references text="type-global" /> -->
+
+</docinfo>
+  <!-- By creating a PreTeXt "book" for the course, we can split components into "chapters" -->
+  <book>
+    <title>Course Name (change me)</title>
+
+    <subtitle>MATH xxx Semester 20xx</subtitle>
+
+    <!-- Optional: include frontmatter with author info and date -->
+    <frontmatter xml:id="frontmatter">
+  <bibinfo>
+    <author>
+      <personname>Instructor Lastname</personname>
+      <department>Mathematical Sciences</department>
+      <institution>University of Templates</institution>
+    </author>
+    <date>
+      Last Updated: <today/>
+    </date>
+  </bibinfo>
+
+  <!-- This displays the title page information -->
+  <titlepage>
+    <titlepage-items/>
+  </titlepage>
+
+</frontmatter>
+
+    <chapter xml:id="course-documents">
+      <title>Course Documents</title>
+
+      <!-- Course syllabus -->
+      <section xml:id="syllabus">
+  <title>Syllabus</title>
+
+  <introduction>
+    <p>
+    </p>
+  </introduction>
+  <!-- Include chapters -->
+  <subsection xml:id="sec-course-info">
+    <title>Course Information</title>
+
+    <p>
+      This is the syllabus for <term>course name (MATH xxx, section xxx)</term> for [term] 20xx.
+      It is a [n] credit course.
+      <!-- use a description list (dl) for short items -->
+      <dl>
+        <li>
+          <title>Instructor</title>
+
+          <p>
+            Prof. Lastname, Office Location, <url href="mailto:prof.lastname@example.edu">prof.lastname@example.edu</url>.
+          </p>
+        </li>
+
+        <li>
+          <title>Student Hours</title>
+
+          <p>
+            TBD
+          </p>
+        </li>
+
+        <li>
+          <title>Class meets</title>
+
+          <p>
+            course times and location.
+          </p>
+        </li>
+
+        <li>
+          <title>Course Description</title>
+
+          <p>
+            course description from catalog
+          </p>
+        </li>
+
+        <li>
+          <title>Prerequisite</title>
+
+          <p>
+            list of prerequisites
+          </p>
+        </li>
+
+        <li>
+          <title>Textbook and course materials</title>
+
+          <p>
+            <pubtitle>textbook name</pubtitle>
+            by textbook author.
+          </p>
+        </li>
+      </dl>
+    </p>
+
+  <!-- Use paragraphs to break apart subsections -->
+    <paragraphs>
+      <title>Course Overview</title>
+
+      <p>
+      </p>
+    </paragraphs>
+  </subsection>
+
+  <!-- Other subsections for larger dividers -->
+  <subsection xml:id="sec-assessments">
+    <title>Assessments and Grades</title>
+
+    <p>
+    </p>
+  </subsection>
+</section>
+      <!-- Other documents could go here, like a schedule, project description, etc. -->
+    </chapter>
+
+    <chapter xml:id="course-objectives">
+      <title>Course Learning Objectives</title>
+
+      <introduction>
+        <p>
+          The following notes are intended to remind you what we covered each week.
+          They are not a substitute for attending class and not a substitute for reading the textbook.
+        </p>
+      </introduction>
+
+      <section xml:id="notes-week-01">
+  <title>Week 1 and Week 2</title>
+
+  <introduction>
+    <p>
+      The first two weeks of class focus on some prerequisite understanding necessary for our later conversations about functions and their analysis.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>P1 Linear Modeling</title>
+
+    <p>
+      I can calculate a slope as a rate of change and use it with the point-slope equation of a line to model a linear relation between two variables.
+    </p>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            <em>Conceptual</em>: A <term>slope</term> is a <term>proportionality constant</term> relating the change in a dependent variable with respect to the change in an independent variable, usually written <m>\Delta y = m \cdot \Delta x</m>, where <m>m</m> represents the slope, <m>\Delta x</m> represents the increment of change in the independent variable <m>x</m>, and <m>\Delta y</m> represents the increment of change in the dependent variable <m>y</m>.
+          </p>
+          <p>
+            The variables <m>x</m> and <m>y</m> represent abstract placeholders for more physically relevant variables. you will need to be able to use other variables.
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Computational</em>: Calculate the slope between two points, <m>(x_1,y_1)</m> and <m>(x_2,y_2)</m> as 
+            <md>
+              m = \frac{\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1}.
+            </md>
+          </p>
+        </li>
+        <li>
+          <p>
+            <em>Modeling</em>: Although you likely currently feel most comfortable with the slope-intercept equation of a line <m>y=mx+b</m>, I am asking you to begin thinking in terms of the <term>point-slope</term> equation of a line given by <m>y = y_1 + m \cdot(x-x_1)</m> where <m>m</m> represents the known slope and <m>(x_1,y_1)</m> represents a known point on the line.
+          </p>
+          <p>
+            This model of a line physically thinks through the process as follows. We know when <m>x=x_1</m>, the value of <m>y</m> starts at <m>y=y_1</m> (because it is on the line). As <m>x</m> changes to any other value, the value of <m>y</m> <em>also</em> changes, and the slope gives the proportional amount of change:
+            <md>
+              <mrow>y \amp = y_1 + \Delta y </mrow>
+              <mrow> \amp = y_1 + m \cdot \Delta x </mrow>
+              <mrow> \amp = y_1 + m \cdot (x-x_1) </mrow>
+            </md>
+          </p>
+          <p>
+            It is <em>this</em> idea that generalizes later in calculus to the idea of a <term>definite integral</term> measuring the change <m>\Delta y</m> when the rate of change or slope <m>f'(t)</m> is <em>not</em> constant:
+            <md>
+              y = y_1 + \int_{x_1}^{x} f'(t) \, dt
+            </md>.
+            You are not expected to understand this bit yet -- it is a preview to the future.
+          </p>
+        </li>
+      </ul>
+    </p>
+    
+    <exercise label="P1_Linear_Modeling">
+      <statement>
+        <p>
+          When a company sets the price of its product at $<eval obj="p0"/>, it is able to sell <eval obj="S0"/> items per day. When it changes the price to $<eval obj="p1"/>, it is able to sell <eval obj="S1"/> items per day. Create a linear model using the point-slope equation for the number of items sold per day <m>S</m> as a function of the company's price <m>p</m>.
+        </p>
+        <p>
+          <m>S</m> = <fillin name="linear_model" width="12" mode="math" ansobj="model_eqn"/>
+        </p>
+        <p><md><eval obj="model_eqn"/></md></p>
+      </statement>
+      <setup seed="1123">
+        <de-object name="p0" context="number">
+          <de-random distribution="discrete" min="15" max="40" by="5"/>
+        </de-object>
+        <de-object name="S0" context="number">
+          <de-random distribution="discrete" min="100" max="500" by="10"/>
+        </de-object>
+        <de-object name="delta_p" context="number">
+          <de-random distribution="discrete" min="5" max="40" by="5"/>
+        </de-object>
+        <de-object name="halfS0" context="number">
+          <de-number>S0 / 2</de-number>
+        </de-object>
+        <de-object name="delta_S" context="number">
+          <de-random distribution="discrete" min="10" max="v.halfS0" by="5"/>
+        </de-object>
+        <de-object name="p1" context="number">
+          <de-number>p0+delta_p</de-number>
+        </de-object>
+        <de-object name="S1" context="number">
+          <de-number>S0-delta_S</de-number>
+        </de-object>
+        <de-object name="model_eqn" context="formula">
+          <de-expression mode="formula">
+            S0 - (delta_S / delta_p)*(p - p0)
+          </de-expression>
+        </de-object>
+      </setup>
+      <evaluation>
+        <evaluate name="linear_model">
+          <test correct="yes">
+            <mathcmp use-answer="yes"/>
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>P2 Intervals and Set Operations</title>
+
+    <p>
+      I can translate a graphical representation of a set of numbers back and forth to interval notation and compute unions and intersections of multiple such sets.
+    </p>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            A collection of real numbers is a <term>set</term>. Simple sets with a finite number of values can be expressed using curly braces listing the numbers separated by commas, such as <m>\{-3,2,5/}</m>, which is a set including the values of -3, 2, and 5.
+          </p>
+        </li>
+        <li>
+          <p>
+            We often deal with sets formed by <term>intervals</term>, which are sets that include <em>all</em> of the values between two endpoints, and possibly the endpoints as well.
+          </p>
+          <p>
+            A <em>single</em> interval <m>(a,b)</m>, where <m>a</m> and <m>b</m> represent any real numbers with <m>a \lt b</m> (or possibly <m>-\infty</m> or <m>\infty</m>), describes the set of values <em>between</em> <m>a</m> and <m>b</m>. It corresponds to the set of values <m>x</m> such that <m>a \lt x \lt b</m>, which in set constructor notation is
+            <md>
+              (a,b) = \{x : a \lt x \lt b\}
+            </md>.
+            This type of interval where the endpoints are <em>not</em> included is called an <term>open interval</term>.
+          </p>
+          <p>
+            In order to describe an interval where the endpoint <em>is</em> included, we change the round parenthesis into a square bracket on the endpoint that is included.
+            <md>
+              <mrow> [a,b) = \{x : a \le x \lt b\} </mrow>
+              <mrow> (a,b] = \{x : a \lt x \le b\} </mrow>
+              <mrow> [a,b] = \{x : a \le x \le b\} </mrow>             
+            </md>
+            When <em>both</em> endpoints are included, the interval is called a <term>closed interval</term>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The <term>graphical representation</term> of an interval is created by drawing a <term>line segment</term> between the endpoints, and marking the endpoints themselves with either open circles (if <em>not included</em>) or closed circles (if <em>included</em>).
+            If the interval extends to infinity, instead of putting a circle on that end, we put an arrow to indicate it continues indefinitely.
+          </p>
+        </li>
+        <li>
+          <p>
+            When a set includes values coming from multiple disconnected or <term>disjoint</term> intervals, we describe the set as a <term>union</term> of the component intervals. A single isolated number <m>a</m> can also be included as a set <m>\{a\}</m>.
+          </p>
+          <p>
+            Suppose my set <m>S</m> has component intervals or isolated values that can be described individually as <m>S_1</m>, <m>S_2</m>, <m>S_3</m>, etc.
+            Then we would write
+            <md>
+              S = S_1 \cup S_2 \cup S_3 \cup \cdots
+            </md>
+            Using the union operation <m>\cup</m> creates a <em>single</em> set from many component pieces.
+          </p>
+        </li>
+        <li>
+          <p>
+            Given two sets <m>A</m> and <m>B</m>, the <term>union</term> is a new set <m>A \cup B</m> that consists of all values in <em>at least one of</em> the two sets (could be in just one or both).
+          </p>
+          <p>
+            Given two sets <m>A</m> and <m>B</m>, the <term>intersection</term> is a new set <m>A \cap B</m> that consists of all values in <em>both</em> the two sets (must be in both). This is the values in the <em>overlap</em>
+          </p>
+          <p>
+            After you identify the values in a set, you then identify the new component intervals and possible isolated values to rewrite the set using interval notation. 
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+
+
+  <subsection>
+    <title>Friday 8/26</title>
+
+    <p>
+    </p>
+  </subsection>
+</section>
+      <!-- etc. -->
+
+    </chapter>
+
+
+    <chapter xml:id="activities">
+      <title>In-Class Activities</title>
+
+      <introduction>
+        <p>
+          These are copies of the in-class activities distributed during the semester.
+        </p>
+      </introduction>
+
+      <worksheet xml:id="activity-linear-relations-slope">
+  <title>Building Linear Relations from Change</title>
+
+  <objectives xml:id="obj-linear-relations-slope">
+    <ul>
+      <li><p>Recognize a proportional relationship between two variables and identify its proportionality constant.</p></li>
+      <li><p>Calculate slope as an average rate of change, and explain why it does not depend on which two data points are used to compute it.</p></li>
+      <li><p>Write the equation of a linear relation in point-slope form, understood as a starting value plus an amount of change.</p></li>
+    </ul>
+  </objectives>
+
+  <introduction>
+    <p>
+      Today's activity is our first as a class using this format. You will work in your assigned
+      group, moving through the questions together rather than racing ahead individually — the
+      goal is that everyone in the group can explain <em>why</em> an answer is correct, not just what
+      the answer is.
+    </p>
+
+    <p>Each group member takes one of the following roles for the activity:</p>
+
+    <tabular>
+      <row header="yes" bottom="minor">
+        <cell>Role</cell>
+        <cell>Responsibility</cell>
+      </row>
+      <row>
+        <cell>Manager</cell>
+        <cell>
+          Keeps the group on task and on pace; makes sure everyone has spoken before the group
+          moves on; asks the instructor for help if the group is stuck after trying on its own.
+        </cell>
+      </row>
+      <row>
+        <cell>Recorder</cell>
+        <cell>
+          Writes the group's agreed-on answers, in the group's own words; notes any question the
+          group could not resolve.
+        </cell>
+      </row>
+      <row>
+        <cell>Spokesperson</cell>
+        <cell>
+          Speaks for the group during whole-class discussion and can explain <em>why</em> the group
+          answered as it did, not just what was written.
+        </cell>
+      </row>
+      <row>
+        <cell>Reflector</cell>
+        <cell>
+          Checks in periodically on whether everyone understands, not just whether the group is
+          moving forward; leads a short end-of-activity check-in on what worked.
+        </cell>
+      </row>
+    </tabular>
+
+    <p>
+      In a group of three, the Manager also takes on the Reflector's check-in duties.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-model1-gas-pump" workspace="0in">
+    <title>Model 1: Paying at the Pump</title>
+    <introduction>
+      <p>
+        Gasoline at a particular station costs <m>\$3.25</m> per gallon. The table below shows the
+        price paid for several purchase amounts. Fill in the two missing entries before answering
+        the questions.
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          <cell>Gallons purchased</cell>
+          <cell>4</cell>
+          <cell>7</cell>
+          <cell>10</cell>
+          <cell>15</cell>
+        </row>
+        <row>
+          <cell>Price paid ($)</cell>
+          <cell>13.00</cell>
+          <cell/>
+          <cell>32.50</cell>
+          <cell/>
+        </row>
+      </tabular>
+    </introduction>
+    <task workspace="1in">
+      <statement><p>For each column, compute (price paid) ÷ (gallons purchased). What do you notice?</p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>
+        Pick two different columns and compute (change in price) ÷ (change in gallons) between
+        them. Then try a different pair of columns. Does the pair you choose matter? Explain.
+      </p></statement>
+    </task>
+    <task workspace="0.75in">
+      <statement><p>
+        Write a sentence describing price in terms of gallons purchased, using the constant you
+        found (for example, “price is ___ times the number of gallons”).
+      </p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>
+        If a customer purchased <m>0</m> gallons, what would they pay? Why must this be true for
+        this kind of relationship between two variables?
+      </p></statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-model1-checkpoint" workspace="0in">
+    <title>Checkpoint: A Different Rate</title>
+    <introduction>
+      <p>
+        A veterinarian prescribes a medication at a fixed rate of <m>5</m> mg per kilogram of the
+        animal's body weight.
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          <cell>Body weight (kg)</cell>
+          <cell>6</cell>
+          <cell>10</cell>
+          <cell>18</cell>
+        </row>
+        <row>
+          <cell>Dose (mg)</cell>
+          <cell>30</cell>
+          <cell/>
+          <cell>90</cell>
+        </row>
+      </tabular>
+    </introduction>
+    <task workspace="0.75in">
+      <statement><p>Fill in the missing dose. What is the proportionality constant here, and what does it mean physically?</p></statement>
+    </task>
+    <task workspace="0.75in">
+      <statement><p>Without adding a new column to the table, predict the dose for a 25 kg animal.</p></statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-model2-mile-marker" workspace="0in">
+    <title>Model 2: Mile Markers on the Highway</title>
+    <introduction>
+      <p>
+        A car is driving on a highway at a constant speed. A passenger records the mile marker the
+        car is passing at several clock times.
+      </p>
+      <tabular>
+        <row header="yes" bottom="minor">
+          <cell>Clock time</cell>
+          <cell>1:15 pm</cell>
+          <cell>1:45 pm</cell>
+          <cell>2:15 pm</cell>
+          <cell>2:45 pm</cell>
+        </row>
+        <row>
+          <cell>Mile marker</cell>
+          <cell>42</cell>
+          <cell>82</cell>
+          <cell>122</cell>
+          <cell>162</cell>
+        </row>
+      </tabular>
+    </introduction>
+    <task workspace="1in">
+      <statement><p>
+        Between 1:15 pm and 1:45 pm, how much time passed, and how many miles did the marker
+        increase? Express this as a rate (miles per minute, or miles per hour).
+      </p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>
+        Compute the same kind of rate using the 2:15 pm and 2:45 pm readings, and again using the
+        1:15 pm and 2:15 pm readings. What do you notice? What everyday word describes this rate?
+      </p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Does doubling the elapsed time double the mile marker? Check using the numbers in the
+        table. Is the mile marker proportional to the clock time? Compare this to what you found
+        about the price of gas in Model 1, and explain the difference.
+      </p></statement>
+    </task>
+    <task workspace="1.5in">
+      <statement><p>
+        Using the 1:15 pm reading and the rate you found, write an equation for the mile marker
+        <m>M</m> in terms of <m>t</m>, the number of hours after 1:15 pm. Write your equation as
+        <em>(starting mile marker) plus (rate times hours elapsed)</em>.
+      </p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>
+        Use your equation to predict the mile marker at 12:45 pm, before the table begins. Was this
+        point one you already had recorded?
+      </p></statement>
+    </task>
+  </exercise>
+
+  <definition xml:id="def-slope-point-slope">
+    <statement>
+      <p>
+        The constant rate you found in Model 2 is called the <term>slope</term> of the relation,
+        or its <term>average rate of change</term>. The equation you built in Task 4 has the same
+        structure as
+        <me>y - y_1 = m(x - x_1),</me>
+        called <term>point-slope form</term>, where <m>(x_1, y_1)</m> is any known point on the
+        relation and <m>m</m> is the slope. It says exactly what you wrote: a new value equals a
+        starting value plus the slope times how far you've moved from that starting point.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-application-plant" workspace="0in">
+    <title>Applying the Idea: A Growing Plant</title>
+    <introduction>
+      <p>
+        A plant is measured twice after it is potted: it is <m>4</m> inches tall after <m>2</m>
+        weeks, and <m>10</m> inches tall after <m>5</m> weeks. Assume it grows at a constant rate.
+      </p>
+    </introduction>
+    <task workspace="1in">
+      <statement><p>Find the plant's growth rate, in inches per week.</p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Using one of the two given measurements, write an equation for the plant's height
+        <m>h</m> in terms of the number of weeks <m>w</m> since it was potted, in point-slope
+        form.
+      </p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Use your equation to find the plant's height when <m>w = 0</m>. Does it make sense for a
+        newly potted plant to already have some height? Was the plant's height proportional to the
+        number of weeks since potting? Explain.
+      </p></statement>
+    </task>
+    <task workspace="1.25in">
+      <statement><p>
+        Rewrite your equation in the form <m>h = mw + b</m>. What does <m>b</m> represent in this
+        situation? Was it one of the two measurements you were originally given?
+      </p></statement>
+    </task>
+    <task workspace="1in">
+      <statement><p>Predict the plant's height at <m>w = 8</m> weeks.</p></statement>
+    </task>
+  </exercise>
+
+</worksheet>
+
+      <!-- Add more xi:include files here to include them in the main course -->
+    </chapter>
+
+    <chapter xml:id="handouts">
+      <title>Handouts</title>
+      <!-- Include handouts -->
+      <!--<xi:include href="./handouts/handout-filename.ptx"/>-->
+    </chapter>
+
+    <chapter xml:id="homework">
+      <title>Homework</title>
+
+      <!-- Include homework files -->
+      <!--<xi:include href="./homework/homework01.ptx"/>-->
+
+    </chapter>
+
+    <!-- Include additional chapters for other categories -->
+
+    </book>
+  </pretext>
