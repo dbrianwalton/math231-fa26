@@ -153,14 +153,14 @@
           <cell>Clock time</cell>
           <cell>1:15 pm</cell>
           <cell>1:30 pm</cell>
-          <cell>2:10 pm</cell>
+          <cell>1:50 pm</cell>
           <cell>2:30 pm</cell>
         </row>
         <row bottom="minor">
           <cell>Minutes after 1:00 pm (<m>T</m>)</cell>
           <cell>15</cell>
           <cell>30</cell>
-          <cell>70</cell>
+          <cell>50</cell>
           <cell>90</cell>
         </row>
         <row>
@@ -180,7 +180,7 @@
     </task>
     <task workspace="1.25in">
       <statement><p>
-        Repeat using the 2:10 pm and 2:30 pm readings, and again using the 1:15 pm and 2:10 pm
+        Repeat using the 1:50 pm and 2:30 pm readings, and again using the 1:15 pm and 1:50 pm
         readings. Do you still get the same rate? What everyday word describes this rate, and
         what is it in miles per hour?
       </p></statement>

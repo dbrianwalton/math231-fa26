@@ -1,6 +1,7 @@
 # PreTeXt build output directory
 output/
 logs/
+.cache
 
 # Generated asset directories
 generated-assets/
