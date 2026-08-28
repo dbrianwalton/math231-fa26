@@ -1,0 +1,10 @@
+# PreTeXt build output directory
+output/
+logs/
+
+# Generated asset directories
+generated-assets/
+
+# PreTeXt CLI local state
+.ptx/
+.vscode
