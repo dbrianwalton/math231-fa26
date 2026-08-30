@@ -471,14 +471,15 @@ function parseTerms(text, menv) {
         throw new Error(`parseSet: missing closing "}" in "${text}"`);
       }
       const interior = text.slice(i + 1, j);
-      if (interior.trim().length === 0) {
-        throw new Error(`parseSet: empty value set "{}" is not supported`);
+      if (interior.trim().length > 0) {
+        const values = splitTopLevelCommas(interior);
+        for (const v of values) {
+          const val = parseEndpointText(v, menv, 'value');
+          intervals.push(new Interval(val, val, [1, 1]));
+        }
       }
-      const values = splitTopLevelCommas(interior);
-      for (const v of values) {
-        const val = parseEndpointText(v, menv, 'value');
-        intervals.push(new Interval(val, val, [1, 1]));
-      }
+      // An empty "{}" contributes no intervals - it is the empty set,
+      // matching Set.toString()'s own rendering of the empty set as "{}".
       i = j + 1;
       expectTerm = false;
       continue;
