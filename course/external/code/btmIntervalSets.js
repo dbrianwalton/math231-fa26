@@ -14,9 +14,11 @@
  *   - toTeX(): string        - exact LaTeX display form, e.g. "\\sqrt{2}"
  *
  * Exports:
- *   - Interval  : a single interval with extended-real endpoints
- *   - Set       : a union of Intervals, with union/intersect/compare/simplify
- *   - parseSet  : parse a text representation into a Set
+ *   - Interval    : a single interval with extended-real endpoints
+ *   - Set         : a union of Intervals, with union/intersect/compare/simplify
+ *   - parseSet    : parse a text representation into a Set
+ *   - SetList     : an ordered list of Sets, with compare()
+ *   - parseSetList: parse a comma-separated list of Set expressions into a SetList
  */
 
 // ---------------------------------------------------------------------------
@@ -376,6 +378,69 @@ export class Set {
 }
 
 // ---------------------------------------------------------------------------
+// SetList
+// ---------------------------------------------------------------------------
+
+export class SetList {
+  /**
+   * @param {Set[]} [sets=[]] - initial sets making up the list, in order
+   */
+  constructor(sets = []) {
+    this.sets = sets.map((s) => s.clone());
+  }
+
+  /** Deep copy of this list. */
+  clone() {
+    return new SetList(this.sets);
+  }
+
+  toString() {
+    return this.sets.map((s) => s.toString()).join(',');
+  }
+
+  toTeX() {
+    return this.sets.map((s) => s.toTeX()).join(', ');
+  }
+
+  /**
+   * Check whether this list of sets is equivalent to another list of sets.
+   *
+   * @param {SetList} other
+   * @param {boolean} [preserveOrder=true] - if true, the i-th set of `this`
+   *   must match the i-th set of `other`, for every i. If false, this list
+   *   matches `other` as long as every set in `this` can be paired with a
+   *   distinct, not-yet-matched set in `other` that it compares equal to
+   *   (in any order).
+   * @param {boolean} [strictEndpoints=true] - forwarded to each pairwise
+   *   Set.compare() call: if true, open/closed endpoint flags must match
+   *   exactly; if false, only the numeric endpoints need to match.
+   */
+  compare(other, preserveOrder = true, strictEndpoints = true) {
+    // Cheap length check first, before doing any pairwise comparisons.
+    if (this.sets.length !== other.sets.length) return false;
+
+    if (preserveOrder) {
+      for (let i = 0; i < this.sets.length; i++) {
+        if (!this.sets[i].compare(other.sets[i], false, strictEndpoints)) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    // Arbitrary order: greedily pair each set in `this` with the first
+    // not-yet-matched set in `other` that it compares equal to.
+    const remaining = other.sets.slice();
+    for (const a of this.sets) {
+      const idx = remaining.findIndex((b) => a.compare(b, false, strictEndpoints));
+      if (idx === -1) return false;
+      remaining.splice(idx, 1);
+    }
+    return true;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // parseSet
 // ---------------------------------------------------------------------------
 
@@ -387,15 +452,17 @@ function isWhitespace(c) {
 
 /**
  * Split `str` on top-level commas only - i.e. commas that are not nested
- * inside parentheses, so a formula like "min(1,2)" is not split internally.
+ * inside parentheses/brackets/braces, so a formula like "min(1,2)" is not
+ * split internally, and (when splitting a SetList's terms) a point-set like
+ * "{3,4}" or an interval like "[5,6]" is not split internally either.
  */
 function splitTopLevelCommas(str) {
   const parts = [];
   let depth = 0;
   let current = '';
   for (const c of str) {
-    if (c === '(') depth++;
-    else if (c === ')') depth = Math.max(0, depth - 1);
+    if (c === '(' || c === '[' || c === '{') depth++;
+    else if (c === ')' || c === ']' || c === '}') depth = Math.max(0, depth - 1);
     if (c === ',' && depth === 0) {
       parts.push(current);
       current = '';
@@ -471,14 +538,15 @@ function parseTerms(text, menv) {
         throw new Error(`parseSet: missing closing "}" in "${text}"`);
       }
       const interior = text.slice(i + 1, j);
-      if (interior.trim().length === 0) {
-        throw new Error(`parseSet: empty value set "{}" is not supported`);
+      if (interior.trim().length > 0) {
+        const values = splitTopLevelCommas(interior);
+        for (const v of values) {
+          const val = parseEndpointText(v, menv, 'value');
+          intervals.push(new Interval(val, val, [1, 1]));
+        }
       }
-      const values = splitTopLevelCommas(interior);
-      for (const v of values) {
-        const val = parseEndpointText(v, menv, 'value');
-        intervals.push(new Interval(val, val, [1, 1]));
-      }
+      // An empty "{}" contributes no intervals - it is the empty set,
+      // matching Set.toString()'s own rendering of the empty set as "{}".
       i = j + 1;
       expectTerm = false;
       continue;
@@ -572,4 +640,47 @@ export function parseSet(text, simplify = false, menv = null) {
     result.simplify();
   }
   return result;
+}
+
+// ---------------------------------------------------------------------------
+// parseSetList
+// ---------------------------------------------------------------------------
+
+/**
+ * Parse a comma-separated list of Set expressions into a SetList, e.g.
+ * "(1,3)U[3,5), {7,8}, (9,INF)" parses into three Sets. Each comma-separated
+ * term is itself a full Set expression (it may contain unions and formula
+ * endpoints); only commas outside any "(...)"/"[...]"/"{...}" are treated as
+ * separators between list elements.
+ *
+ * @param {string} text
+ * @param {boolean} [simplify=false] - if true, simplify() each resulting Set
+ * @param {Object} [menv=null] - a math environment exposing
+ *   parseExpression(text, type), as provided by btm-expressions; forwarded
+ *   to parseSet() for each term.
+ * @returns {SetList}
+ */
+export function parseSetList(text, simplify = false, menv = null) {
+  if (typeof text !== 'string') {
+    throw new Error('parseSetList: expected a string argument');
+  }
+  if (menv != null && typeof menv.parseExpression !== 'function') {
+    throw new Error('parseSetList: menv must provide a parseExpression(text, type) method');
+  }
+
+  const trimmed = text.trim();
+  if (trimmed.length === 0) {
+    throw new Error('parseSetList: cannot parse an empty string');
+  }
+
+  const parts = splitTopLevelCommas(trimmed);
+  const sets = parts.map((part) => {
+    const partTrimmed = part.trim();
+    if (partTrimmed.length === 0) {
+      throw new Error(`parseSetList: empty set term in "${text}"`);
+    }
+    return parseSet(partTrimmed, simplify, menv);
+  });
+
+  return new SetList(sets);
 }

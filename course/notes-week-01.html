@@ -58,14 +58,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '8.2.9';
+eBookConfig.runestone_version = '8.2.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.5ef53875c58b216b.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
 <script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -162,6 +162,7 @@ eBookConfig.enable_chatcodes =  false;
 <ul id="ptx-toc-group-activities" class="structural toc-item-list">
 <li class="toc-item toc-introduction"><div class="toc-title-box"><a href="activities-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-linear-relations-slope.html" class="internal"><span class="title">Building Linear Relations from Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-interval-union-intersection.html" class="internal"><span class="title">Union and Intersection of Intervals</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
@@ -240,7 +241,7 @@ y = y_1 + \int_{x_1}^{x} f'(t) \, dt\text{.}
 </h3></summary>
 <article class="exercise exercise-like knowl__content"><div class="ptx-runestone-container"><div class="runestone">
 <div data-component="fillintheblank" class="fillintheblank" style="visibility: hidden;" id="rs-P1_Linear_Modeling"><script type="application/json">{
-"problemHtml": "\n<div class=\"para\" id=\"P1_Linear_Modeling-1-1\">When a company sets the price of its product at $[%= p0 %], it is able to sell [%= S0 %] items per day. When it changes the price to $[%= p1 %], it is able to sell [%= S1 %] items per day. Create a linear model using the point-slope equation for the number of items sold per day <span class=\"process-math\">\\(S\\)<\/span> as a function of the company’s price <span class=\"process-math\">\\(p\\text{.}\\)<\/span><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#P1_Linear_Modeling-1-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"P1_Linear_Modeling-1-2\"><span class=\"process-math\">\\(S\\)<\/span> = <input type=\"text\" id=\"P1_Linear_Modeling-linear_model\" name=\"linear_model\" size=\"12\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#P1_Linear_Modeling-1-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para logical\" id=\"P1_Linear_Modeling-1-3\"><div class=\"displaymath process-math\" id=\"P1_Linear_Modeling-1-3-1\">\n\\begin{equation*}\n[%= toTeX(model_eqn) %]\n\\end{equation*}\n<\/div><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#P1_Linear_Modeling-1-3\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
+"problemHtml": "\n<div class=\"para\" id=\"P1_Linear_Modeling-1-1\">When a company sets the price of its product at $[%= p0 %], it is able to sell [%= S0 %] items per day. When it changes the price to $[%= p1 %], it is able to sell [%= S1 %] items per day. Create a linear model using the point-slope equation for the number of items sold per day <span class=\"process-math\">\\(S\\)<\/span> as a function of the company’s price <span class=\"process-math\">\\(p\\text{.}\\)<\/span><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#P1_Linear_Modeling-1-1\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>\n<div class=\"para\" id=\"P1_Linear_Modeling-1-2\"><span class=\"process-math\">\\(S\\)<\/span> = <input type=\"text\" id=\"P1_Linear_Modeling-linear_model\" name=\"linear_model\" size=\"12\"\/><div class=\"autopermalink\" aria-hidden=\"true\" data-description=\"Paragraph\"><a tabindex=\"-1\" href=\"#P1_Linear_Modeling-1-2\" title=\"Copy heading and permalink for Paragraph\" aria-label=\"Copy heading and permalink for Paragraph\">🔗<\/a><\/div><\/div>",
 "solutionHtml": "",
 "dyn_imports": ["BTM"],
 "blankNames": {"linear_model": 0},
@@ -261,7 +262,7 @@ y = y_1 + \int_{x_1}^{x} f'(t) \, dt\text{.}
 <div class="para">What do I need to understand?</div>
 <ul class="disc" id="notes-week-01-4-3-1">
 <li id="notes-week-01-4-3-1-1">
-<div class="para" id="notes-week-01-4-3-1-1-1">A collection of real numbers is a <dfn class="terminology">set</dfn>. Simple sets with a finite number of values can be expressed using curly braces listing the numbers separated by commas, such as <span class="process-math">\(\{-3,2,5/}\text{,}\)</span> which is a set including the values of -3, 2, and 5.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-01-4-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="notes-week-01-4-3-1-1-1">A collection of real numbers is a <dfn class="terminology">set</dfn>. Simple sets with a finite number of values can be expressed using curly braces listing the numbers separated by commas, such as <span class="process-math">\(\{-3,2,5\}\text{,}\)</span> which is a set including the values of -3, 2, and 5.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-01-4-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-01-4-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
