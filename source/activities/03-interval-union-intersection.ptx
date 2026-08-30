@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- POGIL-style activity: union and intersection of intervals, building from
+     simple overlap up through intersecting two compound (union-of-two-interval)
+     sets via the distributive strategy.
+
+     Ordering rationale: sections progress through complications one at a
+     time rather than all at once: (1) clear overlap for mechanics,
+     (2) adjacent intervals where the open/closed endpoint decides
+     everything, (3) true gaps giving an empty intersection, (4) chaining
+     three sets, (5) intersecting two compound sets (the capstone skill).
+
+     Common pitfalls to watch for while circulating (instructor notes,
+     not shown on the student worksheet):
+     - Students write "nothing" or leave a blank instead of the empty-set
+       symbol.
+     - Students assume adjacent intervals always give an empty
+       intersection (Problem 5 is designed to break that assumption).
+     - In Section 5, students forget one of the four pairwise
+       combinations, usually the "far apart" pair that comes out empty.
+     - Students report a compound final answer without checking whether
+       its pieces are actually adjacent enough to merge into one
+       interval. -->
+<worksheet xml:id="activity-interval-union-intersection">
+  <title>Union and Intersection of Intervals</title>
+
+  <introduction>
+    <p>
+      Today's problems are ordered so that you meet one new wrinkle at a
+      time instead of all at once. We will start with clearly overlapping
+      intervals to get the mechanics down, then look closely at what
+      happens when two intervals share a single boundary point, then at
+      intervals with a genuine gap between them. After that we will chain
+      three sets together, and finish by intersecting two sets that are
+      each already written as a union of two intervals.
+    </p>
+    <p>
+      Sketch each set on a number line before you write down an answer
+      &#8212; it will save you from the most common mistakes.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-s1-warmup" workspace="0in">
+    <title>Section 1 &#8212; Warm-Up: Clearly Overlapping Intervals</title>
+    <introduction>
+      <p>For each pair below, find <m>A \cup B</m> and <m>A \cap B</m>.</p>
+    </introduction>
+    <task xml:id="task-p1" workspace="0.5in">
+      <title>Problem 1</title>
+      <statement><p><m>A = [1,5]</m>, <m>B = [3,8]</m></p></statement>
+    </task>
+    <task xml:id="task-p2" workspace="0.5in">
+      <title>Problem 2</title>
+      <statement><p><m>A = (0,6)</m>, <m>B = (2,10)</m></p></statement>
+    </task>
+    <task xml:id="task-p3" workspace="0.5in">
+      <title>Problem 3</title>
+      <statement><p><m>A = [-3,2]</m>, <m>B = [-1,4]</m></p></statement>
+    </task>
+    <task xml:id="task-p4" workspace="0.5in">
+      <title>Problem 4</title>
+      <statement><p><m>A = [2,9]</m>, <m>B = [-1,5]</m></p></statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-s2-adjacent" workspace="0in">
+    <title>Section 2 &#8212; Adjacent Intervals: The Endpoint Decides Everything</title>
+    <introduction>
+      <p>
+        Each of the four pairs below uses the same two numbers as
+        endpoints &#8212; only whether each set includes or excludes the
+        shared value <m>4</m> changes. Sketch each pair on a number line
+        before answering. For each pair, find <m>A \cap B</m> and
+        <m>A \cup B</m>, and answer: can the union be written as a single
+        interval? Why or why not?
+      </p>
+    </introduction>
+    <task xml:id="task-p5" workspace="0.75in">
+      <title>Problem 5</title>
+      <statement><p><m>A = [1,4]</m>, <m>B = [4,7]</m> (both closed at <m>4</m>)</p></statement>
+    </task>
+    <task xml:id="task-p6" workspace="0.75in">
+      <title>Problem 6</title>
+      <statement><p><m>A = [1,4)</m>, <m>B = [4,7]</m> (open at <m>4</m> in <m>A</m>, closed at <m>4</m> in <m>B</m>)</p></statement>
+    </task>
+    <task xml:id="task-p7" workspace="0.75in">
+      <title>Problem 7</title>
+      <statement><p><m>A = [1,4]</m>, <m>B = (4,7)</m> (closed at <m>4</m> in <m>A</m>, open at <m>4</m> in <m>B</m>)</p></statement>
+    </task>
+    <task xml:id="task-p8" workspace="0.75in">
+      <title>Problem 8</title>
+      <statement><p><m>A = (1,4)</m>, <m>B = (4,7)</m> (both open at <m>4</m>)</p></statement>
+    </task>
+    <task xml:id="task-s2-discussion" workspace="0.75in">
+      <title>Discussion</title>
+      <statement>
+        <p>
+          In Problem 5, the intersection is not empty, but it is not a
+          normal interval either &#8212; what is it?
+        </p>
+        <p>
+          In Problem 8, the union is missing only one point &#8212; why
+          does that single missing point stop it from being written as
+          one interval?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-s3-gaps" workspace="0in">
+    <title>Section 3 &#8212; True Gaps: Non-Overlapping Intervals</title>
+    <introduction>
+      <p>For each pair below, find <m>A \cap B</m> and <m>A \cup B</m>.</p>
+    </introduction>
+    <task xml:id="task-p9" workspace="0.75in">
+      <title>Problem 9</title>
+      <statement><p><m>A = [1,3]</m>, <m>B = [5,8]</m></p></statement>
+    </task>
+    <task xml:id="task-p10" workspace="0.75in">
+      <title>Problem 10</title>
+      <statement><p><m>A = (-\infty, -2]</m>, <m>B = [0, \infty)</m></p></statement>
+    </task>
+    <task xml:id="task-p11" workspace="0.75in">
+      <title>Problem 11</title>
+      <statement><p><m>A = [0,2]</m>, <m>B = [2.5, 4]</m></p></statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-s4-chaining" workspace="0in">
+    <title>Section 4 &#8212; Chaining It Together</title>
+    <introduction>
+      <p>
+        Build the union of the first three sets, then intersect that
+        result with the last set.
+      </p>
+    </introduction>
+    <task xml:id="task-p12" workspace="1in">
+      <title>Problem 12</title>
+      <statement>
+        <p>
+          <m>A=[0,3]</m>, <m>B=[2,5]</m>, <m>C=[7,9]</m>, <m>D=[1,8]</m>.
+          Find <m>(A \cup B \cup C) \cap D</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-p13" workspace="1in">
+      <title>Problem 13</title>
+      <statement>
+        <p>
+          <m>A=[-4,-1]</m>, <m>B=[-2,3]</m>, <m>C=[6,10]</m>, <m>D=(-3,8)</m>.
+          Find <m>(A \cup B \cup C) \cap D</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-s5-capstone" workspace="0in">
+    <title>Section 5 &#8212; Capstone: Intersecting Two Compound Sets</title>
+    <introduction>
+      <p>
+        When <m>S = A \cup B</m> and <m>T = C \cup D</m>, distribute:
+        <me>S \cap T = (A \cap C) \cup (A \cap D) \cup (B \cap C) \cup (B \cap D).</me>
+        Compute all four pairwise intersections (some will be empty), then
+        combine and simplify.
+      </p>
+    </introduction>
+    <task xml:id="task-p14" workspace="0.75in">
+      <title>Problem 14 (warm-up &#8212; <m>T</m> is a single interval)</title>
+      <statement>
+        <p><m>S=[0,4] \cup [10,14]</m>, <m>T=[3,12]</m>. Find <m>S \cap T</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-p15" workspace="1.25in">
+      <title>Problem 15</title>
+      <statement>
+        <p><m>S=[-5,-1] \cup [2,6]</m>, <m>T=[-3,4] \cup [5,10]</m>. Find <m>S \cap T</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-p16" workspace="1.25in">
+      <title>Problem 16</title>
+      <statement>
+        <p><m>S=[1,5] \cup [7,10]</m>, <m>T=[4,8] \cup [9,12]</m>. Find <m>S \cap T</m>.</p>
+      </statement>
+    </task>
+    <task xml:id="task-p17" workspace="1.25in">
+      <title>Problem 17 &#8212; Challenge</title>
+      <statement>
+        <p>
+          <m>S=[0,4] \cup [8,12]</m>, <m>T=[4,6] \cup [10,14]</m>. Find
+          <m>S \cap T</m>. (One of the four pairwise pieces is not an
+          interval at all &#8212; what is it?)
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-s6-build-your-own" workspace="0in">
+    <title>Section 6 &#8212; Build-Your-Own (Paired Activity)</title>
+    <introduction>
+      <p>
+        Write your own set <m>M</m> as a union of two intervals of your
+        choosing, aiming to include at least one interesting boundary.
+        Trade with a partner and compute <m>M \cap N</m> together.
+      </p>
+    </introduction>
+    <task xml:id="task-s6-yourset" workspace="0.75in">
+      <title>Your set</title>
+      <statement><p>Write your set <m>M</m> here.</p></statement>
+    </task>
+    <task xml:id="task-s6-swap" workspace="1.25in">
+      <title>With your partner</title>
+      <statement>
+        <p>
+          Compute <m>M \cap N</m> together. How many pieces does your
+          intersection have? Could you have chosen your intervals so that
+          the intersection was <m>\varnothing</m>? So that it was a
+          single point?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>

@@ -66,7 +66,6 @@
         <p>
           <m>S</m> = <fillin name="linear_model" width="12"  mode="math" ansobj="model_eqn" />
         </p>
-        <p><md><eval obj="model_eqn"/></md></p>
       </statement>
       <setup seed="1123">
         <de-object name="p0" context="number">
@@ -118,7 +117,7 @@
       <ul>
         <li>
           <p>
-            A collection of real numbers is a <term>set</term>. Simple sets with a finite number of values can be expressed using curly braces listing the numbers separated by commas, such as <m>\{-3,2,5/}</m>, which is a set including the values of -3, 2, and 5.
+            A collection of real numbers is a <term>set</term>. Simple sets with a finite number of values can be expressed using curly braces listing the numbers separated by commas, such as <m>\{-3,2,5\}</m>, which is a set including the values of -3, 2, and 5.
           </p>
         </li>
         <li>

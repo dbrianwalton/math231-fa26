@@ -1,9 +1,0 @@
-<xml version="1">
-  <dynamic-substitution id="P1_Linear_Modeling">
-    <eval-subst obj="p0"><latex>20</latex><plain>20</plain></eval-subst>
-    <eval-subst obj="S0"><latex>190</latex><plain>190</plain></eval-subst>
-    <eval-subst obj="p1"><latex>45</latex><plain>45</plain></eval-subst>
-    <eval-subst obj="S1"><latex>155</latex><plain>155</plain></eval-subst>
-    <eval-subst obj="model_eqn"><latex>190-\frac{deltaS}{25} \left(p-20\right)</latex><plain>190-deltaS/25*(p-20)</plain></eval-subst>
-  </dynamic-substitution>
-</xml>
