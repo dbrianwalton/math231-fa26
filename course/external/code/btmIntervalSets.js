@@ -484,24 +484,21 @@ function splitTopLevelCommas(str) {
  * `menv.parseExpression(text, "number")`. The Interval constructor itself
  * validates that the resulting object is constant (isConstant() === true).
  */
-function parseEndpointText(str, menv, which) {
+function parseEndpointText(str, which) {
   const trimmed = str.trim();
   if (trimmed.length === 0) {
-    throw new Error(`parseSet: missing ${which} endpoint`);
+    throw new TypeError(`Interval is missing the ${which} endpoint.`);
   }
   if (trimmed === '-INF') return -Infinity;
   if (trimmed === 'INF') return Infinity;
   if (PLAIN_NUMBER_REGEX.test(trimmed)) return parseFloat(trimmed);
-  if (menv) {
-    if (typeof menv.parseExpression !== 'function') {
+  if (Set.prototype.menv) {
+    if (typeof Set.prototype.menv.parseExpression !== 'function') {
       throw new Error('parseSet: menv must provide a parseExpression(text, type) method');
     }
-    return menv.parseExpression(trimmed, 'number');
+    return Set.prototype.menv.parseExpression(trimmed, 'number');
   }
-  throw new Error(
-    `parseSet: cannot parse "${trimmed}" as a number for the ${which} endpoint ` +
-    `(pass a math environment as the menv argument to parse formula expressions)`
-  );
+  throw new TypeError(`Unable to interpret the ${which} endpoint.`);
 }
 
 /**
@@ -510,7 +507,7 @@ function parseEndpointText(str, menv, which) {
  * "{min(1,2), 3}") are handled correctly. Every "(" opened within a term's
  * endpoint expressions must have a matching ")" before the term can close.
  */
-function parseTerms(text, menv) {
+function parseTerms(text) {
   const intervals = [];
   const n = text.length;
   let i = 0;
@@ -522,7 +519,7 @@ function parseTerms(text, menv) {
 
     if (!expectTerm) {
       if (text[i] !== 'U') {
-        throw new Error(`parseSet: expected "U" between terms near position ${i} in "${text}"`);
+        throw new TypeError(`Unexpected character ${text[i]} after a set or interval. Did you forget a "U"?`);
       }
       i++;
       expectTerm = true;
@@ -535,13 +532,13 @@ function parseTerms(text, menv) {
       let j = i + 1;
       while (j < n && text[j] !== '}') j++;
       if (j >= n) {
-        throw new Error(`parseSet: missing closing "}" in "${text}"`);
+        throw new TypeError(`Missing closing "}" in "${text}"`);
       }
       const interior = text.slice(i + 1, j);
       if (interior.trim().length > 0) {
         const values = splitTopLevelCommas(interior);
         for (const v of values) {
-          const val = parseEndpointText(v, menv, 'value');
+          const val = parseEndpointText(v, 'value');
           intervals.push(new Interval(val, val, [1, 1]));
         }
       }
@@ -575,20 +572,17 @@ function parseTerms(text, menv) {
         j++;
       }
       if (closeChar === null) {
-        throw new Error(
-          `parseSet: missing closing bracket for interval starting at position ${i} in "${text}" ` +
-          `(every "(" in an endpoint expression needs a matching ")")`
-        );
+        throw new TypeError(`Missing closing parenthesis or bracket on an interval.`);
       }
       const interior = text.slice(i + 1, j);
       const parts = splitTopLevelCommas(interior);
       if (parts.length !== 2) {
-        throw new Error(
-          `parseSet: interval "${text.slice(i, j + 1)}" must have exactly two comma-separated endpoints`
+        throw new TypeError(
+          `The possible interval "${text.slice(i, j + 1)}" must have exactly two comma-separated endpoints`
         );
       }
-      const leftVal = parseEndpointText(parts[0], menv, 'left');
-      const rightVal = parseEndpointText(parts[1], menv, 'right');
+      const leftVal = parseEndpointText(parts[0], 'left');
+      const rightVal = parseEndpointText(parts[1], 'right');
       const fOpenLeft = text[i] === '(';
       const fOpenRight = closeChar === ')';
       intervals.push(new Interval(leftVal, rightVal, [fOpenLeft ? 0 : 1, fOpenRight ? 0 : 1]));
@@ -597,11 +591,11 @@ function parseTerms(text, menv) {
       continue;
     }
 
-    throw new Error(`parseSet: unexpected character "${c}" at position ${i} in "${text}"`);
+    throw new TypeError(`Unexpected character "${c}" in "${text}"`);
   }
 
   if (expectTerm) {
-    throw new Error(`parseSet: unable to parse "${text}" (unexpected end of input, expected a term)`);
+    throw new TypeError(`Unexpected end to set description.`);
   }
 
   return intervals;
@@ -614,26 +608,19 @@ function parseTerms(text, menv) {
  *
  * @param {string} text
  * @param {boolean} [simplify=false] - if true, simplify() the resulting set
- * @param {Object} [menv=null] - a math environment exposing
- *   parseExpression(text, type), as provided by btm-expressions. When
- *   supplied, endpoint text that isn't "-INF"/"INF"/a plain number is parsed
- *   via menv.parseExpression(text, "number") into a BTM number-object.
  * @returns {Set}
  */
-export function parseSet(text, simplify = false, menv = null) {
+export function parseSet(text, simplify = false) {
   if (typeof text !== 'string') {
     throw new Error('parseSet: expected a string argument');
-  }
-  if (menv != null && typeof menv.parseExpression !== 'function') {
-    throw new Error('parseSet: menv must provide a parseExpression(text, type) method');
   }
 
   const trimmed = text.trim();
   if (trimmed.length === 0) {
-    throw new Error('parseSet: cannot parse an empty string');
+    throw new TypeError('Unanswered. An empty set can be entered "{}"');
   }
 
-  const intervals = parseTerms(trimmed, menv);
+  const intervals = parseTerms(trimmed);
 
   const result = new Set(intervals);
   if (simplify) {
@@ -655,17 +642,11 @@ export function parseSet(text, simplify = false, menv = null) {
  *
  * @param {string} text
  * @param {boolean} [simplify=false] - if true, simplify() each resulting Set
- * @param {Object} [menv=null] - a math environment exposing
- *   parseExpression(text, type), as provided by btm-expressions; forwarded
- *   to parseSet() for each term.
  * @returns {SetList}
  */
-export function parseSetList(text, simplify = false, menv = null) {
+export function parseSetList(text, simplify = false) {
   if (typeof text !== 'string') {
     throw new Error('parseSetList: expected a string argument');
-  }
-  if (menv != null && typeof menv.parseExpression !== 'function') {
-    throw new Error('parseSetList: menv must provide a parseExpression(text, type) method');
   }
 
   const trimmed = text.trim();
@@ -677,9 +658,9 @@ export function parseSetList(text, simplify = false, menv = null) {
   const sets = parts.map((part) => {
     const partTrimmed = part.trim();
     if (partTrimmed.length === 0) {
-      throw new Error(`parseSetList: empty set term in "${text}"`);
+      throw new TypeError(`List appears to have two commas with nothing in between.`);
     }
-    return parseSet(partTrimmed, simplify, menv);
+    return parseSet(partTrimmed, simplify);
   });
 
   return new SetList(sets);
