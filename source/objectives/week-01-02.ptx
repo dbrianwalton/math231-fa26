@@ -173,6 +173,76 @@
         </li>
       </ul>
     </p>
+
+    <p>
+      The following exercise is a warm-up problem that I'm using to debug how to create 
+      this type of question for interactive exercises.
+    </p>
+    <exercise label="P2-set-operations">
+      <statement>
+        <p>
+          Give the sets <m>A = <eval obj="interval1"/></m> and <m>B = <eval obj="interval2"/></m>,
+          find the simplified forms for <m>A \cup B</m> and <m>A \cap B</m>. 
+        </p>
+        <p>
+          <m>A \cup B</m> = <fillin name="union_blank" ansobj="unionSet" mode="set" parser="parseSet"/>
+        </p>
+        <p>
+          <m>A \cap B</m> = <fillin name="intersect_blank" ansobj="intersectSet" mode="set" parser="parseSet"/>
+        </p>
+        <p>
+          To describe a set with a single value such as 4, write <c>{4}</c>. To describe an empty set, write <c>{}</c>.
+        </p>
+      </statement>
+      <setup seed="FA26P2-1">
+        <jsimports>
+          <jslibrary source="code/btmIntervalSets.js" />
+        </jsimports>
+        <de-object name="a1" context="number">
+          <de-random distribution="discrete" min="-15" max="15" by="1"/>
+        </de-object>
+        <de-object name="delta1" context="number">
+          <de-random distribution="discrete" min="0" max="10" by="1"/>
+        </de-object>
+        <de-object name="b1" context="number">
+          <de-number>a1+delta1</de-number>
+        </de-object>
+        <de-object name="a2" context="number">
+          <de-random distribution="discrete" min="-15" max="15" by="1"/>
+        </de-object>
+        <de-object name="delta2" context="number">
+          <de-random distribution="discrete" min="0" max="10" by="1"/>
+        </de-object>
+        <de-object name="b2" context="number">
+          <de-number>a2+delta2</de-number>
+        </de-object>
+        <setupScript>
+          <![CDATA[
+          Set.prototype.menv = v._mobjs;
+          v.left1 = RNG.randInt(0,1);
+          v.right1 = RNG.randInt(0,1);
+          v.interval1 = new Set([new Interval(v.a1, v.b1, [v.left1, v.right1])]);
+          v.left2 = RNG.randInt(0,1);
+          v.right2 = RNG.randInt(0,1);
+          v.interval2 = new Set([new Interval(v.a2, v.b2, [v.left2, v.right2])]);
+          v.unionSet = v.interval1.union(v.interval2);
+          v.intersectSet = v.interval1.intersect(v.interval2);
+          ]]>
+        </setupScript>
+      </setup>
+      <evaluation>
+        <evaluate name="union_blank">
+          <test correct="yes">
+            <jscmp>union_blank.compare(unionSet)</jscmp>
+          </test>
+        </evaluate>
+        <evaluate name="intersect_blank">
+          <test correct="yes">
+            <jscmp>intersect_blank.compare(intersectSet)</jscmp>
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
   </subsection>
 
 
