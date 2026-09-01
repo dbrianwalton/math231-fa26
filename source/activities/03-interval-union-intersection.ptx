@@ -2,13 +2,19 @@
 
 <!-- POGIL-style activity: union and intersection of intervals, building from
      simple overlap up through intersecting two compound (union-of-two-interval)
-     sets via the distributive strategy.
+     sets via a graphical (shade-and-overlap) strategy, with the distributive
+     law offered only as an optional algebraic shorthand for what the picture
+     already shows.
 
      Ordering rationale: sections progress through complications one at a
      time rather than all at once: (1) clear overlap for mechanics,
      (2) adjacent intervals where the open/closed endpoint decides
      everything, (3) true gaps giving an empty intersection, (4) chaining
      three sets, (5) intersecting two compound sets (the capstone skill).
+     Section 5 is the capstone specifically because it requires all of the
+     earlier skills at once: pairwise overlap-reading (1), boundary judgment
+     (2), and recognizing empty results from gaps (3), plus the Section 4
+     habit of combining and simplifying a multi-piece result.
 
      Common pitfalls to watch for while circulating (instructor notes,
      not shown on the student worksheet):
@@ -16,8 +22,11 @@
        symbol.
      - Students assume adjacent intervals always give an empty
        intersection (Problem 5 is designed to break that assumption).
-     - In Section 5, students forget one of the four pairwise
-       combinations, usually the "far apart" pair that comes out empty.
+     - In Section 5, working from the shaded picture largely prevents the
+       old failure mode of forgetting a pairwise term (there is no term to
+       drop if it was never shaded), but watch for students missing a
+       boundary-only touch (a single point, as in Problem 17) or
+       misreading it as a full overlapping stretch.
      - Students report a compound final answer without checking whether
        its pieces are actually adjacent enough to merge into one
        interval. -->
@@ -158,10 +167,20 @@
     <title>Section 5 &#8212; Capstone: Intersecting Two Compound Sets</title>
     <introduction>
       <p>
-        When <m>S = A \cup B</m> and <m>T = C \cup D</m>, distribute:
+        Sketch <m>S</m> and <m>T</m> on two number lines, one above the
+        other (or use two colors on the same line). Shade every piece of
+        <m>S</m>, then shade every piece of <m>T</m>. The intersection
+        <m>S \cap T</m> is exactly wherever both shadings overlap
+        &#8212; read the overlapping stretches straight off the picture,
+        write each one as an interval (or as a single point, if that is
+        all the overlap is), and combine them.
+      </p>
+      <p>
+        If you want the algebraic shorthand for what your picture just
+        showed: when <m>S = A \cup B</m> and <m>T = C \cup D</m>,
         <me>S \cap T = (A \cap C) \cup (A \cap D) \cup (B \cap C) \cup (B \cap D).</me>
-        Compute all four pairwise intersections (some will be empty), then
-        combine and simplify.
+        Each term is just one of the double-shaded stretches you already
+        found &#8212; the picture and the formula describe the same thing.
       </p>
     </introduction>
     <task xml:id="task-p14" workspace="0.75in">
@@ -187,8 +206,9 @@
       <statement>
         <p>
           <m>S=[0,4] \cup [8,12]</m>, <m>T=[4,6] \cup [10,14]</m>. Find
-          <m>S \cap T</m>. (One of the four pairwise pieces is not an
-          interval at all &#8212; what is it?)
+          <m>S \cap T</m>. (Somewhere the shading only touches, without
+          overlapping into a stretch &#8212; what does that piece of the
+          intersection look like?)
         </p>
       </statement>
     </task>
