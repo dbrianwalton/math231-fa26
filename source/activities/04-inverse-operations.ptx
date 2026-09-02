@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Concise activity: order-of-operations "story" for a formula, undone in
+     reverse with inverse operations, to solve for x by isolation.
+
+     Design notes (not shown to students):
+     - Section 1 (linear a*x+b) establishes the core idea with the least
+       possible friction: every operation's inverse is obvious, so the
+       point is entirely about ORDER - undo the last thing first.
+     - Section 2 (rational a/(bx+c)) is the payoff. The surface form of the
+       formula makes it look like the last operation is "divide by
+       (bx+c)", which tempts students to reach for "multiply by (bx+c)" as
+       if bx+c were an ordinary multiplier - it isn't, since x is buried
+       inside it. Reframing a/(bx+c) as a * (bx+c)^{-1} restores the same
+       story shape as Section 1: the last operation really is "multiply
+       by a," preceded by "take the reciprocal," which is its own
+       inverse. Watch for students who try to cross-multiply on instinct
+       instead of running the story backward - ask them to write out the
+       forward story before touching the equation.
+     - Kept intentionally short: one worked numeric example and one
+       general (letters) derivation per section, then one independent
+       practice problem. Meant to run well under a full class period.
+     - Lightweight group work (pairs/groups discuss and fill in blanks
+       together) but no formal POGIL roles - keep this fast to run. -->
+<worksheet xml:id="activity-inverse-operations">
+  <title>Method of Isolation: Solving by Inverse Operations</title>
+
+  <introduction>
+    <p>
+      A formula is a set of instructions applied to a number <m>x</m>, <em>in a specific
+      order</em>. Solving an equation built from that formula means undoing the instructions
+      in reverse order. This is called <term>isolating</term> <m>x</m>.
+    </p>
+    <p>
+      Work with your group. In this exercise, we will be deliberate in thinking through
+      the order of operations. It will be like thinking about the formula as
+      a story of operations that act on <m>x</m> in turn.
+      For each problem, clearly identify the forward story first before you
+      try to solve anything.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-linear-story" workspace="0in">
+    <title>Section 1: A Straightforward Story</title>
+
+    <task xml:id="task-linear-forward" workspace="0in">
+      <statement>
+        <p>
+          The formula <m>3x+5</m> tells this story: <q>Start with <m>x</m>, multiply by
+          <m>3</m>, then add <m>5</m>.</q> Fill in the blank below the same way.
+        </p>
+        <p>
+          <m>x \;\xrightarrow{\times\,3}\; \underline{\qquad\phantom{W}\qquad} \;\xrightarrow{+\,5}\; 3x+5</m>
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-linear-undo-numeric" workspace="0.5in">
+      <statement>
+        <p>
+          To solve <m>3x+5=17</m>, undo the story in reverse, undoing the last operation first.
+          Fill in every blank, including the operation labels on the arrows.
+        </p>
+        <p>
+          <m>\begin{array}{c}3x+5\\=\\17\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}3x\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}x\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}</m>
+        </p>
+        <p>What is <m>x</m>? Check your answer in the original equation.</p>
+      </statement>
+    </task>
+
+    <task xml:id="task-linear-undo-general" workspace="0.5in">
+      <statement>
+        <p>
+          Now do the same thing symbolically. Solve <m>ax+b=c</m> for <m>x</m> by undoing the
+          story.
+        </p>
+        <p>
+          <m>\begin{array}{c}ax+b\\=\\c\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}ax\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}x\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}</m>
+        </p>
+        <p>
+          Why must you undo "multiply by <m>a</m>" <em>last</em>, even though it
+          happened <em>first</em> in the forward story?
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-linear-practice" workspace="1.5in">
+      <statement>
+        <p>Solve each equation by writing and then undoing its story. Show both stories.</p>
+        <p>
+          <ol>
+            <li>
+              <p><m>4x-7=9</m></p>
+            </li>
+            <li>
+              <p><m>-2x+1=13</m></p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-rational-story" workspace="0in">
+    <title>Section 2: Slightly More Complicated</title>
+
+    <introduction>
+      <p>
+        Now consider <m>\dfrac{6}{2x+1}</m>. It's tempting to say the last step is
+        <q>divide by <m>2x+1</m>,</q> but that's not the same kind of operation as
+        before. Here <m>x</m> is <em>inside</em> the formula you're dividing <em>by</em>.
+        As an action happening to <m>2x+1</m>, it is <em>not</em> actually division.
+        Instead, we remember that <em>dividing</em> by a quantity is the same as
+        <em>multiplying</em> by its <term>reciprocal</term>. 
+      </p>
+    </introduction>
+
+    <task xml:id="task-rational-forward" workspace="0in">
+      <statement>
+        <p>
+          Fill in the forward story for <m>\dfrac{6}{2x+1}</m>. (<q>Recip.</q> means
+          <q>take the reciprocal.</q>)
+        </p>
+        <p>
+          <m>x \;\xrightarrow{\times\,2}\; \underline{\qquad\phantom{W}\qquad} \;\xrightarrow{+\,1}\;
+          \underline{\qquad\phantom{W}\qquad} \;\xrightarrow{\text{recip.}}\; \underline{\qquad\phantom{W}\qquad}
+          \;\xrightarrow{\times\,6}\; \dfrac{6}{2x+1}</m>
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-rational-key-idea" workspace="0.75in">
+      <statement>
+        <p>
+          The reciprocal action is its own inverse: taking the reciprocal of a reciprocal
+          gets you back where you started. Given that fact, what four steps and in what
+          order will undo the actions in the story above? For this task, describe them in words. In the <em>next</em> task, you'll use the actions.
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-rational-undo-numeric" workspace="0.5in">
+      <statement>
+        <p>
+          Solve <m>\dfrac{6}{2x+1}=2</m> by undoing the story, one arrow at a time &#8212;
+          both sides together. Undo the outer two actions first to get down to an equation in
+          <m>2x+1</m>, then finish it off just like Section 1. Fill in every blank.
+        </p>
+        <p>
+          <m>\begin{array}{c}\dfrac{6}{2x+1}\\=\\2\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}\dfrac{1}{2x+1}\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}2x+1\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}</m>
+        </p>
+        <p>Bring the value you just found down into the equation below.</p>
+        <p>
+          <m>\begin{array}{c}2x+1\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}2x\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}
+          \;\xrightarrow{\underline{\qquad}}\;
+          \begin{array}{c}x\\=\\\underline{\qquad\phantom{W}\qquad}\end{array}</m>
+        </p>
+        <p>Check your answer in the original equation.</p>
+      </statement>
+    </task>
+
+    <task xml:id="task-rational-practice" workspace="1.75in">
+      <statement>
+        <p>
+          Solve <m>\dfrac{12}{3x-2}=4</m> the same way. If your group has time, also solve
+          <m>\dfrac{a}{bx+c}=k</m> for <m>x</m> in terms of <m>a</m>, <m>b</m>, <m>c</m>, and
+          <m>k</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>

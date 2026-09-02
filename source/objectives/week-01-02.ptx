@@ -12,10 +12,13 @@
   <subsection>
     <title>P1 Linear Modeling</title>
 
-    <p>
-      I can calculate a slope as a rate of change and use it with the point-slope equation of a line to model a linear relation between two variables.
-    </p>
-
+    <assemblage xml:id="assemblage-P1">
+      <title>P1</title>
+      <p>
+              I can calculate a slope as a rate of change and use it with the point-slope equation of a line to model a linear relation between two variables.
+      </p>
+    </assemblage>
+    
     <p>
       What do I need to understand?
       <ul>
@@ -108,9 +111,12 @@
   <subsection>
     <title>P2 Intervals and Set Operations</title>
 
-    <p>
-      I can translate a graphical representation of a set of numbers back and forth to interval notation and compute unions and intersections of multiple such sets.
-    </p>
+    <assemblage xml:id="assemblage-P2">
+      <title>P2</title>
+      <p>
+        I can translate a graphical representation of a set of numbers back and forth to interval notation and compute unions and intersections of multiple such sets.
+      </p>
+    </assemblage>
 
     <p>
       What do I need to understand?
@@ -174,11 +180,13 @@
       </ul>
     </p>
 
+    <!--
     <p>
       The following exercise is a warm-up problem that I'm using to debug how to create 
       this type of question for interactive exercises.
     </p>
-    <exercise label="P2-set-operations">
+
+    <exercise label="P2-set-operations-simple">
       <statement>
         <p>
           Give the sets <m>A = <eval obj="interval1"/></m> and <m>B = <eval obj="interval2"/></m>,
@@ -243,13 +251,157 @@
         </evaluate>
       </evaluation>
     </exercise>
+  -->
+
+    <exercise label="P2-set-operations">
+      <statement>
+        <p>
+          Suppose that <m>A</m> is the set illustrated on the number line below.
+        </p>
+        <image width="90%">
+            <description>
+              A number line from negative four to three. The interval from
+              negative three to negative one is shaded, with a closed (filled)
+              circle at negative three and an open circle at negative one. The
+              interval from one to two is shaded, with open circles at both one
+              and two.
+            </description>
+            <latex-image>
+              \begin{tikzpicture}[x=1.1cm]
+                % the number line itself
+                \draw[thick, &lt;-&gt;] (-4.5,0) -- (3.5,0);
+                \foreach \x in {-4,-3,-2,-1,0,1,2,3}
+                  \draw (\x,0.06) -- (\x,-0.06) node[below] {\small $\x$};
+
+                % the highlighted set, drawn just above the line
+                \draw[very thick] (-3,0.3) -- (-1,0.3);
+                \draw[very thick] (1,0.3) -- (2,0.3);
+
+                % endpoints: filled = included, open = excluded
+                \filldraw (-3,0.3) circle (2.2pt);
+                \draw[fill=white] (-1,0.3) circle (2.2pt);
+                \draw[fill=white] (1,0.3) circle (2.2pt);
+                \draw[fill=white] (2,0.3) circle (2.2pt);
+              \end{tikzpicture}
+            </latex-image>
+          </image>
+          <p>
+            The set <m>B</m> is defined by <m>B = (-2,0) \cup [1,3)</m>.
+          </p>
+          <p>
+            Find <m>A \cup B</m> and <m>A \cap B</m>, write them using interval notation, and illustrate them on a number line.
+          </p>
+      </statement>
+    </exercise>
   </subsection>
 
 
   <subsection>
-    <title>Friday 8/26</title>
+    <title>P3 Formula Structure, Inverses and Isolation</title>
+
+    <assemblage xml:id="assemblage-P3">
+      <title>P3</title>
+      <p>
+        I can identify the sequence of algebraic actions in a formula and
+        apply inverse operations to solve an equation by isolating the variable.
+      </p>
+    </assemblage>
 
     <p>
+      This statement of the learning objective is a simplification of the learning objective stated in the original syllabus. The original included too many different skills at once to assess in a single task.
     </p>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            A formula or expression involving a variable specifies a series of 
+            actions that occur in a precise order.
+          </p>
+        </li>
+        <li>
+          <p>
+            Parentheses group terms to <em>force</em> a particular order.
+          </p>
+        </li>
+        <li>
+          <p>
+            The <term>order of operations</term> is a <em>constructed convention</em>
+            so that a community knows the implicit order without requiring all parentheses.
+          </p>
+        </li>
+        <li>
+          <p>
+            An equation where the variable appears in only one location (or that can be rewritten this way) can be <term>solved by isolation</term> by applying <term>inverse operations</term> to <em>both sides</em> of the equation based on the <em>last operation</em> for the expression with the variable.
+          </p>
+        </li>
+        <li>
+          <p>
+            Applying the operation to both sides is essential to retain equivalent equations.
+          </p>
+        </li>
+        <li>
+          <p>
+            The inverse operations are applied in exactly the reverse order as the original operations of the initial expression.
+          </p>
+        </li>
+        <li>
+          <p>
+            Division should really be thought of as multiplication by a reciprocal.
+          </p>
+        </li>
+        <li>
+          <p>
+            The reciprocal operation is its own inverse operation.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise label="P3-solve-by-isolation">
+      <statement>
+        <p>
+          Solve the equation below using the method of isolation.
+          <md>
+            <eval obj="lhs"/> = <eval obj="rhs"/>
+          </md>
+          <m>x</m> = <fillin name="solution" ansobj="xval" mode="math"/>
+        </p>
+      </statement>
+      <setup seed="FA26-P3">
+        <de-object name="a" context="number">
+          <de-random distribution="discrete" min="-5" max="5" by="1" nonzero="yes"/>
+        </de-object>
+        <de-object name="b" context="number">
+          <de-random distribution="discrete" min="2" max="5" by="1" nonzero="yes"/>
+        </de-object>
+        <de-object name="c" context="number">
+          <de-random distribution="discrete" min="-10" max="10" by="1" nonzero="yes"/>
+        </de-object>
+        <de-object name="d" context="number">
+          <de-random distribution="discrete" min="-5" max="5" by="1" nonzero="yes"/>
+        </de-object>
+        <de-object name="k" context="number">
+          <de-random distribution="discrete" min="-15" max="15" by="1" nonzero="yes"/>
+        </de-object>
+        <de-object name="lhs" context="formula">
+          <de-expression>a/(b*x+c)+d</de-expression>
+        </de-object>
+        <de-object name="rhs" context="number">
+          <de-number>d+k</de-number>
+        </de-object>
+        <de-object name="xval" context="number">
+          <de-number reduce="yes">(a-c*k)/(b*k)</de-number>
+        </de-object>
+      </setup>
+      <evaluation>
+        <evaluate name="solution">
+          <test correct="yes">
+            <mathcmp use-answer="yes"/>
+          </test>
+        </evaluate>
+      </evaluation>
+    </exercise>
   </subsection>
 </section>

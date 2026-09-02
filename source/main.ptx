@@ -48,6 +48,7 @@
 
       <xi:include href="./activities/02-linear-relations-slope.ptx"/>
       <xi:include href="./activities/03-interval-union-intersection.ptx"/>
+      <xi:include href="./activities/04-inverse-operations.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
