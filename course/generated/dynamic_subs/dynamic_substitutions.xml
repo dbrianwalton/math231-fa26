@@ -6,10 +6,9 @@
     <eval-subst obj="S1"><latex>155</latex><plain>155</plain></eval-subst>
     <eval-subst obj="model_eqn"><latex>190-\frac{7}{5} \left(p-20\right)</latex><plain>190-(7/5)*(p-20)</plain></eval-subst>
   </dynamic-substitution>
-  <dynamic-substitution id="P2-set-operations">
-    <eval-subst obj="interval1"><latex>[-9,-5)</latex><plain>[-9,-5)</plain></eval-subst>
-    <eval-subst obj="interval2"><latex>(9,18]</latex><plain>(9,18]</plain></eval-subst>
-    <eval-subst obj="unionSet"><latex>[-9,-5) \cup (9,18]</latex><plain>[-9,-5)U(9,18]</plain></eval-subst>
-    <eval-subst obj="intersectSet"><latex>\{\}</latex><plain>{}</plain></eval-subst>
+  <dynamic-substitution id="P3-solve-by-isolation">
+    <eval-subst obj="lhs"><latex>\frac{-5}{5 x-8}-2</latex><plain>-5/(5*x+-8)+-2</plain></eval-subst>
+    <eval-subst obj="rhs"><latex>-4</latex><plain>-4</plain></eval-subst>
+    <eval-subst obj="xval"><latex>\frac{21}{10}</latex><plain>21/10</plain></eval-subst>
   </dynamic-substitution>
 </xml>
