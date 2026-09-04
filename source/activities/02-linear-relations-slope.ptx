@@ -216,7 +216,7 @@
         The constant rate you found in Model 2 is called the <term>slope</term> of the relation,
         or its <term>average rate of change</term>. The equation you built in Task 4 has the same
         structure as
-        <me>y = y_1 + m(x - x_1),</me>
+        <md>y = y_1 + m(x - x_1),</md>
         called <term>point-slope form</term>, where <m>(x_1, y_1)</m> is any known point on the
         relation and <m>m</m> is the slope. It says exactly what you wrote: a new value equals a
         starting value plus the slope times how far you've moved from that starting point.

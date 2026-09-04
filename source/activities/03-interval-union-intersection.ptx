@@ -178,7 +178,7 @@
       <p>
         If you want the algebraic shorthand for what your picture just
         showed: when <m>S = A \cup B</m> and <m>T = C \cup D</m>,
-        <me>S \cap T = (A \cap C) \cup (A \cap D) \cup (B \cap C) \cup (B \cap D).</me>
+        <md>S \cap T = (A \cap C) \cup (A \cap D) \cup (B \cap C) \cup (B \cap D).</md>
         Each term is just one of the double-shaded stretches you already
         found &#8212; the picture and the formula describe the same thing.
       </p>
