@@ -244,6 +244,51 @@ var ptx_lunr_docs = [
   "body": " Section 2: Slightly More Complicated   Now consider . It's tempting to say the last step is divide by , but that's not the same kind of operation as before. Here is inside the formula you're dividing by . As an action happening to , it is not actually division. Instead, we remember that dividing by a quantity is the same as multiplying by its reciprocal .     Fill in the forward story for . ( Recip. means take the reciprocal. )         The reciprocal action is its own inverse: taking the reciprocal of a reciprocal gets you back where you started. Given that fact, what four steps and in what order will undo the actions in the story above? For this task, describe them in words. In the next task, you'll use the actions.      Solve by undoing the story, one arrow at a time — both sides together. Undo the outer two actions first to get down to an equation in , then finish it off just like Section 1. Fill in every blank.     Bring the value you just found down into the equation below.     Check your answer in the original equation.      Solve the same way. If your group has time, also solve for in terms of , , , and .    "
 },
 {
+  "id": "activity-polynomial-sign-behavior",
+  "level": "1",
+  "url": "activity-polynomial-sign-behavior.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Sign Behavior of Factored Polynomials",
+  "body": " Sign Behavior of Factored Polynomials   When a formula is written in factored form, its graph's sign (positive or negative) is controlled entirely by its roots. Today you will use Desmos to discover how. We will use what you notice today to solve equations and inequalities later.  Work through Sections 1-3 on your own, using your own computer or mobile device. Either scan the QR code or open the link shown. After Section 3, compare what you find with your neighbor, then work Section 4 together.    Section 1: One Root, Changing Multiplicity   Open the first Desmos page below. It graphs , with a slider for .    QR code linking to the Desmos graph for Section 1.          Set to each value below. For each one, record the sign of just to the left and just to the right of the root at , and whether the graph crosses the axis there or just touches it.     Sign for  Sign for  Cross or touch?   1  2  3  4       What determines whether the graph crosses or just touches at ? Write a one-sentence rule.      Section 2: Two Roots, Two Independent Exponents   Open the second Desmos page below. It graphs , with separate sliders for and .    QR code linking to the Desmos graph for Section 2.          Try at least three different combinations of and , including at least one even and one odd value for each. Record the sign of in each of the three intervals below.      Sign for  Sign for  Sign for           Does changing ever affect whether the graph crosses or touches at ? Does changing ever affect what happens at ? What does that tell you about how the two roots interact?      Section 3: Predict, Then Check   Do not open the Desmos page yet. Consider .     Before touching Desmos, predict the sign of in each interval below.    Interval  Predicted sign            Now open the Desmos page below. It starts with the placeholder formula . Change the polynomial from to and check your prediction. Where, if anywhere, were you wrong? Update your table above if needed.    QR code linking to the Desmos graph for Sections 3 and 4.           Use what you have seen in Sections 1-3 to make a single rule: given a polynomial in factored form, how do you decide whether the graph crosses or touches the axis at each root?      Suppose you multiplied your polynomial from this section by . Which of your answers above would change, and which would stay the same?      Section 4: Construct One Yourself (with your partner)   Compare your rule from Section 3 with your neighbor's rule. Then work together to build polynomials with the sign behavior described below. Use the last Desmos page to check your work. A constant multiple in front of your factored formula is allowed if you need.     Build a polynomial, in factored form, with a root at where the graph touches without crossing, a root at where it crosses, and a root at where it crosses, and so that is negative for . Check it in Desmos, then write your final formula below.      If you have time: build a second polynomial with a root at where the graph touches, a root at where it crosses, and a root at where it touches so that is negative for .     "
+},
+{
+  "id": "ex-one-root",
+  "level": "2",
+  "url": "activity-polynomial-sign-behavior.html#ex-one-root",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: One Root, Changing Multiplicity.",
+  "body": " Section 1: One Root, Changing Multiplicity   Open the first Desmos page below. It graphs , with a slider for .    QR code linking to the Desmos graph for Section 1.          Set to each value below. For each one, record the sign of just to the left and just to the right of the root at , and whether the graph crosses the axis there or just touches it.     Sign for  Sign for  Cross or touch?   1  2  3  4       What determines whether the graph crosses or just touches at ? Write a one-sentence rule.    "
+},
+{
+  "id": "ex-two-roots",
+  "level": "2",
+  "url": "activity-polynomial-sign-behavior.html#ex-two-roots",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Two Roots, Two Independent Exponents.",
+  "body": " Section 2: Two Roots, Two Independent Exponents   Open the second Desmos page below. It graphs , with separate sliders for and .    QR code linking to the Desmos graph for Section 2.          Try at least three different combinations of and , including at least one even and one odd value for each. Record the sign of in each of the three intervals below.      Sign for  Sign for  Sign for           Does changing ever affect whether the graph crosses or touches at ? Does changing ever affect what happens at ? What does that tell you about how the two roots interact?    "
+},
+{
+  "id": "ex-predict-check",
+  "level": "2",
+  "url": "activity-polynomial-sign-behavior.html#ex-predict-check",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: Predict, Then Check.",
+  "body": " Section 3: Predict, Then Check   Do not open the Desmos page yet. Consider .     Before touching Desmos, predict the sign of in each interval below.    Interval  Predicted sign            Now open the Desmos page below. It starts with the placeholder formula . Change the polynomial from to and check your prediction. Where, if anywhere, were you wrong? Update your table above if needed.    QR code linking to the Desmos graph for Sections 3 and 4.           Use what you have seen in Sections 1-3 to make a single rule: given a polynomial in factored form, how do you decide whether the graph crosses or touches the axis at each root?      Suppose you multiplied your polynomial from this section by . Which of your answers above would change, and which would stay the same?    "
+},
+{
+  "id": "ex-construct",
+  "level": "2",
+  "url": "activity-polynomial-sign-behavior.html#ex-construct",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Construct One Yourself (with your partner).",
+  "body": " Section 4: Construct One Yourself (with your partner)   Compare your rule from Section 3 with your neighbor's rule. Then work together to build polynomials with the sign behavior described below. Use the last Desmos page to check your work. A constant multiple in front of your factored formula is allowed if you need.     Build a polynomial, in factored form, with a root at where the graph touches without crossing, a root at where it crosses, and a root at where it crosses, and so that is negative for . Check it in Desmos, then write your final formula below.      If you have time: build a second polynomial with a root at where the graph touches, a root at where it crosses, and a root at where it touches so that is negative for .    "
+},
+{
   "id": "handouts",
   "level": "1",
   "url": "handouts.html",
