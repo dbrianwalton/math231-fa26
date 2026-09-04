@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Discovery activity: sign behavior of factored polynomials, built around
+     three pre-built Desmos pages (each also has a "Sign Shading" layer
+     the instructor added, using 0 < y <= sign(f(x)) and
+     sign(f(x)) <= y < 0 to shade above/below the axis) plus a partner
+     construction challenge. Prepares for solving polynomial and rational
+     inequalities next class; rational functions are deliberately NOT
+     touched today and get their own short exploration to open next
+     class instead.
+
+     Desmos pages (share links, in order):
+       Section 1: https://www.desmos.com/calculator/brkxbkvz0t
+                  "One Factor Multiplicity Exploration"
+                  f(x) = (x-2)^n, slider n from 1 to 4.
+       Section 2: https://www.desmos.com/calculator/kpud68ncgb
+                  "Two Factor Multiplicity Exploration"
+                  f(x) = (x+2)^m (x-3)^n, independent sliders m, n from 1 to 4.
+       Sections 3 & 4: https://www.desmos.com/calculator/5riqcszzk4
+                  "Function Sign Analysis Exploration"
+                  f(x) = x^2 (placeholder, meant to be replaced by the student).
+
+     Design notes (not shown to students):
+     - One controlled variable per stage. Section 1 varies only the
+       exponent on a single root; Section 2 fixes both roots and varies
+       both exponents independently, so students see that each root's
+       cross/touch behavior depends only on ITS OWN exponent, not the
+       other root's. A leading coefficient is deliberately absent from
+       both of these pages - that variable is withheld until Section 4.
+     - Section 3 is a predict-then-check, not another manipulate-and-
+       observe page: students must commit to a written prediction before
+       opening the graph. The Desmos page starts with the placeholder
+       f(x) = x^2 for exactly this reason - remind students out loud to
+       type their own formula in place of x^2, not just read the graph
+       that's already there.
+     - Section 3's polynomial, (x+4)(x-1)^2(x-3)^3, is chosen to break the
+       "every root flips the sign" assumption (the multiplicity-2 root at
+       x=1 does not flip it) and to show that odd multiplicities above 1
+       still cross, just flatter - watch for students who think the
+       multiplicity-1 and multiplicity-3 crossings are fundamentally
+       different in sign behavior.
+     - Section 4's required target needs an overall negative multiplier,
+       which nothing before it has modeled directly. The retrieval
+       question at the end of Section 3 (multiply by -1 - what changes
+       and what doesn't?) puts that tool in students' hands before they
+       need it, without hinting that THIS target needs it. If a pair's
+       graph is a mirror image of the target (right shape, wrong side of
+       the axis), that's the moment to ask what single change would flip
+       the whole picture - avoid just telling them.
+     - Keep circulating during Section 4 - it is the only paired,
+       synchronous moment in an otherwise individually-paced worksheet,
+       and it's where a stuck pair loses the most time. -->
+<worksheet xml:id="activity-polynomial-sign-behavior">
+  <title>Sign Behavior of Factored Polynomials</title>
+
+  <introduction>
+    <p>
+      When a formula is written in factored form, its graph's sign 
+      (positive or negative) is controlled entirely by its roots.
+      Today you will use Desmos to discover how. We will use what you notice
+      today to solve equations and inequalities later.
+    </p>
+    <p>
+      Work through Sections 1-3 on your own, using your own computer 
+      or mobile device. Either scan the QR code or open the link
+      shown. After Section 3, compare what you find with your
+      neighbor, then work Section 4 together.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-one-root" workspace="0in">
+    <title>Section 1: One Root, Changing Multiplicity</title>
+    <introduction>
+      <p>
+        Open the first Desmos page below. It graphs <m>f(x) = (x-2)^n</m>,
+        with a slider for <m>n</m>.
+      </p>
+      <image source="images/qr-desmos-sign-behavior-1.png" width="20%" margins="0% 80%">
+        <description>
+          <p>QR code linking to the Desmos graph for Section 1.</p>
+        </description>
+      </image>
+      <p>
+        <url href="https://www.desmos.com/calculator/brkxbkvz0t"
+             visual="desmos.com/calculator/brkxbkvz0t"/>
+      </p>
+    </introduction>
+    <task xml:id="task-one-root-table" workspace="0in">
+      <statement>
+        <p>
+          Set <m>n</m> to each value below. For each one, record the sign
+          of <m>f(x)</m> just to the left and just to the right of the
+          root at <m>x=2</m>, and whether the graph crosses the axis there
+          or just touches it.
+        </p>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell><m>n</m></cell>
+            <cell>Sign for <m>x&lt;2</m></cell>
+            <cell>Sign for <m>x&gt;2</m></cell>
+            <cell>Cross or touch?</cell>
+          </row>
+          <row><cell>1</cell><cell/><cell/><cell/></row>
+          <row><cell>2</cell><cell/><cell/><cell/></row>
+          <row><cell>3</cell><cell/><cell/><cell/></row>
+          <row><cell>4</cell><cell/><cell/><cell/></row>
+        </tabular>
+      </statement>
+    </task>
+    <task xml:id="task-one-root-notice" workspace="0.25in">
+      <statement>
+        <p>
+          What determines whether the graph crosses or just touches at
+          <m>x=2</m>? Write a one-sentence rule.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-two-roots" workspace="0in">
+    <title>Section 2: Two Roots, Two Independent Exponents</title>
+    <introduction>
+      <p>
+        Open the second Desmos page below. It graphs
+        <m>f(x) = (x+2)^m(x-3)^n</m>, with separate sliders for <m>m</m>
+        and <m>n</m>.
+      </p>
+      <image source="images/qr-desmos-sign-behavior-2.png" width="20%" margins="0% 80%">
+        <description>
+          <p>QR code linking to the Desmos graph for Section 2.</p>
+        </description>
+      </image>
+      <p>
+        <url href="https://www.desmos.com/calculator/kpud68ncgb"
+             visual="desmos.com/calculator/kpud68ncgb"/>
+      </p>
+    </introduction>
+    <task xml:id="task-two-roots-table" workspace="0in">
+      <statement>
+        <p>
+          Try at least three different combinations of <m>m</m> and
+          <m>n</m>, including at least one even and one odd value for
+          each. Record the sign of <m>f(x)</m> in each of the three
+          intervals below.
+        </p>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell><m>m</m></cell>
+            <cell><m>n</m></cell>
+            <cell>Sign for <m>x&lt;-2</m></cell>
+            <cell>Sign for <m>-2&lt;x&lt;3</m></cell>
+            <cell>Sign for <m>x&gt;3</m></cell>
+          </row>
+          <row><cell><m>\phantom{W}</m></cell><cell/><cell/><cell/><cell/></row>
+          <row><cell><m>\phantom{W}</m></cell><cell/><cell/><cell/><cell/></row>
+          <row><cell><m>\phantom{W}</m></cell><cell/><cell/><cell/><cell/></row>
+        </tabular>
+      </statement>
+    </task>
+    <task xml:id="task-two-roots-notice" workspace="0.25in">
+      <statement>
+        <p>
+          Does changing <m>n</m> ever affect whether the graph crosses or
+          touches at <m>x=-2</m>? Does changing <m>m</m> ever affect what
+          happens at <m>x=3</m>? What does that tell you about how the two
+          roots interact?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-predict-check" workspace="0in">
+    <title>Section 3: Predict, Then Check</title>
+    <introduction>
+      <p>
+        Do <em>not</em> open the Desmos page yet. Consider
+        <md>f(x) = (x+4)(x-1)^2(x-3)^3</md>.
+      </p>
+    </introduction>
+    <task xml:id="task-predict" workspace="0in">
+      <statement>
+        <p>
+          Before touching Desmos, predict the sign of <m>f(x)</m> in each
+          interval below.
+        </p>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell>Interval</cell>
+            <cell>Predicted sign</cell>
+          </row>
+          <row><cell><m>x&lt;-4</m></cell><cell/></row>
+          <row><cell><m>-4&lt;x&lt;1</m></cell><cell/></row>
+          <row><cell><m>1&lt;x&lt;3</m></cell><cell/></row>
+          <row><cell><m>x&gt;3</m></cell><cell/></row>
+        </tabular>
+      </statement>
+    </task>
+    <task xml:id="task-check" workspace="0in">
+      <statement>
+        <p>
+          Now open the Desmos page below. It starts with the
+          placeholder formula <m>f(x) = x^2</m>. Change the polynomial 
+          from <m>x^2</m> to <m>(x+4)(x-1)^2(x-3)^3</m> and check your 
+          prediction. Where, if anywhere, were you wrong? Update your
+          table above if needed.
+        </p>
+        <image source="images/qr-desmos-sign-behavior-3.png" width="20%" margins="0% 80%">
+          <description>
+            <p>
+              QR code linking to the Desmos graph for Sections 3 and 4.
+            </p>
+          </description>
+        </image>
+        <p>
+          <url href="https://www.desmos.com/calculator/5riqcszzk4"
+               visual="desmos.com/calculator/5riqcszzk4"/>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rule" workspace="0.5in">
+      <statement>
+        <p>
+          Use what you have seen in Sections 1-3 to make a single
+          rule: given a polynomial in factored form, how do you decide
+          whether the graph crosses or touches the axis at each root?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-negate" workspace="0.75in">
+      <statement>
+        <p>
+          Suppose you multiplied your polynomial from this section by
+          <m>-1</m>. Which of your answers above would change, and which
+          would stay the same?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-construct" workspace="0in">
+    <title>Section 4: Construct One Yourself (with your partner)</title>
+    <introduction>
+      <p>
+        Compare your rule from Section 3 with your neighbor's rule. Then
+        work together to build polynomials with the sign behavior described 
+        below. Use the last Desmos page to check your work. A constant
+        multiple in front of your factored formula is allowed if you need.
+      </p>
+    </introduction>
+    <task xml:id="task-construct-required" workspace="1in">
+      <statement>
+        <p>
+          Build a polynomial, in factored form, with a root at
+          <m>x=-1</m> where the graph touches without crossing, a root at
+          <m>x=2</m> where it crosses, and a root at <m>x=4</m> where it
+          crosses, and so that <m>f(x)</m> is <em>negative</em> for
+          <m>x&lt;-1</m>. Check it in Desmos, then write your final
+          formula below.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-construct-bonus" workspace="1in">
+      <statement>
+        <p>
+          If you have time: build a second polynomial with a root at
+          <m>x=-3</m> where the graph touches, a root at <m>x=0</m> where
+          it crosses, and a root at <m>x=3</m> where it touches 
+          so that <m>f(x)</m> is negative for <m>x&lt;-3</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
