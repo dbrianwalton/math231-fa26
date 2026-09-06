@@ -49,7 +49,21 @@
        the whole picture - avoid just telling them.
      - Keep circulating during Section 4 - it is the only paired,
        synchronous moment in an otherwise individually-paced worksheet,
-       and it's where a stuck pair loses the most time. -->
+       and it's where a stuck pair loses the most time.
+
+     Note added 2026-09-06, for the next time this activity is taught:
+     fold the number-line sign diagram into Section 3's task-rule moment.
+     Once students state their cross/touch rule, have them re-express it
+     as a number line - mark each root, fix the sign in one interval
+     (test a point, or reason from end behavior), then propagate outward
+     by flipping the sign at odd-multiplicity roots and keeping it at
+     even ones. That is a good 5 extra minutes here, not in the activity
+     that follows: activity 06 (rational functions) reuses this exact
+     diagram and only adds discontinuities as a second kind of marked
+     point (function undefined there, vs. equal to zero at a root) -
+     so if the diagram is already a comfortable tool by the time 06
+     starts, 06 doesn't have to teach it from scratch under a tight
+     30-35 minute budget. -->
 <worksheet xml:id="activity-polynomial-sign-behavior">
   <title>Sign Behavior of Factored Polynomials</title>
 

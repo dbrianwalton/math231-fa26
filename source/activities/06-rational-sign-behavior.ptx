@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Discovery activity: extends the sign-behavior work from Activity 05
+     (factors of polynomials) to a polynomial divided by a polynomial.
+     "Rational function" is not named today - framed instead as "a
+     polynomial divided by a polynomial." Assumes the number-line sign
+     diagram (mark each root, fix a sign in one interval, propagate by
+     flipping at odd-multiplicity boundary points and keeping the sign
+     at even ones) was already introduced live during today's Activity
+     05 catch-up - see the note added to that file on 2026-09-06. This
+     activity only has to add ONE new idea: a denominator factor creates
+     a discontinuity (function undefined there) instead of a root
+     (function equal to zero), but it goes on the same number line and
+     obeys the same odd/even propagation rule.
+
+     Timing: deliberately short. Class opens with roughly 20-25 minutes
+     finishing Activity 05 (Sections 3-4, dropping the Section 4 bonus
+     construction if catch-up runs long), leaving about 25-30 minutes
+     for this activity in the 50-minute period.
+
+     Desmos pages (share links, in order):
+       Section 1: https://www.desmos.com/calculator/6t9ukhu4tg
+                  "One Factor Rational"
+                  f(x) = 1/(x-2)^n, slider n from 1 to 4.
+       Section 2: https://www.desmos.com/calculator/rztlg4whww
+                  "Two Factor Rational"
+                  f(x) = (x+2)^m / (x-3)^n, independent sliders m, n
+                  from 1 to 4.
+       Section 3: reuses Activity 05's Section 3/4 Desmos page and QR
+                  image (same share link and file:
+                  assets/images/qr-desmos-sign-behavior-3.png) - it is
+                  a general "type your own formula" page, already
+                  starting from the placeholder f(x) = x^2, so no new
+                  Desmos page or QR asset is needed.
+                  https://www.desmos.com/calculator/5riqcszzk4
+
+     Design notes:
+     - Section 1 is a direct bridge from last activity: students
+       already know the odd/even rule from Activity 05. The new
+       idea is that a denominator factor's boundary point is a place
+       where f is undefined (vertical asymptote), not a place where
+       f = 0 - the sign still flips or holds by the exact same parity
+       rule.
+     - Section 2 deliberately keeps one factor on top and one on bottom,
+       with independent exponents, to show that a factor's own parity -
+       not whether it sits in the numerator or the denominator - is
+       what controls its own boundary point, and that a root's behavior
+       does not depend on what the denominator is doing (and vice
+       versa).
+     - Section 3's target, (x+2)(x-1)^2 / ((x+1)(x-3)^2), is a
+       test of transfer: one odd and one even multiplicity in the
+       numerator, one odd and one even multiplicity in the denominator,
+       and no shared factors (no holes). Students
+       must build the number-line diagram BY HAND - mark all four
+       boundary points, fix a sign in one interval, and propagate - and
+       commit to it BEFORE touching the Desmos page.
+     - Kept light on writing on purpose. Sections 1-2 use shorter tables
+       and fewer notice-questions than Activity 05's parallel sections -
+       that time is meant to go to the number-line method during the
+       Activity 05 catch-up, not to new writing here. -->
+<worksheet xml:id="activity-rational-sign-behavior">
+  <title>Sign Behavior of Rational Expressions</title>
+
+  <introduction>
+    <p>
+      On the last activity, you found a rule for the sign of a polynomial near each
+      of its roots, based on whether that root's factor has an odd or
+      even exponent. Today we ask the same question when a polynomial
+      is divided by another polynomial.
+    </p>
+    <p>
+      A new kind of point shows up: a value of <m>x</m> where the
+      denominator is <m>0</m>. The function is <em>undefined</em> there
+      instead of equal to zero, but it still marks the edge of an
+      interval on your number line, and the same odd/even rule tells
+      you whether the sign changes there.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-one-factor-rational" workspace="0in">
+    <title>Section 1: One Factor, Now in the Denominator</title>
+    <introduction>
+      <p>
+        Open the first Desmos page below. It graphs
+        <m>f(x) = \dfrac{1}{(x-2)^n}</m>, with a slider for <m>n</m>.
+      </p>
+      <image source="images/qr-desmos-rational-sign-behavior-1.png" width="20%" margins="0% 80%">
+        <description>
+          <p>QR code linking to the Desmos graph for Section 1.</p>
+        </description>
+      </image>
+      <p>
+        <url href="https://www.desmos.com/calculator/6t9ukhu4tg"
+             visual="desmos.com/calculator/6t9ukhu4tg"/>
+      </p>
+    </introduction>
+    <task xml:id="task-one-factor-rational-table" workspace="0in">
+      <statement>
+        <p>
+          Each number line below is already labeled with a value of
+          <m>n</m>. For each one, mark <m>x=2</m> and label the sign of
+          <m>f(x)</m> on each side.
+        </p>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x)=1/(x-2)^1$ to its right.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (4,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x)=\dfrac{1}{(x-2)^1}$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x)=1/(x-2)^2$ to its right.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (4,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x)=\dfrac{1}{(x-2)^2}$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x)=1/(x-2)^3$ to its right.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (4,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x)=\dfrac{1}{(x-2)^3}$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x)=1/(x-2)^4$ to its right.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (4,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x)=\dfrac{1}{(x-2)^4}$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-one-factor-rational-bridge" workspace="0.25in">
+      <statement>
+        <p>
+          At <m>x=2</m>, <m>f</m> is undefined instead of zero.
+          There is no point on the graph there, it instead has an asymptote.
+          Does the even/odd rule you found for roots of polynomials
+          still work for this new formula at <m>x=2</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-two-factor-rational" workspace="0in">
+    <title>Section 2: One Root, One Discontinuity</title>
+    <introduction>
+      <p>
+        Open the second Desmos page below. It graphs
+        <m>f(x) = \dfrac{(x+2)^m}{(x-3)^n}</m>, with separate sliders
+        for <m>m</m> and <m>n</m>.
+      </p>
+      <image source="images/qr-desmos-rational-sign-behavior-2.png" width="20%" margins="0% 80%">
+        <description>
+          <p>QR code linking to the Desmos graph for Section 2.</p>
+        </description>
+      </image>
+      <p>
+        <url href="https://www.desmos.com/calculator/rztlg4whww"
+             visual="desmos.com/calculator/rztlg4whww"/>
+      </p>
+    </introduction>
+    <task xml:id="task-two-factor-rational-table" workspace="0in">
+      <statement>
+        <p>
+          Try at least three combinations of <m>m</m> and <m>n</m>,
+          including at least one even and one odd value for each. For
+          each one, write your formula next to the number line, then
+          mark <m>x=-2</m> and <m>x=3</m> and label the sign of
+          <m>f(x)</m> in each interval.
+        </p>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x) = $ to its right and blank space to write in the chosen formula.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (9,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x) = $};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x) = $ to its right and blank space to write in the chosen formula.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (9,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x) = $};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x) = $ to its right and blank space to write in the chosen formula.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (9,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x) = $};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+        <image width="60%">
+          <description>
+            <p>A blank number line with arrows on both ends, with the label $f(x) = $ to its right and blank space to write in the chosen formula.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (9,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x) = $};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+
+      </statement>
+    </task>
+    <task xml:id="task-two-factor-rational-notice" workspace="0.25in">
+      <statement>
+        <p>
+          Does changing <m>n</m> ever affect whether the graph crosses
+          or touches at <m>x=-2</m>? Does changing <m>m</m> ever affect
+          whether the sign changes at the discontinuity <m>x=3</m>? What
+          does that tell you about numerator and denominator factors?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-rational-challenge" workspace="0in">
+    <title>Section 3: Build the Diagram, Then Check</title>
+    <introduction>
+      <p>
+        Do <em>not</em> open Desmos yet. Consider
+        <md>f(x) = \dfrac{(x+2)(x-1)^2}{(x+1)(x-3)^2}</md>
+      </p>
+    </introduction>
+    <task xml:id="task-rational-challenge-diagram" workspace="0.75in">
+      <statement>
+        <p>
+          Mark all four boundary points on the number line below: the
+          two roots and the two discontinuities. Determine the sign of
+          <m>f(x)</m> in one interval, then use the odd/even rule to
+          fill in every other interval. Label each interval with a
+          sign, and mark each discontinuity clearly so it isn't
+          mistaken for a root.
+        </p>
+        <image width="55%">
+          <description>
+            <p>A blank number line with arrows on both ends, for marking
+            boundary points and signs by hand.</p>
+          </description>
+          <latex-image>
+            \begin{tikzpicture}[x=1cm]
+              \path (-4,-0.8) rectangle (4,0.8);
+              \draw[thick, &lt;-&gt;] (-4,0) -- (4,0);
+              \node[anchor=west] at (4.3,0) {$f(x)$};
+            \end{tikzpicture}
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+    <task xml:id="task-rational-challenge-check" workspace="0in">
+      <statement>
+        <p>
+          After your diagram above is complete, open the Desmos
+          page below to check it. Replace the given formula
+          with that needed for this problem
+          <m>(x+2)(x-1)^2/((x+1)(x-3)^2)</m> and compare the graph to
+          your prediction.
+        </p>
+        <image source="images/qr-desmos-sign-behavior-3.png" width="20%" margins="0% 80%">
+          <description>
+            <p>
+              QR code linking to the Desmos graph for Section 3 (shared
+              with Activity 05).
+            </p>
+          </description>
+        </image>
+        <p>
+          <url href="https://www.desmos.com/calculator/5riqcszzk4"
+               visual="desmos.com/calculator/5riqcszzk4"/>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rational-challenge-reflect" workspace="0.5in">
+      <statement>
+        <p>
+          Where, if anywhere, did your diagram disagree with the graph?
+          What did you fix?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
