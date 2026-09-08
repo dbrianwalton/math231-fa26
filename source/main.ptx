@@ -51,6 +51,7 @@
       <xi:include href="./activities/04-inverse-operations.ptx"/>
       <xi:include href="./activities/05-polynomial-sign-behavior.ptx"/>
       <xi:include href="./activities/06-rational-sign-behavior.ptx"/>
+      <xi:include href="./activities/07-rational-inequalities.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>

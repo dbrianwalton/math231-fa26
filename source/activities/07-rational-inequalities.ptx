@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-solve-rational-inequality">
+  <title>Solving Rational Inequalities</title>
+
+  <introduction>
+    <p>
+      You now know how to create a sign analysis summary of polynomials and rational expressions
+      when they are written in factored form. This allows us to solve inequalities involving
+      polynomials and rational expressions when they can be factored.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-polynomial-inequality-repeated-root" workspace="0in">
+    <title>Section 1: A polynomial inequality</title>
+    <introduction>
+      <p>
+        When an expression is already factored and simplified, we know how to create
+        a sign analysis summary number line:
+          <ol>
+            <li>
+              <p>
+                Find the root of each factor and mark it on a number line.
+                These will be the end-points of our sign intervals.
+              </p>
+            </li>
+            <li>
+              <p>
+                Determine the sign inside each of the intervals. You can use test points with the
+                expression for each interval or you can find one interval and then use even/odd power
+                analysis to get the rest.
+              </p>
+            </li>
+          </ol>
+      </p>
+      <p>
+        Solving an inequality which is comparing an expression to zero is exactly the same as
+        identifying positive and negative intervals, just with an added interpretation step.
+        <ul>
+          <li>
+            <p>
+              <m>\mathrm{expression} &gt; 0</m> is finding the set of values where the expression is <em>positive</em>.
+            </p>
+            <p>
+              <m>\mathrm{expression} \ge 0</m> is finding the set of values where the expression is <em>positive</em> and also any values where the expression <em>equals zero</em>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Similar ideas apply to <m>\mathrm{expression} &lt; 0</m> and <m>\mathrm{expression} \le 0</m>, except we are looking at sets where the expression is <em>negative</em>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </introduction>
+    <task xml:id="task-one-polynomial-inequality-repeated-root" workspace="1.5in">
+      <statement>
+        <p>
+          Solve the inequality <m>\displaystyle (x+1)^2(x-3) &lt; 0</m> using the following steps.
+          <ul>
+            <li>
+              <p>Create the number line summary of the sign analysis for the expression.</p>
+            </li>
+            <li>
+              <p>Because the inequality involves <q><m>&lt; 0</m></q>, identify all of the values on the sign summary that make the expression <em>negative</em>. Since this is a strict inequality, the roots themselves are not included.</p>
+            </li>
+            <li>
+              <p>Write the set using interval notation.</p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-polynomial-inequality-three-roots" workspace="0in">
+    <title>Section 2: A polynomial inequality with three roots</title>
+    <introduction>
+      <p>
+        Now try the same process on a polynomial with three distinct linear factors, this time
+        using an <q>or equals</q> inequality.
+      </p>
+    </introduction>
+    <task xml:id="task-two-polynomial-inequality-three-roots" workspace="1.5in">
+      <statement>
+        <p>
+          Solve the inequality <m>\displaystyle x(x+2)(x-3) \ge 0</m> using the following steps.
+          <ul>
+            <li>
+              <p>Create the number line summary of the sign analysis for the expression.</p>
+            </li>
+            <li>
+              <p>Because the inequality involves <q><m>\ge 0</m></q>, identify all of the values on the sign summary that make the expression <em>positive</em> or <em>equal</em> to zero. Since every factor is in the numerator, all three roots are included in the solution.</p>
+            </li>
+            <li>
+              <p>Write the set using interval notation.</p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-rational-inequality-simple" workspace="0in">
+    <title>Section 3: A rational inequality</title>
+    <introduction>
+      <p>
+        A rational expression introduces a small complication: a factor in the denominator gives a
+        vertical asymptote instead of a root. It still marks the end of a sign interval on the
+        number line, but it is <em>never</em> part of the solution set, even when the inequality
+        includes <q>or equals</q>.
+      </p>
+      <p>
+        It is essential that you pay attention to the difference between <term>roots</term> and <term>vertical asymptotes</term> (or other discontinuities) because the <em>or equals</em> part of an inequality only involves the roots, not the asymptotes.
+      </p>
+    </introduction>
+    <task xml:id="task-one-rational-inequality-simple" workspace="1.5in">
+      <statement>
+        <p>
+          Solve the inequality <m>\displaystyle \frac{(x+2)(x-1)^2}{x-3} \ge 0</m> using the following steps.
+          <ul>
+            <li>
+              <p>Create the number line summary of the sign analysis for the expression.</p>
+            </li>
+            <li>
+              <p>Because the inequality involves <q><m>\ge 0</m></q>, identify all of the values on the sign summary that make the expression <em>positive</em> or <em>equal</em> to zero.</p>
+            </li>
+            <li>
+              <p>Write the set using interval notation.</p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </task>
+    <task workspace="0.5in">
+      <statement>
+        <p>
+          Solve the inequality <m>\displaystyle \frac{(x+2)(x-1)^2}{x-3} \lt 0</m>.
+          You already created the sign analysis summary for the same expression on the last problem.
+          Only the interpretation is different.
+        </p>
+      </statement>
+    </task>
+    <task workspace="0.5in">
+      <statement>
+        <p>
+          Solve the inequality <m>\displaystyle \frac{(x+2)(x-1)^2}{x-3} \le 0</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
