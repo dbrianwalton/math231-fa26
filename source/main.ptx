@@ -52,6 +52,7 @@
       <xi:include href="./activities/05-polynomial-sign-behavior.ptx"/>
       <xi:include href="./activities/06-rational-sign-behavior.ptx"/>
       <xi:include href="./activities/07-rational-inequalities.ptx"/>
+      <xi:include href="./activities/08-function-notation.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
