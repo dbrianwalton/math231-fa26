@@ -361,6 +361,51 @@ var ptx_lunr_docs = [
   "body": " Section 3: A rational inequality   A rational expression introduces a small complication: a factor in the denominator gives a vertical asymptote instead of a root. It still marks the end of a sign interval on the number line, but it is never part of the solution set, even when the inequality includes or equals .  It is essential that you pay attention to the difference between roots and vertical asymptotes (or other discontinuities) because the or equals part of an inequality only involves the roots, not the asymptotes.     Solve the inequality using the following steps.   Create the number line summary of the sign analysis for the expression.    Because the inequality involves , identify all of the values on the sign summary that make the expression positive or equal to zero.    Write the set using interval notation.         Solve the inequality . You already created the sign analysis summary for the same expression on the last problem. Only the interpretation is different.      Solve the inequality .    "
 },
 {
+  "id": "activity-function-notation",
+  "level": "1",
+  "url": "activity-function-notation.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Function Notation: Graphs, Tables, and Formulas",
+  "body": " Function Notation: Graphs, Tables, and Formulas   Today's activity is about function notation : the name of a function , followed by a specific input value in parentheses. It is tempting to read this the way parentheses next to a letter in algebra usually imply multiplication, \" times .\" That is not what is happening here. is a single symbol. All by itself, it names one number: the output that the function produces when the input is . Instead we read, \" of \" or \"the value of at .\"  You will meet functions described three different ways today: as a graph, as a table, and as a formula. You will practice reading the same way no matter which description you're given.    Section 1: Reading Values from a Graph   Every time you evaluate a function, think of it like a card representing a value: the front reads something like , and the back reads whatever number that turns out to be. Evaluating a function is flipping the card over . The front and the back are two views of the very same value and are interchangeable.  Here is the graph of a function .   The graph of   A piecewise graph with three pieces. A rising line segment runs from a closed point at (-4,1) up to an open point at (-2,3). A upward-curving parabola arc runs from a closed point at (-2,4) to a closed point at (1,1), with an open point (a hole) at (-0.5, 0.25) where the curve is interrupted. A falling line segment runs from an open point at (1,3) down to a closed point at (4,0).     A filled-in point is part of the graph of ; an open point is not part of the graph, but illustrates that the curve would reach it if it were closed. Most -values on this graph don't have any special point marked at all and are just read off where the curve passes through.     Find . Make a card for it.      Find . Make a card for it.      Find . Make a card for it. (If you don't think this has a value, say so on the back of the card, and be ready to explain why.)      Find . Make a card for it.      Section 2: Reading Values from a Table, and Combining Values   Here is a table for a second function, . To find , look through the top row for the input value , then read the number underneath it.     -3  -1  0  2  3  4     5  2  -1  0  4  1    Making a card for a value read from a table works exactly the same way as it did for the graph. The input value is found in the row. The value of the function (back of the card) is found in the row.  Some expressions below use more than one function evaluation. In those cases, make a card for each evaluation first. Then use the compound expression starting with the function side up and then flip each card over. Use the new representation showing the values to complete the arithmetic.     Find the value of . Make a card for and use your earlier card for , then multiply the two numbers on their backs.      Find the value of . Make a card for first.      Section 3: Formulas as Evaluation Rules   A formula is a third way to describe a function. Instead of reading a picture or a table, you calculate the number on the back using a rule described by the formula. Although a formula is usually given using a variable like  , it can help to write the rule with a box in place of the input, like this: Whatever number goes inside the box in the parentheses of , that same number must go in every box on the other side with the rule.  This is a piecewise formula: has two different rules, and each rule is associated with a different interval described by an inequality. Which one you use depends on where the input falls. To evaluate , first decide which condition satisfies ( or ) and only then fill that rule's formula box with everywhere it appears.     Find . Make a card for it.      Find . Make a card for it.      Find . Make a card for it. Which rule did you use, and why?      Section 4: Putting It Together   You now have three functions on the table: from its graph, from its table, and from its piecewise formula. They're all the same kind of object. Each one hands you a single output value for a given input. Make a card for every evaluation before combining values.     Find the value of .      Find the value of .     "
+},
+{
+  "id": "ex-function-notation-graph",
+  "level": "2",
+  "url": "activity-function-notation.html#ex-function-notation-graph",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: Reading Values from a Graph.",
+  "body": " Section 1: Reading Values from a Graph   Every time you evaluate a function, think of it like a card representing a value: the front reads something like , and the back reads whatever number that turns out to be. Evaluating a function is flipping the card over . The front and the back are two views of the very same value and are interchangeable.  Here is the graph of a function .   The graph of   A piecewise graph with three pieces. A rising line segment runs from a closed point at (-4,1) up to an open point at (-2,3). A upward-curving parabola arc runs from a closed point at (-2,4) to a closed point at (1,1), with an open point (a hole) at (-0.5, 0.25) where the curve is interrupted. A falling line segment runs from an open point at (1,3) down to a closed point at (4,0).     A filled-in point is part of the graph of ; an open point is not part of the graph, but illustrates that the curve would reach it if it were closed. Most -values on this graph don't have any special point marked at all and are just read off where the curve passes through.     Find . Make a card for it.      Find . Make a card for it.      Find . Make a card for it. (If you don't think this has a value, say so on the back of the card, and be ready to explain why.)      Find . Make a card for it.    "
+},
+{
+  "id": "ex-function-notation-table",
+  "level": "2",
+  "url": "activity-function-notation.html#ex-function-notation-table",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Reading Values from a Table, and Combining Values.",
+  "body": " Section 2: Reading Values from a Table, and Combining Values   Here is a table for a second function, . To find , look through the top row for the input value , then read the number underneath it.     -3  -1  0  2  3  4     5  2  -1  0  4  1    Making a card for a value read from a table works exactly the same way as it did for the graph. The input value is found in the row. The value of the function (back of the card) is found in the row.  Some expressions below use more than one function evaluation. In those cases, make a card for each evaluation first. Then use the compound expression starting with the function side up and then flip each card over. Use the new representation showing the values to complete the arithmetic.     Find the value of . Make a card for and use your earlier card for , then multiply the two numbers on their backs.      Find the value of . Make a card for first.    "
+},
+{
+  "id": "ex-function-notation-formula",
+  "level": "2",
+  "url": "activity-function-notation.html#ex-function-notation-formula",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: Formulas as Evaluation Rules.",
+  "body": " Section 3: Formulas as Evaluation Rules   A formula is a third way to describe a function. Instead of reading a picture or a table, you calculate the number on the back using a rule described by the formula. Although a formula is usually given using a variable like  , it can help to write the rule with a box in place of the input, like this: Whatever number goes inside the box in the parentheses of , that same number must go in every box on the other side with the rule.  This is a piecewise formula: has two different rules, and each rule is associated with a different interval described by an inequality. Which one you use depends on where the input falls. To evaluate , first decide which condition satisfies ( or ) and only then fill that rule's formula box with everywhere it appears.     Find . Make a card for it.      Find . Make a card for it.      Find . Make a card for it. Which rule did you use, and why?    "
+},
+{
+  "id": "ex-function-notation-together",
+  "level": "2",
+  "url": "activity-function-notation.html#ex-function-notation-together",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Putting It Together.",
+  "body": " Section 4: Putting It Together   You now have three functions on the table: from its graph, from its table, and from its piecewise formula. They're all the same kind of object. Each one hands you a single output value for a given input. Make a card for every evaluation before combining values.     Find the value of .      Find the value of .    "
+},
+{
   "id": "handouts",
   "level": "1",
   "url": "handouts.html",
