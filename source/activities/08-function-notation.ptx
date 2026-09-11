@@ -138,14 +138,14 @@
     <task xml:id="task-table-product" workspace="1.5in">
       <statement>
         <p>
-          Find the value of <m>g(0) \cdot f(-1)</m>. Make a card for <m>g(0)</m> and a card for <m>f(-1)</m> first, then multiply the two numbers on their backs.
+          Find the value of <m>g(-3) \cdot f(-1)</m>. Make a card for <m>g(-3)</m> and use your earlier card for <m>f(-1)</m>, then multiply the two numbers on their backs.
         </p>
       </statement>
     </task>
     <task xml:id="task-table-compound" workspace="1.5in">
       <statement>
         <p>
-          Find the value of <m>\bigl(2f(-2) - 1\bigr)^2</m>. Make a card for <m>f(-2)</m> first.
+          Find the value of <m>\bigl(2g(3) - 1\bigr)^2</m>. Make a card for <m>g(3)</m> first.
         </p>
       </statement>
     </task>
