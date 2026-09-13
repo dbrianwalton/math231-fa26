@@ -82,6 +82,51 @@ var ptx_lunr_docs = [
   "body": "  Solve the equation below using the method of isolation.  =                     a\/(b*x+c)+d    d+k    (a-c*k)\/(b*k)           "
 },
 {
+  "id": "notes-week-02",
+  "level": "1",
+  "url": "notes-week-02.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 3 and Week 4",
+  "body": " Week 3 and Week 4   Week 3 focused on sign analysis so that we could be able to address questions involving inequalities using factored polynomials and rational expressions. We then introduced function notation.    P4 Linear Modeling   P4  I can solve an inequality involving a factored polynomial or rational function by creating and interpreting a sign analysis chart.   What do I need to understand?   To perform sign analysis, we need to start with a completely factored formula and be able to identify the root of each factor as well as the multiplicity (power) of the factor.    Roots from the numerator (top) are the zeroes of the expression. They will be included if the inequality includes equal to zero .    Roots from the denominator (bottom) are the discontinuities of the expression. They will be not ever be included because the formula isn't even defined. For a simplified factorization (any common factors canceled), they correspond to vertical asymptotes .    For each resulting interval, we need to find out the sign that corresponds to the values the formula creates based on the input values from that interval. You can choose any x-value in the interval and calculate the sign of the formula.    Once you have one interval's sign determined, you can find the rest by deciding at each zero or discontinuity whether the sign will change using multiplicity. An even multiplicity (even powers) do not change sign; an odd multiplicity (odd powers) do change sign.    An inequality less than zero corresponds to negative values. An inequality greater than zero corresponds to positive values.       Solve the inequality for the rational expression by creating and interpreting a sign analysis summary.   Note that you will need to finish factoring the numerator.      F1 Function Notation   F1  I can calculate expressions involving function notation where functions are represented using tables, graphs, or piecewise formulas.   What do I need to understand?   A function is a rule or relation between an input and output variable such that knowing the input value, there is a single corresponding output value. The name of a function, like , is written with a value in parentheses after the name to identify the value of the input. So means the output value of a function with name based on the input value . It is read, of .    When a function is represented as a graph, find the input on the axis. Look to see if that -value has a point. That point might be represented by a curve passing through the -value or it could be a filled in point where the function breaks. Never use the -value for an open point for a function value. (We will later recognize such points can represent a limit value.)    When a function is represented as a table, be sure to look in the row or column for the input or independent variable for the value inside the parentheses (input). Then the value comes from the output or dependent variable row or column.    When a function represented by an equation with a formula, the independent variable is playing the role of a placeholder for the input. Every instance of that variable is going to be replaced by the input inside parentheses.  It is NOT multiplication.    A piecewise function provides different formulas for different intervals, usually represented by inequalities. First, the independent variable or input to the function is used to determine which interval should be used. Then the formula associated with that interval is used.       Suppose is defined piecewise by and is defined by a table of values and is defined by a graph.   Table giving values of     -4  -2  0  2  3  5     2  5  -1  4  0  -3      The graph of   A piecewise graph with three pieces, labeled h(x) in the upper left. A rising line segment runs from a closed point at (-4,-2) up to an open point at (-1,1). An upward-curving parabola arc runs from a closed point at (-1,2) to a closed point at (2,-1), with an open point (a hole) at (1,-2) where the curve is interrupted. A falling line segment runs from an open point at (2,3) down to a closed point at (4,1).     Calculate each of the following values:                 "
+},
+{
+  "id": "notes-week-02-3-3",
+  "level": "2",
+  "url": "notes-week-02.html#notes-week-02-3-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "zeroes discontinuities vertical asymptotes sign even odd negative positive "
+},
+{
+  "id": "P4-solve-inequality",
+  "level": "2",
+  "url": "notes-week-02.html#P4-solve-inequality",
+  "type": "Checkpoint",
+  "number": "4",
+  "title": "",
+  "body": "  Solve the inequality for the rational expression by creating and interpreting a sign analysis summary.   Note that you will need to finish factoring the numerator.   "
+},
+{
+  "id": "notes-week-02-4-3",
+  "level": "2",
+  "url": "notes-week-02.html#notes-week-02-4-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "piecewise function "
+},
+{
+  "id": "F1-function-notation",
+  "level": "2",
+  "url": "notes-week-02.html#F1-function-notation",
+  "type": "Checkpoint",
+  "number": "5",
+  "title": "",
+  "body": "  Suppose is defined piecewise by and is defined by a table of values and is defined by a graph.   Table giving values of     -4  -2  0  2  3  5     2  5  -1  4  0  -3      The graph of   A piecewise graph with three pieces, labeled h(x) in the upper left. A rising line segment runs from a closed point at (-4,-2) up to an open point at (-1,1). An upward-curving parabola arc runs from a closed point at (-1,2) to a closed point at (2,-1), with an open point (a hole) at (1,-2) where the curve is interrupted. A falling line segment runs from an open point at (2,3) down to a closed point at (4,1).     Calculate each of the following values:               "
+},
+{
   "id": "activity-linear-relations-slope",
   "level": "1",
   "url": "activity-linear-relations-slope.html",
@@ -131,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-linear-relations-slope.html#def-slope-point-slope",
   "type": "Definition",
-  "number": "4",
+  "number": "8",
   "title": "",
   "body": "  The constant rate you found in Model 2 is called the slope of the relation, or its average rate of change . The equation you built in Task 4 has the same structure as called point-slope form , where is any known point on the relation and is the slope. It says exactly what you wrote: a new value equals a starting value plus the slope times how far you've moved from that starting point.   "
 },
@@ -404,6 +449,78 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Section 4: Putting It Together.",
   "body": " Section 4: Putting It Together   You now have three functions on the table: from its graph, from its table, and from its piecewise formula. They're all the same kind of object. Each one hands you a single output value for a given input. Make a card for every evaluation before combining values.     Find the value of .      Find the value of .    "
+},
+{
+  "id": "activity-function-domain",
+  "level": "1",
+  "url": "activity-function-domain.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Domain of a Function",
+  "body": " Domain of a Function   A function is a rule for creating a single, unique output for each input value. But a rule does not automatically make sense for every possible input. The domain of a function is the set of input values for which the rule actually produces an output.  Today you will find the domain of a function three ways: by reading a graph carefully, by noticing which algebraic operations can fail to produce a real number, and by combining more than one restriction into a single set. Along the way, you will also spend a few minutes making reviewing how to evaluate a piecewise formula.    Section 1: Warm-Up: Evaluating a Piecewise Formula   Recall the piecewise function from last class, Evaluating always starts the same way. Decide which condition the input satisfies, and only then substitute into that piece's formula.     Find .      Find . Which rule did you use, and why?      Find .      Recall the graph of from last class. At , there was an open point at and a separate closed point at . Explain how deciding which of those two points actually belongs to is the same kind of decision as deciding which piece of to use when evaluating . What do you check first in each case?      Section 2: Domain from a Graph   Here is the graph of a function .   The graph of   A graph shown for x between -5 and 5, with a dashed vertical line at x = -2. To the left of the dashed line, a decreasing curve runs from about (-5, -0.33) down to (-2.2, -5), dropping toward negative infinity as it nears the dashed line. To the right of the dashed line, a decreasing curve starts very high near (-1.8, 5) and continues down through an open point (a hole) at (2, 0.25), ending near (5, 0.14). The curve continues in the same pattern beyond the edges of this window.     The dashed vertical line at is not part of the graph of . It is only a visual marker showing where the curve is undefined: as gets closer to , the two branches shoot off toward positive or negative infinity, so there is no single point to plot there at all. Compare that to the open circle at : at there is a specific value the curve would reach, , but it has been deliberately left out; it's a hole . The graph is only drawn for between and ; it continues in the same way beyond that window on either side.     State the domain of using interval notation.      The dashed line at and the open circle at both mark values excluded from the domain of , but they are drawn differently. Explain what is different about what's happening at each location.      Section 3: Domain from a Formula: Division by Zero   You have already seen that a root of a denominator factor corresponds to a vertical asymptote. That is often true, but not always: if the same factor also appears in the numerator and cancels, that root shows up as a hole instead. Either way, the input is excluded from the domain, since the original, unsimplified formula is not defined there.  We find these restrictions by solving an equation: set the denominator equal to zero and solve for .     Find the domain of .      Find the domain of . You will need to factor the denominator first.      Consider .    Find the domain of directly from this original form, before simplifying anything.    Now cancel the common factor to get . A student looks at this simplified form and says the domain only needs to exclude . Explain what went wrong.    Which of the two excluded -values would appear as a hole in the graph of , and which would appear as a vertical asymptote?        Section 4: Domain from a Formula: Square Roots   A square root only produces a real number when the expression underneath it is not negative. Finding this restriction means solving an inequality, so remember that multiplying or dividing both sides by a negative number flips the inequality's direction.     Find the domain of .  The input of the square root is the formula . Create and then solve an inequality that this formula is positive or zero.      Find the domain of . What inequality is needed this time?      Section 5: Combining Restrictions   Some formulas have more than one restriction at once. To find the domain of a function like this, find the set of -values allowed by each restriction separately, in interval notation. The domain of the whole function is the set of -values that satisfy every restriction at the same time: the intersection of those sets.  (Equivalently, you could collect every -value that causes a problem for any restriction, take the union of those bad sets, and then find its complement. Either method gives the same answer.) This is the same interval intersection and union work from earlier this term, just applied to domain restrictions instead of solved inequalities.     Consider .    Write the set of -values allowed by the square root alone, in interval notation.    Write the set of -values allowed by avoiding division by zero alone.    Combine these to find the domain of , using interval notation.        Section 6: Challenge (Optional)   If your group has extra time, try this problem. It combines everything from today: sign analysis for a square root restriction, and solving an equation, this time by isolating a square root and squaring both sides, for a division restriction.     Find the domain of .     "
+},
+{
+  "id": "activity-function-domain-2-1",
+  "level": "2",
+  "url": "activity-function-domain.html#activity-function-domain-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "domain "
+},
+{
+  "id": "ex-function-domain-warmup",
+  "level": "2",
+  "url": "activity-function-domain.html#ex-function-domain-warmup",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: Warm-Up: Evaluating a Piecewise Formula.",
+  "body": " Section 1: Warm-Up: Evaluating a Piecewise Formula   Recall the piecewise function from last class, Evaluating always starts the same way. Decide which condition the input satisfies, and only then substitute into that piece's formula.     Find .      Find . Which rule did you use, and why?      Find .      Recall the graph of from last class. At , there was an open point at and a separate closed point at . Explain how deciding which of those two points actually belongs to is the same kind of decision as deciding which piece of to use when evaluating . What do you check first in each case?    "
+},
+{
+  "id": "ex-function-domain-graph",
+  "level": "2",
+  "url": "activity-function-domain.html#ex-function-domain-graph",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Domain from a Graph.",
+  "body": " Section 2: Domain from a Graph   Here is the graph of a function .   The graph of   A graph shown for x between -5 and 5, with a dashed vertical line at x = -2. To the left of the dashed line, a decreasing curve runs from about (-5, -0.33) down to (-2.2, -5), dropping toward negative infinity as it nears the dashed line. To the right of the dashed line, a decreasing curve starts very high near (-1.8, 5) and continues down through an open point (a hole) at (2, 0.25), ending near (5, 0.14). The curve continues in the same pattern beyond the edges of this window.     The dashed vertical line at is not part of the graph of . It is only a visual marker showing where the curve is undefined: as gets closer to , the two branches shoot off toward positive or negative infinity, so there is no single point to plot there at all. Compare that to the open circle at : at there is a specific value the curve would reach, , but it has been deliberately left out; it's a hole . The graph is only drawn for between and ; it continues in the same way beyond that window on either side.     State the domain of using interval notation.      The dashed line at and the open circle at both mark values excluded from the domain of , but they are drawn differently. Explain what is different about what's happening at each location.    "
+},
+{
+  "id": "ex-function-domain-rational",
+  "level": "2",
+  "url": "activity-function-domain.html#ex-function-domain-rational",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: Domain from a Formula: Division by Zero.",
+  "body": " Section 3: Domain from a Formula: Division by Zero   You have already seen that a root of a denominator factor corresponds to a vertical asymptote. That is often true, but not always: if the same factor also appears in the numerator and cancels, that root shows up as a hole instead. Either way, the input is excluded from the domain, since the original, unsimplified formula is not defined there.  We find these restrictions by solving an equation: set the denominator equal to zero and solve for .     Find the domain of .      Find the domain of . You will need to factor the denominator first.      Consider .    Find the domain of directly from this original form, before simplifying anything.    Now cancel the common factor to get . A student looks at this simplified form and says the domain only needs to exclude . Explain what went wrong.    Which of the two excluded -values would appear as a hole in the graph of , and which would appear as a vertical asymptote?      "
+},
+{
+  "id": "ex-function-domain-sqrt",
+  "level": "2",
+  "url": "activity-function-domain.html#ex-function-domain-sqrt",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Domain from a Formula: Square Roots.",
+  "body": " Section 4: Domain from a Formula: Square Roots   A square root only produces a real number when the expression underneath it is not negative. Finding this restriction means solving an inequality, so remember that multiplying or dividing both sides by a negative number flips the inequality's direction.     Find the domain of .  The input of the square root is the formula . Create and then solve an inequality that this formula is positive or zero.      Find the domain of . What inequality is needed this time?    "
+},
+{
+  "id": "ex-function-domain-combine",
+  "level": "2",
+  "url": "activity-function-domain.html#ex-function-domain-combine",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Section 5: Combining Restrictions.",
+  "body": " Section 5: Combining Restrictions   Some formulas have more than one restriction at once. To find the domain of a function like this, find the set of -values allowed by each restriction separately, in interval notation. The domain of the whole function is the set of -values that satisfy every restriction at the same time: the intersection of those sets.  (Equivalently, you could collect every -value that causes a problem for any restriction, take the union of those bad sets, and then find its complement. Either method gives the same answer.) This is the same interval intersection and union work from earlier this term, just applied to domain restrictions instead of solved inequalities.     Consider .    Write the set of -values allowed by the square root alone, in interval notation.    Write the set of -values allowed by avoiding division by zero alone.    Combine these to find the domain of , using interval notation.      "
+},
+{
+  "id": "ex-function-domain-stretch",
+  "level": "2",
+  "url": "activity-function-domain.html#ex-function-domain-stretch",
+  "type": "Worksheet Exercise",
+  "number": "6",
+  "title": "Section 6: Challenge (Optional).",
+  "body": " Section 6: Challenge (Optional)   If your group has extra time, try this problem. It combines everything from today: sign analysis for a square root restriction, and solving an equation, this time by isolating a square root and squaring both sides, for a division restriction.     Find the domain of .    "
 },
 {
   "id": "handouts",
