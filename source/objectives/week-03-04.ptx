@@ -1,28 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="notes-week-02">
-  <title>Week 2</title>
+  <title>Week 3 and Week 4</title>
+
+    <introduction>
+    <p>
+      Week 3 focused on sign analysis so that we could be able to address questions involving inequalities using factored polynomials and rational expressions. We then
+      introduced function notation.
+    </p>
+  </introduction>
 
   <subsection>
-    <title>Monday</title>
+    <title>P4 Linear Modeling</title>
+
+    <assemblage xml:id="assemblage-P4">
+      <title>P4</title>
+      <p>
+        I can solve an inequality involving a factored polynomial or rational function by creating and interpreting a sign analysis chart.
+      </p>
+    </assemblage>
 
     <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>To perform sign analysis, we need to start with a completely factored formula and be able to identify the root of each factor as well as the multiplicity (power) of the factor.</p>
+        </li>
+        <li>
+          <p>Roots from the numerator (top) are the <term>zeroes</term> of the expression. They will be <em>included</em> if the inequality includes <q>equal to zero</q>.</p>
+        </li>
+        <li>
+          <p>Roots from the denominator (bottom) are the <term>discontinuities</term> of the expression. They will be <em>not</em> ever be included because the formula isn't even defined. For a simplified factorization (any common factors canceled), they correspond to <term>vertical asymptotes</term>.</p>
+        </li>
+        <li>
+          <p>For each resulting interval, we need to find out the <term>sign</term> that corresponds to the values the formula <em>creates</em> based on the input values from that interval. You can <em>choose</em> any x-value in the interval and calculate the sign of the formula.</p>
+        </li>
+        <li>
+          <p>Once you have <em>one</em> interval's sign determined, you can find the rest by deciding at each zero or discontinuity whether the sign will change using multiplicity. An <term>even</term> multiplicity (even powers) do <em>not</em> change sign; an <term>odd</term> multiplicity (odd powers) <em>do</em> change sign.</p>
+        </li>
+        <li>
+          <p>
+            An inequality <q>less than zero</q> corresponds to <term>negative</term> values.
+            An inequality <q>greater than zero</q> corresponds to <term>positive</term> values.
+          </p>
+        </li>
+      </ul>
     </p>
+
+    <exercise label="P4-solve-inequality">
+      <statement>
+        <p>
+          Solve the inequality for the rational expression by creating and interpreting
+          a sign analysis summary.
+          <md>
+            \frac{x^2(x^2 - 2x-15)}{(x+4)(x-2)} \le 0
+          </md>
+        </p>
+        <p>
+          Note that you will need to finish factoring the numerator.
+        </p>
+      </statement>
+    </exercise>
+
   </subsection>
 
-
   <subsection>
-    <title>Wednesday</title>
+    <title>F1 Function Notation</title>
+
+    <assemblage xml:id="assemblage-F1">
+      <title>F1</title>
+      <p>
+        I can calculate expressions involving function notation where functions
+        are represented using tables, graphs, or piecewise formulas.
+      </p>
+    </assemblage>
 
     <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>A function is a rule or relation between an input and output variable
+            such that knowing the input value, there is a single corresponding output value. The name of a function, like <m>f</m>, is written with a value in parentheses after the name to identify the value of the input. So <m>f(a)</m> means the output value of a function with name <m>f</m> based on the input value <m>a</m>. It is read, <q><m>f</m> of <m>a</m></q>.
+          </p>
+        </li>
+        <li>
+          <p>
+            When a function is represented as a graph, find the input on the <m>x</m> axis.
+            Look to see if that <m>x</m>-value has a point. That point might be represented by a curve passing through the <m>x</m>-value or it could be a filled in point where the function breaks. Never use the <m>y</m>-value for an open point for a function value. (We will later recognize such points can represent a limit value.)
+          </p>
+        </li>
+        <li>
+          <p>
+            When a function is represented as a table, be sure to look in the row or column for the <em>input</em> or <em>independent variable</em> for the value inside the parentheses (input). Then the value comes from the <em>output</em> or <em>dependent variable</em> row or column.
+          </p>
+        </li>
+        <li>
+          <p>
+            When a function represented by an equation with a formula, the independent variable is playing the role of a placeholder for the input. <em>Every</em> instance of that variable is going to be <em>replaced</em> by the input inside parentheses.
+          </p>
+          <p>
+            It is <em>NOT</em> multiplication.
+          </p>
+        </li>
+        <li>
+          <p>
+            A <term>piecewise function</term> provides different formulas for different intervals, usually represented by inequalities. First, the independent variable or input to the function is used to determine which interval should be used. Then the formula associated with that interval is used.
+          </p>
+        </li>
+      </ul>
     </p>
-  </subsection>
 
+    <exercise label="F1-function-notation">
+      <statement>
+        <p>
+          Suppose <m>f(x)</m> is defined piecewise by
+          <md>
+            f(x) = \begin{cases}
+            2x + 5, &amp; x \lt -1, \\
+            2-x^2, &amp; -1 \le x \lt 2, \\
+            x-4, &amp; x \gt 2,
+            \end{cases}
+          </md>
+          and <m>g(x)</m> is defined by a table of values and <m>h(x)</m> is defined by a graph.
+        </p>
+        <table>
+          <title>Table giving values of <m>g(x)</m></title>
+          <tabular label="F1-ex-function-table">
+            <row header="yes">
+              <cell><m>x</m></cell>
+              <cell>-4</cell>
+              <cell>-2</cell>
+              <cell>0</cell>
+              <cell>2</cell>
+              <cell>3</cell>
+              <cell>5</cell>
+            </row>
+            <row>
+              <cell><m>g(x)</m></cell>
+              <cell>2</cell>
+              <cell>5</cell>
+              <cell>-1</cell>
+              <cell>4</cell>
+              <cell>0</cell>
+              <cell>-3</cell>
+            </row>
+          </tabular>
+        </table>
+        <figure label="F1-ex-function-graph">
+          <caption>The graph of <m>h</m></caption>
+          <image label="F1-image-function-graph" width="60%">
+            <shortdescription>
+              A piecewise graph with three pieces, labeled h(x) in the upper left. A rising
+              line segment runs from a closed point at (-4,-2) up to an open point at (-1,1).
+              An upward-curving parabola arc runs from a closed point at (-1,2) to a closed
+              point at (2,-1), with an open point (a hole) at (1,-2) where the curve is
+              interrupted. A falling line segment runs from an open point at (2,3) down to a
+              closed point at (4,1).
+            </shortdescription>
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}[scale=0.9, >=stealth]
+                % axes
+                \draw[->] (-4.6,0) -- (4.6,0) node[right] {$x$};
+                \draw[->] (0,-2.8) -- (0,3.6) node[above] {$y$};
+                % tick marks
+                \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+                  \draw (\x,0.08) -- (\x,-0.08);
+                  \node[below] at (\x,-0.08) {\small $\x$};
+                }
+                \foreach \y in {-2,-1,1,2,3} {
+                  \draw (0.08,\y) -- (-0.08,\y);
+                  \node[left] at (-0.08,\y) {\small $\y$};
+                }
 
-  <subsection>
-    <title>Friday</title>
+                % Function label
+                \node at (3,3) {$h(x)$};
 
-    <p>
-    </p>
+                % Piece 1: h(x) = x+2 on [-4,-1)
+                \draw[thick, domain=-4:-1, samples=50] plot (\x, {\x+2});
+                \filldraw (-4,-2) circle (2.2pt);
+                \draw[fill=white] (-1,1) circle (2.2pt);
+
+                % Piece 2: h(x) = x^2-2x-1 on [-1,2], hole at x=1
+                \draw[thick, domain=-1:0.95, samples=50] plot (\x, {\x*\x - 2*\x - 1});
+                \draw[thick, domain=1.05:2, samples=50] plot (\x, {\x*\x - 2*\x - 1});
+                \filldraw (-1,2) circle (2.2pt);
+                \draw[fill=white] (1,-2) circle (2.2pt);
+                \filldraw (2,-1) circle (2.2pt);
+
+                % Piece 3: h(x) = -x+5 on (2,4]
+                \draw[thick, domain=2:4, samples=50] plot (\x, {-\x+5});
+                \draw[fill=white] (2,3) circle (2.2pt);
+                \filldraw (4,1) circle (2.2pt);
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </figure>
+        <p>
+          Calculate each of the following values:
+          <ol>
+            <li>
+              <p>
+                <m>2f(-1) + g(0) \cdot h(-1)</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>h(2) \cdot g(f(0))</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
   </subsection>
 </section>
