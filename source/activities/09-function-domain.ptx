@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-function-domain">
+  <title>Domain of a Function</title>
+
+  <introduction>
+    <p>
+      A function is a rule for creating a single, unique output for each input value. But a rule does not automatically make sense for every possible input. The <term>domain</term> of a function is the set of input values for which the rule actually produces an output.
+    </p>
+    <p>
+      Today you will find the domain of a function three ways: by reading a graph carefully, by noticing which algebraic operations can fail to produce a real number, and by combining more than one restriction into a single set. Along the way, you will also spend a few minutes making reviewing how to evaluate a piecewise formula.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-function-domain-warmup" workspace="0in">
+    <title>Section 1: Warm-Up: Evaluating a Piecewise Formula</title>
+    <introduction>
+      <p>
+        Recall the piecewise function <m>h</m> from last class,
+        <md>
+          h(x) = \begin{cases}
+          x^2 - 1, &amp; x \lt 1 \\
+          1 - x, &amp; x \ge 1
+          \end{cases}
+        </md>
+        Evaluating <m>h</m> always starts the same way. Decide which condition the input satisfies, and only then substitute into that piece's formula.
+      </p>
+    </introduction>
+    <task xml:id="task-warmup-negative" workspace="1in">
+      <statement>
+        <p>
+          Find <m>h(-3)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-warmup-boundary" workspace="1in">
+      <statement>
+        <p>
+          Find <m>h(1)</m>. Which rule did you use, and why?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-warmup-positive" workspace="1in">
+      <statement>
+        <p>
+          Find <m>h(4)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-warmup-connect-graph" workspace="1.5in">
+      <statement>
+        <p>
+          Recall the graph of <m>f</m> from last class. At <m>x=-2</m>, there was an open point at <m>(-2,3)</m> and a separate closed point at <m>(-2,4)</m>. Explain how deciding which of those two points actually belongs to <m>f(-2)</m> is the same kind of decision as deciding which piece of <m>h</m> to use when evaluating <m>h(1)</m>. What do you check first in each case?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-function-domain-graph" workspace="0in">
+    <title>Section 2: Domain from a Graph</title>
+    <introduction>
+      <p>
+        Here is the graph of a function <m>k</m>.
+      </p>
+      <figure xml:id="fig-function-domain-graph">
+        <caption>The graph of <m>k</m></caption>
+        <image xml:id="image-function-domain-graph" width="60%">
+          <shortdescription>
+            A graph shown for x between -5 and 5, with a dashed vertical line at x = -2. To the
+            left of the dashed line, a decreasing curve runs from about (-5, -0.33) down to
+            (-2.2, -5), dropping toward negative infinity as it nears the dashed line. To the
+            right of the dashed line, a decreasing curve starts very high near (-1.8, 5) and
+            continues down through an open point (a hole) at (2, 0.25), ending near (5, 0.14).
+            The curve continues in the same pattern beyond the edges of this window.
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \pgfplotsset{compat=1.18}
+            \begin{tikzpicture}
+              \begin{axis}[
+                axis lines = middle,
+                xlabel = {$x$}, ylabel = {$y$},
+                xmin = -5, xmax = 5,
+                ymin = -5, ymax = 5,
+                xtick = {-5,-4,-3,-2,-1,1,2,3,4,5},
+                ytick = {-5,-4,-3,-2,-1,1,2,3,4,5},
+                tick label style = {font=\small},
+                axis line style = {->},
+                width = 8.5cm, height = 8.5cm,
+              ]
+                % The dashed line marks x = -2. It is a visual guide only:
+                % k is undefined there, so this line is not part of the graph of k.
+                \draw[dashed] (axis cs:-2,-5) -- (axis cs:-2,5);
+
+                % Left branch of k(x) = 1/(x+2)
+                \addplot[thick, domain=-5:-2.2, samples=50] {1/(x+2)};
+
+                % Right branch, split around the hole at x = 2
+                \addplot[thick, domain=-1.8:1.95, samples=50] {1/(x+2)};
+                \addplot[thick, domain=2.05:5, samples=50] {1/(x+2)};
+
+                % Hole at (2, 0.25)
+                \draw[fill=white] (axis cs:2,0.25) circle (2.2pt);
+              \end{axis}
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+      <p>
+        The dashed vertical line at <m>x=-2</m> is not part of the graph of <m>k</m>. It is only a visual marker showing where the curve is undefined: as <m>x</m> gets closer to <m>-2</m>, the two branches shoot off toward positive or negative infinity, so there is no single point to plot there at all. Compare that to the open circle at <m>(2, 0.25)</m>: at <m>x=2</m> there <em>is</em> a specific value the curve would reach, <m>0.25</m>, but it has been deliberately left out; it's a <term>hole</term>. The graph is only drawn for <m>x</m> between <m>-5</m> and <m>5</m>; it continues in the same way beyond that window on either side.
+      </p>
+    </introduction>
+    <task xml:id="task-graph-domain-state" workspace="1.5in">
+      <statement>
+        <p>
+          State the domain of <m>k</m> using interval notation.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-graph-domain-explain" workspace="1.5in">
+      <statement>
+        <p>
+          The dashed line at <m>x=-2</m> and the open circle at <m>x=2</m> both mark values excluded from the domain of <m>k</m>, but they are drawn differently. Explain what is different about what's happening at each location.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-function-domain-rational" workspace="0in">
+    <title>Section 3: Domain from a Formula: Division by Zero</title>
+    <introduction>
+      <p>
+        You have already seen that a root of a denominator factor corresponds to a vertical asymptote. That is often true, but not always: if the same factor also appears in the numerator and cancels, that root shows up as a hole instead. Either way, the input is excluded from the domain, since the original, unsimplified formula is not defined there.
+      </p>
+      <p>
+        We find these restrictions by solving an equation: set the denominator equal to zero and solve for <m>x</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-rational-simple" workspace="1in">
+      <statement>
+        <p>
+          Find the domain of <m>p(x) = \dfrac{x+1}{x-3}</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rational-factor" workspace="1.5in">
+      <statement>
+        <p>
+          Find the domain of <m>q(x) = \dfrac{3}{x^2 - x - 6}</m>. You will need to factor the denominator first.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rational-cancel" workspace="2in">
+      <statement>
+        <p>
+          Consider <m>r(x) = \dfrac{(x-2)(x+4)}{(x-2)(x-5)}</m>.
+        </p>
+        <ol>
+          <li>
+            <p>Find the domain of <m>r</m> directly from this original form, before simplifying anything.</p>
+          </li>
+          <li>
+            <p>Now cancel the common factor <m>(x-2)</m> to get <m>\dfrac{x+4}{x-5}</m>. A student looks at this simplified form and says the domain only needs to exclude <m>x=5</m>. Explain what went wrong.</p>
+          </li>
+          <li>
+            <p>Which of the two excluded <m>x</m>-values would appear as a hole in the graph of <m>r</m>, and which would appear as a vertical asymptote?</p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-function-domain-sqrt" workspace="0in">
+    <title>Section 4: Domain from a Formula: Square Roots</title>
+    <introduction>
+      <p>
+        A square root only produces a real number when the expression underneath it is not negative. Finding this restriction means solving an inequality, so remember that multiplying or dividing both sides by a negative number flips the inequality's direction.
+      </p>
+    </introduction>
+    <task xml:id="task-sqrt-linear" workspace="1.5in">
+      <statement>
+        <p>
+          Find the domain of <m>s(x) = \sqrt{-3x+6}</m>.
+        </p>
+        <p>
+          The input of the square root is the formula <m>-3x+6</m>. Create and then solve an inequality that this formula is positive or zero.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sqrt-quadratic" workspace="2in">
+      <statement>
+        <p>
+          Find the domain of <m>t(x) = \sqrt{x^2 - x - 6}</m>. What inequality is needed this time?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-function-domain-combine" workspace="0in">
+    <title>Section 5: Combining Restrictions</title>
+    <introduction>
+      <p>
+        Some formulas have more than one restriction at once. To find the domain of a function like this, find the set of <m>x</m>-values allowed by <em>each</em> restriction separately, in interval notation. The domain of the whole function is the set of <m>x</m>-values that satisfy every restriction at the same time: the <term>intersection</term> of those sets.
+      </p>
+      <p>
+        (Equivalently, you could collect every <m>x</m>-value that causes a problem for <em>any</em> restriction, take the <term>union</term> of those bad sets, and then find its complement. Either method gives the same answer.) This is the same interval intersection and union work from earlier this term, just applied to domain restrictions instead of solved inequalities.
+      </p>
+    </introduction>
+    <task xml:id="task-combine-parts" workspace="2in">
+      <statement>
+        <p>
+          Consider <m>u(x) = \dfrac{\sqrt{x-2}}{x-6}</m>.
+        </p>
+        <ol>
+          <li>
+            <p>Write the set of <m>x</m>-values allowed by the square root alone, in interval notation.</p>
+          </li>
+          <li>
+            <p>Write the set of <m>x</m>-values allowed by avoiding division by zero alone.</p>
+          </li>
+          <li>
+            <p>Combine these to find the domain of <m>u</m>, using interval notation.</p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-function-domain-stretch" workspace="0in">
+    <title>Section 6: Challenge (Optional)</title>
+    <introduction>
+      <p>
+        If your group has extra time, try this problem. It combines everything from today: sign analysis for a square root restriction, and solving an equation, this time by isolating a square root and squaring both sides, for a division restriction.
+      </p>
+    </introduction>
+    <task xml:id="task-stretch-domain" workspace="2.5in">
+      <statement>
+        <p>
+          Find the domain of <m>v(x) = \dfrac{1}{\sqrt{x^2-9}-4}</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
