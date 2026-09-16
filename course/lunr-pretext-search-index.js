@@ -523,6 +523,69 @@ var ptx_lunr_docs = [
   "body": " Section 6: Challenge (Optional)   If your group has extra time, try this problem. It combines everything from today: sign analysis for a square root restriction, and solving an equation, this time by isolating a square root and squaring both sides, for a division restriction.     Find the domain of .    "
 },
 {
+  "id": "activity-function-composition",
+  "level": "1",
+  "url": "activity-function-composition.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Composition of Functions",
+  "body": " Composition of Functions   Many of the functions we will work with are actually assembled out of simpler functions. Today's activity is about one particular way of combining two functions called function composition : feeding the entire output of one function into another function as its input. You will practice this skill in both directions. First, building a new expression by putting one function as the input in another. Second, looking at an already-built formula and figuring out which two functions are the inside and outside functions.    Section 1: Evaluating a Function at an Expression   Recall that a formula for a function is a rule, and it can help to picture that rule with a box standing in for the input, the way you did with the piecewise function in an earlier activity. So far, we have focused on putting specific numbers in the box for evaluation. Nothing about the rule actually requires a number. The input can be any expression at all, including one that still has a variable, including , in it. Whatever goes in the box on the left has to go in every copy of the box on the right, expression and all.     Let . Find .      Using the same , find . Expand and simplify and compare it to your original answer.      Let . Find .      Let . Find . Expand the denominator and simplify if you can and compare it to your original answer.      Section 2: Two Orders, Two Different Functions   What you just did in every task above followed the same pattern. You had a function , and instead of putting a number in its box, you put an entire second expression in it. That second expression is itself a function of . For instance, in the second task, the expression you substituted was , and you were really computing .  Building a new function this way, by using the output of one function as the input to another, is called composition . Combining functions in this way can be represented by writing a small circle as an operation on the function names, and read aloud as f composed with g of x or f of g of x . To evaluate , work from the inside out and from right to left: first apply , then feed that result into .  Notice that and are built in opposite orders, and there is no reason to expect them to come out the same. The rest of this section asks you to check that directly.       Let and , the same two functions from Section 1. Write .    Compare it to what you found for earlier. Are they the same expression?          Using the same and , find and simplify it.    Compare to from the previous task. Are they the same function?          Let and . Find .    Find .    Are and the same expression? Explain how you can tell just by looking at them, without simplifying further.          Let and . Evaluate .    Evaluate .    Which order gives the larger value?        Section 3: Deconstructing a Composition   Now reverse direction. Suppose you are handed a formula that was already built by composition, and you need to identify the two functions involved. For example, . Ask yourself: what is the very last operation applied, the one wrapped around everything else? Here it is the square root. That outermost operation identifies the outer function , . The inner function will be the formula inside the box, . Altogether, .  A useful check: pick the innermost expression involving that is enclosed by something else. That expression is . Replacing that whole enclosed piece with a single box should leave you looking at the outer function's rule.       Let . Identify the inner function and the outer function .    Write using circle notation.          Let . Identify the inner function and the outer function . (The outer function is the rule divided by the box .)    Write using circle notation.        Let . Identify the inner function and the outer function , and write using circle notation.        Let and . Write out and as fully expanded formulas.    Are they equal? What does that tell you about starting from and trying to identify the inner and outer functions: could there be more than one reasonable answer if the two composed formulas happened to match?        Section 4: Mixed Practice   These tasks mix all three skills from today: evaluating a function at an expression, building a composition from two named functions, and taking an already-built formula apart into its inner and outer pieces.       Let and . Write as a single formula.    Now imagine you had only been handed that formula, with no or mentioned. Identify its inner and outer functions. Do you recover the same and you started with?        Let . Identify the inner function and the outer function , and write using circle notation.        Let and . Evaluate .    Evaluate .    Once more, are the two orders giving you the same value?        Section 5: Challenge (Optional)   A formula can be built from more than two functions stacked together. Nothing about your strategy changes: look for the very last operation applied, peel it off as the outer function, and repeat on whatever is left.       Let . This formula is built from three simple functions, one of which is the inner function you already found for in Section 3. Identify all three simple functions involved.    List the three functions in the order they are actually applied to , from first to last.       "
+},
+{
+  "id": "activity-function-composition-2-1",
+  "level": "2",
+  "url": "activity-function-composition.html#activity-function-composition-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "function composition "
+},
+{
+  "id": "ex-composition-eval",
+  "level": "2",
+  "url": "activity-function-composition.html#ex-composition-eval",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: Evaluating a Function at an Expression.",
+  "body": " Section 1: Evaluating a Function at an Expression   Recall that a formula for a function is a rule, and it can help to picture that rule with a box standing in for the input, the way you did with the piecewise function in an earlier activity. So far, we have focused on putting specific numbers in the box for evaluation. Nothing about the rule actually requires a number. The input can be any expression at all, including one that still has a variable, including , in it. Whatever goes in the box on the left has to go in every copy of the box on the right, expression and all.     Let . Find .      Using the same , find . Expand and simplify and compare it to your original answer.      Let . Find .      Let . Find . Expand the denominator and simplify if you can and compare it to your original answer.    "
+},
+{
+  "id": "ex-composition-naming",
+  "level": "2",
+  "url": "activity-function-composition.html#ex-composition-naming",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Two Orders, Two Different Functions.",
+  "body": " Section 2: Two Orders, Two Different Functions   What you just did in every task above followed the same pattern. You had a function , and instead of putting a number in its box, you put an entire second expression in it. That second expression is itself a function of . For instance, in the second task, the expression you substituted was , and you were really computing .  Building a new function this way, by using the output of one function as the input to another, is called composition . Combining functions in this way can be represented by writing a small circle as an operation on the function names, and read aloud as f composed with g of x or f of g of x . To evaluate , work from the inside out and from right to left: first apply , then feed that result into .  Notice that and are built in opposite orders, and there is no reason to expect them to come out the same. The rest of this section asks you to check that directly.       Let and , the same two functions from Section 1. Write .    Compare it to what you found for earlier. Are they the same expression?          Using the same and , find and simplify it.    Compare to from the previous task. Are they the same function?          Let and . Find .    Find .    Are and the same expression? Explain how you can tell just by looking at them, without simplifying further.          Let and . Evaluate .    Evaluate .    Which order gives the larger value?      "
+},
+{
+  "id": "ex-composition-decompose",
+  "level": "2",
+  "url": "activity-function-composition.html#ex-composition-decompose",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: Deconstructing a Composition.",
+  "body": " Section 3: Deconstructing a Composition   Now reverse direction. Suppose you are handed a formula that was already built by composition, and you need to identify the two functions involved. For example, . Ask yourself: what is the very last operation applied, the one wrapped around everything else? Here it is the square root. That outermost operation identifies the outer function , . The inner function will be the formula inside the box, . Altogether, .  A useful check: pick the innermost expression involving that is enclosed by something else. That expression is . Replacing that whole enclosed piece with a single box should leave you looking at the outer function's rule.       Let . Identify the inner function and the outer function .    Write using circle notation.          Let . Identify the inner function and the outer function . (The outer function is the rule divided by the box .)    Write using circle notation.        Let . Identify the inner function and the outer function , and write using circle notation.        Let and . Write out and as fully expanded formulas.    Are they equal? What does that tell you about starting from and trying to identify the inner and outer functions: could there be more than one reasonable answer if the two composed formulas happened to match?      "
+},
+{
+  "id": "ex-composition-mixed",
+  "level": "2",
+  "url": "activity-function-composition.html#ex-composition-mixed",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Mixed Practice.",
+  "body": " Section 4: Mixed Practice   These tasks mix all three skills from today: evaluating a function at an expression, building a composition from two named functions, and taking an already-built formula apart into its inner and outer pieces.       Let and . Write as a single formula.    Now imagine you had only been handed that formula, with no or mentioned. Identify its inner and outer functions. Do you recover the same and you started with?        Let . Identify the inner function and the outer function , and write using circle notation.        Let and . Evaluate .    Evaluate .    Once more, are the two orders giving you the same value?      "
+},
+{
+  "id": "ex-composition-challenge",
+  "level": "2",
+  "url": "activity-function-composition.html#ex-composition-challenge",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Section 5: Challenge (Optional).",
+  "body": " Section 5: Challenge (Optional)   A formula can be built from more than two functions stacked together. Nothing about your strategy changes: look for the very last operation applied, peel it off as the outer function, and repeat on whatever is left.       Let . This formula is built from three simple functions, one of which is the inner function you already found for in Section 3. Identify all three simple functions involved.    List the three functions in the order they are actually applied to , from first to last.      "
+},
+{
   "id": "handouts",
   "level": "1",
   "url": "handouts.html",
