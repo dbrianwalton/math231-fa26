@@ -55,6 +55,7 @@
       <xi:include href="./activities/07-rational-inequalities.ptx"/>
       <xi:include href="./activities/08-function-notation.ptx"/>
       <xi:include href="./activities/09-function-domain.ptx"/>
+      <xi:include href="./activities/10-function-composition.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>

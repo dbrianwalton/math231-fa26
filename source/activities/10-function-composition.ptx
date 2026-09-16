@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-function-composition">
+  <title>Composition of Functions</title>
+
+  <introduction>
+    <p>
+      Many of the functions we will work with are actually assembled out of simpler functions. Today's activity is about one particular way of combining two functions called <term>function composition</term>: feeding the entire output of one function into another function as its input. You will practice this skill in both directions. First, building a new expression by putting one function as the input in another. Second, looking at an already-built formula and figuring out which two functions are the inside and outside functions.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-composition-eval" workspace="0in">
+    <title>Section 1: Evaluating a Function at an Expression</title>
+    <introduction>
+      <p>
+        Recall that a formula for a function is a rule, and it can help to picture that rule with a box standing in for the input, the way you did with the piecewise function <m>h</m> in an earlier activity. So far, we have focused on putting specific numbers in the box for evaluation. Nothing about the rule actually requires a number. The input can be any expression at all, including one that still has a variable, including <m>x</m>, in it. Whatever goes in the box on the left has to go in <em>every</em> copy of the box on the right, expression and all.
+      </p>
+    </introduction>
+    <task xml:id="task-composition-eval-warmup" workspace="1in">
+      <statement>
+        <p>
+          Let <m>f(x) = 2x^2 + 1</m>. Find <m>f(3)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-composition-eval-expression" workspace="1.5in">
+      <statement>
+        <p>
+          Using the same <m>f(x) = 2x^2 + 1</m>, find <m>f(2x-1)</m>. Expand and simplify and compare it to your original answer.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-composition-eval-sqrt" workspace="1in">
+      <statement>
+        <p>
+          Let <m>f(x) = \sqrt{x}</m>. Find <m>f(x^2+1)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-composition-eval-rational" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>f(x) = \dfrac{2}{3x^2+1}</m>. Find <m>f(x-1)</m>. Expand the denominator and simplify if you can and compare it to your original answer.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-composition-naming" workspace="0in">
+    <title>Section 2: Two Orders, Two Different Functions</title>
+    <introduction>
+      <p>
+        What you just did in every task above followed the same pattern. You had a function <m>f</m>, and instead of putting a number in its box, you put an entire second expression in it. That second expression is itself a function of <m>x</m>. For instance, in the second task, the expression you substituted was <m>g(x) = 2x-1</m>, and you were really computing <m>f(g(x))</m>.
+      </p>
+      <p>
+        Building a new function this way, by using the output of one function as the input to another, is called <term>composition</term>. Combining functions in this way can be represented by writing a small circle as an operation on the function names,
+        <md>
+          <mrow>(f \circ g)(x) \amp = f(g(x)) </mrow>
+          <mrow>(g \circ f)(x) \amp = g(f(x)) </mrow>
+        </md>
+        and read aloud as <q>f composed with g of x</q> or <q>f of g of x</q>. To evaluate <m>(f \circ g)(x)</m>, work from the inside out and from right to left: first apply <m>g</m>, then feed that result into <m>f</m>.
+      </p>
+      <p>
+        Notice that <m>f \circ g</m> and <m>g \circ f</m> are built in opposite orders, and there is no reason to expect them to come out the same. The rest of this section asks you to check that directly.
+      </p>
+    </introduction>
+    <task xml:id="task-composition-naming-fg" workspace="1in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>f(x) = 2x^2+1</m> and <m>g(x) = 2x-1</m>, the same two functions from Section 1. Write <m>(f \circ g)(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Compare it to what you found for <m>f(2x-1)</m> earlier. Are they the same expression?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-composition-naming-gf" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Using the same <m>f(x)=2x^2+1</m> and <m>g(x)=2x-1</m>, find <m>(g \circ f)(x)</m> and simplify it.
+            </p>
+          </li>
+          <li>
+            <p>
+              Compare <m>(g \circ f)(x)</m> to <m>(f \circ g)(x)</m> from the previous task. Are they the same function?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-composition-naming-sqrt" workspace="2in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>f(x) = \sqrt{x}</m> and <m>g(x) = x^2+1</m>. Find <m>(f \circ g)(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find <m>(g \circ f)(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Are <m>(f \circ g)(x)</m> and <m>(g \circ f)(x)</m> the same expression? Explain how you can tell just by looking at them, without simplifying further.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-composition-naming-numeric" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>f(x) = \dfrac{2}{3x^2+1}</m> and <m>g(x) = x-1</m>. Evaluate <m>(f \circ g)(2)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Evaluate <m>(g \circ f)(2)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Which order gives the larger value?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-composition-decompose" workspace="0in">
+    <title>Section 3: Deconstructing a Composition</title>
+    <introduction>
+      <p>
+        Now reverse direction. Suppose you are handed a formula that was already built by composition, and you need to identify the two functions involved. For example,
+        <m>E(x) = \sqrt{3x+5}</m>. Ask yourself: what is the very last operation applied, the one wrapped around everything else? Here it is the square root. That outermost operation identifies the <term>outer function</term>, <m>f(x) = \sqrt{x}</m>. 
+        The <term>inner function</term> will be the formula <em>inside</em> the box, <m>g(x) = 3x+5</m>. Altogether, <m>E(x) = (f \circ g)(x)</m>.
+      </p>
+      <p>
+        A useful check: pick the innermost expression involving <m>x</m> that is enclosed by something else. That expression is <m>g(x)</m>. Replacing that whole enclosed piece with a single box should leave you looking at the outer function's rule.
+      </p>
+    </introduction>
+    <task xml:id="task-composition-decompose-cube" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>D(x) = (x^2-4)^3</m>. Identify the inner function <m>g</m> and the outer function <m>f</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Write <m>D(x)</m> using circle notation.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-composition-decompose-reciprocal" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>K(x) = \dfrac{1}{x^2+4}</m>. Identify the inner function <m>g</m> and the outer function <m>f</m>. (The outer function is the rule <q><m>1</m> divided by the box</q>.)
+            </p>
+          </li>
+          <li>
+            <p>
+              Write <m>K(x)</m> using circle notation.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-composition-decompose-sqrt" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>M(x) = \sqrt{5-x^2}</m>. Identify the inner function <m>g</m> and the outer function <m>f</m>, and write <m>M(x)</m> using circle notation.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-composition-decompose-build" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>p(x) = 2x+1</m> and <m>q(x) = x^2</m>. Write out <m>(p \circ q)(x)</m> and <m>(q \circ p)(x)</m> as fully expanded formulas.
+            </p>
+          </li>
+          <li>
+            <p>
+              Are they equal? What does that tell you about starting from <m>(p \circ q)(x)</m> and trying to identify the inner and outer functions: could there be more than one reasonable answer if the two composed formulas happened to match?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-composition-mixed" workspace="0in">
+    <title>Section 4: Mixed Practice</title>
+    <introduction>
+      <p>
+        These tasks mix all three skills from today: evaluating a function at an expression, building a composition from two named functions, and taking an already-built formula apart into its inner and outer pieces.
+      </p>
+    </introduction>
+    <task xml:id="task-composition-mixed-roundtrip" workspace="2in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>f(x) = \sqrt{x}</m> and <m>g(x) = 4-x^2</m>. Write <m>(f \circ g)(x)</m> as a single formula.
+            </p>
+          </li>
+          <li>
+            <p>
+              Now imagine you had only been handed that formula, with no <m>f</m> or <m>g</m> mentioned. Identify its inner and outer functions. Do you recover the same <m>f</m> and <m>g</m> you started with?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-composition-mixed-decompose" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>N(x) = (7-2x)^4</m>. Identify the inner function <m>g</m> and the outer function <m>f</m>, and write <m>N(x)</m> using circle notation.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-composition-mixed-order" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>f(x) = 3x-2</m> and <m>g(x) = x^2</m>. Evaluate <m>(f \circ g)(-1)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Evaluate <m>(g \circ f)(-1)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Once more, are the two orders giving you the same value?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-composition-challenge" workspace="0in">
+    <title>Section 5: Challenge (Optional)</title>
+    <introduction>
+      <p>
+        A formula can be built from more than two functions stacked together. Nothing about your strategy changes: look for the very last operation applied, peel it off as the outer function, and repeat on whatever is left.
+      </p>
+    </introduction>
+    <task xml:id="task-composition-challenge-triple" workspace="2in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>W(x) = \sqrt{(x^2-4)^3}</m>. This formula is built from three simple functions, one of which is the inner function <m>g(x) = x^2-4</m> you already found for <m>D(x) = (x^2-4)^3</m> in Section 3. Identify all three simple functions involved.
+            </p>
+          </li>
+          <li>
+            <p>
+              List the three functions in the order they are actually applied to <m>x</m>, from first to last.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
