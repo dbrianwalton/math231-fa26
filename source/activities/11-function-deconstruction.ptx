@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-function-deconstruction">
+  <title>Sum, Difference, Product, Quotient, or Composition?</title>
+
+  <introduction>
+    <p>
+      A formula for a function is usually built by combining smaller formulas. Sometimes two formulas are joined by an arithmetic operation: added, subtracted, multiplied, or divided. Other times, as in the last activity, one formula is fed as the input to another, which is called composition. Today's activity is about telling these two situations apart just by looking at a formula's <em>last</em> operation, and about naming the four arithmetic cases individually rather than lumping them together. The reason to be this precise now: each of these five ways of combining formulas, the four arithmetic ones and composition, will eventually get its own rule for finding derivatives. Learning to recognize which one you are looking at is learning which rule you will reach for later.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-deconstruction-two-operand" workspace="0in">
+    <title>Section 1: Two Formulas, One Operation</title>
+    <introduction>
+      <p>
+        Whenever a formula's last operation is addition, subtraction, multiplication, or division, that operation is combining exactly two smaller formulas. Each of the two formulas being combined is called an <term>operand</term>. The four cases even get their own names: a <term>sum</term> (addition), a <term>difference</term> (subtraction), a <term>product</term> (multiplication), and a <term>quotient</term> (division).
+      </p>
+      <p>
+        Recall from the last activity that a composition is different: the last operation there is a single outer action applied to just <em>one</em> operand, not two. Counting how many operands the last operation actually sees is the whole question for today.
+      </p>
+    </introduction>
+    <task xml:id="task-deconstruction-difference" workspace="1in">
+      <statement>
+        <p>
+          Let <m>P(x) = x^3 - 2x</m>. What is the last operation performed? Identify its two operands, and name the operation (sum, difference, product, or quotient).
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-deconstruction-product" workspace="1in">
+      <statement>
+        <p>
+          Let <m>Q(x) = x^2(x-3)</m>. What is the last operation performed? Identify its two operands, and name it.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-deconstruction-quotient" workspace="1in">
+      <statement>
+        <p>
+          Let <m>R(x) = \dfrac{2x+1}{x-4}</m>. What is the last operation performed? Identify its two operands, and name it.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-deconstruction-composition-review" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>S(x) = \sqrt{x^2+1}</m>. Does the last operation here see two operands, the way it did in the three formulas above? If not, how many, and what do you call this kind of combination? Identify the outer function and the operand it acts on.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-deconstruction-wrinkle" workspace="0in">
+    <title>Section 2: When One Piece Is Already a Composition</title>
+    <introduction>
+      <p>
+        An operand does not have to be a simple formula. It can itself be a composition. That possibility is exactly what makes a formula like <m>x(x^2+1)^3</m> easy to misread. It is tempting to see the power on the outside and call the whole thing a composition. Before working it out, commit to a guess.
+      </p>
+    </introduction>
+    <task xml:id="task-wrinkle-guess" workspace="2in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>T(x) = x(x^2+1)^3</m>. Before doing anything else: is the whole formula a composition, or an arithmetic combination? Write down your guess.
+            </p>
+          </li>
+          <li>
+            <p>
+              Now identify the last operation performed on the whole formula, and its two operands.
+            </p>
+          </li>
+          <li>
+            <p>
+              Look at the second operand by itself, apart from the rest of the formula. Is <em>it</em> an arithmetic combination or a composition? If it is a composition, identify its outer function and the operand inside.
+            </p>
+          </li>
+          <li>
+            <p>
+              Was your guess in part (a) right? If not, where did it go wrong?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-wrinkle-sum" workspace="2in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>U(x) = (x-1)^2 + \sqrt{x+3}</m>. Identify the last operation performed on the whole formula, and its two operands.
+            </p>
+          </li>
+          <li>
+            <p>
+              Look at each operand separately. Is it a composition? If so, identify its outer function and inner operand.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-deconstruction-naming" workspace="0in">
+    <title>Section 3: Naming the Procedure</title>
+    <introduction>
+      <p>
+        Put the last two sections together into one procedure you can run on any formula. Look at the last operation performed.
+      </p>
+      <ul>
+        <li>
+          <p>
+            If it is addition, subtraction, multiplication, or division, it has exactly two operands. Name it: a sum, difference, product, or quotient.
+          </p>
+        </li>
+        <li>
+          <p>
+            Otherwise, it is a single outer action on exactly one operand: a composition. Name the outer function.
+          </p>
+        </li>
+      </ul>
+      <p>
+        Then repeat the same question on every operand you just found, and keep going until each piece left over is just <m>x</m> or a constant. This works no matter how many layers deep a formula goes.
+      </p>
+    </introduction>
+    <task xml:id="task-naming-difference-composition" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>A(x) = (2x-3)^4 - x</m>. Run the full procedure: identify the last operation and both operands, then decide whether each operand needs to be broken down further.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-naming-quotient-composition" workspace="2in">
+      <statement>
+        <p>
+          Let <m>B(x) = \dfrac{x^2}{(x+1)^3}</m>. Run the full procedure: identify the last operation and both operands, then decide whether each operand needs to be broken down further.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-deconstruction-division" workspace="0in">
+    <title>Section 4: Division in Disguise</title>
+    <introduction>
+      <p>
+        Division deserves one more look. Recall from an earlier activity that dividing by an expression is the same as multiplying by its reciprocal, which is the same as raising that expression to the power <m>-1</m>. That matters here because a quotient is only genuinely an arithmetic combination of two operands when <m>x</m> shows up independently on both sides of the division bar. If <m>x</m> only appears on one side, the other side is just a constant, and the whole thing is really one operand run through an outer action, not two operands being divided.
+      </p>
+    </introduction>
+    <task xml:id="task-division-genuine" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>C(x) = \dfrac{x+1}{x-1}</m>. Does <m>x</m> appear independently on both sides of the division? Is this a genuine quotient, with two operands, or a disguised composition?
+            </p>
+          </li>
+          <li>
+            <p>
+              If it is a quotient, name its two operands.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-division-disguised" workspace="1.5in">
+      <statement>
+        <ol>
+          <li>
+            <p>
+              Let <m>D(x) = \dfrac{5}{x^2+1}</m>. Does <m>x</m> appear on both sides here?
+            </p>
+          </li>
+          <li>
+            <p>
+              Rewrite <m>D(x)</m> using a negative power instead of a division bar. What is the outer function, and what is the one operand it acts on?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-division-check" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>E(x) = \dfrac{x}{x^2+4}</m>. Even though <m>x</m> appears in the denominator here too, check the numerator carefully. Is this a genuine quotient or a disguised composition? Explain using the test from this section.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-division-capstone" workspace="2in">
+      <statement>
+        <p>
+          Let <m>F(x) = x + \dfrac{3}{(x-2)^2}</m>. Run the full procedure from Section 3 on this formula, using the division test from this section wherever it applies, until every remaining piece is just <m>x</m> or a constant.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
