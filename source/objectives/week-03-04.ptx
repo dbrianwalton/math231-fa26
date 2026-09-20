@@ -216,4 +216,82 @@
     </exercise>
 
   </subsection>
+
+  <subsection>
+    <title>F2 Function Domain</title>
+
+    <assemblage xml:id="assemblage-F2">
+      <title>F2</title>
+      <p>
+        I can determine the domain using interval notation for an algebraic function 
+        involving division and square roots by identifying and solving 
+        appropriate inequalities.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>The domain is the set of input values for which a function is defined</p>
+        </li>
+        <li>
+          <p>
+            When a function involves division (has a quotient), the domain requires the formula in the denominator is <em>not equal to zero</em>.
+          </p>
+        </li>
+        <li>
+          <p>
+            When a function involves a square root (or any even root), the domain
+            requires that the input expression (under the square root) is 
+            <em>greater than or equal to zero</em>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Write and solve the inequalities for all constraints. They all must
+            be satisfied (intersection).
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Find the domain of the function 
+          <m>\displaystyle f(x) = \frac{\sqrt{x^2-3x-4}}{x^2-4}</m>
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The function involves <em>division</em>, so we require <m>x^2-4 \ne 0</m>.
+          This can factor <m>x^2-4 = (x+2)(x-2)</m>. 
+          So the denominator would equal zero for <m>x=-2</m> and <m>x=2</m>.
+          The domain requires <m>x \ne -2</m> and <m>x \ne 2</m>.
+        </p>
+        <p>
+          The function also involves a <em>square root</em> with the formula
+          <m>x^2-3x-4</m> as the input.
+          We require <m>x^2-3x-4 \ge 0</m>, which we solve by factoring
+          <md>
+            x^2-3x-4 = (x-4)(x+1) \ge 0
+          </md>
+          The sign chart for this has zeros at <m>x=4</m> and <m>x=-1</m> with signs <m>+/-/+</m>.
+          The square root will be defined wherever its input is positive (the intervals)
+          or zero (the roots).
+        </p>
+        <p>
+          The domain for the square root portion is
+          <m>x in (-\infty,-1] \cup [4,\infty)</m>.
+          The also requires that <m>x \ne-2</m> and <m>x \ne 2</m>.
+          The value 2 is already excluded due to the square root.
+          So we only need to remove <m>x=-2</m> to create the overall domain.
+          <md>
+            (-\infty,-2) \cup (-2,-1] \cup [4,\infty)
+          </md>
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
 </section>

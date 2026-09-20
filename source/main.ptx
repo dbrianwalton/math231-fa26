@@ -33,6 +33,7 @@
 
       <xi:include href="./objectives/week-01-02.ptx"/>
       <xi:include href="./objectives/week-03-04.ptx"/>
+      <xi:include href="./objectives/week-05-06.ptx"/>
       <!-- etc. -->
 
     </chapter>

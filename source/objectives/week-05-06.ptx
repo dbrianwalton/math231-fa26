@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week-03">
+  <title>Week 5 and Week 6</title>
+
+    <introduction>
+    <p>
+      Week 5 started by looking at how functions are constructed, using arithmetic and composition.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>F3 Function Deconstruction</title>
+
+    <assemblage xml:id="assemblage-F3">
+      <title>F3</title>
+      <p>
+        I can deconstruct a function by recognizing the last operation 
+        as a sum, difference, product, quotient, or composition of other expressions.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+    </p>
+
+  </subsection>
+</section>
