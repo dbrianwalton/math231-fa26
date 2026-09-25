@@ -36,7 +36,7 @@ lang: "en-US",
 <meta name="twitter:description" content="MATH 231-0002 Fall 2026">
 <meta property="og:description" content="MATH 231-0002 Fall 2026">
 <meta name="twitter:card" content="summary">
-<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
 <!--**     log level is 0, Runestone Services are disabled     **-->
@@ -223,174 +223,240 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para" id="activity-inverse-functions-2-2">We use the language of <dfn class="terminology">mapping</dfn> to keep track of which variable goes in and which comes out. Writing <span class="process-math">\(f : x \mapsto y\)</span> says that <span class="process-math">\(f\)</span> is the function that starts with <span class="process-math">\(x\)</span> and finds <span class="process-math">\(y\text{.}\)</span> Writing <span class="process-math">\(g : y \mapsto x\)</span> says that <span class="process-math">\(g\)</span> is the function that starts with <span class="process-math">\(y\)</span> and finds <span class="process-math">\(x\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section>
-<article class="exercise exercise-like" id="activity-inverse-functions-3"><h2 class="heading">
+<article class="exercise exercise-like" id="ex-inverse-isolating"><h2 class="heading">
 <span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 1: Isolating variables to find inverse functions.</span>
 </h2>
-<div class="introduction" id="activity-inverse-functions-3-2">
-<div class="para" id="activity-inverse-functions-3-2-1">For any equation involving two variables, if we can solve to isolate one variable (say <span class="process-math">\(a\)</span>) with a formula of the other variable (say <span class="process-math">\(b\)</span>) on the other side, then we have identified a function <span class="process-math">\(b \mapsto a\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="ex-inverse-isolating-2">
+<div class="para" id="ex-inverse-isolating-2-1">For any equation involving two variables, if we can solve to isolate one variable (say <span class="process-math">\(a\)</span>) with a formula of the other variable (say <span class="process-math">\(b\)</span>) on the other side, then we have identified a function <span class="process-math">\(b \mapsto a\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-isolating-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="activity-inverse-functions-3-2-2">If we can <em class="emphasis">also</em> isolate that <em class="emphasis">other</em> variable (<span class="process-math">\(b\)</span>) with a formula of the first (<span class="process-math">\(a\)</span>) on the other side, then this identifies a function <span class="process-math">\(a \mapsto b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-inverse-isolating-2-2">If we can <em class="emphasis">also</em> isolate that <em class="emphasis">other</em> variable (<span class="process-math">\(b\)</span>) with a formula of the first (<span class="process-math">\(a\)</span>) on the other side, then this identifies a function <span class="process-math">\(a \mapsto b\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-isolating-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="activity-inverse-functions-3-2-3">These two identified functions will be inverse functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-inverse-isolating-2-3">These two identified functions will be inverse functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-isolating-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="activity-inverse-functions-3-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="activity-inverse-functions-3-3-1-1">Fahrenheit and Celsius temperatures are related linearly. Water freezes at <span class="process-math">\((F, C) = (32, 0)\)</span> and boils at <span class="process-math">\((F, C) = (212, 100)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-inverse-temperature"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-inverse-temperature-1-1">Fahrenheit and Celsius temperatures are related linearly. Water freezes at <span class="process-math">\((F, C) = (32, 0)\)</span> and boils at <span class="process-math">\((F, C) = (212, 100)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-temperature-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ul class="disc" id="activity-inverse-functions-3-3-1-2">
-<li id="activity-inverse-functions-3-3-1-2-1">
-<div class="para" id="activity-inverse-functions-3-3-1-2-1-1">Find the equation for <span class="process-math">\(F = f(C)\text{.}\)</span> What does this function do?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="task-inverse-temperature-1-2">
+<li id="task-inverse-temperature-1-2-1">
+<div class="para" id="task-inverse-temperature-1-2-1-1">Find the equation for <span class="process-math">\(F = f(C)\text{.}\)</span> What does this function do?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-temperature-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#activity-inverse-functions-3-3-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-inverse-temperature-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="activity-inverse-functions-3-3-1-2-2">
-<div class="para" id="activity-inverse-functions-3-3-1-2-2-1">Find the equation for <span class="process-math">\(C = g(F)\text{.}\)</span> What does this function do?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-3-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="task-inverse-temperature-1-2-2">
+<div class="para" id="task-inverse-temperature-1-2-2-1">Find the equation for <span class="process-math">\(C = g(F)\text{.}\)</span> What does this function do?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-temperature-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#activity-inverse-functions-3-3-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-inverse-temperature-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
-<li id="activity-inverse-functions-3-3-1-2-3">
-<div class="para" id="activity-inverse-functions-3-3-1-2-3-1">What a temperature in degrees Fahrenheit corresponds to a temperature of 24 degrees Celsius? What happens if you use the <em class="emphasis">other</em> function on the resulting Fahrenheit temperature?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-3-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="task-inverse-temperature-1-2-3">
+<div class="para" id="task-inverse-temperature-1-2-3-1">What temperature in degrees Fahrenheit corresponds to a temperature of 24 degrees Celsius? What happens if you use the <em class="emphasis">other</em> function on the resulting Fahrenheit temperature?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-temperature-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#activity-inverse-functions-3-3-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-inverse-temperature-1-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="workspace" data-space="1.75in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 1.a"><a tabindex="-1" href="#activity-inverse-functions-3-3" title="Copy heading and permalink for Task 1.a" aria-label="Copy heading and permalink for Task 1.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.a"><a tabindex="-1" href="#task-inverse-temperature" title="Copy heading and permalink for Task 1.a" aria-label="Copy heading and permalink for Task 1.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-3-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="activity-inverse-functions-3-4-1-1">Start with <span class="process-math">\(f(x) = 3x + 7\text{.}\)</span> Write <span class="process-math">\(y = f(x)\)</span> and then isolate <span class="process-math">\(x\)</span> to discover <span class="process-math">\(x = g(y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-inverse-linear"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-inverse-linear-1-1">Start with <span class="process-math">\(f(x) = 3x + 7\text{.}\)</span> Write <span class="process-math">\(y = f(x)\)</span> and then isolate <span class="process-math">\(x\)</span> to discover <span class="process-math">\(x = g(y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-linear-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1.25in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 1.b"><a tabindex="-1" href="#activity-inverse-functions-3-4" title="Copy heading and permalink for Task 1.b" aria-label="Copy heading and permalink for Task 1.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.b"><a tabindex="-1" href="#task-inverse-linear" title="Copy heading and permalink for Task 1.b" aria-label="Copy heading and permalink for Task 1.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-3-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="activity-inverse-functions-3-5-1-1">Start with <span class="process-math">\(f(x) = \dfrac{1}{2x + 3} - 1\text{.}\)</span> Write <span class="process-math">\(y = f(x)\)</span> and then isolate <span class="process-math">\(x\)</span> to discover <span class="process-math">\(x = g(y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-3-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-inverse-rational"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-inverse-rational-1-1">Start with <span class="process-math">\(f(x) = \dfrac{1}{2x + 3} - 1\text{.}\)</span> Write <span class="process-math">\(y = f(x)\)</span> and then isolate <span class="process-math">\(x\)</span> to discover <span class="process-math">\(x = g(y)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-rational-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 1.c"><a tabindex="-1" href="#activity-inverse-functions-3-5" title="Copy heading and permalink for Task 1.c" aria-label="Copy heading and permalink for Task 1.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 1: Section 1: Isolating variables to find inverse functions"><a tabindex="-1" href="#activity-inverse-functions-3" title="Copy heading and permalink for Worksheet Exercise 1: Section 1: Isolating variables to find inverse functions" aria-label="Copy heading and permalink for Worksheet Exercise 1: Section 1: Isolating variables to find inverse functions">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.c"><a tabindex="-1" href="#task-inverse-rational" title="Copy heading and permalink for Task 1.c" aria-label="Copy heading and permalink for Task 1.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 1: Section 1: Isolating variables to find inverse functions"><a tabindex="-1" href="#ex-inverse-isolating" title="Copy heading and permalink for Worksheet Exercise 1: Section 1: Isolating variables to find inverse functions" aria-label="Copy heading and permalink for Worksheet Exercise 1: Section 1: Isolating variables to find inverse functions">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="activity-inverse-functions-4"><h2 class="heading">
+<article class="exercise exercise-like" id="ex-inverse-composing"><h2 class="heading">
 <span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 2: Composing a function with its inverse.</span>
 </h2>
-<div class="introduction" id="activity-inverse-functions-4-2">
-<div class="para" id="activity-inverse-functions-4-2-1">Suppose <span class="process-math">\(f : C \mapsto F\)</span> and <span class="process-math">\(g : F \mapsto C\text{.}\)</span> Think about what the composition <span class="process-math">\(f \circ g\)</span> does to a temperature, and what <span class="process-math">\(g \circ f\)</span> does.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="ex-inverse-composing-2">
+<div class="para" id="ex-inverse-composing-2-1">Suppose <span class="process-math">\(f : C \mapsto F\)</span> and <span class="process-math">\(g : F \mapsto C\text{.}\)</span> Think about what the composition <span class="process-math">\(f \circ g\)</span> does to a temperature, and what <span class="process-math">\(g \circ f\)</span> does.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-composing-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="activity-inverse-functions-4-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="activity-inverse-functions-4-3-1-1">Make a prediction as a group. What do you expect to happen with <span class="process-math">\(f(g(x))\)</span> and with <span class="process-math">\(g(f(x))\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-composition-prediction"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-composition-prediction-1-1">Make a prediction as a group. What do you expect to happen with <span class="process-math">\(f(g(x))\)</span> and with <span class="process-math">\(g(f(x))\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-prediction-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="0.75in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.a"><a tabindex="-1" href="#activity-inverse-functions-4-3" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.a"><a tabindex="-1" href="#task-composition-prediction" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-4-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<article class="task exercise-like" id="activity-inverse-functions-4-4-2"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-inverse-functions-4-4-2-1-1">
-<span class="process-math">\(f \circ g(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-4-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-composition-temperature"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="introduction" id="task-composition-temperature-1">
+<div class="para" id="task-composition-temperature-1-1">Test your prediction. Let <span class="process-math">\(f : C \mapsto F\)</span> with <span class="process-math">\(f(x) = 32 + \frac{9}{5} x\text{,}\)</span> and let <span class="process-math">\(g : F \mapsto C\)</span> with <span class="process-math">\(g(x) = \frac{5}{9}(x - 32)\text{.}\)</span> Split your group into two pairs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-temperature-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="task-composition-temperature-1-2">
+<li id="task-composition-temperature-1-2-1">
+<div class="para" id="task-composition-temperature-1-2-1-1">One pair creates and simplifies <span class="process-math">\(f \circ g(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-temperature-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-composition-temperature-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="task-composition-temperature-1-2-2">
+<div class="para" id="task-composition-temperature-1-2-2-1">The other pair creates and simplifies <span class="process-math">\(g \circ f(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-temperature-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-composition-temperature-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para" id="task-composition-temperature-1-3">Compare your results with the other pair.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-temperature-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-composition-temperature-fg"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="task-composition-temperature-fg-1-1">
+<span class="process-math">\(f \circ g(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-temperature-fg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1.25in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.b.i"><a tabindex="-1" href="#activity-inverse-functions-4-4-2" title="Copy heading and permalink for Task 2.b.i" aria-label="Copy heading and permalink for Task 2.b.i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.b.i"><a tabindex="-1" href="#task-composition-temperature-fg" title="Copy heading and permalink for Task 2.b.i" aria-label="Copy heading and permalink for Task 2.b.i">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-4-4-3"><h4 class="heading"><span class="codenumber">(ii)</span></h4>
-<div class="para" id="activity-inverse-functions-4-4-3-1-1">
-<span class="process-math">\(g \circ f(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-4-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-composition-temperature-gf"><h4 class="heading"><span class="codenumber">(ii)</span></h4>
+<div class="para" id="task-composition-temperature-gf-1-1">
+<span class="process-math">\(g \circ f(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-temperature-gf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1.25in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.b.ii"><a tabindex="-1" href="#activity-inverse-functions-4-4-3" title="Copy heading and permalink for Task 2.b.ii" aria-label="Copy heading and permalink for Task 2.b.ii">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Task 2.b"><a tabindex="-1" href="#activity-inverse-functions-4-4" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.b.ii"><a tabindex="-1" href="#task-composition-temperature-gf" title="Copy heading and permalink for Task 2.b.ii" aria-label="Copy heading and permalink for Task 2.b.ii">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Task 2.b"><a tabindex="-1" href="#task-composition-temperature" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-4-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<article class="task exercise-like" id="activity-inverse-functions-4-5-2"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-inverse-functions-4-5-2-1-1">
-<span class="process-math">\(f \circ g(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-5-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-composition-linear"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="introduction" id="task-composition-linear-1">
+<div class="para" id="task-composition-linear-1-1">Try another linear example. Let <span class="process-math">\(f(x) = 3x+7\)</span> and <span class="process-math">\(g(x) = \dfrac{1}{3}(x-7)\text{.}\)</span> Again split into two pairs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-linear-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="task-composition-linear-1-2">
+<li id="task-composition-linear-1-2-1">
+<div class="para" id="task-composition-linear-1-2-1-1">One pair creates and simplifies <span class="process-math">\(f \circ g(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-linear-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-composition-linear-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="task-composition-linear-1-2-2">
+<div class="para" id="task-composition-linear-1-2-2-1">The other pair creates and simplifies <span class="process-math">\(g \circ f(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-linear-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-composition-linear-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-composition-linear-fg"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="task-composition-linear-fg-1-1">
+<span class="process-math">\(f \circ g(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-linear-fg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.c.i"><a tabindex="-1" href="#activity-inverse-functions-4-5-2" title="Copy heading and permalink for Task 2.c.i" aria-label="Copy heading and permalink for Task 2.c.i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.c.i"><a tabindex="-1" href="#task-composition-linear-fg" title="Copy heading and permalink for Task 2.c.i" aria-label="Copy heading and permalink for Task 2.c.i">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-4-5-3"><h4 class="heading"><span class="codenumber">(ii)</span></h4>
-<div class="para" id="activity-inverse-functions-4-5-3-1-1">
-<span class="process-math">\(g \circ f(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-composition-linear-gf"><h4 class="heading"><span class="codenumber">(ii)</span></h4>
+<div class="para" id="task-composition-linear-gf-1-1">
+<span class="process-math">\(g \circ f(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-linear-gf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.c.ii"><a tabindex="-1" href="#activity-inverse-functions-4-5-3" title="Copy heading and permalink for Task 2.c.ii" aria-label="Copy heading and permalink for Task 2.c.ii">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Task 2.c"><a tabindex="-1" href="#activity-inverse-functions-4-5" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.c.ii"><a tabindex="-1" href="#task-composition-linear-gf" title="Copy heading and permalink for Task 2.c.ii" aria-label="Copy heading and permalink for Task 2.c.ii">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Task 2.c"><a tabindex="-1" href="#task-composition-linear" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-4-6"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<article class="task exercise-like" id="activity-inverse-functions-4-6-2"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="activity-inverse-functions-4-6-2-1-1">
-<span class="process-math">\(f \circ g(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-6-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-composition-rational"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="introduction" id="task-composition-rational-1">
+<div class="para" id="task-composition-rational-1-1">It also works with rational examples. Let <span class="process-math">\(f(x) = \dfrac{1}{2x + 3} - 1\)</span> and <span class="process-math">\(g(x) = \dfrac{1}{2x + 2} - \dfrac{3}{2}\text{.}\)</span> Again split into two pairs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-rational-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ul class="disc" id="task-composition-rational-1-2">
+<li id="task-composition-rational-1-2-1">
+<div class="para" id="task-composition-rational-1-2-1-1">One pair creates and simplifies <span class="process-math">\(f \circ g(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-rational-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-composition-rational-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="task-composition-rational-1-2-2">
+<div class="para" id="task-composition-rational-1-2-2-1">The other pair creates and simplifies <span class="process-math">\(g \circ f(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-rational-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-composition-rational-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+</div>
+<article class="task exercise-like" id="task-composition-rational-fg"><h4 class="heading"><span class="codenumber">(i)</span></h4>
+<div class="para" id="task-composition-rational-fg-1-1">
+<span class="process-math">\(f \circ g(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-rational-fg-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.d.i"><a tabindex="-1" href="#activity-inverse-functions-4-6-2" title="Copy heading and permalink for Task 2.d.i" aria-label="Copy heading and permalink for Task 2.d.i">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.d.i"><a tabindex="-1" href="#task-composition-rational-fg" title="Copy heading and permalink for Task 2.d.i" aria-label="Copy heading and permalink for Task 2.d.i">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-4-6-3"><h4 class="heading"><span class="codenumber">(ii)</span></h4>
-<div class="para" id="activity-inverse-functions-4-6-3-1-1">
-<span class="process-math">\(g \circ f(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-4-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-composition-rational-gf"><h4 class="heading"><span class="codenumber">(ii)</span></h4>
+<div class="para" id="task-composition-rational-gf-1-1">
+<span class="process-math">\(g \circ f(x)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-composition-rational-gf-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="2in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 2.d.ii"><a tabindex="-1" href="#activity-inverse-functions-4-6-3" title="Copy heading and permalink for Task 2.d.ii" aria-label="Copy heading and permalink for Task 2.d.ii">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Task 2.d"><a tabindex="-1" href="#activity-inverse-functions-4-6" title="Copy heading and permalink for Task 2.d" aria-label="Copy heading and permalink for Task 2.d">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: Section 2: Composing a function with its inverse"><a tabindex="-1" href="#activity-inverse-functions-4" title="Copy heading and permalink for Worksheet Exercise 2: Section 2: Composing a function with its inverse" aria-label="Copy heading and permalink for Worksheet Exercise 2: Section 2: Composing a function with its inverse">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.d.ii"><a tabindex="-1" href="#task-composition-rational-gf" title="Copy heading and permalink for Task 2.d.ii" aria-label="Copy heading and permalink for Task 2.d.ii">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Task 2.d"><a tabindex="-1" href="#task-composition-rational" title="Copy heading and permalink for Task 2.d" aria-label="Copy heading and permalink for Task 2.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: Section 2: Composing a function with its inverse"><a tabindex="-1" href="#ex-inverse-composing" title="Copy heading and permalink for Worksheet Exercise 2: Section 2: Composing a function with its inverse" aria-label="Copy heading and permalink for Worksheet Exercise 2: Section 2: Composing a function with its inverse">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="activity-inverse-functions-5"><h2 class="heading">
+<article class="definition definition-like" id="def-inverse-function"><h2 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inverse function.</span>
+</h2>
+<div class="para" id="def-inverse-function-2-1">For a given function <span class="process-math">\(f\text{,}\)</span> the function <span class="process-math">\(g\)</span> is the <dfn class="terminology">inverse function</dfn> to <span class="process-math">\(f\)</span> if<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-inverse-function-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ul class="disc" id="def-inverse-function-2-2">
+<li id="def-inverse-function-2-2-1">
+<div class="para" id="def-inverse-function-2-2-1-1">
+<span class="process-math">\(f(g(x)) = x\)</span> for every <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(g\text{,}\)</span> and<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-inverse-function-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#def-inverse-function-2-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-inverse-function-2-2-2">
+<div class="para" id="def-inverse-function-2-2-2-1">
+<span class="process-math">\(g(f(x)) = x\)</span> for every <span class="process-math">\(x\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#def-inverse-function-2-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#def-inverse-function-2-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 12: Inverse function"><a tabindex="-1" href="#def-inverse-function" title="Copy heading and permalink for Definition 12: Inverse function" aria-label="Copy heading and permalink for Definition 12: Inverse function">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-inverse-solving"><h2 class="heading">
 <span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 3: Inverse functions and solving equations.</span>
 </h2>
-<div class="introduction" id="activity-inverse-functions-5-2">
-<div class="para" id="activity-inverse-functions-5-2-1">What you observed is the defining property of inverse functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="ex-inverse-solving-2">
+<div class="para" id="ex-inverse-solving-2-1">What you observed is the defining property of inverse functions, as stated in the definition above.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-solving-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="activity-inverse-functions-5-2-2"><h3 class="heading"><span class="title">Definition of an inverse function.</span></h3>
-<div class="para" id="activity-inverse-functions-5-2-2-2">For a given function <span class="process-math">\(f\text{,}\)</span> the function <span class="process-math">\(g\)</span> is the <dfn class="terminology">inverse function</dfn> to <span class="process-math">\(f\)</span> if<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-5-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-inverse-solving-2-2">
+<em class="emphasis">Notation:</em> We write <span class="process-math">\(f^{-1}\)</span> as the name of the inverse function to <span class="process-math">\(f\text{.}\)</span> The <span class="process-math">\(-1\)</span> is read as “inverse”. It is <em class="emphasis">not</em> a power or exponent, even though that is what it looks like. In particular, <span class="process-math">\(f^{-1}(x)\)</span> does <em class="emphasis">not</em> mean <span class="process-math">\(\frac{1}{f(x)}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-solving-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Definition of an inverse function"><a tabindex="-1" href="#activity-inverse-functions-5-2-2" title="Copy heading and permalink for Assemblage: Definition of an inverse function" aria-label="Copy heading and permalink for Assemblage: Definition of an inverse function">🔗</a></div>
-</article>
-<div class="para" id="activity-inverse-functions-5-2-3">
-<em class="emphasis">Notation:</em> We write <span class="process-math">\(f^{-1}\)</span> as the name of the inverse function to <span class="process-math">\(f\text{.}\)</span> The <span class="process-math">\(-1\)</span> is read as “inverse”. It is <em class="emphasis">not</em> a power or exponent, even though that is what it looks like. In particular, <span class="process-math">\(f^{-1}(x)\)</span> does <em class="emphasis">not</em> mean <span class="process-math">\(\frac{1}{f(x)}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-5-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
-</div>
-<div class="para" id="activity-inverse-functions-5-2-4">Inverse functions are a tool for solving equations. Suppose we have isolated an equation into the form <span class="process-math">\(f(u) = c\text{,}\)</span> where <span class="process-math">\(u\)</span> is some formula and <span class="process-math">\(c\)</span> is a value. We may apply <span class="process-math">\(f^{-1}\)</span> to both sides. Because <span class="process-math">\(f^{-1}(f(u)) = u\text{,}\)</span> the function <span class="process-math">\(f^{-1}\)</span> “cancels” or unravels the action of <span class="process-math">\(f\text{,}\)</span> and we get <span class="process-math">\(u = f^{-1}(c)\text{.}\)</span> Then we continue solving for the variable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-5-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="ex-inverse-solving-2-3">Inverse functions are a tool for solving equations. Suppose we have isolated an equation into the form <span class="process-math">\(f(u) = c\text{,}\)</span> where <span class="process-math">\(u\)</span> is some formula and <span class="process-math">\(c\)</span> is a value. We may apply <span class="process-math">\(f^{-1}\)</span> to both sides. Because <span class="process-math">\(f^{-1}(f(u)) = u\text{,}\)</span> the function <span class="process-math">\(f^{-1}\)</span> “cancels” or unravels the action of <span class="process-math">\(f\text{,}\)</span> and we get <span class="process-math">\(u = f^{-1}(c)\text{.}\)</span> Then we continue solving for the variable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-solving-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="activity-inverse-functions-5-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="activity-inverse-functions-5-3-1-1">Consider the equation <span class="process-math">\(\sqrt{2x - 1} = 3\text{.}\)</span> When we work with nonnegative numbers, the squaring function and the square root function are inverses of each other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-5-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-inverse-sqrt"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-inverse-sqrt-1-1">Consider the equation <span class="process-math">\(\sqrt{2x - 1} = 3\text{.}\)</span> When we work with nonnegative numbers, the squaring function and the square root function are inverses of each other.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-sqrt-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> 
-<ul class="disc" id="activity-inverse-functions-5-3-1-2">
-<li id="activity-inverse-functions-5-3-1-2-1">
-<div class="para" id="activity-inverse-functions-5-3-1-2-1-1">Use the method of isolation to solve for <span class="process-math">\(x\text{.}\)</span> Where did you use inverse functions?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-5-3-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ul class="disc" id="task-inverse-sqrt-1-2">
+<li id="task-inverse-sqrt-1-2-1">
+<div class="para" id="task-inverse-sqrt-1-2-1-1">Use the method of isolation to solve for <span class="process-math">\(x\text{.}\)</span> Where did you use inverse functions?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-inverse-sqrt-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#activity-inverse-functions-5-3-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#task-inverse-sqrt-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 </ul>
 <div class="workspace" data-space="1.75in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 3.a"><a tabindex="-1" href="#activity-inverse-functions-5-3" title="Copy heading and permalink for Task 3.a" aria-label="Copy heading and permalink for Task 3.a">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 3: Section 3: Inverse functions and solving equations"><a tabindex="-1" href="#activity-inverse-functions-5" title="Copy heading and permalink for Worksheet Exercise 3: Section 3: Inverse functions and solving equations" aria-label="Copy heading and permalink for Worksheet Exercise 3: Section 3: Inverse functions and solving equations">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.a"><a tabindex="-1" href="#task-inverse-sqrt" title="Copy heading and permalink for Task 3.a" aria-label="Copy heading and permalink for Task 3.a">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 3: Section 3: Inverse functions and solving equations"><a tabindex="-1" href="#ex-inverse-solving" title="Copy heading and permalink for Worksheet Exercise 3: Section 3: Inverse functions and solving equations" aria-label="Copy heading and permalink for Worksheet Exercise 3: Section 3: Inverse functions and solving equations">🔗</a></div>
 </article>
-<article class="exercise exercise-like" id="activity-inverse-functions-6"><h2 class="heading">
+<article class="exercise exercise-like" id="ex-inverse-abstract"><h2 class="heading">
 <span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 4: Solving with abstract functions.</span>
 </h2>
-<div class="introduction" id="activity-inverse-functions-6-2">
-<div class="para" id="activity-inverse-functions-6-2-1">Let <span class="process-math">\(A(x)\)</span> and <span class="process-math">\(B(x)\)</span> be functions for which no formula is given. We only know that they are inverses of each other, so <span class="process-math">\(B = A^{-1}\)</span> and <span class="process-math">\(A = B^{-1}\text{.}\)</span> Use the inverse property to solve each equation for <span class="process-math">\(x\text{.}\)</span> Your answers will be expressed using <span class="process-math">\(A\)</span> or <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-6-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="introduction" id="ex-inverse-abstract-2">
+<div class="para" id="ex-inverse-abstract-2-1">Let <span class="process-math">\(A(x)\)</span> and <span class="process-math">\(B(x)\)</span> be functions for which no formula is given. We only know that they are inverses of each other, so <span class="process-math">\(B = A^{-1}\)</span> and <span class="process-math">\(A = B^{-1}\text{.}\)</span> Use the inverse property to solve each equation for <span class="process-math">\(x\text{.}\)</span> Your answers will be expressed using <span class="process-math">\(A\)</span> or <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-inverse-abstract-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 </div>
-<article class="task exercise-like" id="activity-inverse-functions-6-3"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="activity-inverse-functions-6-3-1-1">
-<span class="process-math">\(A(x) = 4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-abstract-basic"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-abstract-basic-1-1">
+<span class="process-math">\(A(x) = 4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-abstract-basic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.a"><a tabindex="-1" href="#activity-inverse-functions-6-3" title="Copy heading and permalink for Task 4.a" aria-label="Copy heading and permalink for Task 4.a">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.a"><a tabindex="-1" href="#task-abstract-basic" title="Copy heading and permalink for Task 4.a" aria-label="Copy heading and permalink for Task 4.a">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-6-4"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="activity-inverse-functions-6-4-1-1">
-<span class="process-math">\(2A(x + 1) = 6\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-6-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-abstract-shift"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-abstract-shift-1-1">
+<span class="process-math">\(2A(x + 1) = 6\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-abstract-shift-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1.25in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.b"><a tabindex="-1" href="#activity-inverse-functions-6-4" title="Copy heading and permalink for Task 4.b" aria-label="Copy heading and permalink for Task 4.b">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.b"><a tabindex="-1" href="#task-abstract-shift" title="Copy heading and permalink for Task 4.b" aria-label="Copy heading and permalink for Task 4.b">🔗</a></div>
 </article>
-<article class="task exercise-like" id="activity-inverse-functions-6-5"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="activity-inverse-functions-6-5-1-1">
-<span class="process-math">\(\dfrac{2}{B(x - 2)} + 1 = 3\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-inverse-functions-6-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="task exercise-like" id="task-abstract-reciprocal"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-abstract-reciprocal-1-1">
+<span class="process-math">\(\dfrac{2}{B(x - 2)} + 1 = 3\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-abstract-reciprocal-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="workspace" data-space="1.5in"></div>
-<div class="autopermalink" aria-hidden="true" data-description="Task 4.c"><a tabindex="-1" href="#activity-inverse-functions-6-5" title="Copy heading and permalink for Task 4.c" aria-label="Copy heading and permalink for Task 4.c">🔗</a></div>
-</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: Section 4: Solving with abstract functions"><a tabindex="-1" href="#activity-inverse-functions-6" title="Copy heading and permalink for Worksheet Exercise 4: Section 4: Solving with abstract functions" aria-label="Copy heading and permalink for Worksheet Exercise 4: Section 4: Solving with abstract functions">🔗</a></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.c"><a tabindex="-1" href="#task-abstract-reciprocal" title="Copy heading and permalink for Task 4.c" aria-label="Copy heading and permalink for Task 4.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: Section 4: Solving with abstract functions"><a tabindex="-1" href="#ex-inverse-abstract" title="Copy heading and permalink for Worksheet Exercise 4: Section 4: Solving with abstract functions" aria-label="Copy heading and permalink for Worksheet Exercise 4: Section 4: Solving with abstract functions">🔗</a></div>
 </article><div class="autopermalink" aria-hidden="true" data-description="Worksheet: Inverse Functions"><a tabindex="-1" href="#activity-inverse-functions" title="Copy heading and permalink for Worksheet: Inverse Functions" aria-label="Copy heading and permalink for Worksheet: Inverse Functions">🔗</a></div>
 </section>
 </div>
