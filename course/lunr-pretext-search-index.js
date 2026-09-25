@@ -649,6 +649,69 @@ var ptx_lunr_docs = [
   "body": " Section 4: Division in Disguise   Division deserves one more look. Recall from an earlier activity that dividing by an expression is the same as multiplying by its reciprocal, which is the same as raising that expression to the power . That matters here because a quotient is only genuinely an arithmetic combination of two operands when shows up independently on both sides of the division bar. If only appears on one side, the other side is just a constant, and the whole thing is really one operand run through an outer action, not two operands being divided.       Let . Does appear independently on both sides of the division? Is this a genuine quotient, with two operands, or a disguised composition?    If it is a quotient, name its two operands.          Let . Does appear on both sides here?    Rewrite using a negative power instead of a division bar. What is the outer function, and what is the one operand it acts on?        Let . Even though appears in the denominator here too, check the numerator carefully. Is this a genuine quotient or a disguised composition? Explain using the test from this section.      Let . Run the full procedure from Section 3 on this formula, using the division test from this section wherever it applies, until every remaining piece is just or a constant.    "
 },
 {
+  "id": "activity-inverse-functions",
+  "level": "1",
+  "url": "activity-inverse-functions.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Inverse Functions",
+  "body": " Inverse Functions   A formula such as is a method that takes an input value and produces a single output value . Often we want to use the relationship in the other direction. If we know the value of , we want to find the corresponding value of . When there is only one possible answer , we can think of this as a new function , which we call the inverse function .  We use the language of mapping to keep track of which variable goes in and which comes out. Writing says that is the function that starts with and finds . Writing says that is the function that starts with and finds .    Section 1: Isolating variables to find inverse functions   For any equation involving two variables, if we can solve to isolate one variable (say ) with a formula of the other variable (say ) on the other side, then we have identified a function .  If we can also isolate that other variable ( ) with a formula of the first ( ) on the other side, then this identifies a function .  These two identified functions will be inverse functions.     Fahrenheit and Celsius temperatures are related linearly. Water freezes at and boils at .   Find the equation for . What does this function do?  Find the equation for . What does this function do?  What a temperature in degrees Fahrenheit corresponds to a temperature of 24 degrees Celsius? What happens if you use the other function on the resulting Fahrenheit temperature?       Start with . Write and then isolate to discover .      Start with . Write and then isolate to discover .      Section 2: Composing a function with its inverse   Suppose and . Think about what the composition does to a temperature, and what does.     Make a prediction as a group. What do you expect to happen with and with ?      Test your prediction. Let with , and let with . Split your group into two pairs.   One pair creates and simplifies .  The other pair creates and simplifies .   Compare your results with the other pair.                Try another linear example. Let and . Again split into two pairs.   One pair creates and simplifies .  The other pair creates and simplifies .                 It also works with rational examples. Let and . Again split into two pairs.   One pair creates and simplifies .  The other pair creates and simplifies .                 Section 3: Inverse functions and solving equations   What you observed is the defining property of inverse functions.   Definition of an inverse function  For a given function , the function is the inverse function to if   for every in the domain of , and  for every in the domain of .     Notation: We write as the name of the inverse function to . The is read as inverse . It is not a power or exponent, even though that is what it looks like. In particular, does not mean .  Inverse functions are a tool for solving equations. Suppose we have isolated an equation into the form , where is some formula and is a value. We may apply to both sides. Because , the function  cancels or unravels the action of , and we get . Then we continue solving for the variable.     Consider the equation . When we work with nonnegative numbers, the squaring function and the square root function are inverses of each other.   Use the method of isolation to solve for . Where did you use inverse functions?       Section 4: Solving with abstract functions   Let and be functions for which no formula is given. We only know that they are inverses of each other, so and . Use the inverse property to solve each equation for . Your answers will be expressed using or .                   "
+},
+{
+  "id": "activity-inverse-functions-2-1",
+  "level": "2",
+  "url": "activity-inverse-functions.html#activity-inverse-functions-2-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "inverse function "
+},
+{
+  "id": "activity-inverse-functions-2-2",
+  "level": "2",
+  "url": "activity-inverse-functions.html#activity-inverse-functions-2-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "mapping "
+},
+{
+  "id": "activity-inverse-functions-3",
+  "level": "2",
+  "url": "activity-inverse-functions.html#activity-inverse-functions-3",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: Isolating variables to find inverse functions.",
+  "body": " Section 1: Isolating variables to find inverse functions   For any equation involving two variables, if we can solve to isolate one variable (say ) with a formula of the other variable (say ) on the other side, then we have identified a function .  If we can also isolate that other variable ( ) with a formula of the first ( ) on the other side, then this identifies a function .  These two identified functions will be inverse functions.     Fahrenheit and Celsius temperatures are related linearly. Water freezes at and boils at .   Find the equation for . What does this function do?  Find the equation for . What does this function do?  What a temperature in degrees Fahrenheit corresponds to a temperature of 24 degrees Celsius? What happens if you use the other function on the resulting Fahrenheit temperature?       Start with . Write and then isolate to discover .      Start with . Write and then isolate to discover .    "
+},
+{
+  "id": "activity-inverse-functions-4",
+  "level": "2",
+  "url": "activity-inverse-functions.html#activity-inverse-functions-4",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Composing a function with its inverse.",
+  "body": " Section 2: Composing a function with its inverse   Suppose and . Think about what the composition does to a temperature, and what does.     Make a prediction as a group. What do you expect to happen with and with ?      Test your prediction. Let with , and let with . Split your group into two pairs.   One pair creates and simplifies .  The other pair creates and simplifies .   Compare your results with the other pair.                Try another linear example. Let and . Again split into two pairs.   One pair creates and simplifies .  The other pair creates and simplifies .                 It also works with rational examples. Let and . Again split into two pairs.   One pair creates and simplifies .  The other pair creates and simplifies .               "
+},
+{
+  "id": "activity-inverse-functions-5",
+  "level": "2",
+  "url": "activity-inverse-functions.html#activity-inverse-functions-5",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: Inverse functions and solving equations.",
+  "body": " Section 3: Inverse functions and solving equations   What you observed is the defining property of inverse functions.   Definition of an inverse function  For a given function , the function is the inverse function to if   for every in the domain of , and  for every in the domain of .     Notation: We write as the name of the inverse function to . The is read as inverse . It is not a power or exponent, even though that is what it looks like. In particular, does not mean .  Inverse functions are a tool for solving equations. Suppose we have isolated an equation into the form , where is some formula and is a value. We may apply to both sides. Because , the function  cancels or unravels the action of , and we get . Then we continue solving for the variable.     Consider the equation . When we work with nonnegative numbers, the squaring function and the square root function are inverses of each other.   Use the method of isolation to solve for . Where did you use inverse functions?     "
+},
+{
+  "id": "activity-inverse-functions-6",
+  "level": "2",
+  "url": "activity-inverse-functions.html#activity-inverse-functions-6",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Solving with abstract functions.",
+  "body": " Section 4: Solving with abstract functions   Let and be functions for which no formula is given. We only know that they are inverses of each other, so and . Use the inverse property to solve each equation for . Your answers will be expressed using or .                  "
+},
+{
   "id": "handouts",
   "level": "1",
   "url": "handouts.html",
