@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<worksheet xml:id="activity-inverse-functions">
+  <title>Inverse Functions</title>
+
+  <introduction>
+    <p>
+      A formula such as <m>y = f(x)</m> is a method that takes an input value <m>x</m> and produces a single output value <m>y</m>.
+      Often we want to use the relationship in the other direction.
+      If we know the value of <m>y</m>, we want to find the corresponding value of <m>x</m>.
+      When there is only one possible answer <m>x</m>, we can think of this as a new function <m>x = g(y)</m>, which we call the <term>inverse function</term>.
+    </p>
+    <p>
+      We use the language of <term>mapping</term> to keep track of which variable goes in and which comes out.
+      Writing <m>f : x \mapsto y</m> says that <m>f</m> is the function that starts with <m>x</m> and finds <m>y</m>.
+      Writing <m>g : y \mapsto x</m> says that <m>g</m> is the function that starts with <m>y</m> and finds <m>x</m>.
+    </p>
+  </introduction>
+
+  <exercise workspace="0in">
+    <title>Section 1: Isolating variables to find inverse functions</title>
+    <introduction>
+      <p>
+        For any equation involving two variables, if we can solve to isolate one variable (say <m>a</m>) with a formula of the other variable (say <m>b</m>) on the other side,
+        then we have identified a function <m>b \mapsto a</m>.
+      </p>
+      <p>
+        If we can <em>also</em> isolate that <em>other</em> variable (<m>b</m>) with a formula of the first (<m>a</m>) on the other side, then this identifies a function <m>a \mapsto b</m>.
+      </p>
+      <p>
+        These two identified functions will be inverse functions.
+      </p>
+    </introduction>
+
+    <task workspace="1.75in">
+      <statement>
+        <p>
+          Fahrenheit and Celsius temperatures are related linearly.
+          Water freezes at <m>(F, C) = (32, 0)</m> and boils at <m>(F, C) = (212, 100)</m>.
+        </p>
+        <ul>
+          <li><p>Find the equation for <m>F = f(C)</m>. What does this function do?</p></li>
+          <li><p>Find the equation for <m>C = g(F)</m>. What does this function do?</p></li>
+          <li><p>What a temperature in degrees Fahrenheit corresponds to a temperature of 24 degrees Celsius? What happens if you use the <em>other</em> function on the resulting Fahrenheit temperature?</p></li>
+        </ul>
+      </statement>
+    </task>
+
+    <task workspace="1.25in">
+      <statement>
+        <p>
+          Start with <m>f(x) = 3x + 7</m>.
+          Write <m>y = f(x)</m> and then isolate <m>x</m> to discover <m>x = g(y)</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task workspace="2in">
+      <statement>
+        <p>
+          Start with <m>f(x) = \dfrac{1}{2x + 3} - 1</m>.
+          Write <m>y = f(x)</m> and then isolate <m>x</m> to discover <m>x = g(y)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise workspace="0in">
+    <title>Section 2: Composing a function with its inverse</title>
+    <introduction>
+      <p>
+        Suppose <m>f : C \mapsto F</m> and <m>g : F \mapsto C</m>.
+        Think about what the composition <m>f \circ g</m> does to a temperature, and what <m>g \circ f</m> does.
+      </p>
+    </introduction>
+
+    <task workspace="0.75in">
+      <statement>
+        <p>
+          Make a prediction as a group.
+          What do you expect to happen with <m>f(g(x))</m> and with <m>g(f(x))</m>?
+        </p>
+      </statement>
+    </task>
+
+    <task workspace="0in">
+      <statement>
+        <p>
+          Test your prediction.
+          Let <m>f : C \mapsto F</m> with <m>f(x) = 32 + \frac{9}{5} x</m>, and let <m>g : F \mapsto C</m> with <m>g(x) = \frac{5}{9}(x - 32)</m>.
+          Split your group into two pairs.
+        </p>
+        <ul>
+          <li><p>One pair creates and simplifies <m>f \circ g(x)</m>.</p></li>
+          <li><p>The other pair creates and simplifies <m>g \circ f(x)</m>.</p></li>
+        </ul>
+        <p>
+          Compare your results with the other pair.
+        </p>
+      </statement>
+      <task workspace="1.25in">
+        <statement>
+          <p><m>f \circ g(x)</m></p>
+        </statement>
+      </task>
+      <task workspace="1.25in">
+        <statement>
+          <p><m>g \circ f(x)</m></p>
+        </statement>
+      </task>
+    </task>
+
+    <task workspace="0in">
+      <statement>
+        <p>
+          Try another linear example.
+          Let <m>f(x) = 3x+7</m> and <m>g(x) = \dfrac{1}{3}(x-7)</m>.
+          Again split into two pairs.
+        </p>
+        <ul>
+          <li><p>One pair creates and simplifies <m>f \circ g(x)</m>.</p></li>
+          <li><p>The other pair creates and simplifies <m>g \circ f(x)</m>.</p></li>
+        </ul>
+      </statement>
+      <task workspace="2in">
+        <statement>
+          <p><m>f \circ g(x)</m></p>
+        </statement>
+      </task>
+      <task workspace="2in">
+        <statement>
+          <p><m>g \circ f(x)</m></p>
+        </statement>
+      </task>
+    </task>
+
+    <task workspace="0in">
+      <statement>
+        <p>
+          It also works with rational examples.
+          Let <m>f(x) = \dfrac{1}{2x + 3} - 1</m> and <m>g(x) = \dfrac{1}{2x + 2} - \dfrac{3}{2}</m>.
+          Again split into two pairs.
+        </p>
+        <ul>
+          <li><p>One pair creates and simplifies <m>f \circ g(x)</m>.</p></li>
+          <li><p>The other pair creates and simplifies <m>g \circ f(x)</m>.</p></li>
+        </ul>
+      </statement>
+      <task workspace="2in">
+        <statement>
+          <p><m>f \circ g(x)</m></p>
+        </statement>
+      </task>
+      <task workspace="2in">
+        <statement>
+          <p><m>g \circ f(x)</m></p>
+        </statement>
+      </task>
+    </task>
+  </exercise>
+
+  <exercise workspace="0in">
+    <title>Section 3: Inverse functions and solving equations</title>
+    <introduction>
+      <p>
+        What you observed is the defining property of inverse functions.
+      </p>
+      <assemblage>
+        <title>Definition of an inverse function</title>
+        <p>
+          For a given function <m>f</m>, the function <m>g</m> is the <term>inverse function</term> to <m>f</m> if
+        </p>
+        <ul>
+          <li><p><m>f(g(x)) = x</m> for every <m>x</m> in the domain of <m>g</m>, and</p></li>
+          <li><p><m>g(f(x)) = x</m> for every <m>x</m> in the domain of <m>f</m>.</p></li>
+        </ul>
+      </assemblage>
+      <p>
+        <em>Notation:</em> We write <m>f^{-1}</m> as the name of the inverse function to <m>f</m>.
+        The <m>-1</m> is read as <q>inverse</q>.
+        It is <em>not</em> a power or exponent, even though that is what it looks like.
+        In particular, <m>f^{-1}(x)</m> does <em>not</em> mean <m>\frac{1}{f(x)}</m>.
+      </p>
+      <p>
+        Inverse functions are a tool for solving equations.
+        Suppose we have isolated an equation into the form <m>f(u) = c</m>, where <m>u</m> is some formula and <m>c</m> is a value.
+        We may apply <m>f^{-1}</m> to both sides.
+        Because <m>f^{-1}(f(u)) = u</m>, the function <m>f^{-1}</m> <q>cancels</q> or unravels the action of <m>f</m>, and we get <m>u = f^{-1}(c)</m>.
+        Then we continue solving for the variable.
+      </p>
+    </introduction>
+
+    <task workspace="1.75in">
+      <statement>
+        <p>
+          Consider the equation <m>\sqrt{2x - 1} = 3</m>.
+          When we work with nonnegative numbers, the squaring function and the square root function are inverses of each other.
+        </p>
+        <ul>
+          <li><p>Use the method of isolation to solve for <m>x</m>. Where did you use inverse functions?</p></li>
+        </ul>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise workspace="0in">
+    <title>Section 4: Solving with abstract functions</title>
+    <introduction>
+      <p>
+        Let <m>A(x)</m> and <m>B(x)</m> be functions for which no formula is given.
+        We only know that they are inverses of each other, so <m>B = A^{-1}</m> and <m>A = B^{-1}</m>.
+        Use the inverse property to solve each equation for <m>x</m>.
+        Your answers will be expressed using <m>A</m> or <m>B</m>.
+      </p>
+    </introduction>
+
+    <task workspace="1in">
+      <statement>
+        <p><m>A(x) = 4</m></p>
+      </statement>
+    </task>
+
+    <task workspace="1.25in">
+      <statement>
+        <p><m>2A(x + 1) = 6</m></p>
+      </statement>
+    </task>
+
+    <task workspace="1.5in">
+      <statement>
+        <p><m>\dfrac{2}{B(x - 2)} + 1 = 3</m></p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>

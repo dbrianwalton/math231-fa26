@@ -58,6 +58,7 @@
       <xi:include href="./activities/09-function-domain.ptx"/>
       <xi:include href="./activities/10-function-composition.ptx"/>
       <xi:include href="./activities/11-function-deconstruction.ptx"/>
+      <xi:include href="./activities/12-inverse-functions.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
