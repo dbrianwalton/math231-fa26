@@ -17,7 +17,7 @@
     </p>
   </introduction>
 
-  <exercise workspace="0in">
+  <exercise xml:id="ex-inverse-isolating" workspace="0in">
     <title>Section 1: Isolating variables to find inverse functions</title>
     <introduction>
       <p>
@@ -32,7 +32,7 @@
       </p>
     </introduction>
 
-    <task workspace="1.75in">
+    <task xml:id="task-inverse-temperature" workspace="1.75in">
       <statement>
         <p>
           Fahrenheit and Celsius temperatures are related linearly.
@@ -41,12 +41,12 @@
         <ul>
           <li><p>Find the equation for <m>F = f(C)</m>. What does this function do?</p></li>
           <li><p>Find the equation for <m>C = g(F)</m>. What does this function do?</p></li>
-          <li><p>What a temperature in degrees Fahrenheit corresponds to a temperature of 24 degrees Celsius? What happens if you use the <em>other</em> function on the resulting Fahrenheit temperature?</p></li>
+          <li><p>What temperature in degrees Fahrenheit corresponds to a temperature of 24 degrees Celsius? What happens if you use the <em>other</em> function on the resulting Fahrenheit temperature?</p></li>
         </ul>
       </statement>
     </task>
 
-    <task workspace="1.25in">
+    <task xml:id="task-inverse-linear" workspace="1.25in">
       <statement>
         <p>
           Start with <m>f(x) = 3x + 7</m>.
@@ -55,7 +55,7 @@
       </statement>
     </task>
 
-    <task workspace="2in">
+    <task xml:id="task-inverse-rational" workspace="2in">
       <statement>
         <p>
           Start with <m>f(x) = \dfrac{1}{2x + 3} - 1</m>.
@@ -65,7 +65,7 @@
     </task>
   </exercise>
 
-  <exercise workspace="0in">
+  <exercise xml:id="ex-inverse-composing" workspace="0in">
     <title>Section 2: Composing a function with its inverse</title>
     <introduction>
       <p>
@@ -74,7 +74,7 @@
       </p>
     </introduction>
 
-    <task workspace="0.75in">
+    <task xml:id="task-composition-prediction" workspace="0.75in">
       <statement>
         <p>
           Make a prediction as a group.
@@ -83,8 +83,8 @@
       </statement>
     </task>
 
-    <task workspace="0in">
-      <statement>
+    <task xml:id="task-composition-temperature" workspace="0in">
+      <introduction>
         <p>
           Test your prediction.
           Let <m>f : C \mapsto F</m> with <m>f(x) = 32 + \frac{9}{5} x</m>, and let <m>g : F \mapsto C</m> with <m>g(x) = \frac{5}{9}(x - 32)</m>.
@@ -97,21 +97,21 @@
         <p>
           Compare your results with the other pair.
         </p>
-      </statement>
-      <task workspace="1.25in">
+      </introduction>
+      <task xml:id="task-composition-temperature-fg" workspace="1.25in">
         <statement>
           <p><m>f \circ g(x)</m></p>
         </statement>
       </task>
-      <task workspace="1.25in">
+      <task xml:id="task-composition-temperature-gf" workspace="1.25in">
         <statement>
           <p><m>g \circ f(x)</m></p>
         </statement>
       </task>
     </task>
 
-    <task workspace="0in">
-      <statement>
+    <task xml:id="task-composition-linear" workspace="0in">
+      <introduction>
         <p>
           Try another linear example.
           Let <m>f(x) = 3x+7</m> and <m>g(x) = \dfrac{1}{3}(x-7)</m>.
@@ -121,21 +121,21 @@
           <li><p>One pair creates and simplifies <m>f \circ g(x)</m>.</p></li>
           <li><p>The other pair creates and simplifies <m>g \circ f(x)</m>.</p></li>
         </ul>
-      </statement>
-      <task workspace="2in">
+      </introduction>
+      <task xml:id="task-composition-linear-fg" workspace="2in">
         <statement>
           <p><m>f \circ g(x)</m></p>
         </statement>
       </task>
-      <task workspace="2in">
+      <task xml:id="task-composition-linear-gf" workspace="2in">
         <statement>
           <p><m>g \circ f(x)</m></p>
         </statement>
       </task>
     </task>
 
-    <task workspace="0in">
-      <statement>
+    <task xml:id="task-composition-rational" workspace="0in">
+      <introduction>
         <p>
           It also works with rational examples.
           Let <m>f(x) = \dfrac{1}{2x + 3} - 1</m> and <m>g(x) = \dfrac{1}{2x + 2} - \dfrac{3}{2}</m>.
@@ -145,13 +145,13 @@
           <li><p>One pair creates and simplifies <m>f \circ g(x)</m>.</p></li>
           <li><p>The other pair creates and simplifies <m>g \circ f(x)</m>.</p></li>
         </ul>
-      </statement>
-      <task workspace="2in">
+      </introduction>
+      <task xml:id="task-composition-rational-fg" workspace="2in">
         <statement>
           <p><m>f \circ g(x)</m></p>
         </statement>
       </task>
-      <task workspace="2in">
+      <task xml:id="task-composition-rational-gf" workspace="2in">
         <statement>
           <p><m>g \circ f(x)</m></p>
         </statement>
@@ -159,22 +159,25 @@
     </task>
   </exercise>
 
-  <exercise workspace="0in">
+  <definition xml:id="def-inverse-function">
+    <title>Inverse function</title>
+    <statement>
+      <p>
+        For a given function <m>f</m>, the function <m>g</m> is the <term>inverse function</term> to <m>f</m> if
+      </p>
+      <ul>
+        <li><p><m>f(g(x)) = x</m> for every <m>x</m> in the domain of <m>g</m>, and</p></li>
+        <li><p><m>g(f(x)) = x</m> for every <m>x</m> in the domain of <m>f</m>.</p></li>
+      </ul>
+    </statement>
+  </definition>
+
+  <exercise xml:id="ex-inverse-solving" workspace="0in">
     <title>Section 3: Inverse functions and solving equations</title>
     <introduction>
       <p>
-        What you observed is the defining property of inverse functions.
+        What you observed is the defining property of inverse functions, as stated in the definition above.
       </p>
-      <assemblage>
-        <title>Definition of an inverse function</title>
-        <p>
-          For a given function <m>f</m>, the function <m>g</m> is the <term>inverse function</term> to <m>f</m> if
-        </p>
-        <ul>
-          <li><p><m>f(g(x)) = x</m> for every <m>x</m> in the domain of <m>g</m>, and</p></li>
-          <li><p><m>g(f(x)) = x</m> for every <m>x</m> in the domain of <m>f</m>.</p></li>
-        </ul>
-      </assemblage>
       <p>
         <em>Notation:</em> We write <m>f^{-1}</m> as the name of the inverse function to <m>f</m>.
         The <m>-1</m> is read as <q>inverse</q>.
@@ -190,7 +193,7 @@
       </p>
     </introduction>
 
-    <task workspace="1.75in">
+    <task xml:id="task-inverse-sqrt" workspace="1.75in">
       <statement>
         <p>
           Consider the equation <m>\sqrt{2x - 1} = 3</m>.
@@ -203,7 +206,7 @@
     </task>
   </exercise>
 
-  <exercise workspace="0in">
+  <exercise xml:id="ex-inverse-abstract" workspace="0in">
     <title>Section 4: Solving with abstract functions</title>
     <introduction>
       <p>
@@ -214,19 +217,19 @@
       </p>
     </introduction>
 
-    <task workspace="1in">
+    <task xml:id="task-abstract-basic" workspace="1in">
       <statement>
         <p><m>A(x) = 4</m></p>
       </statement>
     </task>
 
-    <task workspace="1.25in">
+    <task xml:id="task-abstract-shift" workspace="1.25in">
       <statement>
         <p><m>2A(x + 1) = 6</m></p>
       </statement>
     </task>
 
-    <task workspace="1.5in">
+    <task xml:id="task-abstract-reciprocal" workspace="1.5in">
       <statement>
         <p><m>\dfrac{2}{B(x - 2)} + 1 = 3</m></p>
       </statement>
