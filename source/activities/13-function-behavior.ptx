@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<worksheet xml:id="activity-function-behavior">
+  <title>Describing Function Behavior</title>
+
+  <introduction>
+    <p>
+      When we look at the graph of a function, we usually notice its overall shape before we notice any particular point.
+      Where does the graph go up?
+      Where does it go down?
+      Where does it turn around?
+      Which way does it bend?
+    </p>
+    <p>
+      In this activity we introduce vocabulary that describes these features precisely.
+      Much of calculus is about finding these features from a formula.
+      For now, we practice reading them from graphs and building graphs that have them.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-behavior-describe" workspace="0in">
+    <title>Section 1: Describing the shape of a graph</title>
+    <introduction>
+      <p>
+        The following definitions give us a common language for talking about how a graph behaves.
+      </p>
+
+      <assemblage>
+        <title>Increasing and Decreasing</title>
+        <p>
+          We say <q>a function <m>f(x)</m> is <term>increasing</term> on a set <m>S</m></q> to mean that for any two values <m>a</m> and <m>b</m> in <m>S</m>, if <m>b \gt a</m> then <m>f(b) \gt f(a)</m>.
+          (That is, the function goes <em>up</em> as the independent variable goes to the right.)
+        </p>
+        <p>
+          We say <q><m>f(x)</m> is <term>decreasing</term> on <m>S</m></q> to mean that for any two values <m>a</m> and <m>b</m> in <m>S</m>, if <m>b \gt a</m>, then <m>f(b) \lt f(a)</m>.
+          (The function goes <em>down</em> as the independent variable goes to the right.)
+        </p>
+      </assemblage>
+
+      <assemblage>
+        <title>Local Extreme Values</title>
+        <p>
+          A function <m>f(x)</m> has a <term>local maximum</term> at <m>x=a</m> means that <m>f(a) \ge f(x)</m> for all <m>x</m> in some (usually small) interval that contains <m>a</m>.
+        </p>
+        <p>
+          It has a <term>local minimum</term> at <m>x=a</m> means that <m>f(a) \le f(x)</m> for all <m>x</m> in some interval containing <m>a</m>.
+        </p>
+      </assemblage>
+
+      <assemblage>
+        <title>Concavity</title>
+        <p>
+          We say <q><m>f(x)</m> is <term>concave up</term> on a set <m>S</m></q> to mean the <term>slope</term> of <m>f(x)</m> is increasing on <m>S</m>.
+          We say <q><m>f(x)</m> is <term>concave down</term> on <m>S</m></q> to mean the slope is decreasing on <m>S</m>.
+        </p>
+      </assemblage>
+
+      <p>
+        <em>Note:</em> The slope will later be measured using the derivative in order to make the definition of concavity more precise.
+        Visually, a function is concave up if the curve bends upward everywhere on the set.
+        It is concave down if the curve bends downward on the set.
+      </p>
+
+      <assemblage>
+        <title>Inflection Points</title>
+        <p>
+          A function <m>f(x)</m> has an <term>inflection point</term> at <m>x=a</m> means that <m>f(x)</m> changes concavity at <m>x=a</m>.
+        </p>
+      </assemblage>
+
+      <p>
+        On an interval where a graph is increasing or decreasing, and also concave up or concave down, it has one of four basic shapes.
+        Each shape can be pictured as one quarter of a circle.
+      </p>
+
+      <figure xml:id="fig-behavior-basic-shapes">
+        <caption>The four basic shapes of a graph</caption>
+        <sidebyside widths="22% 22% 22% 22%">
+          <figure xml:id="fig-behavior-shape-inc-cd">
+            <caption>Increasing and concave down</caption>
+            <image xml:id="image-behavior-shape-inc-cd">
+              <shortdescription>
+                The upper left quarter of a circle. Reading left to right, the curve rises steeply at first and then levels off.
+              </shortdescription>
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[x=2cm, y=2cm]
+                  \path (-0.1,-0.1) rectangle (1.1,1.1);
+                  \draw[very thick] (0,0) arc[start angle=180, end angle=90, radius=1];
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+          </figure>
+          <figure xml:id="fig-behavior-shape-dec-cd">
+            <caption>Decreasing and concave down</caption>
+            <image xml:id="image-behavior-shape-dec-cd">
+              <shortdescription>
+                The upper right quarter of a circle. Reading left to right, the curve starts level and then falls more and more steeply.
+              </shortdescription>
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[x=2cm, y=2cm]
+                  \path (-0.1,-0.1) rectangle (1.1,1.1);
+                  \draw[very thick] (0,1) arc[start angle=90, end angle=0, radius=1];
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+          </figure>
+          <figure xml:id="fig-behavior-shape-dec-cu">
+            <caption>Decreasing and concave up</caption>
+            <image xml:id="image-behavior-shape-dec-cu">
+              <shortdescription>
+                The lower left quarter of a circle. Reading left to right, the curve falls steeply at first and then levels off.
+              </shortdescription>
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[x=2cm, y=2cm]
+                  \path (-0.1,-0.1) rectangle (1.1,1.1);
+                  \draw[very thick] (0,1) arc[start angle=180, end angle=270, radius=1];
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+          </figure>
+          <figure xml:id="fig-behavior-shape-inc-cu">
+            <caption>Increasing and concave up</caption>
+            <image xml:id="image-behavior-shape-inc-cu">
+              <shortdescription>
+                The lower right quarter of a circle. Reading left to right, the curve starts level and then rises more and more steeply.
+              </shortdescription>
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[x=2cm, y=2cm]
+                  \path (-0.1,-0.1) rectangle (1.1,1.1);
+                  \draw[very thick] (0,0) arc[start angle=270, end angle=360, radius=1];
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </figure>
+
+      <p>
+        For each graph below, describe the shape of the graph in complete sentences using this vocabulary.
+        Your description should include:
+      </p>
+      <ul>
+        <li><p>the intervals where the function is increasing and the intervals where it is decreasing,</p></li>
+        <li><p>the intervals where the function is concave up and the intervals where it is concave down,</p></li>
+        <li><p>where the function has a local maximum or a local minimum, and</p></li>
+        <li><p>where the function has an inflection point.</p></li>
+      </ul>
+      <p>
+        A typical sentence might read <q><m>f</m> is decreasing and concave up on the interval <m>(a, b)</m>.</q>
+        When a change in behavior does not happen at a whole number, estimate its location from the graph.
+      </p>
+    </introduction>
+
+    <task xml:id="task-behavior-describe-graph-1" workspace="2in">
+      <statement>
+        <figure xml:id="fig-behavior-graph-1">
+          <caption>The graph of <m>y = f(x)</m></caption>
+          <image xml:id="image-behavior-graph-1" width="60%">
+            <shortdescription>
+              A smooth curve shown for x between -6 and 8 and y between -5 and 15.
+              It enters at the bottom left, rises to a peak at (-2, about 8.2), falls through (1, 4),
+              reaches a low point at (4, about -0.2), and then rises steeply, leaving the top of the window near x = 7.8.
+            </shortdescription>
+            <!-- f(x) = ((x-1)^3 - 27(x-1))/13 + 4.
+                 Local max at x = -2 (f = 106/13), local min at x = 4 (f = -2/13).
+                 Inflection point at x = 1 (f = 4). Concave down on (-infty, 1), concave up on (1, infty). -->
+            <latex-image>
+              <![CDATA[
+              \pgfplotsset{compat=1.18}
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines = middle,
+                  xlabel = {$x$}, ylabel = {$y$},
+                  xmin = -6, xmax = 8,
+                  ymin = -5, ymax = 15,
+                  xtick = {-6,-5,...,8},
+                  ytick = {-4,-2,...,14},
+                  minor ytick = {-5,-3,...,15},
+                  grid = both,
+                  major grid style = {gray!30},
+                  minor grid style = {gray!30},
+                  tick label style = {font=\scriptsize},
+                  axis line style = {->},
+                  width = 8.5cm, height = 10cm,
+                ]
+                  \addplot[very thick, domain=-6:8, samples=200]
+                    {((x-1)*(x-1)*(x-1) - 27*(x-1))/13 + 4};
+                \end{axis}
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </figure>
+        <p>
+          Describe the shape of the graph of <m>f</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-behavior-describe-graph-2" workspace="2in">
+      <statement>
+        <figure xml:id="fig-behavior-graph-2">
+          <caption>The graph of <m>y = g(x)</m></caption>
+          <image xml:id="image-behavior-graph-2" width="60%">
+            <shortdescription>
+              A smooth W-shaped curve shown for x between -3 and 7 and y between 0 and 10.
+              It enters at the top left, falls to a low point at (-1, 1), rises to a rounded peak at (2, about 5),
+              falls to a second low point at (5, 1), and then rises, leaving the top of the window near x = 6.9.
+            </shortdescription>
+            <!-- g(x) = (x-5)^2 (x+1)^2 / 20 + 1.
+                 Local min at x = -1 and x = 5 (g = 1), local max at x = 2 (g = 101/20 = 5.05).
+                 Inflection points at x = 2 - sqrt(3) (about 0.27) and x = 2 + sqrt(3) (about 3.73).
+                 Concave up on (-infty, 2-sqrt3) and (2+sqrt3, infty), concave down between. -->
+            <latex-image>
+              <![CDATA[
+              \pgfplotsset{compat=1.18}
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines = middle,
+                  xlabel = {$x$}, ylabel = {$y$},
+                  xmin = -3, xmax = 7,
+                  ymin = 0, ymax = 10,
+                  xtick = {-3,-2,...,7},
+                  ytick = {1,2,...,10},
+                  grid = major,
+                  major grid style = {gray!30},
+                  tick label style = {font=\scriptsize},
+                  axis line style = {->},
+                  width = 8.5cm, height = 8.5cm,
+                ]
+                  \addplot[very thick, domain=-3:7, samples=200]
+                    {(x-5)*(x-5)*(x+1)*(x+1)/20 + 1};
+                \end{axis}
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </figure>
+        <p>
+          Describe the shape of the graph of <m>g</m>.
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="task-behavior-describe-graph-3" workspace="2in">
+      <statement>
+        <figure xml:id="fig-behavior-graph-3">
+          <caption>The graph of <m>y = h(x)</m></caption>
+          <image xml:id="image-behavior-graph-3" width="60%">
+            <shortdescription>
+              A continuous curve shown for x between -4 and 8 and y between 0 and 8.
+              It starts at (-4, 2) and bends upward as it rises to a sharp peak at (-1, 7).
+              It then falls, bending upward, and levels off at (1, 4).
+              It keeps falling, now bending downward, to a sharp low point at (3, 1).
+              It rises, bending downward, and levels off at (5, 4).
+              Finally it rises again, bending upward, to (8, 7).
+            </shortdescription>
+            <!-- h is built from pieces of parabolas:
+                   on [-4,-1]: (5/9)(x+4)^2 + 2     increasing, concave up
+                   on [-1, 1]: (3/4)(x-1)^2 + 4     decreasing, concave up
+                   on [ 1, 3]: -(3/4)(x-1)^2 + 4    decreasing, concave down
+                   on [ 3, 5]: -(3/4)(x-5)^2 + 4    increasing, concave down
+                   on [ 5, 8]: (1/3)(x-5)^2 + 4     increasing, concave up
+                 Local max at x = -1 and local min at x = 3 (both are sharp corners).
+                 Inflection points at x = 1 and x = 5 (both have a horizontal tangent). -->
+            <latex-image>
+              <![CDATA[
+              \pgfplotsset{compat=1.18}
+              \begin{tikzpicture}
+                \begin{axis}[
+                  axis lines = middle,
+                  xlabel = {$x$}, ylabel = {$y$},
+                  xmin = -4, xmax = 8,
+                  ymin = 0, ymax = 8,
+                  xtick = {-4,-3,...,8},
+                  ytick = {1,2,...,8},
+                  grid = major,
+                  major grid style = {gray!30},
+                  tick label style = {font=\scriptsize},
+                  axis line style = {->},
+                  width = 8.5cm, height = 7cm,
+                ]
+                  \addplot[very thick, domain=-4:-1, samples=60] {(5/9)*(x+4)^2 + 2};
+                  \addplot[very thick, domain=-1:1,  samples=60] {(3/4)*(x-1)^2 + 4};
+                  \addplot[very thick, domain=1:3,   samples=60] {-(3/4)*(x-1)^2 + 4};
+                  \addplot[very thick, domain=3:5,   samples=60] {-(3/4)*(x-5)^2 + 4};
+                  \addplot[very thick, domain=5:8,   samples=60] {(1/3)*(x-5)^2 + 4};
+                \end{axis}
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </figure>
+        <p>
+          Describe the shape of the graph of <m>h</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-behavior-sketch" workspace="0in">
+    <title>Section 2: Sketching a graph from its behavior</title>
+    <introduction>
+      <p>
+        Now we reverse the process.
+        Instead of reading behavior from a graph, we start with a description of the behavior and create a graph that has it.
+      </p>
+      <p>
+        Each description below is given by two number lines.
+        The marked points on each number line are <term>break points</term>, where the behavior changes.
+        The first number line shows where the function is increasing or decreasing.
+        The second number line shows where the function is concave up or concave down.
+        These charts look like the sign charts from our earlier activities.
+        Later in the course, we will build charts like these using sign analysis.
+      </p>
+      <p>
+        For each description:
+      </p>
+      <ol>
+        <li><p>Sketch a graph of a function <m>f</m> that has all of the behavior shown on both number lines.</p></li>
+        <li><p>Mark and label every local maximum, local minimum, and inflection point on your sketch.</p></li>
+        <li><p>State the <m>x</m>-value where each one occurs.</p></li>
+        <li><p>Compare your sketch with the rest of your group. Are the sketches identical? Which features must every correct sketch share?</p></li>
+      </ol>
+    </introduction>
+
+    <task xml:id="task-behavior-sketch-1" workspace="2.5in">
+      <statement>
+        <image xml:id="image-behavior-chart-1" width="90%">
+          <shortdescription>
+            Two number lines. The first has a break point at 2: increasing to the left of 2 and decreasing to the right of 2.
+            The second has a break point at 0: concave up to the left of 0 and concave down to the right of 0.
+          </shortdescription>
+          <!-- Answer: local max at x = 2; inflection point at x = 0. -->
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=0.55cm, y=1cm, font=\small]
+              % Increasing and decreasing
+              \node[anchor=east, align=right] at (-8.5,1.5) {Increasing or\\decreasing};
+              \draw[thick, <->] (-8,1.5) -- (8,1.5);
+              \draw (2,1.65) -- (2,1.35) node[below] {$2$};
+              \node[above] at (-3,1.6) {increasing};
+              \node[above] at (5,1.6) {decreasing};
+              % Concavity
+              \node[anchor=east, align=right] at (-8.5,0) {Concavity};
+              \draw[thick, <->] (-8,0) -- (8,0);
+              \draw (0,0.15) -- (0,-0.15) node[below] {$0$};
+              \node[above] at (-4,0.1) {concave up};
+              \node[above] at (4,0.1) {concave down};
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+
+    <task xml:id="task-behavior-sketch-2" workspace="2.5in">
+      <statement>
+        <image xml:id="image-behavior-chart-2" width="90%">
+          <shortdescription>
+            Two number lines. The first has break points at -4, 0, and 4: decreasing to the left of -4,
+            increasing from -4 to 0, decreasing from 0 to 4, and increasing to the right of 4.
+            The second has break points at -4 and 4: concave up to the left of -4,
+            concave down from -4 to 4, and concave up to the right of 4.
+          </shortdescription>
+          <!-- Answer: local min at x = -4 and x = 4, local max at x = 0;
+               inflection points at x = -4 and x = 4.
+               Note: this behavior forces sharp corners at x = -4 and x = 4. -->
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=0.55cm, y=1cm, font=\small]
+              % Increasing and decreasing
+              \node[anchor=east, align=right] at (-8.5,1.5) {Increasing or\\decreasing};
+              \draw[thick, <->] (-8,1.5) -- (8,1.5);
+              \draw (-4,1.65) -- (-4,1.35) node[below] {$-4$};
+              \draw (0,1.65) -- (0,1.35) node[below] {$0$};
+              \draw (4,1.65) -- (4,1.35) node[below] {$4$};
+              \node[above] at (-6,1.6) {decreasing};
+              \node[above] at (-2,1.6) {increasing};
+              \node[above] at (2,1.6) {decreasing};
+              \node[above] at (6,1.6) {increasing};
+              % Concavity
+              \node[anchor=east, align=right] at (-8.5,0) {Concavity};
+              \draw[thick, <->] (-8,0) -- (8,0);
+              \draw (-4,0.15) -- (-4,-0.15) node[below] {$-4$};
+              \draw (4,0.15) -- (4,-0.15) node[below] {$4$};
+              \node[above] at (-6,0.1) {concave up};
+              \node[above] at (0,0.1) {concave down};
+              \node[above] at (6,0.1) {concave up};
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+
+    <task xml:id="task-behavior-sketch-3" workspace="2.5in">
+      <statement>
+        <image xml:id="image-behavior-chart-3" width="90%">
+          <shortdescription>
+            Two number lines. The first has a break point at 0: decreasing to the left of 0 and increasing to the right of 0.
+            The second has break points at -2 and 2: concave down to the left of -2,
+            concave up from -2 to 2, and concave down to the right of 2.
+          </shortdescription>
+          <!-- Answer: local min at x = 0; inflection points at x = -2 and x = 2. -->
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=0.55cm, y=1cm, font=\small]
+              % Increasing and decreasing
+              \node[anchor=east, align=right] at (-8.5,1.5) {Increasing or\\decreasing};
+              \draw[thick, <->] (-8,1.5) -- (8,1.5);
+              \draw (0,1.65) -- (0,1.35) node[below] {$0$};
+              \node[above] at (-4,1.6) {decreasing};
+              \node[above] at (4,1.6) {increasing};
+              % Concavity
+              \node[anchor=east, align=right] at (-8.5,0) {Concavity};
+              \draw[thick, <->] (-8,0) -- (8,0);
+              \draw (-2,0.15) -- (-2,-0.15) node[below] {$-2$};
+              \draw (2,0.15) -- (2,-0.15) node[below] {$2$};
+              \node[above] at (-5,0.1) {concave down};
+              \node[above] at (0,0.1) {concave up};
+              \node[above] at (5,0.1) {concave down};
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
