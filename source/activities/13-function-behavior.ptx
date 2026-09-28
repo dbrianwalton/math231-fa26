@@ -75,7 +75,7 @@
 
       <figure xml:id="fig-behavior-basic-shapes">
         <caption>The four basic shapes of a graph</caption>
-        <sidebyside widths="22% 22% 22% 22%">
+        <sidebyside widths="18% 18% 18% 18%">
           <figure xml:id="fig-behavior-shape-inc-cd">
             <caption>Increasing and concave down</caption>
             <image xml:id="image-behavior-shape-inc-cd">
@@ -163,7 +163,7 @@
       <statement>
         <figure xml:id="fig-behavior-graph-1">
           <caption>The graph of <m>y = f(x)</m></caption>
-          <image xml:id="image-behavior-graph-1" width="60%">
+          <image xml:id="image-behavior-graph-1" width="40%">
             <shortdescription>
               A smooth curve shown for x between -6 and 8 and y between -5 and 15.
               It enters at the bottom left, rises to a peak at (-2, about 8.2), falls through (1, 4),
@@ -209,7 +209,7 @@
       <statement>
         <figure xml:id="fig-behavior-graph-2">
           <caption>The graph of <m>y = g(x)</m></caption>
-          <image xml:id="image-behavior-graph-2" width="60%">
+          <image xml:id="image-behavior-graph-2" width="40%">
             <shortdescription>
               A smooth W-shaped curve shown for x between -3 and 7 and y between 0 and 10.
               It enters at the top left, falls to a low point at (-1, 1), rises to a rounded peak at (2, about 5),
@@ -254,7 +254,7 @@
       <statement>
         <figure xml:id="fig-behavior-graph-3">
           <caption>The graph of <m>y = h(x)</m></caption>
-          <image xml:id="image-behavior-graph-3" width="60%">
+          <image xml:id="image-behavior-graph-3" width="40%">
             <shortdescription>
               A continuous curve shown for x between -4 and 8 and y between 0 and 8.
               It starts at (-4, 2) and bends upward as it rises to a sharp peak at (-1, 7).
