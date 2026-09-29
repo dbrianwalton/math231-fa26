@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-intuitive-limits">
+  <title>Introducing Limits and Continuity</title>
+
+  <introduction>
+    <p>
+      When we evaluate a function on a graph, <m>f(a)</m> always refers to the <m>y</m>-value of the <em>closed</em> point at <m>x=a</m>. Open points are not values of the function. But an open point still tells us something: it shows where the graph <em>was headed</em> as it approached that <m>x</m>-value.
+    </p>
+    <p>
+      Today we introduce a way to talk about that open point, using the idea of a <term>limit</term>. We will use limits to describe how a graph behaves near a point, separately from what the function value is at that point, and to name the different ways a graph can fail to be connected.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-limits-one-sided" workspace="0in">
+    <title>Section 1: Left- and Right-Limits</title>
+    <introduction>
+      <p>
+        Here is the same function <m>f</m> whose graph we used when reading values from a graph.
+      </p>
+      <figure xml:id="fig-limits-graph">
+        <caption>The graph of <m>f</m></caption>
+        <image xml:id="image-limits-graph" width="60%">
+          <shortdescription>
+            A piecewise graph with three pieces. A rising line segment runs from a closed point
+            at (-4,1) up to an open point at (-2,3). A upward-curving parabola arc runs from a
+            closed point at (-2,4) to a closed point at (1,1), with an open point (a hole) at
+            (-0.5, 0.25) where the curve is interrupted. A falling line segment runs from an open
+            point at (1,3) down to a closed point at (4,0).
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=0.9, >=stealth]
+              % axes
+              \draw[->] (-4.6,0) -- (4.6,0) node[right] {$x$};
+              \draw[->] (0,-1) -- (0,5.2) node[above] {$y$};
+              % tick marks
+              \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+                \draw (\x,0.08) -- (\x,-0.08);
+                \node[below] at (\x,-0.08) {\small $\x$};
+              }
+              \foreach \y in {1,2,3,4,5} {
+                \draw (0.08,\y) -- (-0.08,\y);
+                \node[left] at (-0.08,\y) {\small $\y$};
+              }
+
+              % Piece 1: f(x) = x+5 on [-4,-2)
+              \draw[thick, domain=-4:-2, samples=50] plot (\x, {\x+5});
+              \filldraw (-4,1) circle (2.2pt);
+              \draw[fill=white] (-2,3) circle (2.2pt);
+
+              % Piece 2: f(x) = x^2 on [-2,1], hole at x=-0.5
+              \draw[thick, domain=-2:-0.55, samples=50] plot (\x, {\x*\x});
+              \draw[thick, domain=-0.45:1, samples=50] plot (\x, {\x*\x});
+              \filldraw (-2,4) circle (2.2pt);
+              \draw[fill=white] (-0.5,0.25) circle (2.2pt);
+              \filldraw (1,1) circle (2.2pt);
+
+              % Piece 3: f(x) = -x+4 on (1,4]
+              \draw[thick, domain=1:4, samples=50] plot (\x, {-\x+4});
+              \draw[fill=white] (1,3) circle (2.2pt);
+              \filldraw (4,0) circle (2.2pt);
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+      <p>
+        Although <m>f(-2) = 4</m>, there is an open point at <m>(-2,3)</m> attached to the segment of the graph defined on the domain's subset interval <m>[-4,-2)</m> that appears immediately to the left of <m>x=-2</m>. We call the <m>y</m>-value 3 the <term>left-limit</term> of <m>f(x)</m> as <m>x</m> approaches <m>-2</m>. We cannot use simple function evaluation to describe it, because <m>f(-2)</m> can only mean 4.
+      </p>
+      <p>
+        Instead, we use what is called a <term>limit operator</term> to act on <m>f(x)</m> and write
+        <md>
+          <mrow>\lim_{x \to -2^{-}} f(x) = 3</mrow>
+        </md>.
+        The notation <m>x \to -2</m> is how we indicate which <m>x</m>-value we are looking at. The superscript <c>-</c> that appears <em>after</em> the value <m>-2</m> is how we indicate we are looking on the left side. The limit operator is <em>acting on</em> <m>f(x)</m>, and the entire notation <m>\displaystyle \lim_{x \to -2^{-}} f(x)</m> represents the left-limit of <m>f(x)</m> as <m>x</m> approaches <m>-2</m> (or as <m>x</m> approaches <m>-2</m> from the left).
+      </p>
+      <p>
+        Because the closed point at <m>(-2,4)</m> is connected to the graph using the domain's subset interval <m>(-2,-0.5)</m> to the <em>right</em> of <m>x=-2</m>, we write
+        <md>
+          <mrow>\lim_{x \to -2^{+}} f(x) = 4</mrow>
+        </md>
+        and say the <m>y</m>-value 4 is the <term>right-limit</term> of <m>f(x)</m> as <m>x</m> approaches <m>-2</m>.
+      </p>
+      <p>
+        When we talk about a limit, we are not talking about the actual function value at a point. We are talking about the point that the function would connect to if we were to look at the domain's subset intervals immediately to the left or right of the point. In this case, the left- and right-limits are <em>different</em>, and so we say <q><m>f(x)</m> has a <term>jump discontinuity</term> at <m>x=-2</m></q>.
+      </p>
+    </introduction>
+    <task xml:id="task-limits-notation-compare-1" workspace="1.5in">
+      <statement>
+        <p>
+          Explain in your own words how <m>f(-2)</m> and <m>\displaystyle \lim_{x \to -2^{-}} f(x)</m> are different. Which one refers to a closed point, and which one refers to an open point?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-notation-compare-2" workspace="1.5in">
+      <statement>
+        <p>
+          Explain in your own words how <m>f(-2)</m> and <m>\displaystyle \lim_{x \to -2^{+}} f(x)</m> mean different things even though they refer to the same point.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-limits-two-sided" workspace="0in">
+    <title>Section 2: Two-Sided Limits and Continuity</title>
+    <introduction>
+      <p>
+        Now look at <m>x=-3</m> on the graph of <m>f</m>. The graph just goes continuously through the point at <m>(-3,2)</m>, which corresponds to <m>f(-3)=2</m>. Because the graph using the domain's subset interval <m>[-4,-3)</m> to the left of <m>x=-3</m> connects to the point <m>(-3,2)</m>, we write
+        <md>
+          <mrow>\lim_{x \to -3^{-}} f(x) = 2</mrow>
+        </md>.
+        Similarly, the graph for the domain's subset interval <m>(-3,-2)</m> to the right of <m>x=-3</m> is also connected to the point <m>(-3,2)</m>, so we also write
+        <md>
+          <mrow>\lim_{x \to -3^{+}} f(x) = 2</mrow>
+        </md>.
+        When the subset intervals to the left and right are both connected to the same point, the left- and right-limits have the same value, and we simply write
+        <md>
+          <mrow>\lim_{x \to -3} f(x) = 2</mrow>
+        </md>
+        without any <m>\pm</m> superscript after the <m>x</m>-value. This is called the <term>two-sided limit</term>.
+      </p>
+      <p>
+        In this case the left- and right-limits also agree with the actual function value <m>f(-3)=2</m>, and we say <q><m>f(x)</m> is <term>continuous</term> at <m>x=-3</m></q>.
+      </p>
+      <p>
+        If the left- and right-limits agree with each other but do <em>not</em> agree with the function value, the two-sided limit exists but the function is <em>not</em> continuous. We say that <q><m>f(x)</m> has a <term>removable discontinuity</term> or <term>hole</term></q> at the <m>x</m>-value.
+      </p>
+      <p>
+        Sometimes a limit <term>does not exist</term> (often abbreviated DNE). For example, if the graph has no points at all on one side of an <m>x</m>-value, there is nothing for the graph to connect to on that side, so that one-sided limit does not exist. The two-sided limit exists only when both one-sided limits exist and are equal.
+      </p>
+      <p>
+        For each of the <m>x</m>-values below, use the graph of <m>f</m> in <xref ref="fig-limits-graph"/> to answer the following.
+        <ol marker="a.">
+            <li><p>What is the function value if it exists?</p></li>
+            <li><p>What are the left- and right-limits if they exist?</p></li>
+            <li><p>What is the two-sided limit if it exists?</p></li>
+            <li><p>Is the function continuous at the point?</p></li>
+
+        </ol>
+        Practice writing the correct equation for each value, either using function notation or limit operators.
+      </p>
+    </introduction>
+    <task xml:id="task-limits-graph-neg-four" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=-4</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-graph-neg-half" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=-0.5</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-graph-one" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=1</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-graph-two" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=2</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-graph-four" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=4</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-limits-piecewise" workspace="0in">
+    <title>Section 3: Limits of Piecewise Functions</title>
+    <introduction>
+      <p>
+        For any <m>x</m>-value, there are three things to compare: the left-limit, the right-limit, and the function value. Sometimes these are all the same point, and we say <q><m>f(x)</m> is <term>continuous</term></q> when they all agree. Otherwise, there is a <term>discontinuity</term>.
+      </p>
+      <p>
+        We look for the same information when using a formula instead of a graph. Consider the piecewise function
+        <md>
+          p(x) = \begin{cases}
+          x+3, \amp x \lt -1 \\
+          5, \amp x = -1 \\
+          x^2+1, \amp -1 \lt x \lt 2 \\
+          7-x, \amp 2 \le x \lt 4 \\
+          2x-3, \amp x \ge 4
+          \end{cases}
+        </md>.
+        To find a function value <m>p(c)</m>, we choose the rule whose condition includes <m>c</m>. To find a left-limit at <m>c</m>, we use the rule that applies on the interval immediately to the <em>left</em> of <m>c</m>, and ask what <m>y</m>-value that rule approaches as <m>x</m> gets to <m>c</m>. To find a right-limit, we do the same with the rule on the interval immediately to the <em>right</em> of <m>c</m>. It may help to sketch a representation of the domain's subintervals and the formulas used on each.
+      </p>
+      <p>
+        For each of the <m>x</m>-values below, answer the same four questions:
+        <ol marker="a.">
+            <li><p>What is the function value if it exists?</p></li>
+            <li><p>What are the left- and right-limits if they exist?</p></li>
+            <li><p>What is the two-sided limit if it exists?</p></li>
+            <li><p>Is the function continuous at the point?</p></li>
+
+        </ol>
+        Practice writing the correct equation for each value, either using function notation or limit operators.
+      </p>
+    </introduction>
+    <task xml:id="task-limits-piecewise-neg-one" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=-1</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-piecewise-zero" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=0</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-piecewise-two" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=2</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-piecewise-four" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=4</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
