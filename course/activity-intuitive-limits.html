@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Introducing Limits and Continuity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Calculus with Functions I">
+<meta property="og:title" content="Calculus with Functions I">
+<meta property="book:title" content="Calculus with Functions I">
+<meta name="twitter:description" content="MATH 231-0002 Fall 2026">
+<meta property="og:description" content="MATH 231-0002 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.2';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.6ad113829064d43a.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.02090e9f6a81e70e.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.347e2ecdeacfed99.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Calculus with Functions I</span> <span class="subtitle">MATH 231-0002 Fall 2026</span></a></div>
+<p class="byline">Dr. Brian Walton</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="activity-function-behavior.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="activities.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="handouts.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments and Grades</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-objectives.html" class="internal"><span class="title">Course Learning Objectives</span></a></div>
+<ul id="ptx-toc-group-course-objectives" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="course-objectives-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1 and Week 2</span></a></div>
+<ul id="ptx-toc-group-notes-week-01" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">P1 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">P2 Intervals and Set Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">P3 Formula Structure, Inverses and Isolation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 3 and Week 4</span></a></div>
+<ul id="ptx-toc-group-notes-week-02" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">P4 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">F1 Function Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-5" class="internal"><span class="title">F2 Function Domain</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-03.html" class="internal"><span class="title">Week 5 and Week 6</span></a></div>
+<ul id="ptx-toc-group-notes-week-03" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-3" class="internal"><span class="title">F3 Function Deconstruction</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-activities">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="activities-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-linear-relations-slope.html" class="internal"><span class="title">Building Linear Relations from Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-interval-union-intersection.html" class="internal"><span class="title">Union and Intersection of Intervals</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-operations.html" class="internal"><span class="title">Method of Isolation: Solving by Inverse Operations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Factored Polynomials</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-rational-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Rational Expressions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-solve-rational-inequality.html" class="internal"><span class="title">Solving Rational Inequalities</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-notation.html" class="internal"><span class="title">Function Notation: Graphs, Tables, and Formulas</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-domain.html" class="internal"><span class="title">Domain of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-composition.html" class="internal"><span class="title">Composition of Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-deconstruction.html" class="internal"><span class="title">Sum, Difference, Product, Quotient, or Composition?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-functions.html" class="internal"><span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-behavior.html" class="internal"><span class="title">Describing Function Behavior</span></a></div></li>
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="activity-intuitive-limits.html" class="internal"><span class="title">Introducing Limits and Continuity</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="worksheet" id="activity-intuitive-limits" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h1 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Introducing Limits and Continuity</span><div class="print-links"><a href="?printpreview=activity-intuitive-limits" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h1>
+<section class="introduction" id="activity-intuitive-limits-2">
+<div class="para" id="activity-intuitive-limits-2-1">When we evaluate a function on a graph, <span class="process-math">\(f(a)\)</span> always refers to the <span class="process-math">\(y\)</span>-value of the <em class="emphasis">closed</em> point at <span class="process-math">\(x=a\text{.}\)</span> Open points are not values of the function. But an open point still tells us something: it shows where the graph <em class="emphasis">was headed</em> as it approached that <span class="process-math">\(x\)</span>-value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-intuitive-limits-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="activity-intuitive-limits-2-2">Today we introduce a way to talk about that open point, using the idea of a <dfn class="terminology">limit</dfn>. We will use limits to describe how a graph behaves near a point, separately from what the function value is at that point, and to name the different ways a graph can fail to be connected.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-intuitive-limits-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="exercise exercise-like" id="ex-limits-one-sided"><h2 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 1: Left- and Right-Limits.</span>
+</h2>
+<div class="introduction" id="ex-limits-one-sided-2">
+<div class="para" id="ex-limits-one-sided-2-1">Here is the same function <span class="process-math">\(f\)</span> whose graph we used when reading values from a graph.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-one-sided-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-limits-graph"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/image-limits-graph.svg" role="img" class="contained" alt="A piecewise graph with three pieces. A rising line segment runs from a closed point at (-4,1) up to an open point at (-2,3). A upward-curving parabola arc runs from a closed point at (-2,4) to a closed point at (1,1), with an open point (a hole) at (-0.5, 0.25) where the curve is interrupted. A falling line segment runs from an open point at (1,3) down to a closed point at (4,0)."></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The graph of <span class="process-math">\(f\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 17"><a tabindex="-1" href="#fig-limits-graph" title="Copy heading and permalink for Figure 17" aria-label="Copy heading and permalink for Figure 17">🔗</a></div></figcaption>
+</figure>
+<div class="para" id="ex-limits-one-sided-2-3">Although <span class="process-math">\(f(-2) = 4\text{,}\)</span> there is an open point at <span class="process-math">\((-2,3)\)</span> attached to the segment of the graph defined on the domain’s subset interval <span class="process-math">\([-4,-2)\)</span> that appears immediately to the left of <span class="process-math">\(x=-2\text{.}\)</span> We call the <span class="process-math">\(y\)</span>-value 3 the <dfn class="terminology">left-limit</dfn> of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(-2\text{.}\)</span> We cannot use simple function evaluation to describe it, because <span class="process-math">\(f(-2)\)</span> can only mean 4.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-one-sided-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-limits-one-sided-2-4">
+<div class="para">Instead, we use what is called a <dfn class="terminology">limit operator</dfn> to act on <span class="process-math">\(f(x)\)</span> and write</div>
+<div class="displaymath process-math" id="ex-limits-one-sided-2-4-3">
+\begin{gather*}
+\lim_{x \to -2^{-}} f(x) = 3\text{.}
+\end{gather*}
+</div>
+<div class="para">The notation <span class="process-math">\(x \to -2\)</span> is how we indicate which <span class="process-math">\(x\)</span>-value we are looking at. The superscript <code class="code-inline tex2jax_ignore">-</code> that appears <em class="emphasis">after</em> the value <span class="process-math">\(-2\)</span> is how we indicate we are looking on the left side. The limit operator is <em class="emphasis">acting on</em> <span class="process-math">\(f(x)\text{,}\)</span> and the entire notation <span class="process-math">\(\displaystyle \lim_{x \to -2^{-}} f(x)\)</span> represents the left-limit of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(-2\)</span> (or as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(-2\)</span> from the left).</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-one-sided-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-limits-one-sided-2-5">
+<div class="para">Because the closed point at <span class="process-math">\((-2,4)\)</span> is connected to the graph using the domain’s subset interval <span class="process-math">\((-2,-0.5)\)</span> to the <em class="emphasis">right</em> of <span class="process-math">\(x=-2\text{,}\)</span> we write</div>
+<div class="displaymath process-math" id="ex-limits-one-sided-2-5-5">
+\begin{gather*}
+\lim_{x \to -2^{+}} f(x) = 4
+\end{gather*}
+</div>
+<div class="para">and say the <span class="process-math">\(y\)</span>-value 4 is the <dfn class="terminology">right-limit</dfn> of <span class="process-math">\(f(x)\)</span> as <span class="process-math">\(x\)</span> approaches <span class="process-math">\(-2\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-one-sided-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limits-one-sided-2-6">When we talk about a limit, we are not talking about the actual function value at a point. We are talking about the point that the function would connect to if we were to look at the domain’s subset intervals immediately to the left or right of the point. In this case, the left- and right-limits are <em class="emphasis">different</em>, and so we say “<span class="process-math">\(f(x)\)</span> has a <dfn class="terminology">jump discontinuity</dfn> at <span class="process-math">\(x=-2\)</span>”.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-one-sided-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-limits-notation-compare-1"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-limits-notation-compare-1-1-1">Explain in your own words how <span class="process-math">\(f(-2)\)</span> and <span class="process-math">\(\displaystyle \lim_{x \to -2^{-}} f(x)\)</span> are different. Which one refers to a closed point, and which one refers to an open point?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-notation-compare-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.a"><a tabindex="-1" href="#task-limits-notation-compare-1" title="Copy heading and permalink for Task 1.a" aria-label="Copy heading and permalink for Task 1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-notation-compare-2"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-limits-notation-compare-2-1-1">Explain in your own words how <span class="process-math">\(f(-2)\)</span> and <span class="process-math">\(\displaystyle \lim_{x \to -2^{+}} f(x)\)</span> mean different things even though they refer to the same point.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-notation-compare-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.b"><a tabindex="-1" href="#task-limits-notation-compare-2" title="Copy heading and permalink for Task 1.b" aria-label="Copy heading and permalink for Task 1.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 1: Section 1: Left- and Right-Limits"><a tabindex="-1" href="#ex-limits-one-sided" title="Copy heading and permalink for Worksheet Exercise 1: Section 1: Left- and Right-Limits" aria-label="Copy heading and permalink for Worksheet Exercise 1: Section 1: Left- and Right-Limits">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-limits-two-sided"><h2 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 2: Two-Sided Limits and Continuity.</span>
+</h2>
+<div class="introduction" id="ex-limits-two-sided-2">
+<div class="para logical" id="ex-limits-two-sided-2-1">
+<div class="para">Now look at <span class="process-math">\(x=-3\)</span> on the graph of <span class="process-math">\(f\text{.}\)</span> The graph just goes continuously through the point at <span class="process-math">\((-3,2)\text{,}\)</span> which corresponds to <span class="process-math">\(f(-3)=2\text{.}\)</span> Because the graph using the domain’s subset interval <span class="process-math">\([-4,-3)\)</span> to the left of <span class="process-math">\(x=-3\)</span> connects to the point <span class="process-math">\((-3,2)\text{,}\)</span> we write</div>
+<div class="displaymath process-math" id="ex-limits-two-sided-2-1-8">
+\begin{gather*}
+\lim_{x \to -3^{-}} f(x) = 2\text{.}
+\end{gather*}
+</div>
+<div class="para">Similarly, the graph for the domain’s subset interval <span class="process-math">\((-3,-2)\)</span> to the right of <span class="process-math">\(x=-3\)</span> is also connected to the point <span class="process-math">\((-3,2)\text{,}\)</span> so we also write</div>
+<div class="displaymath process-math" id="ex-limits-two-sided-2-1-12">
+\begin{gather*}
+\lim_{x \to -3^{+}} f(x) = 2\text{.}
+\end{gather*}
+</div>
+<div class="para">When the subset intervals to the left and right are both connected to the same point, the left- and right-limits have the same value, and we simply write</div>
+<div class="displaymath process-math" id="ex-limits-two-sided-2-1-13">
+\begin{gather*}
+\lim_{x \to -3} f(x) = 2
+\end{gather*}
+</div>
+<div class="para">without any <span class="process-math">\(\pm\)</span> superscript after the <span class="process-math">\(x\)</span>-value. This is called the <dfn class="terminology">two-sided limit</dfn>.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limits-two-sided-2-2">In this case the left- and right-limits also agree with the actual function value <span class="process-math">\(f(-3)=2\text{,}\)</span> and we say “<span class="process-math">\(f(x)\)</span> is <dfn class="terminology">continuous</dfn> at <span class="process-math">\(x=-3\)</span>”.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limits-two-sided-2-3">If the left- and right-limits agree with each other but do <em class="emphasis">not</em> agree with the function value, the two-sided limit exists but the function is <em class="emphasis">not</em> continuous. We say that “<span class="process-math">\(f(x)\)</span> has a <dfn class="terminology">removable discontinuity</dfn> or <dfn class="terminology">hole</dfn>” at the <span class="process-math">\(x\)</span>-value.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limits-two-sided-2-4">Sometimes a limit <dfn class="terminology">does not exist</dfn> (often abbreviated DNE). For example, if the graph has no points at all on one side of an <span class="process-math">\(x\)</span>-value, there is nothing for the graph to connect to on that side, so that one-sided limit does not exist. The two-sided limit exists only when both one-sided limits exist and are equal.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-limits-two-sided-2-5">
+<div class="para">For each of the <span class="process-math">\(x\)</span>-values below, use the graph of <span class="process-math">\(f\)</span> in <a href="activity-intuitive-limits.html#fig-limits-graph" class="xref" data-knowl="./knowl/xref/fig-limits-graph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 17">Figure 17</a> to answer the following.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="ex-limits-two-sided-2-5-4">
+<li id="ex-limits-two-sided-2-5-4-1">
+<div class="para" id="ex-limits-two-sided-2-5-4-1-1">What is the function value if it exists?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.a"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-1" title="Copy heading and permalink for Item 2.a" aria-label="Copy heading and permalink for Item 2.a">🔗</a></div>
+</li>
+<li id="ex-limits-two-sided-2-5-4-2">
+<div class="para" id="ex-limits-two-sided-2-5-4-2-1">What are the left- and right-limits if they exist?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.b"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-2" title="Copy heading and permalink for Item 2.b" aria-label="Copy heading and permalink for Item 2.b">🔗</a></div>
+</li>
+<li id="ex-limits-two-sided-2-5-4-3">
+<div class="para" id="ex-limits-two-sided-2-5-4-3-1">What is the two-sided limit if it exists?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.c"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-3" title="Copy heading and permalink for Item 2.c" aria-label="Copy heading and permalink for Item 2.c">🔗</a></div>
+</li>
+<li id="ex-limits-two-sided-2-5-4-4">
+<div class="para" id="ex-limits-two-sided-2-5-4-4-1">Is the function continuous at the point?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.d"><a tabindex="-1" href="#ex-limits-two-sided-2-5-4-4" title="Copy heading and permalink for Item 2.d" aria-label="Copy heading and permalink for Item 2.d">🔗</a></div>
+</li>
+</ol>
+<div class="para">Practice writing the correct equation for each value, either using function notation or limit operators.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-two-sided-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-limits-graph-neg-four"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-limits-graph-neg-four-1-1">
+<span class="process-math">\(x=-4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-graph-neg-four-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.a"><a tabindex="-1" href="#task-limits-graph-neg-four" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-graph-neg-half"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-limits-graph-neg-half-1-1">
+<span class="process-math">\(x=-0.5\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-graph-neg-half-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.b"><a tabindex="-1" href="#task-limits-graph-neg-half" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-graph-one"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-limits-graph-one-1-1">
+<span class="process-math">\(x=1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-graph-one-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.c"><a tabindex="-1" href="#task-limits-graph-one" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-graph-two"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="task-limits-graph-two-1-1">
+<span class="process-math">\(x=2\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-graph-two-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.d"><a tabindex="-1" href="#task-limits-graph-two" title="Copy heading and permalink for Task 2.d" aria-label="Copy heading and permalink for Task 2.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-graph-four"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para" id="task-limits-graph-four-1-1">
+<span class="process-math">\(x=4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-graph-four-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.e"><a tabindex="-1" href="#task-limits-graph-four" title="Copy heading and permalink for Task 2.e" aria-label="Copy heading and permalink for Task 2.e">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: Section 2: Two-Sided Limits and Continuity"><a tabindex="-1" href="#ex-limits-two-sided" title="Copy heading and permalink for Worksheet Exercise 2: Section 2: Two-Sided Limits and Continuity" aria-label="Copy heading and permalink for Worksheet Exercise 2: Section 2: Two-Sided Limits and Continuity">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-limits-piecewise"><h2 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 3: Limits of Piecewise Functions.</span>
+</h2>
+<div class="introduction" id="ex-limits-piecewise-2">
+<div class="para" id="ex-limits-piecewise-2-1">For any <span class="process-math">\(x\)</span>-value, there are three things to compare: the left-limit, the right-limit, and the function value. Sometimes these are all the same point, and we say “<span class="process-math">\(f(x)\)</span> is <dfn class="terminology">continuous</dfn>” when they all agree. Otherwise, there is a <dfn class="terminology">discontinuity</dfn>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-piecewise-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-limits-piecewise-2-2">
+<div class="para">We look for the same information when using a formula instead of a graph. Consider the piecewise function</div>
+<div class="displaymath process-math" id="ex-limits-piecewise-2-2-1">
+\begin{equation*}
+p(x) = \begin{cases}
+x+3, \amp x \lt -1 \\
+5, \amp x = -1 \\
+x^2+1, \amp -1 \lt x \lt 2 \\
+7-x, \amp 2 \le x \lt 4 \\
+2x-3, \amp x \ge 4
+\text{.}\end{cases}
+\end{equation*}
+</div>
+<div class="para">To find a function value <span class="process-math">\(p(c)\text{,}\)</span> we choose the rule whose condition includes <span class="process-math">\(c\text{.}\)</span> To find a left-limit at <span class="process-math">\(c\text{,}\)</span> we use the rule that applies on the interval immediately to the <em class="emphasis">left</em> of <span class="process-math">\(c\text{,}\)</span> and ask what <span class="process-math">\(y\)</span>-value that rule approaches as <span class="process-math">\(x\)</span> gets to <span class="process-math">\(c\text{.}\)</span> To find a right-limit, we do the same with the rule on the interval immediately to the <em class="emphasis">right</em> of <span class="process-math">\(c\text{.}\)</span> It may help to sketch a representation of the domain’s subintervals and the formulas used on each.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-piecewise-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="ex-limits-piecewise-2-3">
+<div class="para">For each of the <span class="process-math">\(x\)</span>-values below, answer the same four questions:</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="ex-limits-piecewise-2-3-2">
+<li id="ex-limits-piecewise-2-3-2-1">
+<div class="para" id="ex-limits-piecewise-2-3-2-1-1">What is the function value if it exists?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.a"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
+</li>
+<li id="ex-limits-piecewise-2-3-2-2">
+<div class="para" id="ex-limits-piecewise-2-3-2-2-1">What are the left- and right-limits if they exist?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.b"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
+</li>
+<li id="ex-limits-piecewise-2-3-2-3">
+<div class="para" id="ex-limits-piecewise-2-3-2-3-1">What is the two-sided limit if it exists?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.c"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-3" title="Copy heading and permalink for Item 3.c" aria-label="Copy heading and permalink for Item 3.c">🔗</a></div>
+</li>
+<li id="ex-limits-piecewise-2-3-2-4">
+<div class="para" id="ex-limits-piecewise-2-3-2-4-1">Is the function continuous at the point?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.d"><a tabindex="-1" href="#ex-limits-piecewise-2-3-2-4" title="Copy heading and permalink for Item 3.d" aria-label="Copy heading and permalink for Item 3.d">🔗</a></div>
+</li>
+</ol>
+<div class="para">Practice writing the correct equation for each value, either using function notation or limit operators.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limits-piecewise-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-limits-piecewise-neg-one"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-limits-piecewise-neg-one-1-1">
+<span class="process-math">\(x=-1\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-piecewise-neg-one-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.a"><a tabindex="-1" href="#task-limits-piecewise-neg-one" title="Copy heading and permalink for Task 3.a" aria-label="Copy heading and permalink for Task 3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-piecewise-zero"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-limits-piecewise-zero-1-1">
+<span class="process-math">\(x=0\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-piecewise-zero-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.b"><a tabindex="-1" href="#task-limits-piecewise-zero" title="Copy heading and permalink for Task 3.b" aria-label="Copy heading and permalink for Task 3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-piecewise-two"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-limits-piecewise-two-1-1">
+<span class="process-math">\(x=2\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-piecewise-two-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.c"><a tabindex="-1" href="#task-limits-piecewise-two" title="Copy heading and permalink for Task 3.c" aria-label="Copy heading and permalink for Task 3.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-limits-piecewise-four"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="task-limits-piecewise-four-1-1">
+<span class="process-math">\(x=4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limits-piecewise-four-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.d"><a tabindex="-1" href="#task-limits-piecewise-four" title="Copy heading and permalink for Task 3.d" aria-label="Copy heading and permalink for Task 3.d">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 3: Section 3: Limits of Piecewise Functions"><a tabindex="-1" href="#ex-limits-piecewise" title="Copy heading and permalink for Worksheet Exercise 3: Section 3: Limits of Piecewise Functions" aria-label="Copy heading and permalink for Worksheet Exercise 3: Section 3: Limits of Piecewise Functions">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet: Introducing Limits and Continuity"><a tabindex="-1" href="#activity-intuitive-limits" title="Copy heading and permalink for Worksheet: Introducing Limits and Continuity" aria-label="Copy heading and permalink for Worksheet: Introducing Limits and Continuity">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="activity-function-behavior.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="handouts.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
