@@ -269,6 +269,9 @@
         exercise-readingquestion="no"
       />-->
 
+    <!-- Exercises placed directly in a subsection start open, not collapsed. -->
+      <knowl exercise-inline="no" />
+
     <!-- The theme controls the look of the html.  Which extra attributes -->
     <!-- apply depends on the theme you choose:                           -->
     <!--   default-modern (the default): @palette is one of blue-red,     -->

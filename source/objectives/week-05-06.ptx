@@ -24,5 +24,228 @@
       What do I need to understand?
     </p>
 
+    <exercise>
+      <statement>
+        <p>
+          Deconstruct the function <m>f(x)=\displaystyle \frac{x^2-3x+5}{(2x+1)^4}</m>.
+          That is, express <m>f(x)</m> as a sum, product, quotient, or composition of two functions, <m>f_1(x)</m> and <m>f_2(x)</m>.
+        </p>
+        <p>
+          Repeat the process for each of <m>f_1(x)</m> and <m>f_2(x)</m> as constructed from functions <m>f_3, f_4, f_5, f_6</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The last operation in the formula for the function <m>f(x)</m> is <em>division</em>, <m>f(x)</m> is a <term>quotient</term>. The operands are the functions involved in division: <m>f_1(x)=x^2-3x+5</m> and <m>f_2(x)=(2x+1)^4</m>.
+        </p>
+        <p>
+          We repeat the process for <m>f_1(x)=x^2-3x+5</m>. Because of the minus sign, it looks like subtraction. We could do that but subtraction can be more complicated than thinking of it as addition. For example, we might say <m>f_1(x)</m> is a <term>sum</term> of operands <m>f_3(x)=x^2</m> and <m>f_4(x)=-3x+5</m>. If we did use subtraction, the negative sign would have to distribute, so we would have to say <m>f_1(x)</m> is a <term>difference</term> of <m>f_3(x)=x^2</m> and <m>f_4(x)=3x-5</m>.
+        </p>
+        <p>
+          We also repeat the process for <m>f_2(x)=(2x+1)^4</m>. The last operation is the power acting on a formula. We say <m>f_2(x)</m> is a <term>composition</term> of the functions <m>f_5(x)=x^4</m> (the outer function is the power) and <m>f_6(x)=2x+1</m> (the inner function).
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>F4 Function Inverses</title>
+
+    <assemblage xml:id="assemblage-F4">
+      <title>F4</title>
+      <p>
+        I can use inverse functions to solve equations involving an abstract function.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Use the fact that unspecified functions <m>A(x)</m> and <m>B(x)</m> are 
+          inverses and the equation
+          <md>
+            \frac{2}{3A(x+4)}-4 = y
+          </md>
+          to solve for <m>x</m> as a function of <m>y</m> involving the functions <m>A</m> and/or <m>B</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We use the method of isolation earlier. When we reach a stage where the last operation on the side of the equation with <m>x</m> is the function operation,
+          we apply the inverse function on both sides and the inverse function.
+          <md>
+            <mrow>\frac{2}{3A(x+4)}-4 \amp = y </mrow>
+            <mrow>\frac{2}{3A(x+4)} \amp = y+4 </mrow>
+            <mrow>\frac{3A(x+4)}{2} \amp = \frac{1}{y+4} </mrow>
+            <mrow>A(x+4) \amp = \frac{2}{3(y+4)} </mrow>
+            <mrow>B\big(A(x+4)\big) \amp = B\left(\frac{2}{3(y+4)}\right) </mrow>
+            <mrow>x+4 \amp = B\left(\frac{2}{3(y+4)}\right) </mrow>
+            <mrow>x \amp = B\left(\frac{2}{3(y+4)}\right) - 4 </mrow>
+          </md>
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+  
+  <subsection>
+    <title>F5 Describing Functions</title>
+
+    <assemblage xml:id="assemblage-F5">
+      <title>F5</title>
+      <p>
+        I can use the vocabulary of calculus to describe functions and sketch
+        graphs of functions based on those descriptions.
+      </p>
+      <p>
+        Key vocabulary phrases:
+        <ul>
+          <li><p><m>f(x)</m> is <term>increasing on an interval</term>.</p></li>
+          <li><p><m>f(x)</m> is <term>decreasing on an interval</term>.</p></li>
+          <li><p><m>f(x)</m> is <term>concave up on an interval</term>.</p></li>
+          <li><p><m>f(x)</m> is <term>concave down on an interval</term>.</p></li>
+          <li><p><m>f(x)</m> has a <term>local maximum at a point</term>.</p></li>
+          <li><p><m>f(x)</m> has a <term>local minimum at a point</term>.</p></li>
+          <li><p><m>f(x)</m> has an <term>inflection point at a point</term>.</p></li>
+        </ul>
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          The following number lines indicate intervals on which <m>f(x)</m> has
+          particular behaviors, with one number line shows where it is increasing or decreasing and the other number line shows where it is concave up or concave down.
+        </p>
+        <image label="F5-image-behavior-chart" width="90%">
+          <shortdescription>
+            Two number lines. The first has break points at -2 and 2: decreasing to the left of -2,
+            increasing from -2 to 2, and decreasing to the right of 2.
+            The second has break points at -4, 0, and 4: concave down to the left of -4,
+            concave up from -4 to 0, concave down from 0 to 4, and concave up to the right of 4.
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=0.55cm, y=1cm, font=\small]
+              % Increasing and decreasing
+              \draw[thick, <->] (-8,1.5) -- (8,1.5);
+              \draw (-2,1.65) -- (-2,1.35) node[below] {$-2$};
+              \draw (2,1.65) -- (2,1.35) node[below] {$2$};
+              \node[above] at (-5,1.6) {decr};
+              \node[above] at (0,1.6) {incr};
+              \node[above] at (5,1.6) {decr};
+              % Concavity
+              \draw[thick, <->] (-8,0) -- (8,0);
+              \draw (-4,0.15) -- (-4,-0.15) node[below] {$-4$};
+              \draw (0,0.15) -- (0,-0.15) node[below] {$0$};
+              \draw (4,0.15) -- (4,-0.15) node[below] {$4$};
+              \node[above] at (-6,0.1) {c. down};
+              \node[above] at (-2,0.1) {c. up};
+              \node[above] at (2,0.1) {c. down};
+              \node[above] at (6,0.1) {c. up};
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+        <p>
+          Sketch a graph that accurately and clearly illustrates the behavior.
+          Indicate on the graph points (including <m>x</m> values) where <m>f(x)</m>
+          has local extreme values and inflection points.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          We work from left to right to identify every interval shape.
+          <ul>
+            <li>
+              <p>
+                The first change on either number line occurs at <m>x=-4</m>, so our first interval is <m>(-\infty, -4)</m>. The function is decreasing and concave down on <m>(-\infty,-4)</m>, which matches the shape on the top right quadrant of a circle. Just to the right of <m>x=-4</m>, the graph changes to concave up so <m>f(x)</m> has an inflection point at <m>x=-4</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The second change on either number line occurs at <m>x=-2</m>, so the next interval is <m>(-4, -2)</m>. The function is decreasing and concave up on <m>(-4,-2)</m>, which matches the shape on the bottom left quadrant of a circle. Just to the right of <m>x=-2</m>, the graph changes to increasing. Because <m>f(x)</m> changes from decreasing to increasing, <m>f(x)</m> has a local minimum at <m>x=-2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The next change occurs at <m>x=0</m>. <m>f(x)</m> is increasing and concave up on <m>(-2,0)</m>, which matches the shape in the bottom right quadrant of a circle. To the right of <m>x=0</m> the function changes being to concave down. This means <m>f(x)</m> has another inflection point at <m>x=0</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The next change is at <m>x=2</m>. <m>f(x)</m> is increasing and concave down on <m>(0,2)</m>, which matches the shape in the top left quadrant of a circle. To the right of <m>x=2</m> the function changes to decreasing. This means <m>f(x)</m> has a local maximum at <m>x=2</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                The last change is at <m>x=4</m>. <m>f(x)</m> is decreasing and concave down on <m>(2,4)</m>, and to the right of <m>x=4</m> the function changes to being concave up. This means <m>f(x)</m> has a third inflection point at <m>x=4</m>.
+              </p>
+            </li>
+          </ul>
+          We can draw a graph by joining the different shapes at the points where shape was identified as changing.
+        </p>
+        <figure>
+          <image label="F5-image-behavior-graph" width="70%">
+            <shortdescription>
+              A smooth graph over a labeled x-axis with no y-axis and no y-values. For x less than -4 the curve
+              decreases and is concave down. At x = -4 the concavity changes to concave up, and the curve keeps decreasing
+              to a local minimum at x = -2. It then increases, with an inflection point at x = 0 where the concavity
+              changes to concave down, up to a local maximum at x = 2. After that it decreases, with an inflection point
+              at x = 4 where the concavity changes to concave up, and it continues decreasing. The three inflection
+              points are at different heights. Points are marked at x = -4, -2, 0, 2, and 4.
+            </shortdescription>
+            <!-- Local min at x = -2, local max at x = 2; inflection points at x = -4, 0, 4, all at different heights.
+                 The x-axis is drawn below the curve on purpose: no y-axis, no y-values, and no x-intercepts are shown.
+                 Generated from f' built from smoothstep pieces with zeros at -2 and 2 and extrema of f' at -4, 0, 4. -->
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}[x=0.8cm, y=1.4cm, >=stealth]
+                % x-axis only, drawn below the curve (no y-axis, no y-values)
+                \draw[->] (-6.6,0) -- (6.6,0) node[right] {$x$};
+                \foreach \x in {-4,-2,0,2,4} {
+                  \draw (\x,0.05) -- (\x,-0.05);
+                  \node[below] at (\x,-0.05) {\small $\x$};
+                }
+                % vertical guides from each marked point to its x-value
+                \draw[dashed] (-4,0) -- (-4,1.382);
+                \draw[dashed] (-2,0) -- (-2,0.300);
+                \draw[dashed] (0,0) -- (0,1.748);
+                \draw[dashed] (2,0) -- (2,2.925);
+                \draw[dashed] (4,0) -- (4,2.263);
+                % curve
+                \draw[thick] plot coordinates {
+                  (-6.20,2.716) (-6.00,2.662) (-5.80,2.589) (-5.60,2.498) (-5.40,2.392) (-5.20,2.273)
+                  (-5.00,2.142) (-4.80,2.001) (-4.60,1.853) (-4.40,1.699) (-4.20,1.542) (-4.00,1.382)
+                  (-3.80,1.222) (-3.60,1.065) (-3.40,0.912) (-3.20,0.769) (-3.00,0.638) (-2.80,0.524)
+                  (-2.60,0.430) (-2.40,0.359) (-2.20,0.315) (-2.00,0.300) (-1.80,0.316) (-1.60,0.363)
+                  (-1.40,0.443) (-1.20,0.555) (-1.00,0.697) (-0.80,0.867) (-0.60,1.063) (-0.40,1.279)
+                  (-0.20,1.509) (0.00,1.748) (0.20,1.979) (0.40,2.187) (0.60,2.368) (0.80,2.523)
+                  (1.00,2.651) (1.20,2.754) (1.40,2.831) (1.60,2.884) (1.80,2.915) (2.00,2.925)
+                  (2.20,2.915) (2.40,2.888) (2.60,2.846) (2.80,2.789) (3.00,2.720) (3.20,2.641)
+                  (3.40,2.554) (3.60,2.460) (3.80,2.363) (4.00,2.263) (4.20,2.163) (4.40,2.064)
+                  (4.60,1.968) (4.80,1.875) (5.00,1.786) (5.20,1.703) (5.40,1.627) (5.60,1.559)
+                  (5.80,1.499) (6.00,1.450) (6.20,1.411)
+                };
+                % local extrema and inflection points
+                \filldraw (-4,1.382) circle (2.2pt);
+                \filldraw (-2,0.300) circle (2.2pt);
+                \filldraw (0,1.748) circle (2.2pt);
+                \filldraw (2,2.925) circle (2.2pt);
+                \filldraw (4,2.263) circle (2.2pt);
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </figure>
+      </solution>
+    </exercise>
   </subsection>
 </section>
