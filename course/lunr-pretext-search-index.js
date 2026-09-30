@@ -142,7 +142,43 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "",
   "title": "Week 5 and Week 6",
-  "body": " Week 5 and Week 6   Week 5 started by looking at how functions are constructed, using arithmetic and composition.    F3 Function Deconstruction   F3  I can deconstruct a function by recognizing the last operation as a sum, difference, product, quotient, or composition of other expressions.   What do I need to understand?   "
+  "body": " Week 5 and Week 6   Week 5 started by looking at how functions are constructed, using arithmetic and composition.    F3 Function Deconstruction   F3  I can deconstruct a function by recognizing the last operation as a sum, difference, product, quotient, or composition of other expressions.   What do I need to understand?    Deconstruct the function . That is, express as a sum, product, quotient, or composition of two functions, and .  Repeat the process for each of and as constructed from functions .    The last operation in the formula for the function is division , is a quotient . The operands are the functions involved in division: and .  We repeat the process for . Because of the minus sign, it looks like subtraction. We could do that but subtraction can be more complicated than thinking of it as addition. For example, we might say is a sum of operands and . If we did use subtraction, the negative sign would have to distribute, so we would have to say is a difference of and .  We also repeat the process for . The last operation is the power acting on a formula. We say is a composition of the functions (the outer function is the power) and (the inner function).      F4 Function Inverses   F4  I can use inverse functions to solve equations involving an abstract function.   What do I need to understand?    Use the fact that unspecified functions and are inverses and the equation to solve for as a function of involving the functions and\/or .    We use the method of isolation earlier. When we reach a stage where the last operation on the side of the equation with is the function operation, we apply the inverse function on both sides and the inverse function.       F5 Describing Functions   F5  I can use the vocabulary of calculus to describe functions and sketch graphs of functions based on those descriptions.  Key vocabulary phrases:  is increasing on an interval .  is decreasing on an interval .  is concave up on an interval .  is concave down on an interval .  has a local maximum at a point .  has a local minimum at a point .  has an inflection point at a point .     What do I need to understand?    The following number lines indicate intervals on which has particular behaviors, with one number line shows where it is increasing or decreasing and the other number line shows where it is concave up or concave down.   Two number lines. The first has break points at -2 and 2: decreasing to the left of -2, increasing from -2 to 2, and decreasing to the right of 2. The second has break points at -4, 0, and 4: concave down to the left of -4, concave up from -4 to 0, concave down from 0 to 4, and concave up to the right of 4.    Sketch a graph that accurately and clearly illustrates the behavior. Indicate on the graph points (including values) where has local extreme values and inflection points.    We work from left to right to identify every interval shape.   The first change on either number line occurs at , so our first interval is . The function is decreasing and concave down on , which matches the shape on the top right quadrant of a circle. Just to the right of , the graph changes to concave up so has an inflection point at .    The second change on either number line occurs at , so the next interval is . The function is decreasing and concave up on , which matches the shape on the bottom left quadrant of a circle. Just to the right of , the graph changes to increasing. Because changes from decreasing to increasing, has a local minimum at .    The next change occurs at . is increasing and concave up on , which matches the shape in the bottom right quadrant of a circle. To the right of the function changes being to concave down. This means has another inflection point at .    The next change is at . is increasing and concave down on , which matches the shape in the top left quadrant of a circle. To the right of the function changes to decreasing. This means has a local maximum at .    The last change is at . is decreasing and concave down on , and to the right of the function changes to being concave up. This means has a third inflection point at .   We can draw a graph by joining the different shapes at the points where shape was identified as changing.    A smooth graph over a labeled x-axis with no y-axis and no y-values. For x less than -4 the curve decreases and is concave down. At x = -4 the concavity changes to concave up, and the curve keeps decreasing to a local minimum at x = -2. It then increases, with an inflection point at x = 0 where the concavity changes to concave down, up to a local maximum at x = 2. After that it decreases, with an inflection point at x = 4 where the concavity changes to concave up, and it continues decreasing. The three inflection points are at different heights. Points are marked at x = -4, -2, 0, 2, and 4.         "
+},
+{
+  "id": "notes-week-03-3-4",
+  "level": "2",
+  "url": "notes-week-03.html#notes-week-03-3-4",
+  "type": "Checkpoint",
+  "number": "9",
+  "title": "",
+  "body": "  Deconstruct the function . That is, express as a sum, product, quotient, or composition of two functions, and .  Repeat the process for each of and as constructed from functions .    The last operation in the formula for the function is division , is a quotient . The operands are the functions involved in division: and .  We repeat the process for . Because of the minus sign, it looks like subtraction. We could do that but subtraction can be more complicated than thinking of it as addition. For example, we might say is a sum of operands and . If we did use subtraction, the negative sign would have to distribute, so we would have to say is a difference of and .  We also repeat the process for . The last operation is the power acting on a formula. We say is a composition of the functions (the outer function is the power) and (the inner function).   "
+},
+{
+  "id": "notes-week-03-4-4",
+  "level": "2",
+  "url": "notes-week-03.html#notes-week-03-4-4",
+  "type": "Checkpoint",
+  "number": "10",
+  "title": "",
+  "body": "  Use the fact that unspecified functions and are inverses and the equation to solve for as a function of involving the functions and\/or .    We use the method of isolation earlier. When we reach a stage where the last operation on the side of the equation with is the function operation, we apply the inverse function on both sides and the inverse function.    "
+},
+{
+  "id": "assemblage-F5-3",
+  "level": "2",
+  "url": "notes-week-03.html#assemblage-F5-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "increasing on an interval decreasing on an interval concave up on an interval concave down on an interval local maximum at a point local minimum at a point inflection point at a point "
+},
+{
+  "id": "notes-week-03-5-4",
+  "level": "2",
+  "url": "notes-week-03.html#notes-week-03-5-4",
+  "type": "Checkpoint",
+  "number": "11",
+  "title": "",
+  "body": "  The following number lines indicate intervals on which has particular behaviors, with one number line shows where it is increasing or decreasing and the other number line shows where it is concave up or concave down.   Two number lines. The first has break points at -2 and 2: decreasing to the left of -2, increasing from -2 to 2, and decreasing to the right of 2. The second has break points at -4, 0, and 4: concave down to the left of -4, concave up from -4 to 0, concave down from 0 to 4, and concave up to the right of 4.    Sketch a graph that accurately and clearly illustrates the behavior. Indicate on the graph points (including values) where has local extreme values and inflection points.    We work from left to right to identify every interval shape.   The first change on either number line occurs at , so our first interval is . The function is decreasing and concave down on , which matches the shape on the top right quadrant of a circle. Just to the right of , the graph changes to concave up so has an inflection point at .    The second change on either number line occurs at , so the next interval is . The function is decreasing and concave up on , which matches the shape on the bottom left quadrant of a circle. Just to the right of , the graph changes to increasing. Because changes from decreasing to increasing, has a local minimum at .    The next change occurs at . is increasing and concave up on , which matches the shape in the bottom right quadrant of a circle. To the right of the function changes being to concave down. This means has another inflection point at .    The next change is at . is increasing and concave down on , which matches the shape in the top left quadrant of a circle. To the right of the function changes to decreasing. This means has a local maximum at .    The last change is at . is decreasing and concave down on , and to the right of the function changes to being concave up. This means has a third inflection point at .   We can draw a graph by joining the different shapes at the points where shape was identified as changing.    A smooth graph over a labeled x-axis with no y-axis and no y-values. For x less than -4 the curve decreases and is concave down. At x = -4 the concavity changes to concave up, and the curve keeps decreasing to a local minimum at x = -2. It then increases, with an inflection point at x = 0 where the concavity changes to concave down, up to a local maximum at x = 2. After that it decreases, with an inflection point at x = 4 where the concavity changes to concave up, and it continues decreasing. The three inflection points are at different heights. Points are marked at x = -4, -2, 0, 2, and 4.       "
 },
 {
   "id": "activity-linear-relations-slope",
@@ -194,7 +230,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-linear-relations-slope.html#def-slope-point-slope",
   "type": "Definition",
-  "number": "9",
+  "number": "13",
   "title": "",
   "body": "  The constant rate you found in Model 2 is called the slope of the relation, or its average rate of change . The equation you built in Task 4 has the same structure as called point-slope form , where is any known point on the relation and is the slope. It says exactly what you wrote: a new value equals a starting value plus the slope times how far you've moved from that starting point.   "
 },
@@ -698,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-inverse-functions.html#def-inverse-function",
   "type": "Definition",
-  "number": "12",
+  "number": "16",
   "title": "Inverse function.",
   "body": " Inverse function   For a given function , the function is the inverse function to if   for every in the domain of , and  for every in the domain of .    "
 },
