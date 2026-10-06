@@ -239,4 +239,100 @@
     </task>
   </exercise>
 
+
+  <exercise xml:id="ex-limits-table" workspace="0in">
+    <title>Section 4: Limits Using Tables</title>
+    <introduction>
+      <p>
+        When we learned to evaluate a function with a table, we could look at a single point:
+        Find the <m>x</m>-value that is the input, and then read off the <m>y</m>-value that is the output.
+        Limits do not work so simply.
+        We need to see what value is <em>approached</em> as we consider a <term>sequence</term> of input values.
+      </p>
+      <p>
+        Consider the function <m>P(x) = \displaystyle \frac{\sqrt{x}-2}{x-4}</m>, which is <term>undefined</term> at <m>x=4</m>.
+        We can not just plug <m>x=4</m> into the formula and <m>P(4)</m> does not exist.
+        The limit, on the other hand, does exist, although you may not know why at this stage.
+        We can <em>approximate</em> its value by using <m>x</m> values that are <em>close</em> to 4.
+      </p>
+      <p>
+        The right-sided limit is approximated by choosing a sequence of <m>x</m> values with <m>x \gt 4</m>
+        such that the values get closer and closer to 4, which we write <m>x \to 4^+</m>.
+        We will create a table summarizing the sequence of values.
+      </p>
+      <tabular>
+        <row header="yes">
+          <cell><m>x</m></cell><cell><m>P(x)</m></cell>
+        </row>
+        <row>
+          <cell>4.1</cell><cell>0.248457</cell>
+        </row>
+        <row>
+          <cell>4.01</cell><cell>0.249844</cell>
+        </row>
+        <row>
+          <cell>4.001</cell><cell>0.249984</cell>
+        </row>
+        <row>
+          <cell>4.0001</cell><cell>0.249998</cell>
+        </row>
+      </tabular>
+      <p>
+        A table approximation never can guarantee an exact limit value,
+        but we can look for a pattern.
+        In this example, the closer <m>x</m> gets to 4,
+        the closer the value <m>P(x)</m> gets to 0.25.
+        This suggests
+        <md>\lim_{x \to 4^+} P(x) = 0.25</md>.
+      </p>
+      <p>
+        We can repeat the process from the left.
+      </p>
+      <tabular>
+        <row header="yes">
+          <cell><m>x</m></cell><cell><m>P(x)</m></cell>
+        </row>
+        <row>
+          <cell>3.9</cell><cell>0.251582</cell>
+        </row>
+        <row>
+          <cell>3.99</cell><cell>0.250156</cell>
+        </row>
+        <row>
+          <cell>3.999</cell><cell>0.250016</cell>
+        </row>
+        <row>
+          <cell>3.9999</cell><cell>0.250002</cell>
+        </row>
+      </tabular>
+      <p>
+        We can see from the table that the left-limit suggests the same limit
+        <md>
+          \lim_{x \to 4^-} P(x) = 0.25
+        </md>.
+        Since both sides of the limit approach the same value, we would conclude there is a two-sided limit
+        <md>
+          \lim_{x \to 4} P(x) = 0.25
+        </md>.
+      </p>
+    </introduction>
+    <task xml:id="task-limits-square-root-table" workspace="1.5in">
+      <statement>
+        <p>
+          Use a table of values to estimate the one-sided limits of <m>\displaystyle Q(x) = \frac{\sqrt{x}-3}{x-9}</m>
+          as <m>x \to 9</m>. Does the two-sided limit exist?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-limits-arctangent-table" workspace="1.5in">
+      <statement>
+        <p>
+          Use a table of values to estimate the one-sided limits of <m>R(x) = 2 \arctan(\frac{1}{x})</m> as <m>x \to 0</m>.
+          (When using a calculator, be sure it is in radian mode.)
+          Does the two-sided limit exist?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
 </worksheet>
