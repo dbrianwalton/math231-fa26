@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-algebraic-limits">
+  <title>Finding Limits Algebraically</title>
+
+  <introduction>
+    <p>
+      So far we have found limits by reading graphs, by following the pieces of a piecewise function, and by building tables of values.
+      Each method tells us where a graph is headed as it approaches a point.
+    </p>
+    <p>
+      Today we compute limits directly from a formula.
+      Many of the formulas we meet are fractions that become <m>0/0</m> at the <m>x</m>-value we care about, so the function value does not exist.
+      We will see that simplifying the formula can show us what the graph is doing at that point: either a hole that can be filled in, or a vertical asymptote where the graph goes to <m>+\infty</m> or <m>-\infty</m>.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-algebraic-agree" workspace="0in">
+    <title>Section 1: Functions That Agree Except at a Point</title>
+    <introduction>
+      <p>
+        Consider the two functions
+        <md>
+          <mrow>f(x) \amp = \frac{x^2-4}{x-2}</mrow>
+          <mrow>g(x) \amp = x+2</mrow>
+        </md>.
+        The function <m>f(x)</m> is undefined at <m>x=2</m>, since the denominator is zero there. The function <m>g(x)</m> is defined for every <m>x</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-agree-table" workspace="1.5in">
+      <statement>
+        <ol marker="a.">
+          <li>
+            <p>
+              Complete the table. Write <q>undefined</q> if a function has no value.
+            </p>
+            <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+              <col right="minor"/>
+              <col right="minor"/>
+              <col/>
+              <row header="yes" bottom="minor">
+                <cell><m>x</m></cell><cell><m>f(x)</m></cell><cell><m>g(x)</m></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>-1</m></cell><cell></cell><cell></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>0</m></cell><cell></cell><cell></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>1</m></cell><cell></cell><cell></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>2</m></cell><cell></cell><cell></cell>
+              </row>
+              <row>
+                <cell><m>3</m></cell><cell></cell><cell></cell>
+              </row>
+            </tabular>
+          </li>
+          <li>
+            <p>
+              Factor the numerator of <m>f(x)</m>. Use the factored form to explain why <m>f(x)</m> and <m>g(x)</m> have the same output for every <m>x</m> except <m>x=2</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              How could we write <m>f(x)</m> as a piecewise function using the formula <m>x+2</m>?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-agree-graph" workspace="2in">
+      <statement>
+        <ol marker="a.">
+          <li>
+            <p>
+              The graph of <m>g(x)</m> is a line. Sketch it. Then sketch the graph of <m>f(x)</m>, using an open point wherever <m>f</m> has no value.
+            </p>
+          </li>
+          <li>
+            <p>
+              Find <m>\displaystyle \lim_{x \to 2^{-}} f(x)</m>, <m>\displaystyle \lim_{x \to 2^{+}} f(x)</m>, and <m>\displaystyle \lim_{x \to 2} f(x)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Compare your answer to <m>g(2)</m>. Is <m>f(x)</m> continuous at <m>x=2</m>? Is <m>g(x)</m>?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-agree-piecewise" workspace="1in">
+      <statement>
+        <p>
+          Now define a third function
+          <md>
+            h(x) = \begin{cases}
+            x+2, \amp x \ne 2 \\
+            7, \amp x = 2
+            \end{cases}
+          </md>.
+          Find <m>h(2)</m> and <m>\displaystyle \lim_{x \to 2} h(x)</m>. What does this tell you about how much the value of a function at <m>x=2</m> matters for its limit as <m>x \to 2</m>?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-algebraic-cancel" workspace="0in">
+    <title>Section 2: Cancelling Common Factors</title>
+    <introduction>
+      <p>
+        In Section 1, we saw that <m>f(x)</m> and <m>g(x)</m> are the same function except at <m>x=2</m>. The reason is the common factor in
+        <md>
+          f(x) = \frac{(x-2)(x+2)}{x-2}
+        </md>.
+        For any <m>x \ne 2</m>, the fraction <m>\frac{x-2}{x-2}</m> equals 1. At <m>x=2</m> it is <m>\frac{0}{0}</m>, which has no value. This observation gives us a general method.
+      </p>
+      <assemblage>
+        <title>The Agreement Principle</title>
+        <p>
+          Suppose <m>f(x) = g(x)</m> on the domain's subset intervals immediately to the left and right of <m>x=a</m>, whether or not they agree at <m>x=a</m> itself. Then <m>f(x)</m> and <m>g(x)</m> have the same left-limit and the same right-limit as <m>x \to a</m>.
+        </p>
+        <p>
+          In particular, if <m>g(x)</m> is continuous at <m>x=a</m>, then
+          <md>
+            \lim_{x \to a} f(x) = g(a)
+          </md>.
+        </p>
+      </assemblage>
+      <assemblage>
+        <title>Cancelling Common Factors</title>
+        <p>
+          Because <m>\frac{x-a}{x-a} = 1</m> for <m>x \ne a</m>, we may cancel a common factor <m>(x-a)</m> from the numerator and denominator of a fraction. The simplified formula agrees with <m>f(x)</m> for every <m>x \ne a</m>.
+        </p>
+        <p>
+          If the simplified formula is continuous at <m>x=a</m>, the limit is found by evaluating it. The discontinuity of <m>f(x)</m> was a <term>removable discontinuity</term>: the simplified formula fills in the hole at the point whose <m>y</m>-value is the value of the simplified formula at <m>x=a</m>.
+        </p>
+      </assemblage>
+      <assemblage>
+        <title>Evaluating a Formula</title>
+        <p>
+          The notation <m>f(a)</m> only makes sense when a function has been given the name <m>f</m>. To evaluate a formula without naming a function, we use an <term>evaluation bar</term>. For example,
+          <md>
+            <mrow>\left. (x^2-3x) \right|_{x=4} = 4^2-3(4) = 4</mrow>
+          </md>.
+          We read this as <q>the formula <m>x^2-3x</m> evaluated at <m>x=4</m></q>. The subscript tells us which value replaces <m>x</m>. (The bar is not an absolute value. The subscript <m>x=4</m> is what marks it as an evaluation.)
+        </p>
+        <p>
+          The evaluation bar is only meaningful when the formula has a value at that <m>x</m>-value. If a formula is continuous at <m>x=a</m>, then finding its limit as <m>x \to a</m> is the same as evaluating it at <m>x=a</m>.
+        </p>
+      </assemblage>
+      <p>
+        For our example, we write
+        <md>
+          <mrow>\lim_{x \to 2} \frac{x^2-4}{x-2} \amp = \lim_{x \to 2} \frac{(x-2)(x+2)}{x-2}</mrow>
+          <mrow>\amp = \lim_{x \to 2} (x+2)</mrow>
+          <mrow>\amp = \left. (x+2) \right|_{x=2}</mrow>
+          <mrow>\amp = 4</mrow>
+        </md>.
+        The first step only factors. The second step cancels, which is allowed because the formulas agree for <m>x \ne 2</m>. The third step is allowed because <m>x+2</m> is continuous at <m>x=2</m>, so its limit is found by evaluating it.
+        Notice that <m>x+2</m> is a <em>continuous version</em> of the original formula. It is not the same function, since it has the value 4 at <m>x=2</m> and <m>f(2)</m> does not exist.
+      </p>
+      <p>
+        <em>Remark:</em> For now, we <em>accept</em> that a formula involving only simple algebraic operations of arithmetic and integer powers is continuous at every <m>x</m>-value where it can be evaluated without dividing by zero. This is what lets us replace a limit by an evaluation. We will <em>justify</em> this claim later, after we state the formal definition of a limit and prove limit rules from that definition.
+      </p>
+      <p>
+        For each function below, answer the following.
+        <ol marker="a.">
+            <li><p>Which <m>x</m>-value makes both the numerator <em>and</em> the denominator zero? What does this say about <m>f</m> at that <m>x</m>-value?</p></li>
+            <li><p>Cancel the common factor to write the simplified formula.</p></li>
+            <li><p>Evaluate the simplified formula at that <m>x</m>-value, using the evaluation bar, to find the limit.</p></li>
+            <li><p>Give the coordinates of the hole in the graph of <m>f</m>.</p></li>
+        </ol>
+        Practice writing each step as an equation, using limit operators and the evaluation bar.
+      </p>
+    </introduction>
+    <task xml:id="task-cancel-linear-factor" workspace="1.5in">
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{(x-3)(x+5)}{(x-3)(x-1)}</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-cancel-squared-factor" workspace="1.5in">
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{(x-2)^2(x+1)}{(x-2)(x+3)}</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-algebraic-asymptote" workspace="0in">
+    <title>Section 3: When Cancelling Is Not Enough</title>
+    <introduction>
+      <p>
+        Not every zero of a denominator can be cancelled. Consider
+        <md>
+          f(x) = \frac{x+1}{x-2}
+        </md>
+        as <m>x \to 2</m>. The numerator evaluates to a nonzero value at <m>x=2</m> and there is no common factor to cancel. As <m>x</m> gets close to 2, the numerator gets close to 3 while the denominator gets close to 0, so the fraction becomes very large in size. To decide whether it is large and positive or large and negative, we use sign analysis on the domain's subset intervals immediately to each side of <m>x=2</m>. Here is the sign chart for this formula.
+      </p>
+      <figure xml:id="fig-asymptote-sign-chart">
+        <caption>Sign chart for <m>\displaystyle \frac{x+1}{x-2}</m></caption>
+        <image xml:id="image-asymptote-sign-chart" width="80%">
+          <shortdescription>
+            A number line with tick marks at -1 and 2. Above the tick at -1 is the label 0, and above the tick at 2 is the label VA.
+            The formula is positive to the left of -1, negative between -1 and 2, and positive to the right of 2.
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=0.9cm, font=\small]
+              \path (-4.2,-0.9) rectangle (9.5,1.0);
+              \draw[thick, <->] (-4,0) -- (5,0);
+              % tick marks with x-values below
+              \draw[thick] (-1,0.12) -- (-1,-0.12) node[below] {$-1$};
+              \draw[thick] (2,0.12) -- (2,-0.12) node[below] {$2$};
+              % labels above the ticks: 0 for a root, VA for a vertical asymptote
+              \node[above] at (-1,0.1) {$0$};
+              \node[above] at (2,0.1) {VA};
+              % signs above the centers of the three intervals
+              \node[above] at (-2.5,0.1) {$+$};
+              \node[above] at (0.5,0.1) {$-$};
+              \node[above] at (3.5,0.1) {$+$};
+              \node[anchor=west] at (5.3,0) {$\dfrac{x+1}{x-2}$};
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+      <ul>
+        <li><p>Just to the left of 2, on the interval <m>(-1,2)</m>: <m>f(x)</m> is negative.</p></li>
+        <li><p>Just to the right of 2, on the interval <m>(2,\infty)</m>: <m>f(x)</m> is positive.</p></li>
+      </ul>
+      <p>
+        Because the graph approaches the vertical asymptote and we know which sign the function has, the function goes <em>down</em> without bound on the left and <em>up</em> without bound on the right. We write
+        <md>
+          <mrow>\lim_{x \to 2^{-}} \frac{x+1}{x-2} \amp = -\infty</mrow>
+          <mrow>\lim_{x \to 2^{+}} \frac{x+1}{x-2} \amp = +\infty</mrow>
+        </md>.
+      </p>
+      <p>
+        The symbols <m>+\infty</m> and <m>-\infty</m> are not numbers. This notation says that the limit does not exist as a real number, and it also says <em>how</em> the graph fails to approach a number: the outputs increase or decrease without bound. Always include the sign. If the left- and right-limits are the same infinite limit, we may write the two-sided limit with that sign. If one side is <m>+\infty</m> and the other is <m>-\infty</m>, the two-sided limit does not exist.
+      </p>
+      <assemblage>
+        <title>Vertical Asymptotes</title>
+        <p>
+          We say <q><m>f(x)</m> has a <term>vertical asymptote</term> at <m>x=a</m></q> to mean at least one of the one-sided limits as <m>x \to a</m> is <m>+\infty</m> or <m>-\infty</m>.
+        </p>
+      </assemblage>
+      <p>
+        We have seen that a zero of a denominator produces trouble in a graph. The new idea is that we must <em>cancel common factors first</em>. After cancelling, there are two possibilities at <m>x=a</m>.
+      </p>
+      <ul>
+        <li><p>The simplified formula is continuous at <m>x=a</m>. The limit is the value of the simplified formula, and the graph has a hole.</p></li>
+        <li><p>The simplified formula still divides by zero at <m>x=a</m>. The graph has a vertical asymptote, and the one-sided limits are <m>+\infty</m> or <m>-\infty</m>.</p></li>
+      </ul>
+      <p>
+        For each function below, answer the following.
+        <ol marker="a.">
+            <li><p>Cancel any common factors to write the simplified formula.</p></li>
+            <li><p>Does the simplified formula still divide by zero at the given <m>x</m>-value?</p></li>
+            <li><p>Use the signs of the factors just to the left and just to the right of the <m>x</m>-value to find each one-sided limit.</p></li>
+            <li><p>State the two-sided limit, or state that it does not exist.</p></li>
+        </ol>
+        Practice writing each step as an equation, using limit operators.
+      </p>
+    </introduction>
+    <task xml:id="task-asymptote-pairs" workspace="0in">
+      <introduction>
+        <p>
+          <m>\displaystyle f(x) = \frac{(x-3)(x+2)}{(x-3)^2}</m> as <m>x \to 3</m>
+        </p>
+        <p>
+          Cancel together first. Then split your group into two pairs, one for each side. Compare your results at the end.
+        </p>
+      </introduction>
+      <task xml:id="task-asymptote-pairs-simplify" workspace="1in">
+        <statement>
+          <p>
+            Cancel common factors to write the simplified formula.
+          </p>
+        </statement>
+      </task>
+      <task xml:id="task-asymptote-pairs-left" workspace="1in">
+        <statement>
+          <p>
+            Pair 1: Find <m>\displaystyle \lim_{x \to 3^{-}} f(x)</m>.
+          </p>
+        </statement>
+      </task>
+      <task xml:id="task-asymptote-pairs-right" workspace="1in">
+        <statement>
+          <p>
+            Pair 2: Find <m>\displaystyle \lim_{x \to 3^{+}} f(x)</m>.
+          </p>
+        </statement>
+      </task>
+      <task xml:id="task-asymptote-pairs-twosided" workspace="0.75in">
+        <statement>
+          <p>
+            State the two-sided limit, or state that it does not exist.
+          </p>
+        </statement>
+      </task>
+    </task>
+    <task xml:id="task-asymptote-even-power" workspace="1.5in">
+      <statement>
+        <p>
+          <m>\displaystyle f(x) = \frac{(x-1)(x-4)}{(x-1)^3}</m> as <m>x \to 1</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-algebraic-classify" workspace="0in">
+    <title>Section 4: Hole or Asymptote?</title>
+    <introduction>
+      <p>
+        Here is a single function with two zeros in its denominator:
+        <md>
+          f(x) = \frac{(x-1)(x+2)}{(x-1)(x-3)}
+        </md>.
+        The denominator is zero at both <m>x=1</m> and <m>x=3</m>, but we will see that these two <m>x</m>-values behave differently.
+      </p>
+      <p>
+        For each of the <m>x</m>-values below, answer the following.
+        <ol marker="a.">
+            <li><p>Find the limit as <m>x</m> approaches the value, using one-sided limits if they differ. Use <m>+\infty</m> or <m>-\infty</m> where appropriate.</p></li>
+            <li><p>Is <m>f(x)</m> continuous at the point? If not, is it a hole or a vertical asymptote?</p></li>
+        </ol>
+        Practice writing the correct equation for each value, using function notation, limit operators, or the evaluation bar as appropriate.
+      </p>
+    </introduction>
+    <task xml:id="task-classify-one" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=1</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-classify-three" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=3</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-classify-neg-two" workspace="1.5in">
+      <statement>
+        <p>
+          <m>x=-2</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-algebraic-factor-first" workspace="0in">
+    <title>Section 5: Factoring First</title>
+    <introduction>
+      <p>
+        In the previous sections, the formulas were already factored. Usually they are not. Before we can cancel, we must factor the numerator and denominator completely. Then we can follow the same steps as before.
+      </p>
+      <p>
+        For each limit below, factor, cancel, and decide whether the graph has a hole or a vertical asymptote at the given <m>x</m>-value. Find the limit, or the one-sided limits.
+      </p>
+    </introduction>
+    <task xml:id="task-factor-first-hole" workspace="2in">
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to 2} \frac{x^2-4}{x^2-5x+6}</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-factor-first-asymptote" workspace="2in">
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to -3} \frac{x^2-9}{x^2+6x+9}</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
