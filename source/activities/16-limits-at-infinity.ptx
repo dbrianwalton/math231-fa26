@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-limits-at-infinity">
+  <title>Limits at Infinity</title>
+
+  <introduction>
+    <p>
+      Last time we studied what a graph does as <m>x</m> approaches a number <m>a</m>, and we saw two outcomes at trouble spots: a hole, where the outputs approach a number, and a vertical asymptote, where the outputs go to <m>+\infty</m> or <m>-\infty</m>.
+    </p>
+    <p>
+      Today we turn the question around and ask what a graph does as <m>x</m> itself grows without bound, in either direction. Does the graph level off toward a single height <m>y=L</m>, or does it keep climbing or falling? Answering this describes the far left and far right ends of a graph, and it will help us understand the overall shape of a function.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-infinity-growth" workspace="0in">
+    <title>Section 1: What Happens When x Gets Huge?</title>
+    <introduction>
+      <p>
+        Consider the three functions
+        <md>
+          <mrow>f(x) \amp = 2 + \frac{3}{x}</mrow>
+          <mrow>g(x) \amp = x^2</mrow>
+          <mrow>h(x) \amp = -x^3</mrow>
+        </md>.
+        Instead of reading a graph, we will watch the outputs as the inputs become very large. Use a calculator as needed.
+      </p>
+    </introduction>
+    <task xml:id="task-growth-positive-table" workspace="1in">
+      <statement>
+        <ol marker="a.">
+          <li>
+            <p>
+              Complete the table.
+            </p>
+            <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+              <col right="minor"/>
+              <col right="minor"/>
+              <col right="minor"/>
+              <col/>
+              <row header="yes" bottom="minor">
+                <cell><m>x</m></cell><cell><m>f(x)</m></cell><cell><m>g(x)</m></cell><cell><m>h(x)</m></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>10</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>100</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>1000</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+              <row>
+                <cell><m>10000</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+            </tabular>
+          </li>
+          <li>
+            <p>
+              As <m>x</m> increases without bound, what happens to the outputs of each function? Does it approach a number (which one?), or does it grow without bound (up or down?)
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-growth-negative-table" workspace="1in">
+      <statement>
+        <ol marker="a.">
+          <li>
+            <p>
+              Now let <m>x</m> be negative and grow in size. Complete the table.
+            </p>
+            <tabular halign="center" top="minor" bottom="minor" left="minor" right="minor">
+              <col right="minor"/>
+              <col right="minor"/>
+              <col right="minor"/>
+              <col/>
+              <row header="yes" bottom="minor">
+                <cell><m>x</m></cell><cell><m>f(x)</m></cell><cell><m>g(x)</m></cell><cell><m>h(x)</m></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>-10</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>-100</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+              <row bottom="minor">
+                <cell><m>-1000</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+              <row>
+                <cell><m>-10000</m></cell><cell></cell><cell></cell><cell></cell>
+              </row>
+            </tabular>
+          </li>
+          <li>
+            <p>
+              As <m>x</m> decreases without bound, what happens to the outputs of each function? Which function behaves differently than it did in the previous task, and why?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-infinity-arithmetic" workspace="0in">
+    <title>Section 2: Limits Using Infinite Arithmetic</title>
+    <introduction>
+      <p>
+        We need notation for what we just observed. We write <m>x \to \infty</m> (read <q><m>x</m> increases without bound</q>, meaning <m>x \to +\infty</m>) and <m>x \to -\infty</m> (read <q><m>x</m> decreases without bound</q>).
+      </p>
+      <assemblage>
+        <title>Limits at Infinity</title>
+        <p>
+          We write <m>\displaystyle \lim_{x \to \infty} f(x) = L</m> to mean that the outputs of <m>f(x)</m> get close to the real number <m>L</m> as <m>x</m> increases without bound. We write <m>\displaystyle \lim_{x \to -\infty} f(x) = L</m> to mean the same thing as <m>x</m> decreases without bound. As in the previous activity, a limit may instead be <m>+\infty</m> or <m>-\infty</m>, which says the outputs grow without bound.
+        </p>
+      </assemblage>
+      <assemblage>
+        <title>Horizontal Asymptotes</title>
+        <p>
+          The line <m>y=c</m> is a <term>horizontal asymptote</term> of the graph of <m>f(x)</m> if <m>y \to c</m> as <m>x \to \infty</m> or as <m>x \to -\infty</m>. In symbols, if
+          <md>
+            \lim_{x \to \infty} f(x) = c \qquad \text{or} \qquad \lim_{x \to -\infty} f(x) = c
+          </md>.
+          Only one of the two limits needs to equal <m>c</m>. The two ends of a graph may even level off at different heights, giving two different horizontal asymptotes.
+        </p>
+        <p>
+          A horizontal asymptote describes only the far left or far right end of the graph. Unlike a vertical asymptote, a graph <em>can</em> cross a horizontal asymptote, even many times. For example, we will see in Section 4 that the graph of <m>\displaystyle \frac{2x^2-x}{5x^2+3}</m> has the horizontal asymptote <m>y=\frac{2}{5}</m>, yet it crosses that line at <m>x=-\frac{6}{5}</m>.
+        </p>
+      </assemblage>
+      <p>
+        When <m>x \to a</m> for a number <m>a</m>, we found limits by evaluating a continuous formula. Since <m>\infty</m> is not a number, we cannot literally evaluate at it. Instead, we use <term>infinite arithmetic</term>, a set of rules that record how quantities behave when some of them grow without bound.
+      </p>
+      <assemblage>
+        <title>Infinite Arithmetic</title>
+        <p>
+          Let <m>k</m> be a real number. The following are safe to use.
+        </p>
+        <p><ul>
+          <li><p>Addition of the same sign infinity:
+            <md>
+              <mrow> (+\infty) + (+\infty) = +\infty </mrow>
+              <mrow> (-\infty) + (-\infty) = -\infty </mrow>
+            </md>
+          </p></li>
+          <li><p>Multiplication of either sign infinity:
+            <md>
+              <mrow>(+\infty)(+\infty) = +\infty</mrow>
+              <mrow>(-\infty)(-\infty) = +\infty</mrow>
+              <mrow>(+\infty)(-\infty) = -\infty</mrow>
+            </md>
+          </p></li>
+          <li><p>Adding a real number does not change an infinite limit: 
+            <md>k + (\pm\infty) = \pm\infty</md>
+          </p></li>
+          <li><p>Multiplying by a <em>nonzero</em> real number keeps the limit infinite.
+            Signs follow the usual rules:
+            <md>
+              <mrow>(-2) \cdot (+\infty) = -\infty</mrow>
+              <mrow>(-5) \cdot (-\infty) = +\infty</mrow>
+            </md>
+          </p></li>
+          <li><p>Dividing a <em>number</em> by infinity gives zero:
+            <md>\displaystyle \frac{k}{\pm\infty} = 0</md>
+          </p></li>
+        </ul></p>
+        <p>
+          Powers follow from these rules. As <m>x \to \infty</m>, every positive integer power <m>x^n</m> goes to <m>+\infty</m>. As <m>x \to -\infty</m>, <m>x^n</m> goes to <m>+\infty</m> when <m>n</m> is even and to <m>-\infty</m> when <m>n</m> is odd.
+        </p>
+        <p>
+          Negative powers of <m>x</m> as <m>x \to \pm\infty</m> approach 0.
+        </p>
+      </assemblage>
+      <assemblage>
+        <title>Indeterminate Forms</title>
+        <p>
+          Some arithmetic does <em>not</em> work. The forms
+          <md>
+            \frac{\pm\infty}{\pm\infty}, \qquad (+\infty) + (-\infty), \qquad 0 \cdot (\pm\infty)
+          </md>
+          are <term>indeterminate</term>, just like <m>\frac{0}{0}</m>. When infinite arithmetic produces one of them, we learn nothing about the limit. We must first find a new formula, one that gives the same outputs, and only then use the infinite values.
+        </p>
+      </assemblage>
+      <p>
+        We write the arithmetic directly inside the steps of a limit. For example,
+        <md>
+          <mrow>\lim_{x \to \infty} \left( 2 + \frac{3}{x} \right) \amp = 2 + \frac{3}{+\infty}</mrow>
+          <mrow>\amp = 2 + 0</mrow>
+          <mrow>\amp = 2</mrow>
+        </md>.
+        Because the limit is the real number 2, the line <m>y=2</m> is a horizontal asymptote. Each <m>\infty</m> here is shorthand for <q>this quantity grows without bound</q>. We accept these rules for now and will justify them after we state the formal definition of a limit.
+      </p>
+    </introduction>
+    <task xml:id="task-arith-summary" workspace="1in">
+      <statement>
+        <p>
+          Use limit notation to summarize what you found in Section 1. Write the limit of each of <m>f(x)</m>, <m>g(x)</m>, and <m>h(x)</m> as <m>x \to \infty</m> and as <m>x \to -\infty</m>. For each limit that is a real number, write the equation of the horizontal asymptote.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-arith-cubic-negative" workspace="1in">
+      <statement>
+        <p>
+          Use infinite arithmetic to find <m>\displaystyle \lim_{x \to -\infty} \left( 5 - 2x^3 \right)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-arith-reciprocal-square" workspace="1in">
+      <statement>
+        <p>
+          Use infinite arithmetic to find <m>\displaystyle \lim_{x \to \infty} \left( 7 - \frac{4}{x^2} \right)</m>. Since the limit is a real number, write the equation of the horizontal asymptote.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-infinity-difference" workspace="0in">
+    <title>Section 3: When Infinities Compete</title>
+    <introduction>
+      <p>
+        Consider
+        <md>
+          \lim_{x \to \infty} \left( x^2 - 5x \right)
+        </md>.
+        If we apply infinite arithmetic directly, <m>x^2 \to +\infty</m> and <m>-5x \to -\infty</m>, so we get <m>(+\infty) + (-\infty)</m>. This is indeterminate. One term attempts to increase the outputs without bound, the other attempts to decrease without bound, and we cannot tell which one wins.
+      </p>
+      <p>
+        The fix is to rewrite the formula first. In a sum of powers of <m>x</m>, the <term>dominant power</term> is the highest power of <m>x</m>. We <em>factor out</em> the dominant power from every term:
+        <md>
+          <mrow>\lim_{x \to \infty} \left( x^2 - 5x \right) \amp = \lim_{x \to \infty} x^2 \left( 1 - \frac{5}{x} \right)</mrow>
+          <mrow>\amp = (+\infty) \left( 1 - \frac{5}{+\infty} \right)</mrow>
+          <mrow>\amp = (+\infty)(1 - 0)</mrow>
+          <mrow>\amp = +\infty</mrow>
+        </md>.
+      </p>
+      <p>
+        Now the formula is a product of two pieces, and neither piece is indeterminate. The first piece grows without bound. The second piece approaches a number that is not zero. By infinite arithmetic, the product is infinite, with the sign of that number.
+      </p>
+      <p>
+        Notice <em>why</em> the term <m>-5x</m> did not matter. After factoring, it became <m>-\frac{5}{x}</m>, which approaches zero as <m>x</m> grows. Every term that has a lower power than the dominant power is divided by a positive power of <m>x</m> once the dominant power is factored out, and so it vanishes. The dominant power is the only part that is left to decide the answer.
+      </p>
+      <p>
+        For each limit below, answer the following.
+        <ol marker="a.">
+            <li><p>Identify the dominant power of <m>x</m> and factor it out of every term.</p></li>
+            <li><p>Simplify so that each term inside the other factor is either a number or a number divided by a power of <m>x</m>.</p></li>
+            <li><p>Use infinite arithmetic on each factor, then combine them to find the limit.</p></li>
+        </ol>
+        Practice writing each step as an equation, using limit operators and infinite arithmetic.
+      </p>
+    </introduction>
+    <task xml:id="task-difference-dominant-second" workspace="1.5in">
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to \infty} \left( 3x - 5x^2 \right)</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-difference-negative-infinity" workspace="1.5in">
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to -\infty} \left( 4x^2 - x^3 \right)</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-infinity-quotient" workspace="0in">
+    <title>Section 4: Fractions That Become Infinity over Infinity</title>
+    <introduction>
+      <p>
+        Now consider a fraction such as
+        <md>
+          \lim_{x \to \infty} \frac{3x^2 + 5x}{x^2 - 4}
+        </md>.
+        The numerator goes to <m>+\infty</m> and so does the denominator, so direct arithmetic gives <m>\frac{+\infty}{+\infty}</m>, which is indeterminate.
+      </p>
+      <p>
+        We use the same idea as in Section 3. Factor the dominant power out of the numerator and out of the denominator, separately. Then cancel the common powers of <m>x</m>. This cancellation is allowed because <m>x \ne 0</m> when <m>x</m> is very large, so the new formula agrees with the original one where it matters, just as in the previous activity.
+        <md>
+          <mrow>\lim_{x \to \infty} \frac{3x^2 + 5x}{x^2 - 4} \amp = \lim_{x \to \infty} \frac{x^2 \left( 3 + \frac{5}{x} \right)}{x^2 \left( 1 - \frac{4}{x^2} \right)}</mrow>
+          <mrow>\amp = \lim_{x \to \infty} \frac{3 + \frac{5}{x}}{1 - \frac{4}{x^2}}</mrow>
+          <mrow>\amp = \frac{3 + \frac{5}{+\infty}}{1 - \frac{4}{+\infty}}</mrow>
+          <mrow>\amp = \frac{3 + 0}{1 - 0}</mrow>
+          <mrow>\amp = 3</mrow>
+        </md>.
+        The limit is a real number, so the line <m>y=3</m> is a horizontal asymptote. Every term other than the dominant ones ended up as a number divided by a power of <m>x</m>, and each of those approached zero.
+      </p>
+      <p>
+        The dominant powers in the numerator and the denominator do not have to match. When they differ, some power of <m>x</m> remains after cancelling, and infinite arithmetic still handles it.
+      </p>
+      <p>
+        For each limit below, answer the following.
+        <ol marker="a.">
+            <li><p>Identify the dominant power of <m>x</m> in the numerator and in the denominator, and factor each out.</p></li>
+            <li><p>Cancel the common powers of <m>x</m> and write the simplified formula.</p></li>
+            <li><p>Use infinite arithmetic to find the limit. If the limit is a real number, write the equation of the horizontal asymptote.</p></li>
+        </ol>
+        Practice writing each step as an equation, using limit operators and infinite arithmetic.
+      </p>
+    </introduction>
+    <task xml:id="task-quotient-same-power" workspace="2in">
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to \infty} \frac{2x^2 - x}{5x^2 + 3}</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-bigger-denominator" workspace="2in">
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to \infty} \frac{4x + 1}{x^2 - 3}</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-bigger-numerator" workspace="2in">
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to -\infty} \frac{x^3 + 2x}{4x^2 - 1}</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-reflect-1" workspace="1.5in">
+      <statement>
+        <p>
+          Look at your work for <m>\displaystyle \frac{2x^2 - x}{5x^2 + 3}</m>. (This graph crosses its horizontal asymptote at <m>x=-\frac{6}{5}</m>. Check that <m>\displaystyle \frac{2x^2 - x}{5x^2 + 3} = \frac{2}{5}</m> there.) Which terms of the original formula did not change the final answer? Point to the step where each one became a number divided by a power of <m>x</m>, and explain why such a term cannot change the limit.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-reflect-2" workspace="1.5in">
+      <statement>
+        <p>
+          Compare your three answers. In each, was the dominant power in the numerator larger than, smaller than, or the same as in the denominator? What kind of answer did you get each time (a nonzero number, zero, or an infinite limit), and which of the three graphs have a horizontal asymptote? Give its equation.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>

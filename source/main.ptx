@@ -34,6 +34,7 @@
       <xi:include href="./objectives/week-01-02.ptx"/>
       <xi:include href="./objectives/week-03-04.ptx"/>
       <xi:include href="./objectives/week-05-06.ptx"/>
+      <xi:include href="./objectives/week-08-09.ptx"/>
       <!-- etc. -->
 
     </chapter>
@@ -62,6 +63,7 @@
       <xi:include href="./activities/13-function-behavior.ptx"/>
       <xi:include href="./activities/14-intuitive-limits.ptx"/>
       <xi:include href="./activities/15-algebraic-limits.ptx"/>
+      <xi:include href="./activities/16-limits-at-infinity.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>

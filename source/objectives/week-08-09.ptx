@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="notes-week-08-09">
+  <title>Week 8 and Week 9</title>
+
+  <introduction>
+    <p>
+      These weeks developed limits as a tool for describing how a function behaves near a point and far out along the <m>x</m>-axis.
+      We used one-sided limits to study piecewise functions and continuity, algebra to evaluate limits of rational functions at holes and vertical asymptotes, and infinite arithmetic to find limits at infinity.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>L1 Piecewise Limits and Continuity</title>
+
+    <assemblage xml:id="assemblage-L1">
+      <title>L1</title>
+      <p>
+        I can evaluate one-sided and two-sided limits of piecewise functions and interpret the results for continuity.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            The function value <m>f(c)</m> comes from the rule whose condition includes <m>c</m>.
+            A limit as <m>x \to c</m> does <em>not</em> use the function value. It describes the <m>y</m>-value the function approaches from nearby inputs.
+          </p>
+        </li>
+        <li>
+          <p>
+            To find a <term>left-limit</term> <m>\displaystyle \lim_{x \to c^-} f(x)</m>, use the rule on the interval immediately to the left of <m>c</m>.
+            To find a <term>right-limit</term> <m>\displaystyle \lim_{x \to c^+} f(x)</m>, use the rule on the interval immediately to the right of <m>c</m>.
+            When that rule is a polynomial, the one-sided limit is found by evaluating the rule at <m>x=c</m>, even if <m>c</m> is not part of that rule's interval.
+          </p>
+        </li>
+        <li>
+          <p>
+            The two-sided limit <m>\displaystyle \lim_{x \to c} f(x)</m> exists only when the left-limit and the right-limit both exist and are equal.
+            If they are different, the two-sided limit does not exist.
+          </p>
+        </li>
+        <li>
+          <p>
+            <q><m>f(x)</m> is <term>continuous</term> at <m>x=c</m></q> requires three things: the function value <m>f(c)</m> exists, the two-sided limit exists, and the two are equal.
+            If any of these fails, there is a <term>discontinuity</term>, and your explanation should name which condition failed.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise label="L1-piecewise-limits">
+      <statement>
+        <p>
+          Suppose <m>f(x)</m> is defined piecewise by
+          <md>
+            f(x) = \begin{cases}
+            2x+5, \amp x \lt -1 \\
+            x^2+2, \amp -1 \le x \lt 3 \\
+            8-x, \amp x \ge 3
+            \end{cases}
+          </md>.
+        </p>
+        <p>
+          At each of the boundary points <m>x=-1</m> and <m>x=3</m>:
+          <ol marker="a.">
+            <li><p>Evaluate the left-limit.</p></li>
+            <li><p>Evaluate the right-limit.</p></li>
+            <li><p>Evaluate the two-sided limit, if it exists.</p></li>
+            <li><p>Decide whether <m>f(x)</m> is continuous at the point, and explain why or why not.</p></li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+  </subsection>
+
+  <subsection>
+    <title>L2 Limits of Rational Functions</title>
+
+    <assemblage xml:id="assemblage-L2">
+      <title>L2</title>
+      <p>
+        I can evaluate limits of algebraic functions involving division at holes and vertical asymptotes.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            Start by trying to evaluate the formula at <m>x=a</m>.
+            If the result is a number, that number is the limit (the formula is continuous at <m>x=a</m>).
+            If the result is <m>\frac{0}{0}</m>, we learn nothing yet, and we must find a simpler formula that gives the same outputs near <m>x=a</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            To find the simpler formula, factor the numerator and denominator completely and cancel the common factors.
+            The limit at the <term>hole</term> is found by evaluating the simplified formula at <m>x=a</m>, written with the evaluation bar as <m>\left. (\text{formula}) \right|_{x=a}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If the result is a nonzero number divided by zero, the formula has a <term>vertical asymptote</term> at <m>x=a</m>.
+            The limit is not a number, so we must look at each side separately.
+          </p>
+        </li>
+        <li>
+          <p>
+            For a one-sided limit at a vertical asymptote, the answer is <m>+\infty</m> or <m>-\infty</m>.
+            To decide which, determine the sign of the numerator and the sign of the denominator for <m>x</m> just to the left or just to the right of <m>x=a</m>.
+            The denominator approaches zero, so the quotient grows without bound with the sign you found. Your reasoning must be shown.
+          </p>
+        </li>
+        <li>
+          <p>
+            Infinite limits are always written with an explicit sign.
+            The two-sided limit is infinite only when both one-sided limits are infinite with the <em>same</em> sign. Otherwise, the two-sided limit does not exist.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise label="L2-rational-limits">
+      <statement>
+        <p>
+          Consider the function
+          <md>
+            g(x) = \frac{x^2+x-6}{(x-2)(x+4)}
+          </md>.
+        </p>
+        <p>
+          Evaluate each of the limits. At vertical asymptotes, you must provide reasoning and one-sided limits.
+          <ol marker="a.">
+            <li><p><m>\displaystyle \lim_{x \to -4} g(x)</m></p></li>
+            <li><p><m>\displaystyle \lim_{x \to 2} g(x)</m></p></li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+  </subsection>
+
+  <subsection>
+    <title>L3 Limits at Infinity</title>
+
+    <assemblage xml:id="assemblage-L3">
+      <title>L3</title>
+      <p>
+        I can evaluate limits at infinity and interpret it as the end behavior of the function.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            <m>\displaystyle \lim_{x \to +\infty} f(x)</m> and <m>\displaystyle \lim_{x \to -\infty} f(x)</m> describe the <term>end behavior</term> of the function on the right and left ends of the graph.
+            They are separate questions and may have different answers.
+          </p>
+        </li>
+        <li>
+          <p>
+            Since <m>\infty</m> is not a number, we use <term>infinite arithmetic</term> instead of evaluating.
+            Some combinations, like <m>\frac{\infty}{\infty}</m>, are <term>indeterminate</term>, so we must rewrite the formula before using infinite values.
+          </p>
+        </li>
+        <li>
+          <p>
+            For a ratio of polynomials, identify the <term>dominant power</term> of <m>x</m> in the numerator and in the denominator.
+            Factor out the dominant power from each, cancel the powers of <m>x</m> that match, and use the fact that terms like <m>\frac{c}{x^n}</m> approach zero.
+          </p>
+        </li>
+        <li>
+          <p>
+            When the dominant power in the numerator is <em>higher</em> than in the denominator, what remains is a positive power of <m>x</m> times a constant.
+            The limit is <m>+\infty</m> or <m>-\infty</m>, and there is no horizontal asymptote.
+            Be careful with signs: the sign of the constant matters, and so does whether the remaining power of <m>x</m> is positive or negative when <m>x \to -\infty</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Interpret the result in words.
+            For example, <q>as <m>x</m> gets large and positive, the function values decrease without bound</q>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise label="L3-limits-at-infinity">
+      <statement>
+        <p>
+          Consider the function
+          <md>
+            h(x) = \frac{3x^3-x+2}{1-2x^2}
+          </md>.
+        </p>
+        <p>
+          Evaluate each limit and interpret the result by writing a sentence describing the end behavior it represents.
+          <ol marker="a.">
+            <li><p><m>\displaystyle \lim_{x \to +\infty} h(x)</m></p></li>
+            <li><p><m>\displaystyle \lim_{x \to -\infty} h(x)</m></p></li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+  </subsection>
+</section>
