@@ -181,6 +181,69 @@ var ptx_lunr_docs = [
   "body": "  The following number lines indicate intervals on which has particular behaviors, with one number line shows where it is increasing or decreasing and the other number line shows where it is concave up or concave down.   Two number lines. The first has break points at -2 and 2: decreasing to the left of -2, increasing from -2 to 2, and decreasing to the right of 2. The second has break points at -4, 0, and 4: concave down to the left of -4, concave up from -4 to 0, concave down from 0 to 4, and concave up to the right of 4.    Sketch a graph that accurately and clearly illustrates the behavior. Indicate on the graph points (including values) where has local extreme values and inflection points.    We work from left to right to identify every interval shape.   The first change on either number line occurs at , so our first interval is . The function is decreasing and concave down on , which matches the shape on the top right quadrant of a circle. Just to the right of , the graph changes to concave up so has an inflection point at .    The second change on either number line occurs at , so the next interval is . The function is decreasing and concave up on , which matches the shape on the bottom left quadrant of a circle. Just to the right of , the graph changes to increasing. Because changes from decreasing to increasing, has a local minimum at .    The next change occurs at . is increasing and concave up on , which matches the shape in the bottom right quadrant of a circle. To the right of the function changes being to concave down. This means has another inflection point at .    The next change is at . is increasing and concave down on , which matches the shape in the top left quadrant of a circle. To the right of the function changes to decreasing. This means has a local maximum at .    The last change is at . is decreasing and concave down on , and to the right of the function changes to being concave up. This means has a third inflection point at .   We can draw a graph by joining the different shapes at the points where shape was identified as changing.    A smooth graph over a labeled x-axis with no y-axis and no y-values. For x less than -4 the curve decreases and is concave down. At x = -4 the concavity changes to concave up, and the curve keeps decreasing to a local minimum at x = -2. It then increases, with an inflection point at x = 0 where the concavity changes to concave down, up to a local maximum at x = 2. After that it decreases, with an inflection point at x = 4 where the concavity changes to concave up, and it continues decreasing. The three inflection points are at different heights. Points are marked at x = -4, -2, 0, 2, and 4.       "
 },
 {
+  "id": "notes-week-08-09",
+  "level": "1",
+  "url": "notes-week-08-09.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 8 and Week 9",
+  "body": " Week 8 and Week 9   These weeks developed limits as a tool for describing how a function behaves near a point and far out along the -axis. We used one-sided limits to study piecewise functions and continuity, algebra to evaluate limits of rational functions at holes and vertical asymptotes, and infinite arithmetic to find limits at infinity.    L1 Piecewise Limits and Continuity   L1  I can evaluate one-sided and two-sided limits of piecewise functions and interpret the results for continuity.   What do I need to understand?   The function value comes from the rule whose condition includes . A limit as does not use the function value. It describes the -value the function approaches from nearby inputs.    To find a left-limit  , use the rule on the interval immediately to the left of . To find a right-limit  , use the rule on the interval immediately to the right of . When that rule is a polynomial, the one-sided limit is found by evaluating the rule at , even if is not part of that rule's interval.    The two-sided limit exists only when the left-limit and the right-limit both exist and are equal. If they are different, the two-sided limit does not exist.     is continuous at requires three things: the function value exists, the two-sided limit exists, and the two are equal. If any of these fails, there is a discontinuity , and your explanation should name which condition failed.       Suppose is defined piecewise by .  At each of the boundary points and :  Evaluate the left-limit.  Evaluate the right-limit.  Evaluate the two-sided limit, if it exists.  Decide whether is continuous at the point, and explain why or why not.        L2 Limits of Rational Functions   L2  I can evaluate limits of algebraic functions involving division at holes and vertical asymptotes.   What do I need to understand?   Start by trying to evaluate the formula at . If the result is a number, that number is the limit (the formula is continuous at ). If the result is , we learn nothing yet, and we must find a simpler formula that gives the same outputs near .    To find the simpler formula, factor the numerator and denominator completely and cancel the common factors. The limit at the hole is found by evaluating the simplified formula at , written with the evaluation bar as .    If the result is a nonzero number divided by zero, the formula has a vertical asymptote at . The limit is not a number, so we must look at each side separately.    For a one-sided limit at a vertical asymptote, the answer is or . To decide which, determine the sign of the numerator and the sign of the denominator for just to the left or just to the right of . The denominator approaches zero, so the quotient grows without bound with the sign you found. Your reasoning must be shown.    Infinite limits are always written with an explicit sign. The two-sided limit is infinite only when both one-sided limits are infinite with the same sign. Otherwise, the two-sided limit does not exist.       Consider the function .  Evaluate each of the limits. At vertical asymptotes, you must provide reasoning and one-sided limits.          L3 Limits at Infinity   L3  I can evaluate limits at infinity and interpret it as the end behavior of the function.   What do I need to understand?    and describe the end behavior of the function on the right and left ends of the graph. They are separate questions and may have different answers.    Since is not a number, we use infinite arithmetic instead of evaluating. Some combinations, like , are indeterminate , so we must rewrite the formula before using infinite values.    For a ratio of polynomials, identify the dominant power of in the numerator and in the denominator. Factor out the dominant power from each, cancel the powers of that match, and use the fact that terms like approach zero.    When the dominant power in the numerator is higher than in the denominator, what remains is a positive power of times a constant. The limit is or , and there is no horizontal asymptote. Be careful with signs: the sign of the constant matters, and so does whether the remaining power of is positive or negative when .    Interpret the result in words. For example, as gets large and positive, the function values decrease without bound .       Consider the function .  Evaluate each limit and interpret the result by writing a sentence describing the end behavior it represents.         "
+},
+{
+  "id": "notes-week-08-09-3-3",
+  "level": "2",
+  "url": "notes-week-08-09.html#notes-week-08-09-3-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "left-limit right-limit continuous discontinuity "
+},
+{
+  "id": "L1-piecewise-limits",
+  "level": "2",
+  "url": "notes-week-08-09.html#L1-piecewise-limits",
+  "type": "Checkpoint",
+  "number": "13",
+  "title": "",
+  "body": "  Suppose is defined piecewise by .  At each of the boundary points and :  Evaluate the left-limit.  Evaluate the right-limit.  Evaluate the two-sided limit, if it exists.  Decide whether is continuous at the point, and explain why or why not.     "
+},
+{
+  "id": "notes-week-08-09-4-3",
+  "level": "2",
+  "url": "notes-week-08-09.html#notes-week-08-09-4-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "hole vertical asymptote "
+},
+{
+  "id": "L2-rational-limits",
+  "level": "2",
+  "url": "notes-week-08-09.html#L2-rational-limits",
+  "type": "Checkpoint",
+  "number": "14",
+  "title": "",
+  "body": "  Consider the function .  Evaluate each of the limits. At vertical asymptotes, you must provide reasoning and one-sided limits.       "
+},
+{
+  "id": "notes-week-08-09-5-3",
+  "level": "2",
+  "url": "notes-week-08-09.html#notes-week-08-09-5-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "end behavior infinite arithmetic indeterminate dominant power "
+},
+{
+  "id": "L3-limits-at-infinity",
+  "level": "2",
+  "url": "notes-week-08-09.html#L3-limits-at-infinity",
+  "type": "Checkpoint",
+  "number": "15",
+  "title": "",
+  "body": "  Consider the function .  Evaluate each limit and interpret the result by writing a sentence describing the end behavior it represents.       "
+},
+{
   "id": "activity-linear-relations-slope",
   "level": "1",
   "url": "activity-linear-relations-slope.html",
@@ -230,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-linear-relations-slope.html#def-slope-point-slope",
   "type": "Definition",
-  "number": "13",
+  "number": "16",
   "title": "",
   "body": "  The constant rate you found in Model 2 is called the slope of the relation, or its average rate of change . The equation you built in Task 4 has the same structure as called point-slope form , where is any known point on the relation and is the slope. It says exactly what you wrote: a new value equals a starting value plus the slope times how far you've moved from that starting point.   "
 },
@@ -734,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-inverse-functions.html#def-inverse-function",
   "type": "Definition",
-  "number": "16",
+  "number": "19",
   "title": "Inverse function.",
   "body": " Inverse function   For a given function , the function is the inverse function to if   for every in the domain of , and  for every in the domain of .    "
 },
@@ -890,6 +953,51 @@ var ptx_lunr_docs = [
   "number": "5",
   "title": "Section 5: Factoring First.",
   "body": " Section 5: Factoring First   In the previous sections, the formulas were already factored. Usually they are not. Before we can cancel, we must factor the numerator and denominator completely. Then we can follow the same steps as before.  For each limit below, factor, cancel, and decide whether the graph has a hole or a vertical asymptote at the given -value. Find the limit, or the one-sided limits.                 "
+},
+{
+  "id": "activity-limits-at-infinity",
+  "level": "1",
+  "url": "activity-limits-at-infinity.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Limits at Infinity",
+  "body": " Limits at Infinity   Last time we studied what a graph does as approaches a number , and we saw two outcomes at trouble spots: a hole, where the outputs approach a number, and a vertical asymptote, where the outputs go to or .  Today we turn the question around and ask what a graph does as itself grows without bound, in either direction. Does the graph level off toward a single height , or does it keep climbing or falling? Answering this describes the far left and far right ends of a graph, and it will help us understand the overall shape of a function.    Section 1: What Happens When x Gets Huge?   Consider the three functions . Instead of reading a graph, we will watch the outputs as the inputs become very large. Use a calculator as needed.       Complete the table.                         As increases without bound, what happens to the outputs of each function? Does it approach a number (which one?), or does it grow without bound (up or down?)          Now let be negative and grow in size. Complete the table.                         As decreases without bound, what happens to the outputs of each function? Which function behaves differently than it did in the previous task, and why?        Section 2: Limits Using Infinite Arithmetic   We need notation for what we just observed. We write (read increases without bound , meaning ) and (read decreases without bound ).   Limits at Infinity  We write to mean that the outputs of get close to the real number as increases without bound. We write to mean the same thing as decreases without bound. As in the previous activity, a limit may instead be or , which says the outputs grow without bound.    Horizontal Asymptotes  The line is a horizontal asymptote of the graph of if as or as . In symbols, if . Only one of the two limits needs to equal . The two ends of a graph may even level off at different heights, giving two different horizontal asymptotes.  A horizontal asymptote describes only the far left or far right end of the graph. Unlike a vertical asymptote, a graph can cross a horizontal asymptote, even many times. For example, we will see in Section 4 that the graph of has the horizontal asymptote , yet it crosses that line at .   When for a number , we found limits by evaluating a continuous formula. Since is not a number, we cannot literally evaluate at it. Instead, we use infinite arithmetic , a set of rules that record how quantities behave when some of them grow without bound.   Infinite Arithmetic  Let be a real number. The following are safe to use.   Addition of the same sign infinity:   Multiplication of either sign infinity:   Adding a real number does not change an infinite limit:   Multiplying by a nonzero real number keeps the limit infinite. Signs follow the usual rules:   Dividing a number by infinity gives zero:    Powers follow from these rules. As , every positive integer power goes to . As , goes to when is even and to when is odd.  Negative powers of as approach 0.    Indeterminate Forms  Some arithmetic does not work. The forms are indeterminate , just like . When infinite arithmetic produces one of them, we learn nothing about the limit. We must first find a new formula, one that gives the same outputs, and only then use the infinite values.   We write the arithmetic directly inside the steps of a limit. For example, . Because the limit is the real number 2, the line is a horizontal asymptote. Each here is shorthand for this quantity grows without bound . We accept these rules for now and will justify them after we state the formal definition of a limit.     Use limit notation to summarize what you found in Section 1. Write the limit of each of , , and as and as . For each limit that is a real number, write the equation of the horizontal asymptote.      Use infinite arithmetic to find .      Use infinite arithmetic to find . Since the limit is a real number, write the equation of the horizontal asymptote.      Section 3: When Infinities Compete   Consider . If we apply infinite arithmetic directly, and , so we get . This is indeterminate. One term attempts to increase the outputs without bound, the other attempts to decrease without bound, and we cannot tell which one wins.  The fix is to rewrite the formula first. In a sum of powers of , the dominant power is the highest power of . We factor out the dominant power from every term: .  Now the formula is a product of two pieces, and neither piece is indeterminate. The first piece grows without bound. The second piece approaches a number that is not zero. By infinite arithmetic, the product is infinite, with the sign of that number.  Notice why the term did not matter. After factoring, it became , which approaches zero as grows. Every term that has a lower power than the dominant power is divided by a positive power of once the dominant power is factored out, and so it vanishes. The dominant power is the only part that is left to decide the answer.  For each limit below, answer the following.  Identify the dominant power of and factor it out of every term.  Simplify so that each term inside the other factor is either a number or a number divided by a power of .  Use infinite arithmetic on each factor, then combine them to find the limit.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                   Section 4: Fractions That Become Infinity over Infinity   Now consider a fraction such as . The numerator goes to and so does the denominator, so direct arithmetic gives , which is indeterminate.  We use the same idea as in Section 3. Factor the dominant power out of the numerator and out of the denominator, separately. Then cancel the common powers of . This cancellation is allowed because when is very large, so the new formula agrees with the original one where it matters, just as in the previous activity. . The limit is a real number, so the line is a horizontal asymptote. Every term other than the dominant ones ended up as a number divided by a power of , and each of those approached zero.  The dominant powers in the numerator and the denominator do not have to match. When they differ, some power of remains after cancelling, and infinite arithmetic still handles it.  For each limit below, answer the following.  Identify the dominant power of in the numerator and in the denominator, and factor each out.  Cancel the common powers of and write the simplified formula.  Use infinite arithmetic to find the limit. If the limit is a real number, write the equation of the horizontal asymptote.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                          Look at your work for . (This graph crosses its horizontal asymptote at . Check that there.) Which terms of the original formula did not change the final answer? Point to the step where each one became a number divided by a power of , and explain why such a term cannot change the limit.      Compare your three answers. In each, was the dominant power in the numerator larger than, smaller than, or the same as in the denominator? What kind of answer did you get each time (a nonzero number, zero, or an infinite limit), and which of the three graphs have a horizontal asymptote? Give its equation.     "
+},
+{
+  "id": "ex-infinity-growth",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-growth",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: What Happens When x Gets Huge?",
+  "body": " Section 1: What Happens When x Gets Huge?   Consider the three functions . Instead of reading a graph, we will watch the outputs as the inputs become very large. Use a calculator as needed.       Complete the table.                         As increases without bound, what happens to the outputs of each function? Does it approach a number (which one?), or does it grow without bound (up or down?)          Now let be negative and grow in size. Complete the table.                         As decreases without bound, what happens to the outputs of each function? Which function behaves differently than it did in the previous task, and why?      "
+},
+{
+  "id": "ex-infinity-arithmetic",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-arithmetic",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Limits Using Infinite Arithmetic.",
+  "body": " Section 2: Limits Using Infinite Arithmetic   We need notation for what we just observed. We write (read increases without bound , meaning ) and (read decreases without bound ).   Limits at Infinity  We write to mean that the outputs of get close to the real number as increases without bound. We write to mean the same thing as decreases without bound. As in the previous activity, a limit may instead be or , which says the outputs grow without bound.    Horizontal Asymptotes  The line is a horizontal asymptote of the graph of if as or as . In symbols, if . Only one of the two limits needs to equal . The two ends of a graph may even level off at different heights, giving two different horizontal asymptotes.  A horizontal asymptote describes only the far left or far right end of the graph. Unlike a vertical asymptote, a graph can cross a horizontal asymptote, even many times. For example, we will see in Section 4 that the graph of has the horizontal asymptote , yet it crosses that line at .   When for a number , we found limits by evaluating a continuous formula. Since is not a number, we cannot literally evaluate at it. Instead, we use infinite arithmetic , a set of rules that record how quantities behave when some of them grow without bound.   Infinite Arithmetic  Let be a real number. The following are safe to use.   Addition of the same sign infinity:   Multiplication of either sign infinity:   Adding a real number does not change an infinite limit:   Multiplying by a nonzero real number keeps the limit infinite. Signs follow the usual rules:   Dividing a number by infinity gives zero:    Powers follow from these rules. As , every positive integer power goes to . As , goes to when is even and to when is odd.  Negative powers of as approach 0.    Indeterminate Forms  Some arithmetic does not work. The forms are indeterminate , just like . When infinite arithmetic produces one of them, we learn nothing about the limit. We must first find a new formula, one that gives the same outputs, and only then use the infinite values.   We write the arithmetic directly inside the steps of a limit. For example, . Because the limit is the real number 2, the line is a horizontal asymptote. Each here is shorthand for this quantity grows without bound . We accept these rules for now and will justify them after we state the formal definition of a limit.     Use limit notation to summarize what you found in Section 1. Write the limit of each of , , and as and as . For each limit that is a real number, write the equation of the horizontal asymptote.      Use infinite arithmetic to find .      Use infinite arithmetic to find . Since the limit is a real number, write the equation of the horizontal asymptote.    "
+},
+{
+  "id": "ex-infinity-difference",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-difference",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: When Infinities Compete.",
+  "body": " Section 3: When Infinities Compete   Consider . If we apply infinite arithmetic directly, and , so we get . This is indeterminate. One term attempts to increase the outputs without bound, the other attempts to decrease without bound, and we cannot tell which one wins.  The fix is to rewrite the formula first. In a sum of powers of , the dominant power is the highest power of . We factor out the dominant power from every term: .  Now the formula is a product of two pieces, and neither piece is indeterminate. The first piece grows without bound. The second piece approaches a number that is not zero. By infinite arithmetic, the product is infinite, with the sign of that number.  Notice why the term did not matter. After factoring, it became , which approaches zero as grows. Every term that has a lower power than the dominant power is divided by a positive power of once the dominant power is factored out, and so it vanishes. The dominant power is the only part that is left to decide the answer.  For each limit below, answer the following.  Identify the dominant power of and factor it out of every term.  Simplify so that each term inside the other factor is either a number or a number divided by a power of .  Use infinite arithmetic on each factor, then combine them to find the limit.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                 "
+},
+{
+  "id": "ex-infinity-quotient",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-quotient",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Fractions That Become Infinity over Infinity.",
+  "body": " Section 4: Fractions That Become Infinity over Infinity   Now consider a fraction such as . The numerator goes to and so does the denominator, so direct arithmetic gives , which is indeterminate.  We use the same idea as in Section 3. Factor the dominant power out of the numerator and out of the denominator, separately. Then cancel the common powers of . This cancellation is allowed because when is very large, so the new formula agrees with the original one where it matters, just as in the previous activity. . The limit is a real number, so the line is a horizontal asymptote. Every term other than the dominant ones ended up as a number divided by a power of , and each of those approached zero.  The dominant powers in the numerator and the denominator do not have to match. When they differ, some power of remains after cancelling, and infinite arithmetic still handles it.  For each limit below, answer the following.  Identify the dominant power of in the numerator and in the denominator, and factor each out.  Cancel the common powers of and write the simplified formula.  Use infinite arithmetic to find the limit. If the limit is a real number, write the equation of the horizontal asymptote.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                          Look at your work for . (This graph crosses its horizontal asymptote at . Check that there.) Which terms of the original formula did not change the final answer? Point to the step where each one became a number divided by a power of , and explain why such a term cannot change the limit.      Compare your three answers. In each, was the dominant power in the numerator larger than, smaller than, or the same as in the denominator? What kind of answer did you get each time (a nonzero number, zero, or an infinite limit), and which of the three graphs have a horizontal asymptote? Give its equation.    "
 },
 {
   "id": "handouts",
