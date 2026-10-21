@@ -64,6 +64,7 @@
       <xi:include href="./activities/14-intuitive-limits.ptx"/>
       <xi:include href="./activities/15-algebraic-limits.ptx"/>
       <xi:include href="./activities/16-limits-at-infinity.ptx"/>
+      <xi:include href="./activities/17-limit-definition.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
