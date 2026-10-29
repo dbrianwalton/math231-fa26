@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-limit-error-tolerance">
+  <title>Limits as Error Tolerance</title>
+
+  <introduction>
+    <p>
+      In the real world, a formula predicts a quantity from an input, which we can only control to a certain precision. A machine cannot cut a side length of exactly 2 meters, and a driver cannot hold a speed of exactly 60 miles per hour. The question that matters in practice is this: <em>how precisely must we control the input so that the predicted output stays within an acceptable error?</em>
+    </p>
+    <p>
+      In the activity <q><xref ref="activity-limit-definition" text="title"/></q> we gave the limit definition and saw that <m>\epsilon</m> is an acceptable tolerance of error in the output and <m>\delta</m> is how close the input must be to guarantee it. Today we give that definition a physical meaning in two situations, and we see that the answer to the practical question is exactly what a limit statement says.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-tolerance-square" workspace="0in">
+    <title>Section 1: What the Tiles Were Telling Us</title>
+    <introduction>
+      <p>
+        In the activity <q><xref ref="activity-limit-definition" text="title"/></q> you worked out the specific example <m>\displaystyle \lim_{x \to 2} x^2 = 4</m> with <m>\epsilon = 0.1</m>. That example has a physical meaning. The area covered by a square tile is <m>A = s^2</m>, where <m>s</m> is the side length in meters. A tile with side <m>s=2</m> has exactly <m>4\ \mathrm{m}^2</m> of area, but a cutting machine can only control the side length so precisely. Suppose the manufacturer insists that every tile have an area within <m>0.1\ \mathrm{m}^2</m> of <m>4\ \mathrm{m}^2</m>. The side lengths you found that work are about <m>1.9748 \lt s \lt 2.0248</m>, which is roughly <m>0.0252</m> below 2 and <m>0.0248</m> above 2. Because the neighborhood <m>|s-2| \lt \delta</m> is symmetric, the machine is guaranteed to be safe only if it stays within the smaller distance, about <m>0.0248</m> meters, of the target. Any smaller <m>\delta</m> also works.
+      </p>
+    </introduction>
+    <task xml:id="task-tolerance-square-interpret" workspace="2in">
+      <statement>
+        <p>
+          For the tile problem with <m>a=2</m> and <m>L=4</m>, answer the following.
+          <ol marker="a.">
+            <li><p>What does <m>\epsilon = 0.1</m> measure, and in what units?</p></li>
+            <li><p>What does <m>\delta</m> measure, and in what units?</p></li>
+            <li><p>Complete the statement using <m>\delta = 0.02</m>: if <m>0 \lt |s-\underline{\quad\quad}| \lt \underline{\quad\quad}</m>, then <m>|s^2-\underline{\quad\quad}| \lt \underline{\quad\quad}</m>.</p></li>
+          </ol>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-tolerance-larger-square" workspace="0in">
+    <title>Section 2: Larger Tiles</title>
+    <introduction>
+      <p>
+        The manufacturer also produces larger tiles with target side length <m>s=3</m> meters and target area <m>9\ \mathrm{m}^2</m>. The area must again be within <m>\epsilon = 0.1\ \mathrm{m}^2</m> of the target. This corresponds to the limit statement <m>\displaystyle \lim_{s \to 3} s^2 = 9</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-tolerance-larger-square-delta" workspace="2in">
+      <statement>
+        <p>
+          Find an input tolerance <m>\delta</m> that works for <m>\displaystyle \lim_{s \to 3} s^2 = 9</m> with <m>\epsilon = 0.1</m>. Show the interval of acceptable areas, the interval of acceptable side lengths, and the two distances from <m>s=3</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-tolerance-larger-square-interpret" workspace="2in">
+      <statement>
+        <p>
+          <ol marker="a.">
+            <li><p>Explain what your <m>\delta</m> means for the person running the cutting machine.</p></li>
+            <li><p>Compare it to the <m>\delta</m> for the 2 meter tile. Which tile needs the more precise cut, and why, in terms of how much the area changes when the side length changes a little?</p></li>
+          </ol>
+        </p>
+      </statement>
+    </task>
+    <conclusion>
+      <p>
+        Notice what the definition of the limit promises.
+        <em>Regardless of how small the required tolerance <m>\epsilon</m> is chosen</em>,
+        you will be able to find a precision <m>\delta</m> for the input that achieves it.
+        We tested only <m>\epsilon = 0.1</m>, but the claim is about every <m>\epsilon \gt 0</m>.
+        If there is even one <m>\epsilon</m> for which no <m>\delta</m> works, 
+        then the limit statement was not valid.
+      </p>
+    </conclusion>
+  </exercise>
+
+  <exercise xml:id="ex-tolerance-travel-time" workspace="0in">
+    <title>Section 3: Travel Time and Speed</title>
+    <introduction>
+      <p>
+        A delivery truck makes a trip of 120 miles at a constant speed of <m>v</m> miles per hour. The travel time in hours is <m>t = \dfrac{120}{v}</m>. At <m>v=60</m> mph the trip takes exactly 2 hours. The company needs the arrival time to be within <m>0.1</m> hours of 2 hours. How much can the driver's speed vary from 60 mph? Explain how this relates to the definition of a limit.
+      </p>
+      <figure xml:id="fig-tolerance-travel-time">
+        <caption>Travel time <m>t=\frac{120}{v}</m>. The axes do not start at zero.</caption>
+        <image xml:id="image-tolerance-travel-time" width="60%">
+          <shortdescription>
+            A decreasing curve showing travel time in hours against speed in miles per hour, for speeds from 45 to 75 mph. The curve passes through a closed point at (60, 2).
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[scale=1.0, >=stealth]
+              % axes
+              \draw[->] (0,0) -- (7.9,0) node[right] {$v$ (mph)};
+              \draw[->] (0,0) -- (0,5.2) node[above] {$t$ (hours)};
+              % ticks on v-axis, x = (v-45)*0.25
+              \foreach \v in {45,50,55,60,65,70,75} {
+                \draw ({(\v-45)*0.25},0.08) -- ({(\v-45)*0.25},-0.08);
+                \node[below] at ({(\v-45)*0.25},-0.08) {\small $\v$};
+              }
+              % ticks on t-axis, y = (t-1.5)*4
+              \draw (0.08,2.0) -- (-0.08,2.0);
+              \node[left] at (-0.08,2.0) {\small $2$};
+              % the curve t = 120/v
+              \draw[thick, domain=45:75, samples=60] plot ({(\x-45)*0.25},{(120/\x-1.5)*4});
+              % target point (60,2)
+              \filldraw (3.75,2.0) circle (2.2pt);
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+    </introduction>
+    <task xml:id="task-tolerance-travel-time-windows" workspace="2.5in">
+      <statement>
+        <p>
+          Answer the following, in order.
+          <ol marker="a.">
+            <li><p>Write the set of acceptable travel times as an interval of <m>t</m>-values. Indicate on the <m>t</m>-axis of the graph and create a horizontal strip.</p></li>
+            <li><p>Solve for the interval of speeds <m>v\gt 0</m> that produce an acceptable time.</p></li>
+            <li><p>Mark the interval of acceptable speeds on the <m>v</m>-axis and draw the vertical lines that connect it to the horizontal strip you drew.</p></li>
+            <li><p>How far below 60 mph and how far above 60 mph may the speed be?</p></li>
+            <li><p>What input tolerance <m>\delta</m> should the driver use so that every speed within <m>\delta</m> of 60 mph gives an acceptable time?</p></li>
+          </ol>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-tolerance-travel-time-statement" workspace="1.5in">
+      <statement>
+        <p>
+          <ol marker="a.">
+            <li><p>Write the limit statement that this situation illustrates.</p></li>
+            <li><p>Complete the statement with your numbers: if <m>0 \lt |v-\underline{\quad\quad}| \lt \underline{\quad\quad}</m>, then <m>\left|\dfrac{120}{v}-\underline{\quad\quad}\right| \lt \underline{\quad\quad}</m>.</p></li>
+          </ol>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>

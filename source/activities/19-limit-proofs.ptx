@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<handout xml:id="handout-limit-proofs">
+  <title>Proving Limits with the Definition</title>
+
+  <introduction>
+    <p>
+      In <q>The Definition of a Limit</q> and <q>Limits as Error Tolerance</q> we found a working <m>\delta</m> for specific choices of <m>\epsilon</m>. A limit statement makes a stronger claim: a working <m>\delta</m> exists for <em>every</em> <m>\epsilon \gt 0</m>. This handout shows how to guarantee that by finding <m>\delta</m> as a formula in <m>\epsilon</m>.
+    </p>
+  </introduction>
+
+  <paragraphs>
+    <title>What a Proof of a Limit Must Show</title>
+
+    <definition xml:id="def-handout-limit">
+      <title>Limit</title>
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to a} f(x) = L</m> means that for every <m>\epsilon \gt 0</m> there exists a <m>\delta \gt 0</m> such that
+          <md>
+            <mrow>0 \lt |x-a| \lt \delta \quad \text{implies} \quad |f(x)-L| \lt \epsilon</mrow>
+          </md>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      To prove a limit statement, we start by assuming we are given <m>\epsilon \gt 0</m> as an arbitrary value. We need to state a specific way to find or guarantee we could find <m>\delta \gt 0</m>, which may depend on <m>\epsilon</m>, and show using this value of <m>\delta</m>, every value of <m>x</m> satisfying <m>0 \lt |x-a| \lt \delta</m> must guarantee <m>|f(x)-L| \lt \epsilon</m> is true.
+    </p>
+
+    <remark>
+      <title>Strategy</title>
+      <p>
+        A proof states the value or method to find <m>\delta</m> as soon as we state we are given the value of <m>\epsilon</m>. In practice, we have to work backward on scratch paper. We start from the desired output inequality <m>|f(x)-L| \lt \epsilon</m> and rewrite it so that the expression <m>|x-a|</m> appears, usually by factoring. The value <m>|x-a|</m> is usually multiplied by some value or formula which we need to bound so that we get some multiple of <m>\delta</m>. We choose our value of <m>\delta</m> so that when multiplying by this bound we stay smaller than <m>\epsilon</m>. Then we return to the actual proof and proceed forward, beginning with <m>\epsilon</m>, stating <m>\delta</m>, assuming <m>0 \lt |x-a| \lt \delta</m> and ending with <m>|f(x)-L| \lt \epsilon</m>.
+      </p>
+    </remark>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Worked Examples</title>
+
+    <example xml:id="ex-handout-limit-linear">
+      <title>A Linear Function</title>
+      <statement>
+        <p>
+          Prove <m>\displaystyle \lim_{x \to 2} (2x+3) = 7</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <em>Scratch work.</em> We want <m>|(2x+3)-7| \lt \epsilon</m>. Simplifying the left side means we want <m>|2x-4| = 2|x-2| \lt \epsilon</m>. We will be choosing <m>\delta</m> and know that <m>|x-2| \lt \delta</m>, which will then be multiplied by 2. This suggests we want <m>\delta = \frac{\epsilon}{2}</m>.
+        </p>
+        <proof>
+          <p>
+            Let <m>\epsilon \gt 0</m> and choose <m>\delta = \frac{\epsilon}{2}</m>. If <m>0 \lt |x-2| \lt \delta</m>, then
+            <md>
+              <mrow>|(2x+3)-7| \amp = 2|x-2|</mrow>
+              <mrow>\amp \lt 2\delta</mrow>
+              <mrow>\amp = \epsilon</mrow>
+            </md>.
+            Since <m>\epsilon</m> was arbitrary, the limit statement is true.
+          </p>
+        </proof>
+      </solution>
+    </example>
+
+    <example xml:id="ex-handout-limit-quadratic">
+      <title>A Quadratic Function</title>
+      <statement>
+        <p>
+          Prove <m>\displaystyle \lim_{x \to 2} x^2 = 4</m>.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          <em>Scratch work.</em> We want <m>|x^2-4| \lt \epsilon</m>. Factoring gives <m>|x-2|\,|x+2| \lt \epsilon</m>. The factor <m>|x+2|</m> is not constant, so we bound it. If we require <m>\delta \lt 1</m>, then we will work with <m>|x-2| \lt 1</m>, then <m>1 \lt x \lt 3</m> and <m>3 \lt x+2 \lt 5</m>, so <m>|x+2| \lt 5</m>. Then <m>|x-2|\,|x+2| \lt 5|x-2|</m>, and we need <m>5|x-2| \le \epsilon</m>. This suggests we also need <m>\delta \lt \frac{\epsilon}{5}</m>. We meet both of our requirements by choosing <m>\delta = \min\left(1, \frac{\epsilon}{5}\right)</m>.
+        </p>
+        <proof>
+          <p>
+            Let <m>\epsilon \gt 0</m> and choose <m>\delta = \min\left(1, \frac{\epsilon}{5}\right)</m>. If <m>0 \lt |x-2| \lt \delta</m>, we know that <m>|x-2| \lt 1</m> and <m>|x-2| \lt \frac{\epsilon}{5}</m>. Because <m>|x-2| \lt 1</m>, we know <m>|x+2| \lt 5</m>. Together, we now know
+            <md>
+              <mrow>|x^2-4| \amp = |x-2|\,|x+2|</mrow>
+              <mrow>\amp \le \frac{\epsilon}{5} \cdot 5 = \epsilon</mrow>
+            </md>.
+            Since <m>\epsilon</m> was arbitrary, the limit statement is true.
+          </p>
+        </proof>
+      </solution>
+    </example>
+
+  </paragraphs>
+
+  <paragraphs>
+    <title>From Proofs to Rules</title>
+
+    <p>
+      The two examples above each ended with a formula for <m>\delta</m> in terms of <m>\epsilon</m>. Such a formula is an <term><m>\epsilon</m>-<m>\delta</m> rule</term>: a recipe that takes any tolerance <m>\epsilon \gt 0</m> and returns a precision <m>\delta \gt 0</m> that works. When we know <m>\displaystyle \lim_{x \to a} f(x) = L</m>, we know that some <m>\epsilon</m>-<m>\delta</m> rule exists for <m>f</m>.
+    </p>
+    <p>
+      We will now prove the limits of the simplest functions directly, and then show how the <m>\epsilon</m>-<m>\delta</m> rules of the pieces build a rule for combinations. This turns the definition of limits into a collection of limit rules.
+    </p>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Limits of Elementary Functions</title>
+
+    <theorem xml:id="thm-limit-constant">
+      <title>Limit of a Constant</title>
+      <statement>
+        <p>
+          For any constant <m>c</m>, <m>\displaystyle \lim_{x \to a} c = c</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let <m>\epsilon \gt 0</m>. Any positive <m>\delta</m> works, so choose <m>\delta = 1</m>. If <m>0 \lt |x-a| \lt \delta</m>, then <m>|c-c| = 0 \lt \epsilon</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="thm-limit-identity">
+      <title>Limit of the Identity Function</title>
+      <statement>
+        <p>
+          <m>\displaystyle \lim_{x \to a} x = a</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let <m>\epsilon \gt 0</m> and choose <m>\delta = \epsilon</m>. If <m>0 \lt |x-a| \lt \delta</m>, then <m>|x-a| \lt \epsilon</m>.
+        </p>
+      </proof>
+    </theorem>
+
+    <theorem xml:id="thm-limit-linear">
+      <title>Limit of a Linear Function</title>
+      <statement>
+        <p>
+          For constants <m>m \ne 0</m> and <m>b</m>, <m>\displaystyle \lim_{x \to a} (mx+b) = ma+b</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          Let <m>\epsilon \gt 0</m> and choose <m>\delta = \frac{\epsilon}{|m|}</m>. If <m>0 \lt |x-a| \lt \delta</m>, then
+          <md>
+            <mrow>|(mx+b)-(ma+b)| \amp = |m|\,|x-a|</mrow>
+            <mrow>\amp \lt |m|\delta</mrow>
+            <mrow>\amp = \epsilon</mrow>
+          </md>.
+        </p>
+      </proof>
+    </theorem>
+
+    <remark>
+      <title>Continuity</title>
+      <p>
+        In each of these results the value of the limit is the same as the value of the function at <m>x=a</m>. For the constant function <m>f(x)=c</m> the value is <m>c</m>, for the identity function the value is <m>a</m>, and for the linear function the value is <m>ma+b</m>. This means that these elementary functions are <term>continuous</term> at every point <m>a</m>.
+      </p>
+    </remark>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Limits of Combinations</title>
+
+    <p>
+      In each rule below, assume the limits of the pieces are known, so each piece has its own <m>\epsilon</m>-<m>\delta</m> rule. The remark after each rule states how to produce a <m>\delta</m> for the combination from those rules, and the proof shows that it works. 
+    </p>
+
+    <theorem xml:id="thm-limit-scalar-multiple">
+      <title>Limit of a Scalar Multiple</title>
+      <statement>
+        <p>
+          If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>k \ne 0</m> is a constant, then <m>\displaystyle \lim_{x \to a} \left[k f(x)\right] = kL</m>.
+        </p>
+      </statement>
+    </theorem>
+    <remark>
+      <title>Finding <m>\delta</m></title>
+      <p>
+        Given <m>\epsilon</m>, use the <m>\epsilon</m>-<m>\delta</m> rule for <m>f(x)</m> with the tolerance <m>\frac{\epsilon}{|k|}</m> to get <m>\delta</m>.
+      </p>
+    </remark>
+
+    <proof ref="thm-limit-scalar-multiple">
+      <p>
+        Let <m>\epsilon \gt 0</m>. Because <m>\displaystyle \lim_{x \to a} f(x) = L</m>, choose <m>\delta</m> so that if <m>0 \lt |x-a| \lt \delta</m>, then <m>|f(x)-L| \lt \frac{\epsilon}{|k|}</m>. Consequently,
+        <md>
+          <mrow>|k f(x) - kL| \amp = |k|\,|f(x)-L|</mrow>
+          <mrow>\amp \lt |k| \cdot \frac{\epsilon}{|k|}</mrow>
+          <mrow>\amp = \epsilon</mrow>
+        </md>.
+      </p>
+    </proof>
+
+    <example xml:id="ex-handout-snacks">
+      <title>Buying Snacks</title>
+      <statement>
+        <p>
+          You and a friend are buying snacks. You are supposed to buy <m>\$3</m> of snacks and your friend is supposed to buy <m>\$3</m> of snacks, but prices vary slightly so it is hard to be exact. You agree in advance that you will each stay within <m>\$0.10</m> of your target. How far away can the total combined cost be from <m>\$6</m>?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Each of you are going to be spending a value between $2.90 and $3.10.
+          The cheapest scenario is that you each spend $2.90 for a total cost of $5.80.
+          The most expensive scenario results in a total cost of $6.20.
+          The total error can be as large as $0.20.
+        </p>
+      </solution>
+    </example>
+
+    <theorem xml:id="thm-triangle-inequality">
+      <title>Triangle Inequality</title>
+      <statement>
+        <p>
+          For any values <m>A</m> and <m>B</m>, <m>|A+B| \le |A| + |B|</m>.
+        </p>
+      </statement>
+    </theorem>
+    <p>
+      In the snack example, let <m>x</m> be your cost and <m>y</m> be your friend's cost. The agreement says <m>|x-3| \lt 0.10</m> and <m>|y-3| \lt 0.10</m>. The distance of the total from <m>\$6</m> is
+          <md>
+            <mrow>|(x+y)-6| \amp = |(x-3)+(y-3)|</mrow>
+            <mrow>\amp \le |x-3| + |y-3|</mrow>
+            <mrow>\amp \lt 0.10 + 0.10 = 0.20</mrow>
+          </md>.
+    </p>
+    
+    <theorem xml:id="thm-limit-sum">
+      <title>Limit of a Sum</title>
+      <statement>
+        <p>
+          If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then <m>\displaystyle \lim_{x \to a} \left[f(x)+g(x)\right] = L+M</m>.
+        </p>
+      </statement>
+    </theorem>
+    <remark>
+      <title>Finding <m>\delta</m></title>
+      <p>
+        Given <m>\epsilon</m>, use the <m>\epsilon</m>-<m>\delta</m> rule for <m>f(x)</m> with the tolerance <m>\frac{\epsilon}{2}</m> to get <m>\delta_1</m>. Use the <m>\epsilon</m>-<m>\delta</m> rule for <m>g(x)</m> with the tolerance <m>\frac{\epsilon}{2}</m> to get <m>\delta_2</m>. The rule for the sum uses <m>\delta = \min(\delta_1, \delta_2)</m>.
+      </p>
+    </remark>
+
+    <proof ref="thm-limit-sum">
+      <p>
+        Let <m>\epsilon \gt 0</m>. Because <m>\displaystyle \lim_{x \to a} f(x)=L</m>, choose <m>\delta_1</m> so that if <m>0 \lt |x-a| \lt \delta_1</m>, <m>|f(x)-L| \lt \frac{\epsilon}{2}</m>. Because <m>\displaystyle \lim_{x \to a} g(x)=M</m>, choose <m>\delta_2</m> so that if <m>0 \lt |x-a| \lt \delta_2</m>, <m>|g(x)-M| \lt \frac{\epsilon}{2}</m>. Let <m>\delta = \min(\delta_1, \delta_2)</m>. If <m>0 \lt |x-a| \lt \delta</m>, then <m>|x-a| \lt \delta_1</m> and <m>|x-a| \lt \delta_2</m>, so <m>|f(x)-L| \lt \frac{\epsilon}{2}</m> and <m>|g(x)-M| \lt \frac{\epsilon}{2}</m>. By the triangle inequality with <m>A = f(x)-L</m> and <m>B = g(x)-M</m>,
+        <md>
+          <mrow>|(f(x)+g(x))-(L+M)| \amp = |(f(x)-L)+(g(x)-M)|</mrow>
+          <mrow>\amp \le |f(x)-L| + |g(x)-M|</mrow>
+          <mrow>\amp \lt \frac{\epsilon}{2} + \frac{\epsilon}{2}</mrow>
+          <mrow>\amp = \epsilon</mrow>
+        </md>.
+      </p>
+    </proof>
+
+    <theorem xml:id="thm-limit-product">
+      <title>Limit of a Product</title>
+      <statement>
+        <p>
+          If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then <m>\displaystyle \lim_{x \to a} \left[f(x)\,g(x)\right] = LM</m>.
+        </p>
+      </statement>
+    </theorem>
+    <remark>
+      <title>Finding <m>\delta</m></title>
+      <p>
+        Given <m>\epsilon</m>, use the <m>\epsilon</m>-<m>\delta</m> rule for <m>f(x)</m> with the tolerance <m>\min\left(1, \frac{\epsilon}{2(|M|+1)}\right)</m> to get <m>\delta_1</m>. Use the <m>\epsilon</m>-<m>\delta</m> rule for <m>g(x)</m> with the tolerance <m>\frac{\epsilon}{2(|L|+1)}</m> to get <m>\delta_2</m>. The rule for the product uses <m>\delta = \min(\delta_1, \delta_2)</m>.
+      </p>
+    </remark>
+
+    <proof ref="thm-limit-product">
+      <p>
+        Let <m>\epsilon \gt 0</m>. We will be rewriting <m>f(x)g(x) - LM</m> so that we replace one function by its limit at a time:
+        <md>
+          <mrow> |f(x)g(x) - LM| \amp = |f(x) g(x) - f(x) M + f(x) M - LM |</mrow>
+          <mrow> \amp = |f(x) \big(g(x) - M\big) + \big(f(x)-L\big) M|</mrow>
+          <mrow> \amp \le |f(x)| \, |g(x)-M| + |f(x)-L| \, |M|</mrow>
+        </md>
+        If <m>|f(x)-L| \lt 1</m>, then <m>|f(x)| \lt |L| + 1</m>.
+        If we also have <m>|g(x)-M| \lt \frac{\epsilon/2}{|L|+1}</m>,
+        then <m>|f(x)| \, |g(x)-M|  \lt \frac{\epsilon}{2}</m>.
+        Similarly, if <m>|f(x)-L| \lt \frac{\epsilon/2}{|M|+1}</m>, then <m>|f(x)-L| \, |M| \lt \frac{\epsilon}{2}</m>.
+      </p>
+      <p>
+        Because <m>\lim_{x \to a} f(x)=L</m>, choose <m>\delta_1 \gt 0</m> so that if <m>0 \lt |x-a| \lt \delta_1</m>, then <m>|f(x)-L| \lt \min(1, \frac{\epsilon/2}{|M|+1})</m>.
+        Because <m>\lim_{x \to a} g(x)=M</m>, choose <m>\delta_2 \gt 0</m> so that if <m>0 \lt |x-a| \lt \delta_2</m>, then <m>|g(x)-M| \lt \frac{\epsilon/2}{|L|+1})</m>.
+        Let <m>\delta = \min(\delta_1, \delta_2)</m> and assume <m>0 \lt |x-a| \lt \delta</m>.
+        This guarantees
+        <md>
+          <mrow>|f(x)-L| \amp \lt 1</mrow>
+          <mrow>|f(x)-L| \amp \lt \frac{\epsilon}{2(|M|+1)}</mrow>
+          <mrow>|g(x)-M| \amp \lt \frac{\epsilon}{2(|L|+1)}</mrow>
+        </md>.
+        Consequently,
+        <md>
+          <mrow>|f(x)g(x)-LM| \amp \le |f(x)|\,|g(x)-M| + |M|\,|f(x)-L|</mrow>
+          <mrow>\amp \lt (|L|+1)\cdot\frac{\epsilon}{2(|L|+1)} + |M|\cdot\frac{\epsilon}{2(|M|+1)}</mrow>
+          <mrow>\amp \le \frac{\epsilon}{2} + \frac{\epsilon}{2}</mrow>
+          <mrow>\amp = \epsilon</mrow>
+        </md>.
+      </p>
+    </proof>
+
+    <theorem xml:id="thm-limit-reciprocal">
+      <title>Limit of a Reciprocal</title>
+      <statement>
+        <p>
+          If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>L \ne 0</m>, then <m>\displaystyle \lim_{x \to a} \frac{1}{f(x)} = \frac{1}{L}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <remark>
+      <title>Finding <m>\delta</m></title>
+      <p>
+        Given <m>\epsilon</m>, use the <m>\epsilon</m>-<m>\delta</m> rule for <m>f(x)</m> with the tolerance <m>\min\left(\frac{|L|}{2}, \frac{\epsilon L^2}{2}\right)</m> to get <m>\delta</m>.
+      </p>
+    </remark>
+
+    <proof ref="thm-limit-reciprocal">
+      <p>
+        Let <m>\epsilon \gt 0</m>. Because <m>\displaystyle \lim_{x \to a}f(x) = L</m>, 
+        choose <m>\delta \gt 0</m> so that <m>|f(x)-L| \lt \min\left(\frac{|L|}{2}, \frac{\epsilon L^2}{2}\right)</m> whenever <m>0 \lt |x-a| \lt \delta</m>.
+      </p>
+      <p>
+        Now assume <m>0 \lt |x-a| \lt \delta</m>.
+        Because <m>|f(x)-L| \lt \frac{|L|}{2}</m>, we get <m>|f(x)| \gt \frac{|L|}{2}</m>
+        using the triangle inequality: <m>|L| = |f(x) + (L-f(x))| \le |f(x)| + |L-f(x)|</m>, so
+        <md>
+          <mrow>|f(x)| \amp \ge |L| - |L-f(x)|</mrow>
+          <mrow>\amp \gt |L| - \frac{|L|}{2}</mrow>
+          <mrow>\amp = \frac{|L|}{2}</mrow>
+        </md>.
+        In particular <m>f(x) \ne 0</m>, and <m>\frac{1}{|f(x)|} \lt \frac{2}{|L|}</m>.
+        Because we also have <m>|f(x)-L| \lt \frac{\epsilon L^2}{2}</m>,
+        <md>
+          <mrow>\left|\frac{1}{f(x)}-\frac{1}{L}\right| \amp = \frac{|L-f(x)|}{|f(x)|\,|L|}</mrow>
+          <mrow>\amp \lt \frac{\epsilon L^2}{2}\cdot\frac{2}{|L|}\cdot\frac{1}{|L|}</mrow>
+          <mrow>\amp = \epsilon</mrow>
+        </md>.
+      </p>
+    </proof>
+
+    <theorem xml:id="thm-limit-quotient">
+      <title>Limit of a Quotient</title>
+      <statement>
+        <p>
+          If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m> and <m>M \ne 0</m>, then <m>\displaystyle \lim_{x \to a} \frac{f(x)}{g(x)} = \frac{L}{M}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <remark>
+      <title>No Need for <m>\delta</m></title>
+      <p>
+        This theorem can actually be proved based on earlier rules rather than requiring that we use the <m>\epsilon</m>-<m>\delta</m> rules for limits because a quotient <m>f(x)/g(x)</m> is the same as a product of <m>f(x)</m> with a reciprocal <m>1/g(x)</m>.
+      </p>
+    </remark>
+    <proof>
+      <p>
+        Because <m>\lim_{x \to a} g(x) = M</m> and <m>M \ne 0</m>, the limit rule for a reciprocal guarantees <m>\lim_{x \to a} \frac{1}{g(x)} = \frac{1}{M}</m>.
+        Then since <m>\frac{f(x)}{g(x)} = f(x) \cdot \frac{1}{g(x)}</m> and <m>\lim_{x \to a} f(x) = L</m>, we can use the limit rule of products to know
+        <md>
+          \lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} f(x) \cdot \frac{1}{g(x)} = L \cdot \frac{1}{M} = \frac{L}{M}
+        </md>
+      </p>
+    </proof>
+
+  </paragraphs>
+</handout>
