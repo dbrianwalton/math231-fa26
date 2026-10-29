@@ -181,6 +181,69 @@ var ptx_lunr_docs = [
   "body": "  The following number lines indicate intervals on which has particular behaviors, with one number line shows where it is increasing or decreasing and the other number line shows where it is concave up or concave down.   Two number lines. The first has break points at -2 and 2: decreasing to the left of -2, increasing from -2 to 2, and decreasing to the right of 2. The second has break points at -4, 0, and 4: concave down to the left of -4, concave up from -4 to 0, concave down from 0 to 4, and concave up to the right of 4.    Sketch a graph that accurately and clearly illustrates the behavior. Indicate on the graph points (including values) where has local extreme values and inflection points.    We work from left to right to identify every interval shape.   The first change on either number line occurs at , so our first interval is . The function is decreasing and concave down on , which matches the shape on the top right quadrant of a circle. Just to the right of , the graph changes to concave up so has an inflection point at .    The second change on either number line occurs at , so the next interval is . The function is decreasing and concave up on , which matches the shape on the bottom left quadrant of a circle. Just to the right of , the graph changes to increasing. Because changes from decreasing to increasing, has a local minimum at .    The next change occurs at . is increasing and concave up on , which matches the shape in the bottom right quadrant of a circle. To the right of the function changes being to concave down. This means has another inflection point at .    The next change is at . is increasing and concave down on , which matches the shape in the top left quadrant of a circle. To the right of the function changes to decreasing. This means has a local maximum at .    The last change is at . is decreasing and concave down on , and to the right of the function changes to being concave up. This means has a third inflection point at .   We can draw a graph by joining the different shapes at the points where shape was identified as changing.    A smooth graph over a labeled x-axis with no y-axis and no y-values. For x less than -4 the curve decreases and is concave down. At x = -4 the concavity changes to concave up, and the curve keeps decreasing to a local minimum at x = -2. It then increases, with an inflection point at x = 0 where the concavity changes to concave down, up to a local maximum at x = 2. After that it decreases, with an inflection point at x = 4 where the concavity changes to concave up, and it continues decreasing. The three inflection points are at different heights. Points are marked at x = -4, -2, 0, 2, and 4.       "
 },
 {
+  "id": "notes-week-08-09",
+  "level": "1",
+  "url": "notes-week-08-09.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 8 and Week 9",
+  "body": " Week 8 and Week 9   These weeks developed limits as a tool for describing how a function behaves near a point and far out along the -axis. We used one-sided limits to study piecewise functions and continuity, algebra to evaluate limits of rational functions at holes and vertical asymptotes, and infinite arithmetic to find limits at infinity.    L1 Piecewise Limits and Continuity   L1  I can evaluate one-sided and two-sided limits of piecewise functions and interpret the results for continuity.   What do I need to understand?   The function value comes from the rule whose condition includes . A limit as does not use the function value. It describes the -value the function approaches from nearby inputs.    To find a left-limit  , use the rule on the interval immediately to the left of . To find a right-limit  , use the rule on the interval immediately to the right of . When that rule is a polynomial, the one-sided limit is found by evaluating the rule at , even if is not part of that rule's interval.    The two-sided limit exists only when the left-limit and the right-limit both exist and are equal. If they are different, the two-sided limit does not exist.     is continuous at requires three things: the function value exists, the two-sided limit exists, and the two are equal. If any of these fails, there is a discontinuity , and your explanation should name which condition failed.       Suppose is defined piecewise by .  At each of the boundary points and :  Evaluate the left-limit.  Evaluate the right-limit.  Evaluate the two-sided limit, if it exists.  Decide whether is continuous at the point, and explain why or why not.        L2 Limits of Rational Functions   L2  I can evaluate limits of algebraic functions involving division at holes and vertical asymptotes.   What do I need to understand?   Start by trying to evaluate the formula at . If the result is a number, that number is the limit (the formula is continuous at ). If the result is , we learn nothing yet, and we must find a simpler formula that gives the same outputs near .    To find the simpler formula, factor the numerator and denominator completely and cancel the common factors. The limit at the hole is found by evaluating the simplified formula at , written with the evaluation bar as .    If the result is a nonzero number divided by zero, the formula has a vertical asymptote at . The limit is not a number, so we must look at each side separately.    For a one-sided limit at a vertical asymptote, the answer is or . To decide which, determine the sign of the numerator and the sign of the denominator for just to the left or just to the right of . The denominator approaches zero, so the quotient grows without bound with the sign you found. Your reasoning must be shown.    Infinite limits are always written with an explicit sign. The two-sided limit is infinite only when both one-sided limits are infinite with the same sign. Otherwise, the two-sided limit does not exist.       Consider the function .  Evaluate each of the limits. At vertical asymptotes, you must provide reasoning and one-sided limits.          L3 Limits at Infinity   L3  I can evaluate limits at infinity and interpret it as the end behavior of the function.   What do I need to understand?    and describe the end behavior of the function on the right and left ends of the graph. They are separate questions and may have different answers.    Since is not a number, we use infinite arithmetic instead of evaluating. Some combinations, like , are indeterminate , so we must rewrite the formula before using infinite values.    For a ratio of polynomials, identify the dominant power of in the numerator and in the denominator. Factor out the dominant power from each, cancel the powers of that match, and use the fact that terms like approach zero.    When the dominant power in the numerator is higher than in the denominator, what remains is a positive power of times a constant. The limit is or , and there is no horizontal asymptote. Be careful with signs: the sign of the constant matters, and so does whether the remaining power of is positive or negative when .    Interpret the result in words. For example, as gets large and positive, the function values decrease without bound .       Consider the function .  Evaluate each limit and interpret the result by writing a sentence describing the end behavior it represents.         "
+},
+{
+  "id": "notes-week-08-09-3-3",
+  "level": "2",
+  "url": "notes-week-08-09.html#notes-week-08-09-3-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "left-limit right-limit continuous discontinuity "
+},
+{
+  "id": "L1-piecewise-limits",
+  "level": "2",
+  "url": "notes-week-08-09.html#L1-piecewise-limits",
+  "type": "Checkpoint",
+  "number": "13",
+  "title": "",
+  "body": "  Suppose is defined piecewise by .  At each of the boundary points and :  Evaluate the left-limit.  Evaluate the right-limit.  Evaluate the two-sided limit, if it exists.  Decide whether is continuous at the point, and explain why or why not.     "
+},
+{
+  "id": "notes-week-08-09-4-3",
+  "level": "2",
+  "url": "notes-week-08-09.html#notes-week-08-09-4-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "hole vertical asymptote "
+},
+{
+  "id": "L2-rational-limits",
+  "level": "2",
+  "url": "notes-week-08-09.html#L2-rational-limits",
+  "type": "Checkpoint",
+  "number": "14",
+  "title": "",
+  "body": "  Consider the function .  Evaluate each of the limits. At vertical asymptotes, you must provide reasoning and one-sided limits.       "
+},
+{
+  "id": "notes-week-08-09-5-3",
+  "level": "2",
+  "url": "notes-week-08-09.html#notes-week-08-09-5-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "end behavior infinite arithmetic indeterminate dominant power "
+},
+{
+  "id": "L3-limits-at-infinity",
+  "level": "2",
+  "url": "notes-week-08-09.html#L3-limits-at-infinity",
+  "type": "Checkpoint",
+  "number": "15",
+  "title": "",
+  "body": "  Consider the function .  Evaluate each limit and interpret the result by writing a sentence describing the end behavior it represents.       "
+},
+{
   "id": "activity-linear-relations-slope",
   "level": "1",
   "url": "activity-linear-relations-slope.html",
@@ -230,7 +293,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-linear-relations-slope.html#def-slope-point-slope",
   "type": "Definition",
-  "number": "13",
+  "number": "16",
   "title": "",
   "body": "  The constant rate you found in Model 2 is called the slope of the relation, or its average rate of change . The equation you built in Task 4 has the same structure as called point-slope form , where is any known point on the relation and is the slope. It says exactly what you wrote: a new value equals a starting value plus the slope times how far you've moved from that starting point.   "
 },
@@ -734,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-inverse-functions.html#def-inverse-function",
   "type": "Definition",
-  "number": "16",
+  "number": "19",
   "title": "Inverse function.",
   "body": " Inverse function   For a given function , the function is the inverse function to if   for every in the domain of , and  for every in the domain of .    "
 },
@@ -836,6 +899,438 @@ var ptx_lunr_docs = [
   "number": "4",
   "title": "Section 4: Limits Using Tables.",
   "body": " Section 4: Limits Using Tables   When we learned to evaluate a function with a table, we could look at a single point: Find the -value that is the input, and then read off the -value that is the output. Limits do not work so simply. We need to see what value is approached as we consider a sequence of input values.  Consider the function , which is undefined at . We can not just plug into the formula and does not exist. The limit, on the other hand, does exist, although you may not know why at this stage. We can approximate its value by using values that are close to 4.  The right-sided limit is approximated by choosing a sequence of values with such that the values get closer and closer to 4, which we write . We will create a table summarizing the sequence of values.       4.1 0.248457    4.01 0.249844    4.001 0.249984    4.0001 0.249998    A table approximation never can guarantee an exact limit value, but we can look for a pattern. In this example, the closer gets to 4, the closer the value gets to 0.25. This suggests .  We can repeat the process from the left.       3.9 0.251582    3.99 0.250156    3.999 0.250016    3.9999 0.250002    We can see from the table that the left-limit suggests the same limit . Since both sides of the limit approach the same value, we would conclude there is a two-sided limit .     Use a table of values to estimate the one-sided limits of as . Does the two-sided limit exist?      Use a table of values to estimate the one-sided limits of as . (When using a calculator, be sure it is in radian mode.) Does the two-sided limit exist?    "
+},
+{
+  "id": "activity-algebraic-limits",
+  "level": "1",
+  "url": "activity-algebraic-limits.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Finding Limits Algebraically",
+  "body": " Finding Limits Algebraically   So far we have found limits by reading graphs, by following the pieces of a piecewise function, and by building tables of values. Each method tells us where a graph is headed as it approaches a point.  Today we compute limits directly from a formula. Many of the formulas we meet are fractions that become at the -value we care about, so the function value does not exist. We will see that simplifying the formula can show us what the graph is doing at that point: either a hole that can be filled in, or a vertical asymptote where the graph goes to or .    Section 1: Functions That Agree Except at a Point   Consider the two functions . The function is undefined at , since the denominator is zero there. The function is defined for every .       Complete the table. Write undefined if a function has no value.                           Factor the numerator of . Use the factored form to explain why and have the same output for every except .    How could we write as a piecewise function using the formula ?          The graph of is a line. Sketch it. Then sketch the graph of , using an open point wherever has no value.    Find , , and .    Compare your answer to . Is continuous at ? Is ?        Now define a third function . Find and . What does this tell you about how much the value of a function at matters for its limit as ?      Section 2: Cancelling Common Factors   In Section 1, we saw that and are the same function except at . The reason is the common factor in . For any , the fraction equals 1. At it is , which has no value. This observation gives us a general method.   The Agreement Principle  Suppose on the domain's subset intervals immediately to the left and right of , whether or not they agree at itself. Then and have the same left-limit and the same right-limit as .  In particular, if is continuous at , then .    Cancelling Common Factors  Because for , we may cancel a common factor from the numerator and denominator of a fraction. The simplified formula agrees with for every .  If the simplified formula is continuous at , the limit is found by evaluating it. The discontinuity of was a removable discontinuity : the simplified formula fills in the hole at the point whose -value is the value of the simplified formula at .    Evaluating a Formula  The notation only makes sense when a function has been given the name . To evaluate a formula without naming a function, we use an evaluation bar . For example, . We read this as the formula evaluated at . The subscript tells us which value replaces . (The bar is not an absolute value. The subscript is what marks it as an evaluation.)  The evaluation bar is only meaningful when the formula has a value at that -value. If a formula is continuous at , then finding its limit as is the same as evaluating it at .   For our example, we write . The first step only factors. The second step cancels, which is allowed because the formulas agree for . The third step is allowed because is continuous at , so its limit is found by evaluating it. Notice that is a continuous version of the original formula. It is not the same function, since it has the value 4 at and does not exist.   Remark: For now, we accept that a formula involving only simple algebraic operations of arithmetic and integer powers is continuous at every -value where it can be evaluated without dividing by zero. This is what lets us replace a limit by an evaluation. We will justify this claim later, after we state the formal definition of a limit and prove limit rules from that definition.  For each function below, answer the following.  Which -value makes both the numerator and the denominator zero? What does this say about at that -value?  Cancel the common factor to write the simplified formula.  Evaluate the simplified formula at that -value, using the evaluation bar, to find the limit.  Give the coordinates of the hole in the graph of .  Practice writing each step as an equation, using limit operators and the evaluation bar.                   Section 3: When Cancelling Is Not Enough   Not every zero of a denominator can be cancelled. Consider as . The numerator evaluates to a nonzero value at and there is no common factor to cancel. As gets close to 2, the numerator gets close to 3 while the denominator gets close to 0, so the fraction becomes very large in size. To decide whether it is large and positive or large and negative, we use sign analysis on the domain's subset intervals immediately to each side of . Here is the sign chart for this formula.   Sign chart for   A number line with tick marks at -1 and 2. Above the tick at -1 is the label 0, and above the tick at 2 is the label VA. The formula is positive to the left of -1, negative between -1 and 2, and positive to the right of 2.      Just to the left of 2, on the interval : is negative.  Just to the right of 2, on the interval : is positive.   Because the graph approaches the vertical asymptote and we know which sign the function has, the function goes down without bound on the left and up without bound on the right. We write .  The symbols and are not numbers. This notation says that the limit does not exist as a real number, and it also says how the graph fails to approach a number: the outputs increase or decrease without bound. Always include the sign. If the left- and right-limits are the same infinite limit, we may write the two-sided limit with that sign. If one side is and the other is , the two-sided limit does not exist.   Vertical Asymptotes  We say has a vertical asymptote at to mean at least one of the one-sided limits as is or .   We have seen that a zero of a denominator produces trouble in a graph. The new idea is that we must cancel common factors first . After cancelling, there are two possibilities at .   The simplified formula is continuous at . The limit is the value of the simplified formula, and the graph has a hole.  The simplified formula still divides by zero at . The graph has a vertical asymptote, and the one-sided limits are or .   For each function below, answer the following.  Cancel any common factors to write the simplified formula.  Does the simplified formula still divide by zero at the given -value?  Use the signs of the factors just to the left and just to the right of the -value to find each one-sided limit.  State the two-sided limit, or state that it does not exist.  Practice writing each step as an equation, using limit operators.      as   Cancel together first. Then split your group into two pairs, one for each side. Compare your results at the end.     Cancel common factors to write the simplified formula.      Pair 1: Find .      Pair 2: Find .      State the two-sided limit, or state that it does not exist.        as       Section 4: Hole or Asymptote?   Here is a single function with two zeros in its denominator: . The denominator is zero at both and , but we will see that these two -values behave differently.  For each of the -values below, answer the following.  Find the limit as approaches the value, using one-sided limits if they differ. Use or where appropriate.  Is continuous at the point? If not, is it a hole or a vertical asymptote?  Practice writing the correct equation for each value, using function notation, limit operators, or the evaluation bar as appropriate.                          Section 5: Factoring First   In the previous sections, the formulas were already factored. Usually they are not. Before we can cancel, we must factor the numerator and denominator completely. Then we can follow the same steps as before.  For each limit below, factor, cancel, and decide whether the graph has a hole or a vertical asymptote at the given -value. Find the limit, or the one-sided limits.                  "
+},
+{
+  "id": "ex-algebraic-agree",
+  "level": "2",
+  "url": "activity-algebraic-limits.html#ex-algebraic-agree",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: Functions That Agree Except at a Point.",
+  "body": " Section 1: Functions That Agree Except at a Point   Consider the two functions . The function is undefined at , since the denominator is zero there. The function is defined for every .       Complete the table. Write undefined if a function has no value.                           Factor the numerator of . Use the factored form to explain why and have the same output for every except .    How could we write as a piecewise function using the formula ?          The graph of is a line. Sketch it. Then sketch the graph of , using an open point wherever has no value.    Find , , and .    Compare your answer to . Is continuous at ? Is ?        Now define a third function . Find and . What does this tell you about how much the value of a function at matters for its limit as ?    "
+},
+{
+  "id": "ex-algebraic-cancel",
+  "level": "2",
+  "url": "activity-algebraic-limits.html#ex-algebraic-cancel",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Cancelling Common Factors.",
+  "body": " Section 2: Cancelling Common Factors   In Section 1, we saw that and are the same function except at . The reason is the common factor in . For any , the fraction equals 1. At it is , which has no value. This observation gives us a general method.   The Agreement Principle  Suppose on the domain's subset intervals immediately to the left and right of , whether or not they agree at itself. Then and have the same left-limit and the same right-limit as .  In particular, if is continuous at , then .    Cancelling Common Factors  Because for , we may cancel a common factor from the numerator and denominator of a fraction. The simplified formula agrees with for every .  If the simplified formula is continuous at , the limit is found by evaluating it. The discontinuity of was a removable discontinuity : the simplified formula fills in the hole at the point whose -value is the value of the simplified formula at .    Evaluating a Formula  The notation only makes sense when a function has been given the name . To evaluate a formula without naming a function, we use an evaluation bar . For example, . We read this as the formula evaluated at . The subscript tells us which value replaces . (The bar is not an absolute value. The subscript is what marks it as an evaluation.)  The evaluation bar is only meaningful when the formula has a value at that -value. If a formula is continuous at , then finding its limit as is the same as evaluating it at .   For our example, we write . The first step only factors. The second step cancels, which is allowed because the formulas agree for . The third step is allowed because is continuous at , so its limit is found by evaluating it. Notice that is a continuous version of the original formula. It is not the same function, since it has the value 4 at and does not exist.   Remark: For now, we accept that a formula involving only simple algebraic operations of arithmetic and integer powers is continuous at every -value where it can be evaluated without dividing by zero. This is what lets us replace a limit by an evaluation. We will justify this claim later, after we state the formal definition of a limit and prove limit rules from that definition.  For each function below, answer the following.  Which -value makes both the numerator and the denominator zero? What does this say about at that -value?  Cancel the common factor to write the simplified formula.  Evaluate the simplified formula at that -value, using the evaluation bar, to find the limit.  Give the coordinates of the hole in the graph of .  Practice writing each step as an equation, using limit operators and the evaluation bar.                 "
+},
+{
+  "id": "ex-algebraic-asymptote",
+  "level": "2",
+  "url": "activity-algebraic-limits.html#ex-algebraic-asymptote",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: When Cancelling Is Not Enough.",
+  "body": " Section 3: When Cancelling Is Not Enough   Not every zero of a denominator can be cancelled. Consider as . The numerator evaluates to a nonzero value at and there is no common factor to cancel. As gets close to 2, the numerator gets close to 3 while the denominator gets close to 0, so the fraction becomes very large in size. To decide whether it is large and positive or large and negative, we use sign analysis on the domain's subset intervals immediately to each side of . Here is the sign chart for this formula.   Sign chart for   A number line with tick marks at -1 and 2. Above the tick at -1 is the label 0, and above the tick at 2 is the label VA. The formula is positive to the left of -1, negative between -1 and 2, and positive to the right of 2.      Just to the left of 2, on the interval : is negative.  Just to the right of 2, on the interval : is positive.   Because the graph approaches the vertical asymptote and we know which sign the function has, the function goes down without bound on the left and up without bound on the right. We write .  The symbols and are not numbers. This notation says that the limit does not exist as a real number, and it also says how the graph fails to approach a number: the outputs increase or decrease without bound. Always include the sign. If the left- and right-limits are the same infinite limit, we may write the two-sided limit with that sign. If one side is and the other is , the two-sided limit does not exist.   Vertical Asymptotes  We say has a vertical asymptote at to mean at least one of the one-sided limits as is or .   We have seen that a zero of a denominator produces trouble in a graph. The new idea is that we must cancel common factors first . After cancelling, there are two possibilities at .   The simplified formula is continuous at . The limit is the value of the simplified formula, and the graph has a hole.  The simplified formula still divides by zero at . The graph has a vertical asymptote, and the one-sided limits are or .   For each function below, answer the following.  Cancel any common factors to write the simplified formula.  Does the simplified formula still divide by zero at the given -value?  Use the signs of the factors just to the left and just to the right of the -value to find each one-sided limit.  State the two-sided limit, or state that it does not exist.  Practice writing each step as an equation, using limit operators.      as   Cancel together first. Then split your group into two pairs, one for each side. Compare your results at the end.     Cancel common factors to write the simplified formula.      Pair 1: Find .      Pair 2: Find .      State the two-sided limit, or state that it does not exist.        as     "
+},
+{
+  "id": "ex-algebraic-classify",
+  "level": "2",
+  "url": "activity-algebraic-limits.html#ex-algebraic-classify",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Hole or Asymptote?",
+  "body": " Section 4: Hole or Asymptote?   Here is a single function with two zeros in its denominator: . The denominator is zero at both and , but we will see that these two -values behave differently.  For each of the -values below, answer the following.  Find the limit as approaches the value, using one-sided limits if they differ. Use or where appropriate.  Is continuous at the point? If not, is it a hole or a vertical asymptote?  Practice writing the correct equation for each value, using function notation, limit operators, or the evaluation bar as appropriate.                        "
+},
+{
+  "id": "ex-algebraic-factor-first",
+  "level": "2",
+  "url": "activity-algebraic-limits.html#ex-algebraic-factor-first",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Section 5: Factoring First.",
+  "body": " Section 5: Factoring First   In the previous sections, the formulas were already factored. Usually they are not. Before we can cancel, we must factor the numerator and denominator completely. Then we can follow the same steps as before.  For each limit below, factor, cancel, and decide whether the graph has a hole or a vertical asymptote at the given -value. Find the limit, or the one-sided limits.                 "
+},
+{
+  "id": "activity-limits-at-infinity",
+  "level": "1",
+  "url": "activity-limits-at-infinity.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Limits at Infinity",
+  "body": " Limits at Infinity   Last time we studied what a graph does as approaches a number , and we saw two outcomes at trouble spots: a hole, where the outputs approach a number, and a vertical asymptote, where the outputs go to or .  Today we turn the question around and ask what a graph does as itself grows without bound, in either direction. Does the graph level off toward a single height , or does it keep climbing or falling? Answering this describes the far left and far right ends of a graph, and it will help us understand the overall shape of a function.    Section 1: What Happens When x Gets Huge?   Consider the three functions . Instead of reading a graph, we will watch the outputs as the inputs become very large. Use a calculator as needed.       Complete the table.                         As increases without bound, what happens to the outputs of each function? Does it approach a number (which one?), or does it grow without bound (up or down?)          Now let be negative and grow in size. Complete the table.                         As decreases without bound, what happens to the outputs of each function? Which function behaves differently than it did in the previous task, and why?        Section 2: Limits Using Infinite Arithmetic   We need notation for what we just observed. We write (read increases without bound , meaning ) and (read decreases without bound ).   Limits at Infinity  We write to mean that the outputs of get close to the real number as increases without bound. We write to mean the same thing as decreases without bound. As in the previous activity, a limit may instead be or , which says the outputs grow without bound.    Horizontal Asymptotes  The line is a horizontal asymptote of the graph of if as or as . In symbols, if . Only one of the two limits needs to equal . The two ends of a graph may even level off at different heights, giving two different horizontal asymptotes.  A horizontal asymptote describes only the far left or far right end of the graph. Unlike a vertical asymptote, a graph can cross a horizontal asymptote, even many times. For example, we will see in Section 4 that the graph of has the horizontal asymptote , yet it crosses that line at .   When for a number , we found limits by evaluating a continuous formula. Since is not a number, we cannot literally evaluate at it. Instead, we use infinite arithmetic , a set of rules that record how quantities behave when some of them grow without bound.   Infinite Arithmetic  Let be a real number. The following are safe to use.   Addition of the same sign infinity:   Multiplication of either sign infinity:   Adding a real number does not change an infinite limit:   Multiplying by a nonzero real number keeps the limit infinite. Signs follow the usual rules:   Dividing a number by infinity gives zero:    Powers follow from these rules. As , every positive integer power goes to . As , goes to when is even and to when is odd.  Negative powers of as approach 0.    Indeterminate Forms  Some arithmetic does not work. The forms are indeterminate , just like . When infinite arithmetic produces one of them, we learn nothing about the limit. We must first find a new formula, one that gives the same outputs, and only then use the infinite values.   We write the arithmetic directly inside the steps of a limit. For example, . Because the limit is the real number 2, the line is a horizontal asymptote. Each here is shorthand for this quantity grows without bound . We accept these rules for now and will justify them after we state the formal definition of a limit.     Use limit notation to summarize what you found in Section 1. Write the limit of each of , , and as and as . For each limit that is a real number, write the equation of the horizontal asymptote.      Use infinite arithmetic to find .      Use infinite arithmetic to find . Since the limit is a real number, write the equation of the horizontal asymptote.      Section 3: When Infinities Compete   Consider . If we apply infinite arithmetic directly, and , so we get . This is indeterminate. One term attempts to increase the outputs without bound, the other attempts to decrease without bound, and we cannot tell which one wins.  The fix is to rewrite the formula first. In a sum of powers of , the dominant power is the highest power of . We factor out the dominant power from every term: .  Now the formula is a product of two pieces, and neither piece is indeterminate. The first piece grows without bound. The second piece approaches a number that is not zero. By infinite arithmetic, the product is infinite, with the sign of that number.  Notice why the term did not matter. After factoring, it became , which approaches zero as grows. Every term that has a lower power than the dominant power is divided by a positive power of once the dominant power is factored out, and so it vanishes. The dominant power is the only part that is left to decide the answer.  For each limit below, answer the following.  Identify the dominant power of and factor it out of every term.  Simplify so that each term inside the other factor is either a number or a number divided by a power of .  Use infinite arithmetic on each factor, then combine them to find the limit.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                   Section 4: Fractions That Become Infinity over Infinity   Now consider a fraction such as . The numerator goes to and so does the denominator, so direct arithmetic gives , which is indeterminate.  We use the same idea as in Section 3. Factor the dominant power out of the numerator and out of the denominator, separately. Then cancel the common powers of . This cancellation is allowed because when is very large, so the new formula agrees with the original one where it matters, just as in the previous activity. . The limit is a real number, so the line is a horizontal asymptote. Every term other than the dominant ones ended up as a number divided by a power of , and each of those approached zero.  The dominant powers in the numerator and the denominator do not have to match. When they differ, some power of remains after cancelling, and infinite arithmetic still handles it.  For each limit below, answer the following.  Identify the dominant power of in the numerator and in the denominator, and factor each out.  Cancel the common powers of and write the simplified formula.  Use infinite arithmetic to find the limit. If the limit is a real number, write the equation of the horizontal asymptote.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                          Look at your work for . (This graph crosses its horizontal asymptote at . Check that there.) Which terms of the original formula did not change the final answer? Point to the step where each one became a number divided by a power of , and explain why such a term cannot change the limit.      Compare your three answers. In each, was the dominant power in the numerator larger than, smaller than, or the same as in the denominator? What kind of answer did you get each time (a nonzero number, zero, or an infinite limit), and which of the three graphs have a horizontal asymptote? Give its equation.     "
+},
+{
+  "id": "ex-infinity-growth",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-growth",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: What Happens When x Gets Huge?",
+  "body": " Section 1: What Happens When x Gets Huge?   Consider the three functions . Instead of reading a graph, we will watch the outputs as the inputs become very large. Use a calculator as needed.       Complete the table.                         As increases without bound, what happens to the outputs of each function? Does it approach a number (which one?), or does it grow without bound (up or down?)          Now let be negative and grow in size. Complete the table.                         As decreases without bound, what happens to the outputs of each function? Which function behaves differently than it did in the previous task, and why?      "
+},
+{
+  "id": "ex-infinity-arithmetic",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-arithmetic",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Limits Using Infinite Arithmetic.",
+  "body": " Section 2: Limits Using Infinite Arithmetic   We need notation for what we just observed. We write (read increases without bound , meaning ) and (read decreases without bound ).   Limits at Infinity  We write to mean that the outputs of get close to the real number as increases without bound. We write to mean the same thing as decreases without bound. As in the previous activity, a limit may instead be or , which says the outputs grow without bound.    Horizontal Asymptotes  The line is a horizontal asymptote of the graph of if as or as . In symbols, if . Only one of the two limits needs to equal . The two ends of a graph may even level off at different heights, giving two different horizontal asymptotes.  A horizontal asymptote describes only the far left or far right end of the graph. Unlike a vertical asymptote, a graph can cross a horizontal asymptote, even many times. For example, we will see in Section 4 that the graph of has the horizontal asymptote , yet it crosses that line at .   When for a number , we found limits by evaluating a continuous formula. Since is not a number, we cannot literally evaluate at it. Instead, we use infinite arithmetic , a set of rules that record how quantities behave when some of them grow without bound.   Infinite Arithmetic  Let be a real number. The following are safe to use.   Addition of the same sign infinity:   Multiplication of either sign infinity:   Adding a real number does not change an infinite limit:   Multiplying by a nonzero real number keeps the limit infinite. Signs follow the usual rules:   Dividing a number by infinity gives zero:    Powers follow from these rules. As , every positive integer power goes to . As , goes to when is even and to when is odd.  Negative powers of as approach 0.    Indeterminate Forms  Some arithmetic does not work. The forms are indeterminate , just like . When infinite arithmetic produces one of them, we learn nothing about the limit. We must first find a new formula, one that gives the same outputs, and only then use the infinite values.   We write the arithmetic directly inside the steps of a limit. For example, . Because the limit is the real number 2, the line is a horizontal asymptote. Each here is shorthand for this quantity grows without bound . We accept these rules for now and will justify them after we state the formal definition of a limit.     Use limit notation to summarize what you found in Section 1. Write the limit of each of , , and as and as . For each limit that is a real number, write the equation of the horizontal asymptote.      Use infinite arithmetic to find .      Use infinite arithmetic to find . Since the limit is a real number, write the equation of the horizontal asymptote.    "
+},
+{
+  "id": "ex-infinity-difference",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-difference",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: When Infinities Compete.",
+  "body": " Section 3: When Infinities Compete   Consider . If we apply infinite arithmetic directly, and , so we get . This is indeterminate. One term attempts to increase the outputs without bound, the other attempts to decrease without bound, and we cannot tell which one wins.  The fix is to rewrite the formula first. In a sum of powers of , the dominant power is the highest power of . We factor out the dominant power from every term: .  Now the formula is a product of two pieces, and neither piece is indeterminate. The first piece grows without bound. The second piece approaches a number that is not zero. By infinite arithmetic, the product is infinite, with the sign of that number.  Notice why the term did not matter. After factoring, it became , which approaches zero as grows. Every term that has a lower power than the dominant power is divided by a positive power of once the dominant power is factored out, and so it vanishes. The dominant power is the only part that is left to decide the answer.  For each limit below, answer the following.  Identify the dominant power of and factor it out of every term.  Simplify so that each term inside the other factor is either a number or a number divided by a power of .  Use infinite arithmetic on each factor, then combine them to find the limit.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                 "
+},
+{
+  "id": "ex-infinity-quotient",
+  "level": "2",
+  "url": "activity-limits-at-infinity.html#ex-infinity-quotient",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Fractions That Become Infinity over Infinity.",
+  "body": " Section 4: Fractions That Become Infinity over Infinity   Now consider a fraction such as . The numerator goes to and so does the denominator, so direct arithmetic gives , which is indeterminate.  We use the same idea as in Section 3. Factor the dominant power out of the numerator and out of the denominator, separately. Then cancel the common powers of . This cancellation is allowed because when is very large, so the new formula agrees with the original one where it matters, just as in the previous activity. . The limit is a real number, so the line is a horizontal asymptote. Every term other than the dominant ones ended up as a number divided by a power of , and each of those approached zero.  The dominant powers in the numerator and the denominator do not have to match. When they differ, some power of remains after cancelling, and infinite arithmetic still handles it.  For each limit below, answer the following.  Identify the dominant power of in the numerator and in the denominator, and factor each out.  Cancel the common powers of and write the simplified formula.  Use infinite arithmetic to find the limit. If the limit is a real number, write the equation of the horizontal asymptote.  Practice writing each step as an equation, using limit operators and infinite arithmetic.                          Look at your work for . (This graph crosses its horizontal asymptote at . Check that there.) Which terms of the original formula did not change the final answer? Point to the step where each one became a number divided by a power of , and explain why such a term cannot change the limit.      Compare your three answers. In each, was the dominant power in the numerator larger than, smaller than, or the same as in the denominator? What kind of answer did you get each time (a nonzero number, zero, or an infinite limit), and which of the three graphs have a horizontal asymptote? Give its equation.    "
+},
+{
+  "id": "activity-limit-definition",
+  "level": "1",
+  "url": "activity-limit-definition.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "The Definition of a Limit",
+  "body": " The Definition of a Limit   The limit is a value if the value of converges to when from the left and right. The value of itself is not relevant. We need a way to formalize what this means. Rules of limits will eventually all be based on the definition that we choose.  In order to be precise, we need to be able to say what it means for to converge to a value as . When we looked at limits using a table, we saw that the value of was becoming closer to a final value when was getting closer to . Limits are based on the idea of distance between values.  For two numbers and , the distance is measured as the absolute value of their difference, . In a limit statement, we are interested in two different distances at the same time: measures the distance is away from and measures the distance is away from .   Definition of a Limit   means that for every , there exists some so that whenever .    Limits are really about approximation. The value of the limit represents some value that we want to know but that in principle is something we can only approximate. The function is the rule of approximation based on choosing values of that get progressively closer to .  The inequality means . The value represents an acceptable tolerance of error in our approximation, or how close we require to be to . The inequality means . The additional requirement means . The value represents how close needs to be to in order to be guaranteed that is within of .    Section 1: Absolute Value Inequalities   An absolute value inequality such as says that the distance from to is less than . Equivalently, , which is an interval centered at .  For each statement below, answer the following.  Write an absolute value inequality that represents the statement.  Write the set of values that satisfy the inequality as an interval.        The distance that is away from 2 is less than 0.1.        The mass (g) of an object is within 0.05 grams of 10 grams.        The height (m) of a plant is within 0.01 m of 2.4 m.       Section 2: Distance Between Function Values   The same idea applies to outputs. The distance between the output and the value is . If we write , then the inequality describes a horizontal strip around the line . The graph of is inside the strip exactly for the -values where .  In this section, let and . Notice that , so the graph of crosses the line at .     Write an absolute value inequality that represents the distance between and is less than 0.2 .      Write the absolute value inequality is within 0.2 units of 7 and interpret it as an interval of -values.      Sketch the graph of and the horizontal line . Then draw a horizontal strip surrounding that line that represents . Label the -values of the lower and upper edges of the strip. (The strip is narrow, so your sketch does not need to be to scale.)      Identify the -values for which . These are the -values for which the graph of is inside the strip. Write them as an interval.      The graph crosses at . Is the interval of -values you found centered at ? How far does it extend to the left of and to the right of ? Write your answer as an absolute value inequality of the form .      Section 3: A Function That Is Not Linear   Now repeat the process with and , using the distance . Notice that , so we again center our attention on .     Write an absolute value inequality that represents the distance between and 4 is less than 0.1 , and rewrite it as a compound inequality for .      Use a graphing calculator to graph , , and . Find the -coordinates of the two intersection points near . Record each with at least 4 decimal places, and then write the interval of -values near 2 for which the graph is inside the strip .       How far is the left endpoint of your interval from ? How far is the right endpoint from ?  Is your interval symmetric around ?  What is the widest distance from so that every with stays inside your interval?       Section 4: Describing the Limit Definition   In the previous sections you carried out the key step of the limit definition for one choice of . In general, the definition describes the following process, which is illustrated in .   A strip and a symmetric neighborhood for , , and . The value of is chosen large so the picture is readable. The half-filled point at indicates that the limit ignores whether or not.   The graph of an upward-curving parabola passing through the point (2,4). A horizontal shaded strip surrounds the line y=4, with edges labeled L minus epsilon and L plus epsilon on the y-axis. Two vertical dashed lines mark the interval from a minus delta to a plus delta on the x-axis, centered at a=2. Within that interval the graph stays inside the strip. The point on the graph at x=a is drawn half-filled, to show that it may or may not be part of the graph.     The point on the graph at is drawn half-filled on purpose. The limit ignores the value of , so the point may or may not be included in the graph at . Only the behavior of the graph near matters.   Given any value of , we can create the strip and look at to find the set of -values for which .  We then verify that is inside an interval within this set, possibly excluding the actual value of itself. The value represents a symmetric neighborhood with completely contained in the solution set of .  If this works for every positive choice for , then the limit statement is true. If there is any value of such that this fails to work, then the limit statement is false.      For , , and , you found in Section 2 the set of -values that works for . What is the largest value of that works? Would a smaller positive value of also work? Explain.      For , , and , use your work in Section 3 to give a value of that works for . Then explain why does not work by finding a specific with for which is false.      Suppose someone claims that . Test the claim with .   Find the set of -values for which .  Is inside an interval within this set? Is there any value of that works?  What does this tell you about the claim?       Suppose someone claims that . Test the claim with two different tolerances, using a graph or by solving the inequalities.   For , find the set of -values for which . Is inside an interval within this set? If so, give a value of that works.  For , find the set of -values for which . Is inside an interval within this set? Is there any value of that works?  Is the claim true or false? Explain why a choice of that works for one value of is not enough.      "
+},
+{
+  "id": "activity-limit-definition-2-3",
+  "level": "2",
+  "url": "activity-limit-definition.html#activity-limit-definition-2-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "distance "
+},
+{
+  "id": "ex-limit-def-abs-value",
+  "level": "2",
+  "url": "activity-limit-definition.html#ex-limit-def-abs-value",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: Absolute Value Inequalities.",
+  "body": " Section 1: Absolute Value Inequalities   An absolute value inequality such as says that the distance from to is less than . Equivalently, , which is an interval centered at .  For each statement below, answer the following.  Write an absolute value inequality that represents the statement.  Write the set of values that satisfy the inequality as an interval.        The distance that is away from 2 is less than 0.1.        The mass (g) of an object is within 0.05 grams of 10 grams.        The height (m) of a plant is within 0.01 m of 2.4 m.     "
+},
+{
+  "id": "ex-limit-def-function-distance",
+  "level": "2",
+  "url": "activity-limit-definition.html#ex-limit-def-function-distance",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Distance Between Function Values.",
+  "body": " Section 2: Distance Between Function Values   The same idea applies to outputs. The distance between the output and the value is . If we write , then the inequality describes a horizontal strip around the line . The graph of is inside the strip exactly for the -values where .  In this section, let and . Notice that , so the graph of crosses the line at .     Write an absolute value inequality that represents the distance between and is less than 0.2 .      Write the absolute value inequality is within 0.2 units of 7 and interpret it as an interval of -values.      Sketch the graph of and the horizontal line . Then draw a horizontal strip surrounding that line that represents . Label the -values of the lower and upper edges of the strip. (The strip is narrow, so your sketch does not need to be to scale.)      Identify the -values for which . These are the -values for which the graph of is inside the strip. Write them as an interval.      The graph crosses at . Is the interval of -values you found centered at ? How far does it extend to the left of and to the right of ? Write your answer as an absolute value inequality of the form .    "
+},
+{
+  "id": "ex-limit-def-quadratic",
+  "level": "2",
+  "url": "activity-limit-definition.html#ex-limit-def-quadratic",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: A Function That Is Not Linear.",
+  "body": " Section 3: A Function That Is Not Linear   Now repeat the process with and , using the distance . Notice that , so we again center our attention on .     Write an absolute value inequality that represents the distance between and 4 is less than 0.1 , and rewrite it as a compound inequality for .      Use a graphing calculator to graph , , and . Find the -coordinates of the two intersection points near . Record each with at least 4 decimal places, and then write the interval of -values near 2 for which the graph is inside the strip .       How far is the left endpoint of your interval from ? How far is the right endpoint from ?  Is your interval symmetric around ?  What is the widest distance from so that every with stays inside your interval?     "
+},
+{
+  "id": "ex-limit-def-epsilon-delta",
+  "level": "2",
+  "url": "activity-limit-definition.html#ex-limit-def-epsilon-delta",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Describing the Limit Definition.",
+  "body": " Section 4: Describing the Limit Definition   In the previous sections you carried out the key step of the limit definition for one choice of . In general, the definition describes the following process, which is illustrated in .   A strip and a symmetric neighborhood for , , and . The value of is chosen large so the picture is readable. The half-filled point at indicates that the limit ignores whether or not.   The graph of an upward-curving parabola passing through the point (2,4). A horizontal shaded strip surrounds the line y=4, with edges labeled L minus epsilon and L plus epsilon on the y-axis. Two vertical dashed lines mark the interval from a minus delta to a plus delta on the x-axis, centered at a=2. Within that interval the graph stays inside the strip. The point on the graph at x=a is drawn half-filled, to show that it may or may not be part of the graph.     The point on the graph at is drawn half-filled on purpose. The limit ignores the value of , so the point may or may not be included in the graph at . Only the behavior of the graph near matters.   Given any value of , we can create the strip and look at to find the set of -values for which .  We then verify that is inside an interval within this set, possibly excluding the actual value of itself. The value represents a symmetric neighborhood with completely contained in the solution set of .  If this works for every positive choice for , then the limit statement is true. If there is any value of such that this fails to work, then the limit statement is false.      For , , and , you found in Section 2 the set of -values that works for . What is the largest value of that works? Would a smaller positive value of also work? Explain.      For , , and , use your work in Section 3 to give a value of that works for . Then explain why does not work by finding a specific with for which is false.      Suppose someone claims that . Test the claim with .   Find the set of -values for which .  Is inside an interval within this set? Is there any value of that works?  What does this tell you about the claim?       Suppose someone claims that . Test the claim with two different tolerances, using a graph or by solving the inequalities.   For , find the set of -values for which . Is inside an interval within this set? If so, give a value of that works.  For , find the set of -values for which . Is inside an interval within this set? Is there any value of that works?  Is the claim true or false? Explain why a choice of that works for one value of is not enough.     "
+},
+{
+  "id": "activity-limit-error-tolerance",
+  "level": "1",
+  "url": "activity-limit-error-tolerance.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Limits as Error Tolerance",
+  "body": " Limits as Error Tolerance   In the real world, a formula predicts a quantity from an input, which we can only control to a certain precision. A machine cannot cut a side length of exactly 2 meters, and a driver cannot hold a speed of exactly 60 miles per hour. The question that matters in practice is this: how precisely must we control the input so that the predicted output stays within an acceptable error?   In the activity we gave the limit definition and saw that is an acceptable tolerance of error in the output and is how close the input must be to guarantee it. Today we give that definition a physical meaning in two situations, and we see that the answer to the practical question is exactly what a limit statement says.    Section 1: What the Tiles Were Telling Us   In the activity you worked out the specific example with . That example has a physical meaning. The area covered by a square tile is , where is the side length in meters. A tile with side has exactly of area, but a cutting machine can only control the side length so precisely. Suppose the manufacturer insists that every tile have an area within of . The side lengths you found that work are about , which is roughly below 2 and above 2. Because the neighborhood is symmetric, the machine is guaranteed to be safe only if it stays within the smaller distance, about meters, of the target. Any smaller also works.     For the tile problem with and , answer the following.  What does measure, and in what units?  What does measure, and in what units?  Complete the statement using : if , then .        Section 2: Larger Tiles   The manufacturer also produces larger tiles with target side length meters and target area . The area must again be within of the target. This corresponds to the limit statement .     Find an input tolerance that works for with . Show the interval of acceptable areas, the interval of acceptable side lengths, and the two distances from .        Explain what your means for the person running the cutting machine.  Compare it to the for the 2 meter tile. Which tile needs the more precise cut, and why, in terms of how much the area changes when the side length changes a little?       Notice what the definition of the limit promises. Regardless of how small the required tolerance is chosen , you will be able to find a precision for the input that achieves it. We tested only , but the claim is about every . If there is even one for which no works, then the limit statement was not valid.     Section 3: Travel Time and Speed   A delivery truck makes a trip of 120 miles at a constant speed of miles per hour. The travel time in hours is . At mph the trip takes exactly 2 hours. The company needs the arrival time to be within hours of 2 hours. How much can the driver's speed vary from 60 mph? Explain how this relates to the definition of a limit.   Travel time . The axes do not start at zero.   A decreasing curve showing travel time in hours against speed in miles per hour, for speeds from 45 to 75 mph. The curve passes through a closed point at (60, 2).        Answer the following, in order.  Write the set of acceptable travel times as an interval of -values. Indicate on the -axis of the graph and create a horizontal strip.  Solve for the interval of speeds that produce an acceptable time.  Mark the interval of acceptable speeds on the -axis and draw the vertical lines that connect it to the horizontal strip you drew.  How far below 60 mph and how far above 60 mph may the speed be?  What input tolerance should the driver use so that every speed within of 60 mph gives an acceptable time?          Write the limit statement that this situation illustrates.  Complete the statement with your numbers: if , then .       "
+},
+{
+  "id": "ex-tolerance-square",
+  "level": "2",
+  "url": "activity-limit-error-tolerance.html#ex-tolerance-square",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: What the Tiles Were Telling Us.",
+  "body": " Section 1: What the Tiles Were Telling Us   In the activity you worked out the specific example with . That example has a physical meaning. The area covered by a square tile is , where is the side length in meters. A tile with side has exactly of area, but a cutting machine can only control the side length so precisely. Suppose the manufacturer insists that every tile have an area within of . The side lengths you found that work are about , which is roughly below 2 and above 2. Because the neighborhood is symmetric, the machine is guaranteed to be safe only if it stays within the smaller distance, about meters, of the target. Any smaller also works.     For the tile problem with and , answer the following.  What does measure, and in what units?  What does measure, and in what units?  Complete the statement using : if , then .      "
+},
+{
+  "id": "ex-tolerance-larger-square",
+  "level": "2",
+  "url": "activity-limit-error-tolerance.html#ex-tolerance-larger-square",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Larger Tiles.",
+  "body": " Section 2: Larger Tiles   The manufacturer also produces larger tiles with target side length meters and target area . The area must again be within of the target. This corresponds to the limit statement .     Find an input tolerance that works for with . Show the interval of acceptable areas, the interval of acceptable side lengths, and the two distances from .        Explain what your means for the person running the cutting machine.  Compare it to the for the 2 meter tile. Which tile needs the more precise cut, and why, in terms of how much the area changes when the side length changes a little?       Notice what the definition of the limit promises. Regardless of how small the required tolerance is chosen , you will be able to find a precision for the input that achieves it. We tested only , but the claim is about every . If there is even one for which no works, then the limit statement was not valid.   "
+},
+{
+  "id": "ex-tolerance-travel-time",
+  "level": "2",
+  "url": "activity-limit-error-tolerance.html#ex-tolerance-travel-time",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: Travel Time and Speed.",
+  "body": " Section 3: Travel Time and Speed   A delivery truck makes a trip of 120 miles at a constant speed of miles per hour. The travel time in hours is . At mph the trip takes exactly 2 hours. The company needs the arrival time to be within hours of 2 hours. How much can the driver's speed vary from 60 mph? Explain how this relates to the definition of a limit.   Travel time . The axes do not start at zero.   A decreasing curve showing travel time in hours against speed in miles per hour, for speeds from 45 to 75 mph. The curve passes through a closed point at (60, 2).        Answer the following, in order.  Write the set of acceptable travel times as an interval of -values. Indicate on the -axis of the graph and create a horizontal strip.  Solve for the interval of speeds that produce an acceptable time.  Mark the interval of acceptable speeds on the -axis and draw the vertical lines that connect it to the horizontal strip you drew.  How far below 60 mph and how far above 60 mph may the speed be?  What input tolerance should the driver use so that every speed within of 60 mph gives an acceptable time?          Write the limit statement that this situation illustrates.  Complete the statement with your numbers: if , then .      "
+},
+{
+  "id": "handout-limit-proofs",
+  "level": "1",
+  "url": "handout-limit-proofs.html",
+  "type": "Handout",
+  "number": "",
+  "title": "Proving Limits with the Definition",
+  "body": " Proving Limits with the Definition   In The Definition of a Limit and Limits as Error Tolerance we found a working for specific choices of . A limit statement makes a stronger claim: a working exists for every  . This handout shows how to guarantee that by finding as a formula in .    What a Proof of a Limit Must Show   Limit    means that for every there exists a such that .    To prove a limit statement, we start by assuming we are given as an arbitrary value. We need to state a specific way to find or guarantee we could find , which may depend on , and show using this value of , every value of satisfying must guarantee is true.   Strategy  A proof states the value or method to find as soon as we state we are given the value of . In practice, we have to work backward on scratch paper. We start from the desired output inequality and rewrite it so that the expression appears, usually by factoring. The value is usually multiplied by some value or formula which we need to bound so that we get some multiple of . We choose our value of so that when multiplying by this bound we stay smaller than . Then we return to the actual proof and proceed forward, beginning with , stating , assuming and ending with .     Worked Examples   A Linear Function   Prove .     Scratch work. We want . Simplifying the left side means we want . We will be choosing and know that , which will then be multiplied by 2. This suggests we want .   Let and choose . If , then . Since was arbitrary, the limit statement is true.      A Quadratic Function   Prove .     Scratch work. We want . Factoring gives . The factor is not constant, so we bound it. If we require , then we will work with , then and , so . Then , and we need . This suggests we also need . We meet both of our requirements by choosing .   Let and choose . If , we know that and . Because , we know . Together, we now know . Since was arbitrary, the limit statement is true.       From Proofs to Rules  The two examples above each ended with a formula for in terms of . Such a formula is an - rule : a recipe that takes any tolerance and returns a precision that works. When we know , we know that some - rule exists for .  We will now prove the limits of the simplest functions directly, and then show how the - rules of the pieces build a rule for combinations. This turns the definition of limits into a collection of limit rules.    Limits of Elementary Functions   Limit of a Constant   For any constant , .    Let . Any positive works, so choose . If , then .     Limit of the Identity Function    .    Let and choose . If , then .     Limit of a Linear Function   For constants and , .    Let and choose . If , then .     Continuity  In each of these results the value of the limit is the same as the value of the function at . For the constant function the value is , for the identity function the value is , and for the linear function the value is . This means that these elementary functions are continuous at every point .     Limits of Combinations  In each rule below, assume the limits of the pieces are known, so each piece has its own - rule. The remark after each rule states how to produce a for the combination from those rules, and the proof shows that it works.   Limit of a Scalar Multiple   If and is a constant, then .     Finding  Given , use the - rule for with the tolerance to get .    Let . Because , choose so that if , then . Consequently, .    Buying Snacks   You and a friend are buying snacks. You are supposed to buy of snacks and your friend is supposed to buy of snacks, but prices vary slightly so it is hard to be exact. You agree in advance that you will each stay within of your target. How far away can the total combined cost be from ?    Each of you are going to be spending a value between $2.90 and $3.10. The cheapest scenario is that you each spend $2.90 for a total cost of $5.80. The most expensive scenario results in a total cost of $6.20. The total error can be as large as $0.20.     Triangle Inequality   For any values and , .    In the snack example, let be your cost and be your friend's cost. The agreement says and . The distance of the total from is .   Limit of a Sum   If and , then .     Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the sum uses .    Let . Because , choose so that if , . Because , choose so that if , . Let . If , then and , so and . By the triangle inequality with and , .    Limit of a Product   If and , then .     Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the product uses .    Let . We will be rewriting so that we replace one function by its limit at a time: If , then . If we also have , then . Similarly, if , then .  Because , choose so that if , then . Because , choose so that if , then . Let and assume . This guarantees . Consequently, .    Limit of a Reciprocal   If and , then .     Finding  Given , use the - rule for with the tolerance to get .    Let . Because , choose so that whenever .  Now assume . Because , we get using the triangle inequality: , so . In particular , and . Because we also have , .    Limit of a Quotient   If and and , then .     No Need for  This theorem can actually be proved based on earlier rules rather than requiring that we use the - rules for limits because a quotient is the same as a product of with a reciprocal .    Because and , the limit rule for a reciprocal guarantees . Then since and , we can use the limit rule of products to know     "
+},
+{
+  "id": "def-handout-limit",
+  "level": "2",
+  "url": "handout-limit-proofs.html#def-handout-limit",
+  "type": "Definition",
+  "number": "28",
+  "title": "Limit.",
+  "body": " Limit    means that for every there exists a such that .   "
+},
+{
+  "id": "handout-limit-proofs-3-4",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-3-4",
+  "type": "Remark",
+  "number": "29",
+  "title": "Strategy.",
+  "body": " Strategy  A proof states the value or method to find as soon as we state we are given the value of . In practice, we have to work backward on scratch paper. We start from the desired output inequality and rewrite it so that the expression appears, usually by factoring. The value is usually multiplied by some value or formula which we need to bound so that we get some multiple of . We choose our value of so that when multiplying by this bound we stay smaller than . Then we return to the actual proof and proceed forward, beginning with , stating , assuming and ending with .  "
+},
+{
+  "id": "ex-handout-limit-linear",
+  "level": "2",
+  "url": "handout-limit-proofs.html#ex-handout-limit-linear",
+  "type": "Example",
+  "number": "30",
+  "title": "A Linear Function.",
+  "body": " A Linear Function   Prove .     Scratch work. We want . Simplifying the left side means we want . We will be choosing and know that , which will then be multiplied by 2. This suggests we want .   Let and choose . If , then . Since was arbitrary, the limit statement is true.    "
+},
+{
+  "id": "ex-handout-limit-quadratic",
+  "level": "2",
+  "url": "handout-limit-proofs.html#ex-handout-limit-quadratic",
+  "type": "Example",
+  "number": "31",
+  "title": "A Quadratic Function.",
+  "body": " A Quadratic Function   Prove .     Scratch work. We want . Factoring gives . The factor is not constant, so we bound it. If we require , then we will work with , then and , so . Then , and we need . This suggests we also need . We meet both of our requirements by choosing .   Let and choose . If , we know that and . Because , we know . Together, we now know . Since was arbitrary, the limit statement is true.    "
+},
+{
+  "id": "handout-limit-proofs-5-2",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-5-2",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "- rule "
+},
+{
+  "id": "thm-limit-constant",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-constant",
+  "type": "Theorem",
+  "number": "32",
+  "title": "Limit of a Constant.",
+  "body": " Limit of a Constant   For any constant , .    Let . Any positive works, so choose . If , then .   "
+},
+{
+  "id": "thm-limit-identity",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-identity",
+  "type": "Theorem",
+  "number": "33",
+  "title": "Limit of the Identity Function.",
+  "body": " Limit of the Identity Function    .    Let and choose . If , then .   "
+},
+{
+  "id": "thm-limit-linear",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-linear",
+  "type": "Theorem",
+  "number": "34",
+  "title": "Limit of a Linear Function.",
+  "body": " Limit of a Linear Function   For constants and , .    Let and choose . If , then .   "
+},
+{
+  "id": "handout-limit-proofs-6-5",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-6-5",
+  "type": "Remark",
+  "number": "35",
+  "title": "Continuity.",
+  "body": " Continuity  In each of these results the value of the limit is the same as the value of the function at . For the constant function the value is , for the identity function the value is , and for the linear function the value is . This means that these elementary functions are continuous at every point .  "
+},
+{
+  "id": "thm-limit-scalar-multiple",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-scalar-multiple",
+  "type": "Theorem",
+  "number": "36",
+  "title": "Limit of a Scalar Multiple.",
+  "body": " Limit of a Scalar Multiple   If and is a constant, then .   "
+},
+{
+  "id": "handout-limit-proofs-7-4",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-4",
+  "type": "Remark",
+  "number": "37",
+  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
+  "body": " Finding  Given , use the - rule for with the tolerance to get .  "
+},
+{
+  "id": "handout-limit-proofs-7-5",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-5",
+  "type": "Proof",
+  "number": "1",
+  "title": "",
+  "body": " Let . Because , choose so that if , then . Consequently, .  "
+},
+{
+  "id": "ex-handout-snacks",
+  "level": "2",
+  "url": "handout-limit-proofs.html#ex-handout-snacks",
+  "type": "Example",
+  "number": "38",
+  "title": "Buying Snacks.",
+  "body": " Buying Snacks   You and a friend are buying snacks. You are supposed to buy of snacks and your friend is supposed to buy of snacks, but prices vary slightly so it is hard to be exact. You agree in advance that you will each stay within of your target. How far away can the total combined cost be from ?    Each of you are going to be spending a value between $2.90 and $3.10. The cheapest scenario is that you each spend $2.90 for a total cost of $5.80. The most expensive scenario results in a total cost of $6.20. The total error can be as large as $0.20.   "
+},
+{
+  "id": "thm-triangle-inequality",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-triangle-inequality",
+  "type": "Theorem",
+  "number": "39",
+  "title": "Triangle Inequality.",
+  "body": " Triangle Inequality   For any values and , .   "
+},
+{
+  "id": "thm-limit-sum",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-sum",
+  "type": "Theorem",
+  "number": "40",
+  "title": "Limit of a Sum.",
+  "body": " Limit of a Sum   If and , then .   "
+},
+{
+  "id": "handout-limit-proofs-7-10",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-10",
+  "type": "Remark",
+  "number": "41",
+  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
+  "body": " Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the sum uses .  "
+},
+{
+  "id": "handout-limit-proofs-7-11",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-11",
+  "type": "Proof",
+  "number": "2",
+  "title": "",
+  "body": " Let . Because , choose so that if , . Because , choose so that if , . Let . If , then and , so and . By the triangle inequality with and , .  "
+},
+{
+  "id": "thm-limit-product",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-product",
+  "type": "Theorem",
+  "number": "42",
+  "title": "Limit of a Product.",
+  "body": " Limit of a Product   If and , then .   "
+},
+{
+  "id": "handout-limit-proofs-7-13",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-13",
+  "type": "Remark",
+  "number": "43",
+  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
+  "body": " Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the product uses .  "
+},
+{
+  "id": "handout-limit-proofs-7-14",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-14",
+  "type": "Proof",
+  "number": "3",
+  "title": "",
+  "body": " Let . We will be rewriting so that we replace one function by its limit at a time: If , then . If we also have , then . Similarly, if , then .  Because , choose so that if , then . Because , choose so that if , then . Let and assume . This guarantees . Consequently, .  "
+},
+{
+  "id": "thm-limit-reciprocal",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-reciprocal",
+  "type": "Theorem",
+  "number": "44",
+  "title": "Limit of a Reciprocal.",
+  "body": " Limit of a Reciprocal   If and , then .   "
+},
+{
+  "id": "handout-limit-proofs-7-16",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-16",
+  "type": "Remark",
+  "number": "45",
+  "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
+  "body": " Finding  Given , use the - rule for with the tolerance to get .  "
+},
+{
+  "id": "handout-limit-proofs-7-17",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-17",
+  "type": "Proof",
+  "number": "4",
+  "title": "",
+  "body": " Let . Because , choose so that whenever .  Now assume . Because , we get using the triangle inequality: , so . In particular , and . Because we also have , .  "
+},
+{
+  "id": "thm-limit-quotient",
+  "level": "2",
+  "url": "handout-limit-proofs.html#thm-limit-quotient",
+  "type": "Theorem",
+  "number": "46",
+  "title": "Limit of a Quotient.",
+  "body": " Limit of a Quotient   If and and , then .   "
+},
+{
+  "id": "handout-limit-proofs-7-19",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-19",
+  "type": "Remark",
+  "number": "47",
+  "title": "No Need for <span class=\"process-math\">\\(\\delta\\)<\/span>.",
+  "body": " No Need for  This theorem can actually be proved based on earlier rules rather than requiring that we use the - rules for limits because a quotient is the same as a product of with a reciprocal .  "
+},
+{
+  "id": "handout-limit-proofs-7-20",
+  "level": "2",
+  "url": "handout-limit-proofs.html#handout-limit-proofs-7-20",
+  "type": "Proof",
+  "number": "5",
+  "title": "",
+  "body": " Because and , the limit rule for a reciprocal guarantees . Then since and , we can use the limit rule of products to know   "
 },
 {
   "id": "handouts",
