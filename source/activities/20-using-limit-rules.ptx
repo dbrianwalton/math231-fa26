@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-using-limit-rules">
+  <title>Using Limit Rules</title>
+
+  <introduction>
+    <p>
+      Until now we have found limits from graphs, tables, and algebraic simplification.
+      Proving a limit directly from the epsilon-delta definition is far too slow to do for every formula we meet.
+      Today we learn to <em>justify</em> a limit by listing the limit rules that build it, one step at a time.
+    </p>
+    <p>
+      The rules below are the only tools we need.
+      Keep this page handy, because every justification today is a list of true limit statements, each with the name of the rule that makes it true.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-limit-rules-summary" workspace="0in">
+    <title>Section 1: The Limit Rules and Deconstructing a Formula</title>
+    <introduction>
+      <assemblage xml:id="assemblage-elementary-limits">
+        <title>Elementary Limits</title>
+        <ul>
+          <li>
+            <p>
+              <term>Limit of a Constant Function:</term>
+              <m>\displaystyle \lim_{x \to a} C = C</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of the Identity Function:</term>
+              <m>\displaystyle \lim_{x \to a} x = a</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of a Linear Function:</term>
+              <m>\displaystyle \lim_{x \to a} (mx+b) = ma+b</m>
+            </p>
+          </li>
+        </ul>
+      </assemblage>
+      <assemblage xml:id="assemblage-limits-of-combinations">
+        <title>Limits of Combinations</title>
+        <ul>
+          <li>
+            <p>
+              <term>Limit of a Constant Multiple:</term>
+              If <m>\displaystyle \lim_{x \to a} f(x) = L</m>, then
+              <m>\displaystyle \lim_{x \to a} [k f(x)] = kL</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of a Reciprocal:</term>
+              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>L \ne 0</m>, then
+              <m>\displaystyle \lim_{x \to a} \left[\frac{1}{f(x)}\right] = \frac{1}{L}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of a Sum:</term>
+              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then
+              <m>\displaystyle \lim_{x \to a} [f(x)+g(x)] = L+M</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of a Difference:</term>
+              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then
+              <m>\displaystyle \lim_{x \to a} [f(x)-g(x)] = L-M</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of a Product:</term>
+              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then
+              <m>\displaystyle \lim_{x \to a} [f(x)\, g(x)] = LM</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of a Quotient:</term>
+              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m> and <m>M \ne 0</m>, then
+              <m>\displaystyle \lim_{x \to a} \left[\frac{f(x)}{g(x)}\right] = \frac{L}{M}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <term>Limit of a Continuous Composition:</term>
+              If <m>\displaystyle \lim_{x \to a} g(x) = M</m> and <m>f(u)</m> is continuous at <m>u=M</m>, then
+              <m>\displaystyle \lim_{x \to a} (f \circ g)(x) = \lim_{x \to a} f(g(x)) = f(M)</m>.
+            </p>
+          </li>
+        </ul>
+      </assemblage>
+      <p>
+        We can justify limits without writing epsilon-delta proofs if we use these rules instead.
+        The limits of the elementary functions (constant, identity, and linear) were proved, so we justify such a limit by identifying the elementary function in play and naming the corresponding rule.
+      </p>
+      <p>
+        All of the more complicated algebraic functions are built from elementary functions by combining them with arithmetic or composition.
+        Powers of the independent variable are repeated multiplication, so they are justified by repeated use of the product rule.
+        We can therefore justify a limit by identifying how the formula is constructed and naming the appropriate limit rules.
+      </p>
+      <p>
+        Notice that each combination rule <em>requires</em> that we already know the limits of the component parts before we can combine them.
+        In practice we think through a formula starting from its last operation.
+        A logical justification, however, goes the other way: we first list the elementary pieces and then combine them one step at a time.
+      </p>
+      <p>
+        Our first example is
+        <m>\displaystyle \lim_{x \to 2} \left(3x^2+2x-5\right)</m>.
+        To begin, we deconstruct the formula by asking what the <em>last</em> operation is, and then doing the same for each piece.
+      </p>
+    </introduction>
+    <task xml:id="task-rules-deconstruct-sum" workspace="1in">
+      <statement>
+        <p>
+          The formula <m>3x^2+2x-5</m> is a <em>sum</em>. Which two formulas are being added? Which of them is a linear function, so that we can use an elementary limit?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rules-deconstruct-multiple" workspace="1in">
+      <statement>
+        <p>
+          The other formula in the sum is <m>3x^2</m>. Explain why it is a constant multiple of <m>x^2</m>. What is the constant?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-rules-deconstruct-product" workspace="1in">
+      <statement>
+        <p>
+          Explain why <m>x^2</m> is a product of two copies of the identity function.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-limit-rules-sum-example" workspace="0in">
+    <title>Section 2: Building a Justification for a Sum</title>
+    <introduction>
+      <p>
+        A justification is a numbered list of limit statements that we know are true, each followed by the reason.
+        We start from the elementary pieces and work up to the full formula.
+        For
+        <m>\displaystyle \lim_{x \to 2} \left(3x^2+2x-5\right)</m>
+        we begin with two elementary limits, and then each new step uses results from earlier steps.
+      </p>
+      <p>
+        Write each step in the form <q>limit statement, then <em>(rule used)</em></q>.
+        In the combination steps, also name the earlier step numbers that you are combining.
+      </p>
+    </introduction>
+    <task xml:id="task-sum-example-identity" workspace="0.5in">
+      <statement>
+        <p>
+          <em>Step 1.</em> Write the limit of the identity function as <m>x \to 2</m>, and name the rule.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sum-example-linear" workspace="0.5in">
+      <statement>
+        <p>
+          <em>Step 2.</em> Write the limit of the linear formula <m>2x-5</m> as <m>x \to 2</m>, and name the rule.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sum-example-product" workspace="1in">
+      <statement>
+        <p>
+          <em>Step 3.</em> Use the product rule with <m>f(x)=x</m> and <m>g(x)=x</m> and Step 1 to find <m>\displaystyle \lim_{x \to 2} x^2</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sum-example-multiple" workspace="1in">
+      <statement>
+        <p>
+          <em>Step 4.</em> Use the constant multiple rule with Step 3 to find <m>\displaystyle \lim_{x \to 2} 3x^2</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-sum-example-sum" workspace="1in">
+      <statement>
+        <p>
+          <em>Step 5.</em> Use the sum rule with <m>f(x)=3x^2</m> from Step 4 and <m>g(x)=2x-5</m> from Step 2 to find
+          <m>\displaystyle \lim_{x \to 2} \left(3x^2+2x-5\right)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-limit-rules-quotient-example" workspace="0in">
+    <title>Section 3: Building a Justification for a Quotient</title>
+    <introduction>
+      <p>
+        Now consider
+        <md>
+          \lim_{x \to 3} \frac{3x^2(2x-5)}{x^2-3x+2}
+        </md>.
+        The last operation is a quotient, so we will eventually use the quotient rule.
+      </p>
+      <assemblage>
+        <title>Check the Denominator</title>
+        <p>
+          The quotient rule only applies when the limit of the denominator is <em>not zero</em>.
+          Before using the quotient rule, we must write down the limit of the denominator and note that it is nonzero.
+          If it is zero, the quotient rule cannot be used, and we need a different method, such as the factoring and cancelling from the previous activity.
+        </p>
+      </assemblage>
+    </introduction>
+    <task xml:id="task-quotient-example-deconstruct" workspace="1.5in">
+      <statement>
+        <p>
+          Deconstruct the formula.
+        </p>
+        <ol marker="a.">
+          <li>
+            <p>
+              The numerator <m>3x^2(2x-5)</m> is a product. What are the two factors? Which factor is a linear function, and which is a constant multiple of a power?
+            </p>
+          </li>
+          <li>
+            <p>
+              The denominator <m>x^2-3x+2</m> is a difference. Which two formulas are being subtracted? (Hint: group <m>3x-2</m> together.) Which of them is linear?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-example-elementary" workspace="1.5in">
+      <statement>
+        <p>
+          Start the justification with the elementary limits as <m>x \to 3</m>.
+        </p>
+        <ol marker="a.">
+          <li>
+            <p>
+              <em>Step 1.</em> The identity function.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 2.</em> The linear formula <m>2x-5</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 3.</em> The linear formula <m>3x-2</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-example-numerator" workspace="2in">
+      <statement>
+        <p>
+          Build the limit of the numerator.
+        </p>
+        <ol marker="a.">
+          <li>
+            <p>
+              <em>Step 4.</em> Find <m>\displaystyle \lim_{x \to 3} x^2</m> (product rule).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 5.</em> Find <m>\displaystyle \lim_{x \to 3} 3x^2</m> (constant multiple rule).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 6.</em> Find <m>\displaystyle \lim_{x \to 3} 3x^2(2x-5)</m> (product rule).
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-example-denominator" workspace="1in">
+      <statement>
+        <p>
+          <em>Step 7.</em> Build the limit of the denominator. Use the difference rule with <m>f(x)=x^2</m> from Step 4 and <m>g(x)=3x-2</m> from Step 3 to find
+          <m>\displaystyle \lim_{x \to 3} \left(x^2-3x+2\right)</m>.
+          Is this limit nonzero?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-example-quotient" workspace="1in">
+      <statement>
+        <p>
+          <em>Step 8.</em> Use the quotient rule with Steps 6 and 7 to find the original limit. State the condition on the denominator that lets you use the rule.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-quotient-example-zero" workspace="1.5in">
+      <statement>
+        <p>
+          Find the limit of the denominator <m>x^2-3x+2</m> as <m>x \to 1</m> and as <m>x \to 2</m>. Can the quotient rule be used for the original fraction at those <m>x</m>-values? What would you try instead?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-limit-rules-given-example" workspace="0in">
+    <title>Section 4: Starting from a Given Limit</title>
+    <introduction>
+      <p>
+        Sometimes a problem does not give us a formula for every piece. Consider
+        <md>
+          \lim_{x \to 1} \frac{3\, g(x) \left(x^2+4\right)}{(2x+1)^2}
+        </md>
+        where we are told that
+        <m>\displaystyle \lim_{x \to 1} g(x) = 4</m>.
+      </p>
+      <assemblage>
+        <title>A Given Limit Is Not a Function Value</title>
+        <p>
+          We are <em>not</em> saying that <m>g(x)=4</m>. We are not even saying that <m>g(1)=4</m>, since <m>g</m> might be undefined at <m>x=1</m> or might have a different value there.
+        </p>
+        <p>
+          We are simply treating the statement <m>\displaystyle \lim_{x \to 1} g(x) = 4</m> as if it were a new elementary limit that we get to start with, because the problem gave it to us.
+          In a justification, the reason for this step is <q>given</q>.
+        </p>
+      </assemblage>
+    </introduction>
+    <task xml:id="task-given-example-deconstruct" workspace="1.5in">
+      <statement>
+        <p>
+          Deconstruct the formula.
+        </p>
+        <ol marker="a.">
+          <li>
+            <p>
+              What is the last operation? Name the numerator and the denominator.
+            </p>
+          </li>
+          <li>
+            <p>
+              The numerator is a product. What are its two factors? Which factor involves a constant multiple of <m>g(x)</m>, and which is a sum?
+            </p>
+          </li>
+          <li>
+            <p>
+              The denominator <m>(2x+1)^2</m> is a product of two copies of what linear formula?
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-given-example-elementary" workspace="1.5in">
+      <statement>
+        <p>
+          Start the justification with the limits we get to begin with, as <m>x \to 1</m>.
+        </p>
+        <ol marker="a.">
+          <li>
+            <p>
+              <em>Step 1.</em> The limit of <m>g(x)</m>. (What is the reason for this step?)
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 2.</em> The identity function.
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 3.</em> The linear formula <m>2x+1</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-given-example-numerator" workspace="2in">
+      <statement>
+        <p>
+          Build the limit of the numerator.
+        </p>
+        <ol marker="a.">
+          <li>
+            <p>
+              <em>Step 4.</em> Find <m>\displaystyle \lim_{x \to 1} 3\,g(x)</m> (constant multiple rule with Step 1).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 5.</em> Find <m>\displaystyle \lim_{x \to 1} x^2</m> (product rule with Step 2).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 6.</em> Find <m>\displaystyle \lim_{x \to 1} \left(x^2+4\right)</m> (sum rule with Step 5 and the constant function).
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Step 7.</em> Find <m>\displaystyle \lim_{x \to 1} 3\,g(x)\left(x^2+4\right)</m> (product rule with Steps 4 and 6).
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-given-example-denominator" workspace="1in">
+      <statement>
+        <p>
+          <em>Step 8.</em> Build the limit of the denominator. Use the product rule with Step 3 used for both factors to find <m>\displaystyle \lim_{x \to 1} (2x+1)^2</m>. Is this limit nonzero?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-given-example-quotient" workspace="1in">
+      <statement>
+        <p>
+          <em>Step 9.</em> Use the quotient rule with Steps 7 and 8 to find the original limit. Simplify your answer.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-limit-rules-practice" workspace="0in">
+    <title>Section 5: Practice with Computer Feedback</title>
+    <introduction>
+      <p>
+        Practice justifying limits with similar problems at the web page below. It gives you feedback on your choices of rules as you build each justification.
+      </p>
+      <p>
+        <url href="https://dbrianwalton.github.io/home/webapp/limit_rules.html"
+             visual="dbrianwalton.github.io/home/webapp/limit_rules.html"/>
+      </p>
+    </introduction>
+    <task xml:id="task-limit-rules-practice-notes" workspace="2in">
+      <statement>
+        <p>
+          Use this space to record one problem from the practice page and your justification for it.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+</worksheet>
