@@ -67,6 +67,7 @@
       <xi:include href="./activities/17-limit-definition.ptx"/>
       <xi:include href="./activities/18-limit-error-tolerance.ptx"/>
       <xi:include href="./activities/19-limit-proofs.ptx"/>
+      <xi:include href="./activities/20-using-limit-rules.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>
