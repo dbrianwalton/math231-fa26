@@ -20,11 +20,12 @@
     <introduction>
       <assemblage xml:id="assemblage-elementary-limits">
         <title>Elementary Limits</title>
-        <ul>
+        <p>
+          <ul>
           <li>
             <p>
               <term>Limit of a Constant Function:</term>
-              <m>\displaystyle \lim_{x \to a} C = C</m>
+              <m>\displaystyle \lim_{x \to a} c = c</m>
             </p>
           </li>
           <li>
@@ -39,61 +40,61 @@
               <m>\displaystyle \lim_{x \to a} (mx+b) = ma+b</m>
             </p>
           </li>
-        </ul>
+          </ul>
+        </p>
       </assemblage>
       <assemblage xml:id="assemblage-limits-of-combinations">
         <title>Limits of Combinations</title>
-        <ul>
+        <p>
+          Prior to each limit of combination, we must first know the limits of the parts that are being combined, which we represent as <m>\displaystyle \lim_{x \to a} u(x) = L</m> and <m>\displaystyle \lim_{x \to a} v(x) = M</m>.
+          <ul>
           <li>
             <p>
               <term>Limit of a Constant Multiple:</term>
-              If <m>\displaystyle \lim_{x \to a} f(x) = L</m>, then
-              <m>\displaystyle \lim_{x \to a} [k f(x)] = kL</m>.
+              <m>\displaystyle \lim_{x \to a} [k u(x)] = kL</m>.
             </p>
           </li>
           <li>
             <p>
               <term>Limit of a Reciprocal:</term>
-              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>L \ne 0</m>, then
-              <m>\displaystyle \lim_{x \to a} \left[\frac{1}{f(x)}\right] = \frac{1}{L}</m>.
+              If <m>L \ne 0</m>, then
+              <m>\displaystyle \lim_{x \to a} \left[\frac{1}{u(x)}\right] = \frac{1}{L}</m>.
             </p>
           </li>
           <li>
             <p>
               <term>Limit of a Sum:</term>
-              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then
-              <m>\displaystyle \lim_{x \to a} [f(x)+g(x)] = L+M</m>.
+              <m>\displaystyle \lim_{x \to a} [u(x)+v(x)] = L+M</m>.
             </p>
           </li>
           <li>
             <p>
               <term>Limit of a Difference:</term>
-              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then
-              <m>\displaystyle \lim_{x \to a} [f(x)-g(x)] = L-M</m>.
+              <m>\displaystyle \lim_{x \to a} [u(x)-v(x)] = L-M</m>.
             </p>
           </li>
           <li>
             <p>
               <term>Limit of a Product:</term>
-              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m>, then
-              <m>\displaystyle \lim_{x \to a} [f(x)\, g(x)] = LM</m>.
+              <m>\displaystyle \lim_{x \to a} [u(x)\, v(x)] = LM</m>.
             </p>
           </li>
           <li>
             <p>
               <term>Limit of a Quotient:</term>
-              If <m>\displaystyle \lim_{x \to a} f(x) = L</m> and <m>\displaystyle \lim_{x \to a} g(x) = M</m> and <m>M \ne 0</m>, then
-              <m>\displaystyle \lim_{x \to a} \left[\frac{f(x)}{g(x)}\right] = \frac{L}{M}</m>.
+              If <m>M \ne 0</m>, then
+              <m>\displaystyle \lim_{x \to a} \left[\frac{u(x)}{v(x)}\right] = \frac{L}{M}</m>.
             </p>
           </li>
           <li>
             <p>
               <term>Limit of a Continuous Composition:</term>
-              If <m>\displaystyle \lim_{x \to a} g(x) = M</m> and <m>f(u)</m> is continuous at <m>u=M</m>, then
+              If <m>\displaystyle \lim_{x \to a} v(x) = M</m> and <m>f(u)</m> is continuous at <m>u=M</m>, then
               <m>\displaystyle \lim_{x \to a} (f \circ g)(x) = \lim_{x \to a} f(g(x)) = f(M)</m>.
             </p>
           </li>
-        </ul>
+          </ul>
+        </p>
       </assemblage>
       <p>
         We can justify limits without writing epsilon-delta proofs if we use these rules instead.
@@ -170,7 +171,7 @@
     <task xml:id="task-sum-example-product" workspace="1in">
       <statement>
         <p>
-          <em>Step 3.</em> Use the product rule with <m>f(x)=x</m> and <m>g(x)=x</m> and Step 1 to find <m>\displaystyle \lim_{x \to 2} x^2</m>.
+          <em>Step 3.</em> Use the product rule with <m>u(x)=x</m> and <m>v(x)=x</m> and Step 1 to find <m>\displaystyle \lim_{x \to 2} x^2</m>.
         </p>
       </statement>
     </task>
@@ -184,7 +185,7 @@
     <task xml:id="task-sum-example-sum" workspace="1in">
       <statement>
         <p>
-          <em>Step 5.</em> Use the sum rule with <m>f(x)=3x^2</m> from Step 4 and <m>g(x)=2x-5</m> from Step 2 to find
+          <em>Step 5.</em> Use the sum rule with <m>u(x)=3x^2</m> from Step 4 and <m>v(x)=2x-5</m> from Step 2 to find
           <m>\displaystyle \lim_{x \to 2} \left(3x^2+2x-5\right)</m>.
         </p>
       </statement>
@@ -280,7 +281,7 @@
     <task xml:id="task-quotient-example-denominator" workspace="1in">
       <statement>
         <p>
-          <em>Step 7.</em> Build the limit of the denominator. Use the difference rule with <m>f(x)=x^2</m> from Step 4 and <m>g(x)=3x-2</m> from Step 3 to find
+          <em>Step 7.</em> Build the limit of the denominator. Use the difference rule with <m>u(x)=x^2</m> from Step 4 and <m>v(x)=3x-2</m> from Step 3 to find
           <m>\displaystyle \lim_{x \to 3} \left(x^2-3x+2\right)</m>.
           Is this limit nonzero?
         </p>
@@ -423,6 +424,11 @@
       <p>
         Practice justifying limits with similar problems at the web page below. It gives you feedback on your choices of rules as you build each justification.
       </p>
+      <image source="images/qr-limit-rules-practice.png" width="20%" margins="0% 80%">
+        <description>
+          <p>QR code linking to the limit rules practice web page.</p>
+        </description>
+      </image>
       <p>
         <url href="https://dbrianwalton.github.io/home/webapp/limit_rules.html"
              visual="dbrianwalton.github.io/home/webapp/limit_rules.html"/>
