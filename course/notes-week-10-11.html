@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Week 10 and Week 11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Calculus with Functions I">
+<meta property="og:title" content="Calculus with Functions I">
+<meta property="book:title" content="Calculus with Functions I">
+<meta name="twitter:description" content="MATH 231-0002 Fall 2026">
+<meta property="og:description" content="MATH 231-0002 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.6';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Calculus with Functions I</span> <span class="subtitle">MATH 231-0002 Fall 2026</span></a></div>
+<p class="byline">Dr. Brian Walton</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="notes-week-08-09.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="course-objectives.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="activities.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments and Grades</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="course-objectives.html" class="internal"><span class="title">Course Learning Objectives</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-course-objectives">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="course-objectives-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1 and Week 2</span></a></div>
+<ul id="ptx-toc-group-notes-week-01" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">P1 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">P2 Intervals and Set Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">P3 Formula Structure, Inverses and Isolation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 3 and Week 4</span></a></div>
+<ul id="ptx-toc-group-notes-week-02" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">P4 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">F1 Function Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-5" class="internal"><span class="title">F2 Function Domain</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-03.html" class="internal"><span class="title">Week 5 and Week 6</span></a></div>
+<ul id="ptx-toc-group-notes-week-03" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-3" class="internal"><span class="title">F3 Function Deconstruction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-4" class="internal"><span class="title">F4 Function Inverses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-5" class="internal"><span class="title">F5 Describing Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-08-09.html" class="internal"><span class="title">Week 8 and Week 9</span></a></div>
+<ul id="ptx-toc-group-notes-week-08-09" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-3" class="internal"><span class="title">L1 Piecewise Limits and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-4" class="internal"><span class="title">L2 Limits of Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-5" class="internal"><span class="title">L3 Limits at Infinity</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="notes-week-10-11.html" class="internal"><span class="title">Week 10 and Week 11</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-notes-week-10-11">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-3" class="internal"><span class="title">L4 Illustrating the Limit Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-4" class="internal"><span class="title">L5 Justifying Limits with Limit Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-5" class="internal"><span class="title">D3 Sketching the Derivative Graph</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul id="ptx-toc-group-activities" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="activities-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-linear-relations-slope.html" class="internal"><span class="title">Building Linear Relations from Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-interval-union-intersection.html" class="internal"><span class="title">Union and Intersection of Intervals</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-operations.html" class="internal"><span class="title">Method of Isolation: Solving by Inverse Operations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Factored Polynomials</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-rational-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Rational Expressions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-solve-rational-inequality.html" class="internal"><span class="title">Solving Rational Inequalities</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-notation.html" class="internal"><span class="title">Function Notation: Graphs, Tables, and Formulas</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-domain.html" class="internal"><span class="title">Domain of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-composition.html" class="internal"><span class="title">Composition of Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-deconstruction.html" class="internal"><span class="title">Sum, Difference, Product, Quotient, or Composition?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-functions.html" class="internal"><span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-behavior.html" class="internal"><span class="title">Describing Function Behavior</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-intuitive-limits.html" class="internal"><span class="title">Introducing Limits and Continuity</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-algebraic-limits.html" class="internal"><span class="title">Finding Limits Algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limits-at-infinity.html" class="internal"><span class="title">Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limit-definition.html" class="internal"><span class="title">The Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limit-error-tolerance.html" class="internal"><span class="title">Limits as Error Tolerance</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="handout-limit-proofs.html" class="internal"><span class="title">Proving Limits with the Definition</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-using-limit-rules.html" class="internal"><span class="title">Using Limit Rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-intro-derivative.html" class="internal"><span class="title">Tangent Lines and the Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="notes-week-10-11">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Week 10 and Week 11</span>
+</h1>
+<section class="introduction" id="notes-week-10-11-2">
+<div class="para" id="notes-week-10-11-2-1">These weeks made the idea of a limit precise and then put it to work. We stated the definition of a limit in terms of an error tolerance <span class="process-math">\(\epsilon\)</span> for the output and a precision <span class="process-math">\(\delta\)</span> for the input, and we used particular values of <span class="process-math">\(\epsilon\)</span> to see when the definition is satisfied. From the definition we built limit rules and used them to justify limits of formulas, one step at a time. We then used tangent lines to define the derivative function and learned to sketch the graph of the derivative from the graph of the original function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<section class="subsection" id="notes-week-10-11-3">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L4 Illustrating the Limit Definition</span>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-L4"><h3 class="heading"><span class="title">L4.</span></h3>
+<div class="para" id="assemblage-L4-2">I can illustrate the definition of a limit as being satisfied or not satisfied using particular values for epsilon.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-L4-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: L4"><a tabindex="-1" href="#assemblage-L4" title="Copy heading and permalink for Assemblage: L4" aria-label="Copy heading and permalink for Assemblage: L4">🔗</a></div>
+</article>
+<div class="para logical" id="notes-week-10-11-3-3">
+<div class="para">What do I need to understand?</div>
+<ul class="disc" id="notes-week-10-11-3-3-1">
+<li id="notes-week-10-11-3-3-1-1">
+<div class="para" id="notes-week-10-11-3-3-1-1-1">
+<span class="process-math">\(\displaystyle \lim_{x \to a} f(x) = L\)</span> means that for every <span class="process-math">\(\epsilon \gt 0\)</span> there exists some <span class="process-math">\(\delta \gt 0\)</span> so that <span class="process-math">\(|f(x)-L| \lt \epsilon\)</span> whenever <span class="process-math">\(0 \lt |x-a| \lt \delta\text{.}\)</span> The value <span class="process-math">\(\epsilon\)</span> is an acceptable tolerance of error for the output, and <span class="process-math">\(\delta\)</span> is how close the input must be to <span class="process-math">\(a\)</span> to guarantee that tolerance. Both are distances, so in a context they carry the units of the output and the input.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-3-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-3-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-3-3-1-2">
+<div class="para" id="notes-week-10-11-3-3-1-2-1">The inequality <span class="process-math">\(|f(x)-L| \lt \epsilon\)</span> means <span class="process-math">\(L-\epsilon \lt f(x) \lt L+\epsilon\text{,}\)</span> a horizontal strip around the line <span class="process-math">\(y=L\text{.}\)</span> Solving this inequality for <span class="process-math">\(x\)</span> gives the set of inputs whose outputs are acceptable.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-3-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-3-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-3-3-1-3">
+<div class="para" id="notes-week-10-11-3-3-1-3-1">For a particular <span class="process-math">\(\epsilon\text{,}\)</span> the definition is <em class="emphasis">satisfied</em> when the set of acceptable inputs contains an interval around <span class="process-math">\(x=a\text{,}\)</span> with the point <span class="process-math">\(x=a\)</span> itself allowed to be left out. Then <span class="process-math">\(\delta\)</span> is the smaller of the two distances from <span class="process-math">\(a\)</span> to the endpoints of that interval, and any smaller positive number also works.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-3-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-3-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-3-3-1-4">
+<div class="para" id="notes-week-10-11-3-3-1-4-1">For a particular <span class="process-math">\(\epsilon\text{,}\)</span> the definition is <em class="emphasis">not satisfied</em> when the set of acceptable inputs does not reach all the way around <span class="process-math">\(x=a\text{.}\)</span> For example, <span class="process-math">\(a\)</span> may lie outside the set, or on its edge. Then no positive <span class="process-math">\(\delta\)</span> works, and the limit statement is false.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-3-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-3-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-3-3-1-5">
+<div class="para" id="notes-week-10-11-3-3-1-5-1">One value of <span class="process-math">\(\epsilon\)</span> that fails is enough to show a limit statement is false. One value of <span class="process-math">\(\epsilon\)</span> that works is not enough to show it is true, since the definition requires a working <span class="process-math">\(\delta\)</span> for <em class="emphasis">every</em> <span class="process-math">\(\epsilon \gt 0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-3-3-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-3-3-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="L4-checkpoint"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">16</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L4.</span>
+</h3>
+<div class="para" id="L4-checkpoint-2-1">A circuit is powered by a 12 volt battery connected across a resistor of <span class="process-math">\(R\)</span> ohms. The current in amperes is <span class="process-math">\(I = \dfrac{12}{R}\text{.}\)</span> With <span class="process-math">\(R=4\)</span> ohms the current is exactly 3 amperes. The device needs the current to be within <span class="process-math">\(0.2\)</span> amperes of 3 amperes. How much can the resistance vary from 4 ohms? Explain how this relates to the definition of a limit.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L4-checkpoint-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="L4-checkpoint-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="L4-checkpoint-3-1">The current must satisfy <span class="process-math">\(|I-3| \lt 0.2\text{,}\)</span> so <span class="process-math">\(2.8 \lt I \lt 3.2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L4-checkpoint-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="L4-checkpoint-3-2">We need <span class="process-math">\(2.8 \lt \dfrac{12}{R} \lt 3.2\)</span> with <span class="process-math">\(R \gt 0\text{.}\)</span> Taking reciprocals reverses the inequalities, and multiplying by 12 gives <span class="process-math">\(\dfrac{12}{3.2} \lt R \lt \dfrac{12}{2.8}\text{,}\)</span> which is <span class="process-math">\(3.75 \lt R \lt \dfrac{30}{7} \approx 4.2857\text{.}\)</span> Alternatively, we find the endpoints by solving <span class="process-math">\(\dfrac{12}{R} = 2.8\)</span> and <span class="process-math">\(\dfrac{12}{R} = 3.2\)</span> and use those points as the endpoints of the interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L4-checkpoint-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="L4-checkpoint-3-3">The lower endpoint is <span class="process-math">\(4-3.75=0.25\)</span> below 4 ohms and the upper endpoint is <span class="process-math">\(\frac{30}{7}-4=\frac{2}{7}\approx 0.2857\)</span> above 4 ohms. The symmetric neighborhood <span class="process-math">\(|R-4| \lt \delta\)</span> fits inside the acceptable interval when <span class="process-math">\(\delta \le 0.25\text{,}\)</span> so <span class="process-math">\(\delta = 0.25\)</span> is the largest value that works, and any smaller positive value also works.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L4-checkpoint-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="L4-checkpoint-3-4">The situation illustrates <span class="process-math">\(\displaystyle \lim_{R \to 4} \frac{12}{R} = 3\)</span> for the tolerance <span class="process-math">\(\epsilon = 0.2\text{.}\)</span> If <span class="process-math">\(0 \lt |R-4| \lt 0.25\text{,}\)</span> then <span class="process-math">\(\left|\dfrac{12}{R}-3\right| \lt 0.2\text{.}\)</span> Here <span class="process-math">\(\epsilon=0.2\)</span> is the tolerance on the output current in amperes and <span class="process-math">\(\delta=0.25\)</span> is the precision on the input resistance in ohms. The definition of the limit makes the stronger promise that a working <span class="process-math">\(\delta\)</span> exists for <em class="emphasis">every</em> tolerance <span class="process-math">\(\epsilon \gt 0\text{,}\)</span> not just <span class="process-math">\(0.2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L4-checkpoint-3-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 16.1"><a tabindex="-1" href="#L4-checkpoint-3" title="Copy heading and permalink for Solution 16.1" aria-label="Copy heading and permalink for Solution 16.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Checkpoint 16: L4"><a tabindex="-1" href="#L4-checkpoint" title="Copy heading and permalink for Checkpoint 16: L4" aria-label="Copy heading and permalink for Checkpoint 16: L4">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: L4 Illustrating the Limit Definition"><a tabindex="-1" href="#notes-week-10-11-3" title="Copy heading and permalink for Subsection: L4 Illustrating the Limit Definition" aria-label="Copy heading and permalink for Subsection: L4 Illustrating the Limit Definition">🔗</a></div>
+</section>
+<section class="subsection" id="notes-week-10-11-4">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L5 Justifying Limits with Limit Rules</span>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-L5"><h3 class="heading"><span class="title">L5.</span></h3>
+<div class="para" id="assemblage-L5-2">I can apply limit rules according to rules of deductive reasoning to justify the value of a limit based on formulas.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-L5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: L5"><a tabindex="-1" href="#assemblage-L5" title="Copy heading and permalink for Assemblage: L5" aria-label="Copy heading and permalink for Assemblage: L5">🔗</a></div>
+</article>
+<div class="para logical" id="notes-week-10-11-4-3">
+<div class="para">What do I need to understand?</div>
+<ul class="disc" id="notes-week-10-11-4-3-1">
+<li id="notes-week-10-11-4-3-1-1">
+<div class="para" id="notes-week-10-11-4-3-1-1-1">A justification is a sequence of true limit statements, each followed by the reason it is true. The reason is either a named rule (an elementary limit or a limit of a combination) or “given”.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-4-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-4-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-4-3-1-2">
+<div class="para" id="notes-week-10-11-4-3-1-2-1">Deconstruct the formula to plan the justification: find the last operation, then repeat for each piece until every piece is a constant, the identity function, or a linear function. Write the justification in the opposite order, starting from those elementary pieces and building up to the full formula.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-4-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-4-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-4-3-1-3">
+<div class="para" id="notes-week-10-11-4-3-1-3-1">Each combination rule requires that the limits of its parts are already known. In each step, name the earlier step numbers that you are combining. Powers of <span class="process-math">\(x\)</span> are justified by repeated use of the product rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-4-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-4-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-4-3-1-4">
+<div class="para" id="notes-week-10-11-4-3-1-4-1">The quotient rule and the reciprocal rule require that the limit of the denominator is <em class="emphasis">not zero</em>. Write down the limit of the denominator and note that it is nonzero before using the rule. If it is zero, the rule cannot be used and a different method, such as factoring and cancelling, is needed.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-4-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-4-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-4-3-1-5">
+<div class="para" id="notes-week-10-11-4-3-1-5-1">A given limit such as <span class="process-math">\(\displaystyle \lim_{x \to a} g(x) = M\)</span> is a place to start, with the reason “given”. It does not say that <span class="process-math">\(g(a)=M\text{,}\)</span> and <span class="process-math">\(g(a)\)</span> may not even exist. We may also be given a limit of some combination, such as <span class="process-math">\(\displaystyle \lim_{x \to a} \frac{g(x)}{x-a}\text{,}\)</span> which cannot be separated since division by <span class="process-math">\(x-a\)</span> would have denominator 0.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-4-3-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-4-3-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-4-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="L5-checkpoint"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">17</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">L5.</span>
+</h3>
+<div class="para logical" id="L5-checkpoint-2-1">
+<div class="para">Suppose <span class="process-math">\(f(x)\)</span> is a function for which <span class="process-math">\(\displaystyle \lim_{x \to 4} f(x)(x-4) = 5\text{.}\)</span> Find and justify the limit</div>
+<div class="displaymath process-math" id="L5-checkpoint-2-1-3">
+\begin{equation*}
+\lim_{x \to 4} \frac{2f(x)(x-4)}{x^2-2x+3}
+\end{equation*}
+</div>
+<div class="para">using limit rules involving either elementary limits or combinations of limits that have already been demonstrated.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="L5-checkpoint-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="L5-checkpoint-3-1">The last operation is a quotient. The numerator is a constant multiple of the product <span class="process-math">\(f(x)(x-4)\text{,}\)</span> whose limit is given, so we treat that product as a single piece and do not need to know <span class="process-math">\(\displaystyle \lim_{x \to 4} f(x)\)</span> by itself. The denominator is built from <span class="process-math">\(x^2\text{,}\)</span> <span class="process-math">\(2x\text{,}\)</span> and a constant.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="L5-checkpoint-3-2">
+<li id="L5-checkpoint-3-2-1">
+<div class="para" id="L5-checkpoint-3-2-1-1">
+<span class="process-math">\(\displaystyle \lim_{x \to 4} f(x)(x-4) = 5\)</span> (given).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 17.1"><a tabindex="-1" href="#L5-checkpoint-3-2-1" title="Copy heading and permalink for Item 17.1" aria-label="Copy heading and permalink for Item 17.1">🔗</a></div>
+</li>
+<li id="L5-checkpoint-3-2-2">
+<div class="para" id="L5-checkpoint-3-2-2-1">
+<span class="process-math">\(\displaystyle \lim_{x \to 4} 2f(x)(x-4) = 2(5) = 10\)</span> (constant multiple rule with Step 1).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 17.2"><a tabindex="-1" href="#L5-checkpoint-3-2-2" title="Copy heading and permalink for Item 17.2" aria-label="Copy heading and permalink for Item 17.2">🔗</a></div>
+</li>
+<li id="L5-checkpoint-3-2-3">
+<div class="para" id="L5-checkpoint-3-2-3-1">
+<span class="process-math">\(\displaystyle \lim_{x \to 4} x = 4\)</span> (limit of the identity function).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 17.3"><a tabindex="-1" href="#L5-checkpoint-3-2-3" title="Copy heading and permalink for Item 17.3" aria-label="Copy heading and permalink for Item 17.3">🔗</a></div>
+</li>
+<li id="L5-checkpoint-3-2-4">
+<div class="para" id="L5-checkpoint-3-2-4-1">
+<span class="process-math">\(\displaystyle \lim_{x \to 4} x^2 = (4)(4) = 16\)</span> (product rule with Step 3 used for both factors).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 17.4"><a tabindex="-1" href="#L5-checkpoint-3-2-4" title="Copy heading and permalink for Item 17.4" aria-label="Copy heading and permalink for Item 17.4">🔗</a></div>
+</li>
+<li id="L5-checkpoint-3-2-5">
+<div class="para" id="L5-checkpoint-3-2-5-1">
+<span class="process-math">\(\displaystyle \lim_{x \to 4} -2x+3 = -2(4)+3 = -5\)</span> (limit of a linear function3).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 17.5"><a tabindex="-1" href="#L5-checkpoint-3-2-5" title="Copy heading and permalink for Item 17.5" aria-label="Copy heading and permalink for Item 17.5">🔗</a></div>
+</li>
+<li id="L5-checkpoint-3-2-6">
+<div class="para" id="L5-checkpoint-3-2-6-1">
+<span class="process-math">\(\displaystyle \lim_{x \to 4} (x^2-2x+3) = 16+-5 = 11\)</span> (sum rule with Steps 4 and 5).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 17.6"><a tabindex="-1" href="#L5-checkpoint-3-2-6" title="Copy heading and permalink for Item 17.6" aria-label="Copy heading and permalink for Item 17.6">🔗</a></div>
+</li>
+<li id="L5-checkpoint-3-2-7">
+<div class="para" id="L5-checkpoint-3-2-7-1">
+<span class="process-math">\(\displaystyle \lim_{x \to 4} \frac{2f(x)(x-4)}{x^2-2x+3} = \frac{10}{11}\)</span> (quotient rule with Steps 2 and 6, which applies because the limit of the denominator, <span class="process-math">\(11\text{,}\)</span> is not zero).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#L5-checkpoint-3-2-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 17.7"><a tabindex="-1" href="#L5-checkpoint-3-2-7" title="Copy heading and permalink for Item 17.7" aria-label="Copy heading and permalink for Item 17.7">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 17.1"><a tabindex="-1" href="#L5-checkpoint-3" title="Copy heading and permalink for Solution 17.1" aria-label="Copy heading and permalink for Solution 17.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Checkpoint 17: L5"><a tabindex="-1" href="#L5-checkpoint" title="Copy heading and permalink for Checkpoint 17: L5" aria-label="Copy heading and permalink for Checkpoint 17: L5">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: L5 Justifying Limits with Limit Rules"><a tabindex="-1" href="#notes-week-10-11-4" title="Copy heading and permalink for Subsection: L5 Justifying Limits with Limit Rules" aria-label="Copy heading and permalink for Subsection: L5 Justifying Limits with Limit Rules">🔗</a></div>
+</section>
+<section class="subsection" id="notes-week-10-11-5">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">D3 Sketching the Derivative Graph</span>
+</h2>
+<article class="assemblage assemblage-like" id="assemblage-D3"><h3 class="heading"><span class="title">D3.</span></h3>
+<div class="para" id="assemblage-D3-2">I can create (sketch) a graph of a derivative function based on the original function’s graph.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-D3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: D3"><a tabindex="-1" href="#assemblage-D3" title="Copy heading and permalink for Assemblage: D3" aria-label="Copy heading and permalink for Assemblage: D3">🔗</a></div>
+</article>
+<div class="para logical" id="notes-week-10-11-5-3">
+<div class="para">What do I need to understand?</div>
+<ul class="disc" id="notes-week-10-11-5-3-1">
+<li id="notes-week-10-11-5-3-1-1">
+<div class="para" id="notes-week-10-11-5-3-1-1-1">The output <span class="process-math">\(f'(a)\)</span> is the <em class="emphasis">slope</em> of the tangent line to the graph of <span class="process-math">\(f(x)\)</span> at <span class="process-math">\(x=a\text{.}\)</span> The graph of <span class="process-math">\(f'(x)\)</span> reports slopes, not heights, so it does not look like a copy of the graph of <span class="process-math">\(f(x)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-5-3-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-5-3-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-5-3-1-2">
+<div class="para" id="notes-week-10-11-5-3-1-2-1">Where <span class="process-math">\(f(x)\)</span> has a horizontal tangent line, such as a local maximum or local minimum, <span class="process-math">\(f'(x)=0\text{.}\)</span> Mark these <span class="process-math">\(x\)</span>-values first as the places where the graph of <span class="process-math">\(f'(x)\)</span> meets the <span class="process-math">\(x\)</span>-axis.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-5-3-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-5-3-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-5-3-1-3">
+<div class="para" id="notes-week-10-11-5-3-1-3-1">Where <span class="process-math">\(f(x)\)</span> is increasing, the slopes are positive, so the graph of <span class="process-math">\(f'(x)\)</span> is above the <span class="process-math">\(x\)</span>-axis. Where <span class="process-math">\(f(x)\)</span> is decreasing, the slopes are negative, so the graph of <span class="process-math">\(f'(x)\)</span> is below the <span class="process-math">\(x\)</span>-axis.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-5-3-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-5-3-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-5-3-1-4">
+<div class="para" id="notes-week-10-11-5-3-1-4-1">The steeper the graph of <span class="process-math">\(f(x)\text{,}\)</span> the farther the graph of <span class="process-math">\(f'(x)\)</span> is from the <span class="process-math">\(x\)</span>-axis. Between two horizontal tangents, the graph of <span class="process-math">\(f(x)\)</span> is steepest near an inflection point, so that is where <span class="process-math">\(f'(x)\)</span> reaches a local maximum or local minimum.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-5-3-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-5-3-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="notes-week-10-11-5-3-1-5">
+<div class="para" id="notes-week-10-11-5-3-1-5-1">Build the sketch in order: mark the zeros, decide the sign on each interval, locate the steepest points, and then connect everything with a smooth curve. Estimates of slopes are fine, but the zeros, signs, and the places where <span class="process-math">\(f'(x)\)</span> is largest or smallest must be correct.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-5-3-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#notes-week-10-11-5-3-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#notes-week-10-11-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="exercise exercise-like" id="D3-checkpoint"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">18</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">D3.</span>
+</h3>
+<div class="para" id="D3-checkpoint-2-1">The graph of <span class="process-math">\(f(x)\)</span> is shown for <span class="process-math">\(-3 \le x \le 4\text{.}\)</span> Each grid square is 1 unit wide and 1 unit tall.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D3-checkpoint-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/D3-image-quartic.svg" role="img" class="contained" alt="An M-shaped graph for x from -3 to 4 on a grid. It rises from about (-3, -0.8) to a local maximum at (-2, 2), falls to a local minimum at (0, 0), rises to a higher local maximum at (3, 5.9), and then falls to (4, 2)."></div> 
+<div class="para" id="D3-checkpoint-2-3">Sketch the graph of <span class="process-math">\(f'(x)\)</span> on the axes below. Mark the <span class="process-math">\(x\)</span>-values where <span class="process-math">\(f'(x)=0\)</span> and your graph should show clearly where <span class="process-math">\(f'(x)\)</span> is increasing and decreasing, with reasonable estimates for actual values at extremes.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D3-checkpoint-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/D3-image-quartic-axes.svg" role="img" class="contained" alt="Blank axes on a grid for x from -3 to 4 and for slope values from -10 to 8. The horizontal scale matches the graph of f(x)."></div>
+<div class="solutions">
+<details id="D3-checkpoint-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para" id="D3-checkpoint-3-1">The graph of <span class="process-math">\(f(x)\)</span> has horizontal tangent lines at <span class="process-math">\(x=-2\text{,}\)</span> <span class="process-math">\(x=0\text{,}\)</span> and <span class="process-math">\(x=3\text{,}\)</span> so <span class="process-math">\(f'(x)=0\)</span> at those three <span class="process-math">\(x\)</span>-values.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D3-checkpoint-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="D3-checkpoint-3-2">The graph of <span class="process-math">\(f(x)\)</span> is increasing on <span class="process-math">\((-\infty,-2)\)</span> and <span class="process-math">\((0,3)\text{,}\)</span> so <span class="process-math">\(f'(x)\)</span> is positive there. It is decreasing on <span class="process-math">\((-2,0)\)</span> and <span class="process-math">\((3,\infty)\text{,}\)</span> so <span class="process-math">\(f'(x)\)</span> is negative there. The graph of <span class="process-math">\(f'(x)\)</span> therefore crosses the <span class="process-math">\(x\)</span>-axis at each of the three <span class="process-math">\(x\)</span>-values, and it has the shape of a cubic with a negative leading coefficient.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D3-checkpoint-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="D3-checkpoint-3-3">The graph of <span class="process-math">\(f(x)\)</span> is steepest between the horizontal tangent lines near its inflection points, at about <span class="process-math">\(x=-1.1\)</span> and <span class="process-math">\(x=1.8\text{.}\)</span> On <span class="process-math">\((-2,0)\)</span> the graph is falling, so <span class="process-math">\(f'(x)\)</span> has a local minimum near <span class="process-math">\(x=-1.1\)</span> with a slope of about <span class="process-math">\(-1.5\text{.}\)</span> On <span class="process-math">\((0,3)\)</span> the graph is rising, so <span class="process-math">\(f'(x)\)</span> has a local maximum near <span class="process-math">\(x=1.8\)</span> with a slope of about <span class="process-math">\(3\text{.}\)</span> The graph of <span class="process-math">\(f(x)\)</span> is rising fairly steeply at <span class="process-math">\(x=-3\)</span> and falling steeply at <span class="process-math">\(x=4\text{,}\)</span> so <span class="process-math">\(f'(x)\)</span> is about <span class="process-math">\(6.75\)</span> at <span class="process-math">\(x=-3\)</span> and <span class="process-math">\(-9\)</span> at <span class="process-math">\(x=4\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#D3-checkpoint-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/D3-image-quartic-solution.svg" role="img" class="contained" alt="A graph for x from -3 to 4 that crosses the x-axis at x = -2, 0, and 3. It is positive and falling for x less than -2, then negative between -2 and 0 with a local minimum near (-1.1, -1.5), then positive between 0 and 3 with a local maximum near (1.8, 3), and then negative and falling for x greater than 3."></div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 18.1"><a tabindex="-1" href="#D3-checkpoint-3" title="Copy heading and permalink for Solution 18.1" aria-label="Copy heading and permalink for Solution 18.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Checkpoint 18: D3"><a tabindex="-1" href="#D3-checkpoint" title="Copy heading and permalink for Checkpoint 18: D3" aria-label="Copy heading and permalink for Checkpoint 18: D3">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: D3 Sketching the Derivative Graph"><a tabindex="-1" href="#notes-week-10-11-5" title="Copy heading and permalink for Subsection: D3 Sketching the Derivative Graph" aria-label="Copy heading and permalink for Subsection: D3 Sketching the Derivative Graph">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section: Week 10 and Week 11"><a tabindex="-1" href="#notes-week-10-11" title="Copy heading and permalink for Section: Week 10 and Week 11" aria-label="Copy heading and permalink for Section: Week 10 and Week 11">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="notes-week-08-09.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="activities.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

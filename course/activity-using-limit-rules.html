@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Using Limit Rules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Calculus with Functions I">
+<meta property="og:title" content="Calculus with Functions I">
+<meta property="book:title" content="Calculus with Functions I">
+<meta name="twitter:description" content="MATH 231-0002 Fall 2026">
+<meta property="og:description" content="MATH 231-0002 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.3.6';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.4beca1fdeed766a2.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.ebd33f6a21eed414.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.9963089870a016c8.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Calculus with Functions I</span> <span class="subtitle">MATH 231-0002 Fall 2026</span></a></div>
+<p class="byline">Dr. Brian Walton</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="handout-limit-proofs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="activities.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="activity-intro-derivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments and Grades</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-objectives.html" class="internal"><span class="title">Course Learning Objectives</span></a></div>
+<ul id="ptx-toc-group-course-objectives" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="course-objectives-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1 and Week 2</span></a></div>
+<ul id="ptx-toc-group-notes-week-01" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">P1 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">P2 Intervals and Set Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">P3 Formula Structure, Inverses and Isolation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 3 and Week 4</span></a></div>
+<ul id="ptx-toc-group-notes-week-02" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">P4 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">F1 Function Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-5" class="internal"><span class="title">F2 Function Domain</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-03.html" class="internal"><span class="title">Week 5 and Week 6</span></a></div>
+<ul id="ptx-toc-group-notes-week-03" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-3" class="internal"><span class="title">F3 Function Deconstruction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-4" class="internal"><span class="title">F4 Function Inverses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-5" class="internal"><span class="title">F5 Describing Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-08-09.html" class="internal"><span class="title">Week 8 and Week 9</span></a></div>
+<ul id="ptx-toc-group-notes-week-08-09" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-3" class="internal"><span class="title">L1 Piecewise Limits and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-4" class="internal"><span class="title">L2 Limits of Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-5" class="internal"><span class="title">L3 Limits at Infinity</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-10-11.html" class="internal"><span class="title">Week 10 and Week 11</span></a></div>
+<ul id="ptx-toc-group-notes-week-10-11" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-3" class="internal"><span class="title">L4 Illustrating the Limit Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-4" class="internal"><span class="title">L5 Justifying Limits with Limit Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-5" class="internal"><span class="title">D3 Sketching the Derivative Graph</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-activities">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="activities-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-linear-relations-slope.html" class="internal"><span class="title">Building Linear Relations from Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-interval-union-intersection.html" class="internal"><span class="title">Union and Intersection of Intervals</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-operations.html" class="internal"><span class="title">Method of Isolation: Solving by Inverse Operations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Factored Polynomials</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-rational-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Rational Expressions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-solve-rational-inequality.html" class="internal"><span class="title">Solving Rational Inequalities</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-notation.html" class="internal"><span class="title">Function Notation: Graphs, Tables, and Formulas</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-domain.html" class="internal"><span class="title">Domain of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-composition.html" class="internal"><span class="title">Composition of Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-deconstruction.html" class="internal"><span class="title">Sum, Difference, Product, Quotient, or Composition?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-functions.html" class="internal"><span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-behavior.html" class="internal"><span class="title">Describing Function Behavior</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-intuitive-limits.html" class="internal"><span class="title">Introducing Limits and Continuity</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-algebraic-limits.html" class="internal"><span class="title">Finding Limits Algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limits-at-infinity.html" class="internal"><span class="title">Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limit-definition.html" class="internal"><span class="title">The Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limit-error-tolerance.html" class="internal"><span class="title">Limits as Error Tolerance</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="handout-limit-proofs.html" class="internal"><span class="title">Proving Limits with the Definition</span></a></div></li>
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="activity-using-limit-rules.html" class="internal"><span class="title">Using Limit Rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-intro-derivative.html" class="internal"><span class="title">Tangent Lines and the Derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="worksheet" id="activity-using-limit-rules" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h1 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Using Limit Rules</span><div class="print-links"><a href="?printpreview=activity-using-limit-rules" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h1>
+<section class="introduction" id="activity-using-limit-rules-2">
+<div class="para" id="activity-using-limit-rules-2-1">Until now we have found limits from graphs, tables, and algebraic simplification. Proving a limit directly from the epsilon-delta definition is far too slow to do for every formula we meet. Today we learn to <em class="emphasis">justify</em> a limit by listing the limit rules that build it, one step at a time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-using-limit-rules-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="activity-using-limit-rules-2-2">The rules below are the only tools we need. Keep this page handy, because every justification today is a list of true limit statements, each with the name of the rule that makes it true.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-using-limit-rules-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="exercise exercise-like" id="ex-limit-rules-summary"><h2 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 1: The Limit Rules and Deconstructing a Formula.</span>
+</h2>
+<div class="introduction" id="ex-limit-rules-summary-2">
+<article class="assemblage assemblage-like" id="assemblage-elementary-limits"><h3 class="heading"><span class="title">Elementary Limits.</span></h3>
+<div class="para logical" id="assemblage-elementary-limits-2">
+<ul class="disc" id="assemblage-elementary-limits-2-1">
+<li id="assemblage-elementary-limits-2-1-1">
+<div class="para" id="assemblage-elementary-limits-2-1-1-1">
+<dfn class="terminology">Limit of a Constant Function:</dfn> <span class="process-math">\(\displaystyle \lim_{x \to a} c = c\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-elementary-limits-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-elementary-limits-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-elementary-limits-2-1-2">
+<div class="para" id="assemblage-elementary-limits-2-1-2-1">
+<dfn class="terminology">Limit of the Identity Function:</dfn> <span class="process-math">\(\displaystyle \lim_{x \to a} x = a\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-elementary-limits-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-elementary-limits-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-elementary-limits-2-1-3">
+<div class="para" id="assemblage-elementary-limits-2-1-3-1">
+<dfn class="terminology">Limit of a Linear Function:</dfn> <span class="process-math">\(\displaystyle \lim_{x \to a} (mx+b) = ma+b\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-elementary-limits-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-elementary-limits-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-elementary-limits-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Elementary Limits"><a tabindex="-1" href="#assemblage-elementary-limits" title="Copy heading and permalink for Assemblage: Elementary Limits" aria-label="Copy heading and permalink for Assemblage: Elementary Limits">🔗</a></div>
+</article>
+<article class="assemblage assemblage-like" id="assemblage-limits-of-combinations"><h3 class="heading"><span class="title">Limits of Combinations.</span></h3>
+<div class="para logical" id="assemblage-limits-of-combinations-2">
+<div class="para">Prior to each limit of combination, we must first know the limits of the parts that are being combined, which we represent as <span class="process-math">\(\displaystyle \lim_{x \to a} u(x) = L\)</span> and <span class="process-math">\(\displaystyle \lim_{x \to a} v(x) = M\text{.}\)</span>
+</div>
+<ul class="disc" id="assemblage-limits-of-combinations-2-3">
+<li id="assemblage-limits-of-combinations-2-3-1">
+<div class="para" id="assemblage-limits-of-combinations-2-3-1-1">
+<dfn class="terminology">Limit of a Constant Multiple:</dfn> <span class="process-math">\(\displaystyle \lim_{x \to a} [k u(x)] = kL\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-limits-of-combinations-2-3-2">
+<div class="para" id="assemblage-limits-of-combinations-2-3-2-1">
+<dfn class="terminology">Limit of a Reciprocal:</dfn> If <span class="process-math">\(L \ne 0\text{,}\)</span> then <span class="process-math">\(\displaystyle \lim_{x \to a} \left[\frac{1}{u(x)}\right] = \frac{1}{L}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-limits-of-combinations-2-3-3">
+<div class="para" id="assemblage-limits-of-combinations-2-3-3-1">
+<dfn class="terminology">Limit of a Sum:</dfn> <span class="process-math">\(\displaystyle \lim_{x \to a} [u(x)+v(x)] = L+M\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-limits-of-combinations-2-3-4">
+<div class="para" id="assemblage-limits-of-combinations-2-3-4-1">
+<dfn class="terminology">Limit of a Difference:</dfn> <span class="process-math">\(\displaystyle \lim_{x \to a} [u(x)-v(x)] = L-M\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-limits-of-combinations-2-3-5">
+<div class="para" id="assemblage-limits-of-combinations-2-3-5-1">
+<dfn class="terminology">Limit of a Product:</dfn> <span class="process-math">\(\displaystyle \lim_{x \to a} [u(x)\, v(x)] = LM\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-limits-of-combinations-2-3-6">
+<div class="para" id="assemblage-limits-of-combinations-2-3-6-1">
+<dfn class="terminology">Limit of a Quotient:</dfn> If <span class="process-math">\(M \ne 0\text{,}\)</span> then <span class="process-math">\(\displaystyle \lim_{x \to a} \left[\frac{u(x)}{v(x)}\right] = \frac{L}{M}\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="assemblage-limits-of-combinations-2-3-7">
+<div class="para" id="assemblage-limits-of-combinations-2-3-7-1">
+<dfn class="terminology">Limit of a Continuous Composition:</dfn> If <span class="process-math">\(\displaystyle \lim_{x \to a} v(x) = M\)</span> and <span class="process-math">\(f(u)\)</span> is continuous at <span class="process-math">\(u=M\text{,}\)</span> then <span class="process-math">\(\displaystyle \lim_{x \to a} (f \circ g)(x) = \lim_{x \to a} f(g(x)) = f(M)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#assemblage-limits-of-combinations-2-3-7" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#assemblage-limits-of-combinations-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Limits of Combinations"><a tabindex="-1" href="#assemblage-limits-of-combinations" title="Copy heading and permalink for Assemblage: Limits of Combinations" aria-label="Copy heading and permalink for Assemblage: Limits of Combinations">🔗</a></div>
+</article>
+<div class="para" id="ex-limit-rules-summary-2-3">We can justify limits without writing epsilon-delta proofs if we use these rules instead. The limits of the elementary functions (constant, identity, and linear) were proved, so we justify such a limit by identifying the elementary function in play and naming the corresponding rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-summary-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limit-rules-summary-2-4">All of the more complicated algebraic functions are built from elementary functions by combining them with arithmetic or composition. Powers of the independent variable are repeated multiplication, so they are justified by repeated use of the product rule. We can therefore justify a limit by identifying how the formula is constructed and naming the appropriate limit rules.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-summary-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limit-rules-summary-2-5">Notice that each combination rule <em class="emphasis">requires</em> that we already know the limits of the component parts before we can combine them. In practice we think through a formula starting from its last operation. A logical justification, however, goes the other way: we first list the elementary pieces and then combine them one step at a time.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-summary-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limit-rules-summary-2-6">Our first example is <span class="process-math">\(\displaystyle \lim_{x \to 2} \left(3x^2+2x-5\right)\text{.}\)</span> To begin, we deconstruct the formula by asking what the <em class="emphasis">last</em> operation is, and then doing the same for each piece.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-summary-2-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-rules-deconstruct-sum"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-rules-deconstruct-sum-1-1">The formula <span class="process-math">\(3x^2+2x-5\)</span> is a <em class="emphasis">sum</em>. Which two formulas are being added? Which of them is a linear function, so that we can use an elementary limit?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-rules-deconstruct-sum-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.a"><a tabindex="-1" href="#task-rules-deconstruct-sum" title="Copy heading and permalink for Task 1.a" aria-label="Copy heading and permalink for Task 1.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-rules-deconstruct-multiple"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-rules-deconstruct-multiple-1-1">The other formula in the sum is <span class="process-math">\(3x^2\text{.}\)</span> Explain why it is a constant multiple of <span class="process-math">\(x^2\text{.}\)</span> What is the constant?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-rules-deconstruct-multiple-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.b"><a tabindex="-1" href="#task-rules-deconstruct-multiple" title="Copy heading and permalink for Task 1.b" aria-label="Copy heading and permalink for Task 1.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-rules-deconstruct-product"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-rules-deconstruct-product-1-1">Explain why <span class="process-math">\(x^2\)</span> is a product of two copies of the identity function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-rules-deconstruct-product-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.c"><a tabindex="-1" href="#task-rules-deconstruct-product" title="Copy heading and permalink for Task 1.c" aria-label="Copy heading and permalink for Task 1.c">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 1: Section 1: The Limit Rules and Deconstructing a Formula"><a tabindex="-1" href="#ex-limit-rules-summary" title="Copy heading and permalink for Worksheet Exercise 1: Section 1: The Limit Rules and Deconstructing a Formula" aria-label="Copy heading and permalink for Worksheet Exercise 1: Section 1: The Limit Rules and Deconstructing a Formula">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-limit-rules-sum-example"><h2 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 2: Building a Justification for a Sum.</span>
+</h2>
+<div class="introduction" id="ex-limit-rules-sum-example-2">
+<div class="para" id="ex-limit-rules-sum-example-2-1">A justification is a numbered list of limit statements that we know are true, each followed by the reason. We start from the elementary pieces and work up to the full formula. For <span class="process-math">\(\displaystyle \lim_{x \to 2} \left(3x^2+2x-5\right)\)</span> we begin with two elementary limits, and then each new step uses results from earlier steps.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-sum-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limit-rules-sum-example-2-2">Write each step in the form “limit statement, then <em class="emphasis">(rule used)</em>”. In the combination steps, also name the earlier step numbers that you are combining.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-sum-example-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-sum-example-identity"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-sum-example-identity-1-1">
+<em class="emphasis">Step 1.</em> Write the limit of the identity function as <span class="process-math">\(x \to 2\text{,}\)</span> and name the rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-sum-example-identity-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.a"><a tabindex="-1" href="#task-sum-example-identity" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-sum-example-linear"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-sum-example-linear-1-1">
+<em class="emphasis">Step 2.</em> Write the limit of the linear formula <span class="process-math">\(2x-5\)</span> as <span class="process-math">\(x \to 2\text{,}\)</span> and name the rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-sum-example-linear-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="0.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.b"><a tabindex="-1" href="#task-sum-example-linear" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-sum-example-product"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-sum-example-product-1-1">
+<em class="emphasis">Step 3.</em> Use the product rule with <span class="process-math">\(u(x)=x\)</span> and <span class="process-math">\(v(x)=x\)</span> and Step 1 to find <span class="process-math">\(\displaystyle \lim_{x \to 2} x^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-sum-example-product-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.c"><a tabindex="-1" href="#task-sum-example-product" title="Copy heading and permalink for Task 2.c" aria-label="Copy heading and permalink for Task 2.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-sum-example-multiple"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="task-sum-example-multiple-1-1">
+<em class="emphasis">Step 4.</em> Use the constant multiple rule with Step 3 to find <span class="process-math">\(\displaystyle \lim_{x \to 2} 3x^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-sum-example-multiple-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.d"><a tabindex="-1" href="#task-sum-example-multiple" title="Copy heading and permalink for Task 2.d" aria-label="Copy heading and permalink for Task 2.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-sum-example-sum"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para" id="task-sum-example-sum-1-1">
+<em class="emphasis">Step 5.</em> Use the sum rule with <span class="process-math">\(u(x)=3x^2\)</span> from Step 4 and <span class="process-math">\(v(x)=2x-5\)</span> from Step 2 to find <span class="process-math">\(\displaystyle \lim_{x \to 2} \left(3x^2+2x-5\right)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-sum-example-sum-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.e"><a tabindex="-1" href="#task-sum-example-sum" title="Copy heading and permalink for Task 2.e" aria-label="Copy heading and permalink for Task 2.e">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: Section 2: Building a Justification for a Sum"><a tabindex="-1" href="#ex-limit-rules-sum-example" title="Copy heading and permalink for Worksheet Exercise 2: Section 2: Building a Justification for a Sum" aria-label="Copy heading and permalink for Worksheet Exercise 2: Section 2: Building a Justification for a Sum">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-limit-rules-quotient-example"><h2 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 3: Building a Justification for a Quotient.</span>
+</h2>
+<div class="introduction" id="ex-limit-rules-quotient-example-2">
+<div class="para logical" id="ex-limit-rules-quotient-example-2-1">
+<div class="para">Now consider</div>
+<div class="displaymath process-math" id="ex-limit-rules-quotient-example-2-1-1">
+\begin{equation*}
+\lim_{x \to 3} \frac{3x^2(2x-5)}{x^2-3x+2}\text{.}
+\end{equation*}
+</div>
+<div class="para">The last operation is a quotient, so we will eventually use the quotient rule.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-quotient-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="ex-limit-rules-quotient-example-2-2"><h3 class="heading"><span class="title">Check the Denominator.</span></h3>
+<div class="para" id="ex-limit-rules-quotient-example-2-2-2">The quotient rule only applies when the limit of the denominator is <em class="emphasis">not zero</em>. Before using the quotient rule, we must write down the limit of the denominator and note that it is nonzero. If it is zero, the quotient rule cannot be used, and we need a different method, such as the factoring and cancelling from the previous activity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-quotient-example-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Check the Denominator"><a tabindex="-1" href="#ex-limit-rules-quotient-example-2-2" title="Copy heading and permalink for Assemblage: Check the Denominator" aria-label="Copy heading and permalink for Assemblage: Check the Denominator">🔗</a></div>
+</article>
+</div>
+<article class="task exercise-like" id="task-quotient-example-deconstruct"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-quotient-example-deconstruct-1-1">Deconstruct the formula.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-deconstruct-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-quotient-example-deconstruct-1-2">
+<li id="task-quotient-example-deconstruct-1-2-1">
+<div class="para" id="task-quotient-example-deconstruct-1-2-1-1">The numerator <span class="process-math">\(3x^2(2x-5)\)</span> is a product. What are the two factors? Which factor is a linear function, and which is a constant multiple of a power?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-deconstruct-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.a"><a tabindex="-1" href="#task-quotient-example-deconstruct-1-2-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
+</li>
+<li id="task-quotient-example-deconstruct-1-2-2">
+<div class="para" id="task-quotient-example-deconstruct-1-2-2-1">The denominator <span class="process-math">\(x^2-3x+2\)</span> is a difference. Which two formulas are being subtracted? (Hint: group <span class="process-math">\(3x-2\)</span> together.) Which of them is linear?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-deconstruct-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.b"><a tabindex="-1" href="#task-quotient-example-deconstruct-1-2-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.a"><a tabindex="-1" href="#task-quotient-example-deconstruct" title="Copy heading and permalink for Task 3.a" aria-label="Copy heading and permalink for Task 3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-quotient-example-elementary"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-quotient-example-elementary-1-1">Start the justification with the elementary limits as <span class="process-math">\(x \to 3\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-elementary-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-quotient-example-elementary-1-2">
+<li id="task-quotient-example-elementary-1-2-1">
+<div class="para" id="task-quotient-example-elementary-1-2-1-1">
+<em class="emphasis">Step 1.</em> The identity function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-elementary-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.a"><a tabindex="-1" href="#task-quotient-example-elementary-1-2-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
+</li>
+<li id="task-quotient-example-elementary-1-2-2">
+<div class="para" id="task-quotient-example-elementary-1-2-2-1">
+<em class="emphasis">Step 2.</em> The linear formula <span class="process-math">\(2x-5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-elementary-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.b"><a tabindex="-1" href="#task-quotient-example-elementary-1-2-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
+</li>
+<li id="task-quotient-example-elementary-1-2-3">
+<div class="para" id="task-quotient-example-elementary-1-2-3-1">
+<em class="emphasis">Step 3.</em> The linear formula <span class="process-math">\(3x-2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-elementary-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.c"><a tabindex="-1" href="#task-quotient-example-elementary-1-2-3" title="Copy heading and permalink for Item 3.c" aria-label="Copy heading and permalink for Item 3.c">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.b"><a tabindex="-1" href="#task-quotient-example-elementary" title="Copy heading and permalink for Task 3.b" aria-label="Copy heading and permalink for Task 3.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-quotient-example-numerator"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-quotient-example-numerator-1-1">Build the limit of the numerator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-numerator-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-quotient-example-numerator-1-2">
+<li id="task-quotient-example-numerator-1-2-1">
+<div class="para" id="task-quotient-example-numerator-1-2-1-1">
+<em class="emphasis">Step 4.</em> Find <span class="process-math">\(\displaystyle \lim_{x \to 3} x^2\)</span> (product rule).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-numerator-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.a"><a tabindex="-1" href="#task-quotient-example-numerator-1-2-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
+</li>
+<li id="task-quotient-example-numerator-1-2-2">
+<div class="para" id="task-quotient-example-numerator-1-2-2-1">
+<em class="emphasis">Step 5.</em> Find <span class="process-math">\(\displaystyle \lim_{x \to 3} 3x^2\)</span> (constant multiple rule).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-numerator-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.b"><a tabindex="-1" href="#task-quotient-example-numerator-1-2-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
+</li>
+<li id="task-quotient-example-numerator-1-2-3">
+<div class="para" id="task-quotient-example-numerator-1-2-3-1">
+<em class="emphasis">Step 6.</em> Find <span class="process-math">\(\displaystyle \lim_{x \to 3} 3x^2(2x-5)\)</span> (product rule).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-numerator-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.c"><a tabindex="-1" href="#task-quotient-example-numerator-1-2-3" title="Copy heading and permalink for Item 3.c" aria-label="Copy heading and permalink for Item 3.c">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.c"><a tabindex="-1" href="#task-quotient-example-numerator" title="Copy heading and permalink for Task 3.c" aria-label="Copy heading and permalink for Task 3.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-quotient-example-denominator"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="task-quotient-example-denominator-1-1">
+<em class="emphasis">Step 7.</em> Build the limit of the denominator. Use the difference rule with <span class="process-math">\(u(x)=x^2\)</span> from Step 4 and <span class="process-math">\(v(x)=3x-2\)</span> from Step 3 to find <span class="process-math">\(\displaystyle \lim_{x \to 3} \left(x^2-3x+2\right)\text{.}\)</span> Is this limit nonzero?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-denominator-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.d"><a tabindex="-1" href="#task-quotient-example-denominator" title="Copy heading and permalink for Task 3.d" aria-label="Copy heading and permalink for Task 3.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-quotient-example-quotient"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para" id="task-quotient-example-quotient-1-1">
+<em class="emphasis">Step 8.</em> Use the quotient rule with Steps 6 and 7 to find the original limit. State the condition on the denominator that lets you use the rule.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-quotient-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.e"><a tabindex="-1" href="#task-quotient-example-quotient" title="Copy heading and permalink for Task 3.e" aria-label="Copy heading and permalink for Task 3.e">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-quotient-example-zero"><h3 class="heading"><span class="codenumber">(f)</span></h3>
+<div class="para" id="task-quotient-example-zero-1-1">Find the limit of the denominator <span class="process-math">\(x^2-3x+2\)</span> as <span class="process-math">\(x \to 1\)</span> and as <span class="process-math">\(x \to 2\text{.}\)</span> Can the quotient rule be used for the original fraction at those <span class="process-math">\(x\)</span>-values? What would you try instead?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-quotient-example-zero-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.f"><a tabindex="-1" href="#task-quotient-example-zero" title="Copy heading and permalink for Task 3.f" aria-label="Copy heading and permalink for Task 3.f">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 3: Section 3: Building a Justification for a Quotient"><a tabindex="-1" href="#ex-limit-rules-quotient-example" title="Copy heading and permalink for Worksheet Exercise 3: Section 3: Building a Justification for a Quotient" aria-label="Copy heading and permalink for Worksheet Exercise 3: Section 3: Building a Justification for a Quotient">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-limit-rules-given-example"><h2 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 4: Starting from a Given Limit.</span>
+</h2>
+<div class="introduction" id="ex-limit-rules-given-example-2">
+<div class="para logical" id="ex-limit-rules-given-example-2-1">
+<div class="para">Sometimes a problem does not give us a formula for every piece. Consider</div>
+<div class="displaymath process-math" id="ex-limit-rules-given-example-2-1-1">
+\begin{equation*}
+\lim_{x \to 1} \frac{3\, g(x) \left(x^2+4\right)}{(2x+1)^2}
+\end{equation*}
+</div>
+<div class="para">where we are told that <span class="process-math">\(\displaystyle \lim_{x \to 1} g(x) = 4\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-given-example-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="ex-limit-rules-given-example-2-2"><h3 class="heading"><span class="title">A Given Limit Is Not a Function Value.</span></h3>
+<div class="para" id="ex-limit-rules-given-example-2-2-2">We are <em class="emphasis">not</em> saying that <span class="process-math">\(g(x)=4\text{.}\)</span> We are not even saying that <span class="process-math">\(g(1)=4\text{,}\)</span> since <span class="process-math">\(g\)</span> might be undefined at <span class="process-math">\(x=1\)</span> or might have a different value there.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-given-example-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-limit-rules-given-example-2-2-3">We are simply treating the statement <span class="process-math">\(\displaystyle \lim_{x \to 1} g(x) = 4\)</span> as if it were a new elementary limit that we get to start with, because the problem gave it to us. In a justification, the reason for this step is “given”.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-given-example-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: A Given Limit Is Not a Function Value"><a tabindex="-1" href="#ex-limit-rules-given-example-2-2" title="Copy heading and permalink for Assemblage: A Given Limit Is Not a Function Value" aria-label="Copy heading and permalink for Assemblage: A Given Limit Is Not a Function Value">🔗</a></div>
+</article>
+</div>
+<article class="task exercise-like" id="task-given-example-deconstruct"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-given-example-deconstruct-1-1">Deconstruct the formula.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-deconstruct-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-given-example-deconstruct-1-2">
+<li id="task-given-example-deconstruct-1-2-1">
+<div class="para" id="task-given-example-deconstruct-1-2-1-1">What is the last operation? Name the numerator and the denominator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-deconstruct-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.a"><a tabindex="-1" href="#task-given-example-deconstruct-1-2-1" title="Copy heading and permalink for Item 4.a" aria-label="Copy heading and permalink for Item 4.a">🔗</a></div>
+</li>
+<li id="task-given-example-deconstruct-1-2-2">
+<div class="para" id="task-given-example-deconstruct-1-2-2-1">The numerator is a product. What are its two factors? Which factor involves a constant multiple of <span class="process-math">\(g(x)\text{,}\)</span> and which is a sum?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-deconstruct-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.b"><a tabindex="-1" href="#task-given-example-deconstruct-1-2-2" title="Copy heading and permalink for Item 4.b" aria-label="Copy heading and permalink for Item 4.b">🔗</a></div>
+</li>
+<li id="task-given-example-deconstruct-1-2-3">
+<div class="para" id="task-given-example-deconstruct-1-2-3-1">The denominator <span class="process-math">\((2x+1)^2\)</span> is a product of two copies of what linear formula?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-deconstruct-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.c"><a tabindex="-1" href="#task-given-example-deconstruct-1-2-3" title="Copy heading and permalink for Item 4.c" aria-label="Copy heading and permalink for Item 4.c">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.a"><a tabindex="-1" href="#task-given-example-deconstruct" title="Copy heading and permalink for Task 4.a" aria-label="Copy heading and permalink for Task 4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-given-example-elementary"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-given-example-elementary-1-1">Start the justification with the limits we get to begin with, as <span class="process-math">\(x \to 1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-elementary-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-given-example-elementary-1-2">
+<li id="task-given-example-elementary-1-2-1">
+<div class="para" id="task-given-example-elementary-1-2-1-1">
+<em class="emphasis">Step 1.</em> The limit of <span class="process-math">\(g(x)\text{.}\)</span> (What is the reason for this step?)<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-elementary-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.a"><a tabindex="-1" href="#task-given-example-elementary-1-2-1" title="Copy heading and permalink for Item 4.a" aria-label="Copy heading and permalink for Item 4.a">🔗</a></div>
+</li>
+<li id="task-given-example-elementary-1-2-2">
+<div class="para" id="task-given-example-elementary-1-2-2-1">
+<em class="emphasis">Step 2.</em> The identity function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-elementary-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.b"><a tabindex="-1" href="#task-given-example-elementary-1-2-2" title="Copy heading and permalink for Item 4.b" aria-label="Copy heading and permalink for Item 4.b">🔗</a></div>
+</li>
+<li id="task-given-example-elementary-1-2-3">
+<div class="para" id="task-given-example-elementary-1-2-3-1">
+<em class="emphasis">Step 3.</em> The linear formula <span class="process-math">\(2x+1\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-elementary-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.c"><a tabindex="-1" href="#task-given-example-elementary-1-2-3" title="Copy heading and permalink for Item 4.c" aria-label="Copy heading and permalink for Item 4.c">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="1.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.b"><a tabindex="-1" href="#task-given-example-elementary" title="Copy heading and permalink for Task 4.b" aria-label="Copy heading and permalink for Task 4.b">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-given-example-numerator"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="task-given-example-numerator-1-1">Build the limit of the numerator.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-numerator-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-given-example-numerator-1-2">
+<li id="task-given-example-numerator-1-2-1">
+<div class="para" id="task-given-example-numerator-1-2-1-1">
+<em class="emphasis">Step 4.</em> Find <span class="process-math">\(\displaystyle \lim_{x \to 1} 3\,g(x)\)</span> (constant multiple rule with Step 1).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-numerator-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.a"><a tabindex="-1" href="#task-given-example-numerator-1-2-1" title="Copy heading and permalink for Item 4.a" aria-label="Copy heading and permalink for Item 4.a">🔗</a></div>
+</li>
+<li id="task-given-example-numerator-1-2-2">
+<div class="para" id="task-given-example-numerator-1-2-2-1">
+<em class="emphasis">Step 5.</em> Find <span class="process-math">\(\displaystyle \lim_{x \to 1} x^2\)</span> (product rule with Step 2).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-numerator-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.b"><a tabindex="-1" href="#task-given-example-numerator-1-2-2" title="Copy heading and permalink for Item 4.b" aria-label="Copy heading and permalink for Item 4.b">🔗</a></div>
+</li>
+<li id="task-given-example-numerator-1-2-3">
+<div class="para" id="task-given-example-numerator-1-2-3-1">
+<em class="emphasis">Step 6.</em> Find <span class="process-math">\(\displaystyle \lim_{x \to 1} \left(x^2+4\right)\)</span> (sum rule with Step 5 and the constant function).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-numerator-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.c"><a tabindex="-1" href="#task-given-example-numerator-1-2-3" title="Copy heading and permalink for Item 4.c" aria-label="Copy heading and permalink for Item 4.c">🔗</a></div>
+</li>
+<li id="task-given-example-numerator-1-2-4">
+<div class="para" id="task-given-example-numerator-1-2-4-1">
+<em class="emphasis">Step 7.</em> Find <span class="process-math">\(\displaystyle \lim_{x \to 1} 3\,g(x)\left(x^2+4\right)\)</span> (product rule with Steps 4 and 6).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-numerator-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.d"><a tabindex="-1" href="#task-given-example-numerator-1-2-4" title="Copy heading and permalink for Item 4.d" aria-label="Copy heading and permalink for Item 4.d">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.c"><a tabindex="-1" href="#task-given-example-numerator" title="Copy heading and permalink for Task 4.c" aria-label="Copy heading and permalink for Task 4.c">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-given-example-denominator"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="task-given-example-denominator-1-1">
+<em class="emphasis">Step 8.</em> Build the limit of the denominator. Use the product rule with Step 3 used for both factors to find <span class="process-math">\(\displaystyle \lim_{x \to 1} (2x+1)^2\text{.}\)</span> Is this limit nonzero?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-denominator-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.d"><a tabindex="-1" href="#task-given-example-denominator" title="Copy heading and permalink for Task 4.d" aria-label="Copy heading and permalink for Task 4.d">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-given-example-quotient"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para" id="task-given-example-quotient-1-1">
+<em class="emphasis">Step 9.</em> Use the quotient rule with Steps 7 and 8 to find the original limit. Simplify your answer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-given-example-quotient-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="1in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.e"><a tabindex="-1" href="#task-given-example-quotient" title="Copy heading and permalink for Task 4.e" aria-label="Copy heading and permalink for Task 4.e">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: Section 4: Starting from a Given Limit"><a tabindex="-1" href="#ex-limit-rules-given-example" title="Copy heading and permalink for Worksheet Exercise 4: Section 4: Starting from a Given Limit" aria-label="Copy heading and permalink for Worksheet Exercise 4: Section 4: Starting from a Given Limit">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-limit-rules-practice"><h2 class="heading">
+<span class="codenumber">5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 5: Practice with Computer Feedback.</span>
+</h2>
+<div class="introduction" id="ex-limit-rules-practice-2">
+<div class="para" id="ex-limit-rules-practice-2-1">Practice justifying limits with similar problems at the web page below. It gives you feedback on your choices of rules as you build each justification.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-practice-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="image-box" style="width: 20%; margin-left: 0%; margin-right: 80%;">
+<img src="external/images/qr-limit-rules-practice.png" class="contained" alt="described in detail following the image" aria-describedby="ex-limit-rules-practice-2-2-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="ex-limit-rules-practice-2-2-description">
+<div class="para" id="ex-limit-rules-practice-2-2-1-1">QR code linking to the limit rules practice web page.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-practice-2-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div></details>
+</div>
+<div class="para" id="ex-limit-rules-practice-2-3">
+<a class="external" href="https://dbrianwalton.github.io/home/webapp/limit_rules.html" target="_blank"><code class="code-inline tex2jax_ignore">dbrianwalton.github.io/home/webapp/limit_rules.html</code></a><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-limit-rules-practice-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-limit-rules-practice-notes"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-limit-rules-practice-notes-1-1">Use this space to record one problem from the practice page and your justification for it.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-limit-rules-practice-notes-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 5.a"><a tabindex="-1" href="#task-limit-rules-practice-notes" title="Copy heading and permalink for Task 5.a" aria-label="Copy heading and permalink for Task 5.a">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 5: Section 5: Practice with Computer Feedback"><a tabindex="-1" href="#ex-limit-rules-practice" title="Copy heading and permalink for Worksheet Exercise 5: Section 5: Practice with Computer Feedback" aria-label="Copy heading and permalink for Worksheet Exercise 5: Section 5: Practice with Computer Feedback">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet: Using Limit Rules"><a tabindex="-1" href="#activity-using-limit-rules" title="Copy heading and permalink for Worksheet: Using Limit Rules" aria-label="Copy heading and permalink for Worksheet: Using Limit Rules">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="handout-limit-proofs.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="activity-intro-derivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

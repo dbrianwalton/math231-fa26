@@ -244,6 +244,42 @@ var ptx_lunr_docs = [
   "body": "  Consider the function .  Evaluate each limit and interpret the result by writing a sentence describing the end behavior it represents.       "
 },
 {
+  "id": "notes-week-10-11",
+  "level": "1",
+  "url": "notes-week-10-11.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 10 and Week 11",
+  "body": " Week 10 and Week 11   These weeks made the idea of a limit precise and then put it to work. We stated the definition of a limit in terms of an error tolerance for the output and a precision for the input, and we used particular values of to see when the definition is satisfied. From the definition we built limit rules and used them to justify limits of formulas, one step at a time. We then used tangent lines to define the derivative function and learned to sketch the graph of the derivative from the graph of the original function.    L4 Illustrating the Limit Definition   L4  I can illustrate the definition of a limit as being satisfied or not satisfied using particular values for epsilon.   What do I need to understand?    means that for every there exists some so that whenever . The value is an acceptable tolerance of error for the output, and is how close the input must be to to guarantee that tolerance. Both are distances, so in a context they carry the units of the output and the input.    The inequality means , a horizontal strip around the line . Solving this inequality for gives the set of inputs whose outputs are acceptable.    For a particular , the definition is satisfied when the set of acceptable inputs contains an interval around , with the point itself allowed to be left out. Then is the smaller of the two distances from to the endpoints of that interval, and any smaller positive number also works.    For a particular , the definition is not satisfied when the set of acceptable inputs does not reach all the way around . For example, may lie outside the set, or on its edge. Then no positive works, and the limit statement is false.    One value of that fails is enough to show a limit statement is false. One value of that works is not enough to show it is true, since the definition requires a working for every  .      L4   A circuit is powered by a 12 volt battery connected across a resistor of ohms. The current in amperes is . With ohms the current is exactly 3 amperes. The device needs the current to be within amperes of 3 amperes. How much can the resistance vary from 4 ohms? Explain how this relates to the definition of a limit.    The current must satisfy , so .  We need with . Taking reciprocals reverses the inequalities, and multiplying by 12 gives , which is . Alternatively, we find the endpoints by solving and and use those points as the endpoints of the interval.  The lower endpoint is below 4 ohms and the upper endpoint is above 4 ohms. The symmetric neighborhood fits inside the acceptable interval when , so is the largest value that works, and any smaller positive value also works.  The situation illustrates for the tolerance . If , then . Here is the tolerance on the output current in amperes and is the precision on the input resistance in ohms. The definition of the limit makes the stronger promise that a working exists for every tolerance , not just .      L5 Justifying Limits with Limit Rules   L5  I can apply limit rules according to rules of deductive reasoning to justify the value of a limit based on formulas.   What do I need to understand?   A justification is a sequence of true limit statements, each followed by the reason it is true. The reason is either a named rule (an elementary limit or a limit of a combination) or given .    Deconstruct the formula to plan the justification: find the last operation, then repeat for each piece until every piece is a constant, the identity function, or a linear function. Write the justification in the opposite order, starting from those elementary pieces and building up to the full formula.    Each combination rule requires that the limits of its parts are already known. In each step, name the earlier step numbers that you are combining. Powers of are justified by repeated use of the product rule.    The quotient rule and the reciprocal rule require that the limit of the denominator is not zero . Write down the limit of the denominator and note that it is nonzero before using the rule. If it is zero, the rule cannot be used and a different method, such as factoring and cancelling, is needed.    A given limit such as is a place to start, with the reason given . It does not say that , and may not even exist. We may also be given a limit of some combination, such as , which cannot be separated since division by would have denominator 0.      L5   Suppose is a function for which . Find and justify the limit using limit rules involving either elementary limits or combinations of limits that have already been demonstrated.    The last operation is a quotient. The numerator is a constant multiple of the product , whose limit is given, so we treat that product as a single piece and do not need to know by itself. The denominator is built from , , and a constant.   (given).  (constant multiple rule with Step 1).  (limit of the identity function).  (product rule with Step 3 used for both factors).  (limit of a linear function3).  (sum rule with Steps 4 and 5).    (quotient rule with Steps 2 and 6, which applies because the limit of the denominator, , is not zero).        D3 Sketching the Derivative Graph   D3  I can create (sketch) a graph of a derivative function based on the original function's graph.   What do I need to understand?   The output is the slope of the tangent line to the graph of at . The graph of reports slopes, not heights, so it does not look like a copy of the graph of .    Where has a horizontal tangent line, such as a local maximum or local minimum, . Mark these -values first as the places where the graph of meets the -axis.    Where is increasing, the slopes are positive, so the graph of is above the -axis. Where is decreasing, the slopes are negative, so the graph of is below the -axis.    The steeper the graph of , the farther the graph of is from the -axis. Between two horizontal tangents, the graph of is steepest near an inflection point, so that is where reaches a local maximum or local minimum.    Build the sketch in order: mark the zeros, decide the sign on each interval, locate the steepest points, and then connect everything with a smooth curve. Estimates of slopes are fine, but the zeros, signs, and the places where is largest or smallest must be correct.      D3   The graph of is shown for . Each grid square is 1 unit wide and 1 unit tall.   An M-shaped graph for x from -3 to 4 on a grid. It rises from about (-3, -0.8) to a local maximum at (-2, 2), falls to a local minimum at (0, 0), rises to a higher local maximum at (3, 5.9), and then falls to (4, 2).    Sketch the graph of on the axes below. Mark the -values where and your graph should show clearly where is increasing and decreasing, with reasonable estimates for actual values at extremes.   Blank axes on a grid for x from -3 to 4 and for slope values from -10 to 8. The horizontal scale matches the graph of f(x).      The graph of has horizontal tangent lines at , , and , so at those three -values.  The graph of is increasing on and , so is positive there. It is decreasing on and , so is negative there. The graph of therefore crosses the -axis at each of the three -values, and it has the shape of a cubic with a negative leading coefficient.  The graph of is steepest between the horizontal tangent lines near its inflection points, at about and . On the graph is falling, so has a local minimum near with a slope of about . On the graph is rising, so has a local maximum near with a slope of about . The graph of is rising fairly steeply at and falling steeply at , so is about at and at .   A graph for x from -3 to 4 that crosses the x-axis at x = -2, 0, and 3. It is positive and falling for x less than -2, then negative between -2 and 0 with a local minimum near (-1.1, -1.5), then positive between 0 and 3 with a local maximum near (1.8, 3), and then negative and falling for x greater than 3.       "
+},
+{
+  "id": "L4-checkpoint",
+  "level": "2",
+  "url": "notes-week-10-11.html#L4-checkpoint",
+  "type": "Checkpoint",
+  "number": "16",
+  "title": "L4.",
+  "body": " L4   A circuit is powered by a 12 volt battery connected across a resistor of ohms. The current in amperes is . With ohms the current is exactly 3 amperes. The device needs the current to be within amperes of 3 amperes. How much can the resistance vary from 4 ohms? Explain how this relates to the definition of a limit.    The current must satisfy , so .  We need with . Taking reciprocals reverses the inequalities, and multiplying by 12 gives , which is . Alternatively, we find the endpoints by solving and and use those points as the endpoints of the interval.  The lower endpoint is below 4 ohms and the upper endpoint is above 4 ohms. The symmetric neighborhood fits inside the acceptable interval when , so is the largest value that works, and any smaller positive value also works.  The situation illustrates for the tolerance . If , then . Here is the tolerance on the output current in amperes and is the precision on the input resistance in ohms. The definition of the limit makes the stronger promise that a working exists for every tolerance , not just .   "
+},
+{
+  "id": "L5-checkpoint",
+  "level": "2",
+  "url": "notes-week-10-11.html#L5-checkpoint",
+  "type": "Checkpoint",
+  "number": "17",
+  "title": "L5.",
+  "body": " L5   Suppose is a function for which . Find and justify the limit using limit rules involving either elementary limits or combinations of limits that have already been demonstrated.    The last operation is a quotient. The numerator is a constant multiple of the product , whose limit is given, so we treat that product as a single piece and do not need to know by itself. The denominator is built from , , and a constant.   (given).  (constant multiple rule with Step 1).  (limit of the identity function).  (product rule with Step 3 used for both factors).  (limit of a linear function3).  (sum rule with Steps 4 and 5).    (quotient rule with Steps 2 and 6, which applies because the limit of the denominator, , is not zero).     "
+},
+{
+  "id": "D3-checkpoint",
+  "level": "2",
+  "url": "notes-week-10-11.html#D3-checkpoint",
+  "type": "Checkpoint",
+  "number": "18",
+  "title": "D3.",
+  "body": " D3   The graph of is shown for . Each grid square is 1 unit wide and 1 unit tall.   An M-shaped graph for x from -3 to 4 on a grid. It rises from about (-3, -0.8) to a local maximum at (-2, 2), falls to a local minimum at (0, 0), rises to a higher local maximum at (3, 5.9), and then falls to (4, 2).    Sketch the graph of on the axes below. Mark the -values where and your graph should show clearly where is increasing and decreasing, with reasonable estimates for actual values at extremes.   Blank axes on a grid for x from -3 to 4 and for slope values from -10 to 8. The horizontal scale matches the graph of f(x).      The graph of has horizontal tangent lines at , , and , so at those three -values.  The graph of is increasing on and , so is positive there. It is decreasing on and , so is negative there. The graph of therefore crosses the -axis at each of the three -values, and it has the shape of a cubic with a negative leading coefficient.  The graph of is steepest between the horizontal tangent lines near its inflection points, at about and . On the graph is falling, so has a local minimum near with a slope of about . On the graph is rising, so has a local maximum near with a slope of about . The graph of is rising fairly steeply at and falling steeply at , so is about at and at .   A graph for x from -3 to 4 that crosses the x-axis at x = -2, 0, and 3. It is positive and falling for x less than -2, then negative between -2 and 0 with a local minimum near (-1.1, -1.5), then positive between 0 and 3 with a local maximum near (1.8, 3), and then negative and falling for x greater than 3.     "
+},
+{
   "id": "activity-linear-relations-slope",
   "level": "1",
   "url": "activity-linear-relations-slope.html",
@@ -293,7 +329,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-linear-relations-slope.html#def-slope-point-slope",
   "type": "Definition",
-  "number": "16",
+  "number": "19",
   "title": "",
   "body": "  The constant rate you found in Model 2 is called the slope of the relation, or its average rate of change . The equation you built in Task 4 has the same structure as called point-slope form , where is any known point on the relation and is the slope. It says exactly what you wrote: a new value equals a starting value plus the slope times how far you've moved from that starting point.   "
 },
@@ -797,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-inverse-functions.html#def-inverse-function",
   "type": "Definition",
-  "number": "19",
+  "number": "22",
   "title": "Inverse function.",
   "body": " Inverse function   For a given function , the function is the inverse function to if   for every in the domain of , and  for every in the domain of .    "
 },
@@ -1103,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#def-handout-limit",
   "type": "Definition",
-  "number": "28",
+  "number": "31",
   "title": "Limit.",
   "body": " Limit    means that for every there exists a such that .   "
 },
@@ -1112,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-3-4",
   "type": "Remark",
-  "number": "29",
+  "number": "32",
   "title": "Strategy.",
   "body": " Strategy  A proof states the value or method to find as soon as we state we are given the value of . In practice, we have to work backward on scratch paper. We start from the desired output inequality and rewrite it so that the expression appears, usually by factoring. The value is usually multiplied by some value or formula which we need to bound so that we get some multiple of . We choose our value of so that when multiplying by this bound we stay smaller than . Then we return to the actual proof and proceed forward, beginning with , stating , assuming and ending with .  "
 },
@@ -1121,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#ex-handout-limit-linear",
   "type": "Example",
-  "number": "30",
+  "number": "33",
   "title": "A Linear Function.",
   "body": " A Linear Function   Prove .     Scratch work. We want . Simplifying the left side means we want . We will be choosing and know that , which will then be multiplied by 2. This suggests we want .   Let and choose . If , then . Since was arbitrary, the limit statement is true.    "
 },
@@ -1130,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#ex-handout-limit-quadratic",
   "type": "Example",
-  "number": "31",
+  "number": "34",
   "title": "A Quadratic Function.",
   "body": " A Quadratic Function   Prove .     Scratch work. We want . Factoring gives . The factor is not constant, so we bound it. If we require , then we will work with , then and , so . Then , and we need . This suggests we also need . We meet both of our requirements by choosing .   Let and choose . If , we know that and . Because , we know . Together, we now know . Since was arbitrary, the limit statement is true.    "
 },
@@ -1148,7 +1184,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-constant",
   "type": "Theorem",
-  "number": "32",
+  "number": "35",
   "title": "Limit of a Constant.",
   "body": " Limit of a Constant   For any constant , .    Let . Any positive works, so choose . If , then .   "
 },
@@ -1157,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-identity",
   "type": "Theorem",
-  "number": "33",
+  "number": "36",
   "title": "Limit of the Identity Function.",
   "body": " Limit of the Identity Function    .    Let and choose . If , then .   "
 },
@@ -1166,7 +1202,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-linear",
   "type": "Theorem",
-  "number": "34",
+  "number": "37",
   "title": "Limit of a Linear Function.",
   "body": " Limit of a Linear Function   For constants and , .    Let and choose . If , then .   "
 },
@@ -1175,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-6-5",
   "type": "Remark",
-  "number": "35",
+  "number": "38",
   "title": "Continuity.",
   "body": " Continuity  In each of these results the value of the limit is the same as the value of the function at . For the constant function the value is , for the identity function the value is , and for the linear function the value is . This means that these elementary functions are continuous at every point .  "
 },
@@ -1184,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-scalar-multiple",
   "type": "Theorem",
-  "number": "36",
+  "number": "39",
   "title": "Limit of a Scalar Multiple.",
   "body": " Limit of a Scalar Multiple   If and is a constant, then .   "
 },
@@ -1193,7 +1229,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-4",
   "type": "Remark",
-  "number": "37",
+  "number": "40",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get .  "
 },
@@ -1211,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#ex-handout-snacks",
   "type": "Example",
-  "number": "38",
+  "number": "41",
   "title": "Buying Snacks.",
   "body": " Buying Snacks   You and a friend are buying snacks. You are supposed to buy of snacks and your friend is supposed to buy of snacks, but prices vary slightly so it is hard to be exact. You agree in advance that you will each stay within of your target. How far away can the total combined cost be from ?    Each of you are going to be spending a value between $2.90 and $3.10. The cheapest scenario is that you each spend $2.90 for a total cost of $5.80. The most expensive scenario results in a total cost of $6.20. The total error can be as large as $0.20.   "
 },
@@ -1220,7 +1256,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-triangle-inequality",
   "type": "Theorem",
-  "number": "39",
+  "number": "42",
   "title": "Triangle Inequality.",
   "body": " Triangle Inequality   For any values and , .   "
 },
@@ -1229,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-sum",
   "type": "Theorem",
-  "number": "40",
+  "number": "43",
   "title": "Limit of a Sum.",
   "body": " Limit of a Sum   If and , then .   "
 },
@@ -1238,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-10",
   "type": "Remark",
-  "number": "41",
+  "number": "44",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the sum uses .  "
 },
@@ -1256,7 +1292,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-product",
   "type": "Theorem",
-  "number": "42",
+  "number": "45",
   "title": "Limit of a Product.",
   "body": " Limit of a Product   If and , then .   "
 },
@@ -1265,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-13",
   "type": "Remark",
-  "number": "43",
+  "number": "46",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the product uses .  "
 },
@@ -1283,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-reciprocal",
   "type": "Theorem",
-  "number": "44",
+  "number": "47",
   "title": "Limit of a Reciprocal.",
   "body": " Limit of a Reciprocal   If and , then .   "
 },
@@ -1292,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-16",
   "type": "Remark",
-  "number": "45",
+  "number": "48",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get .  "
 },
@@ -1310,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-quotient",
   "type": "Theorem",
-  "number": "46",
+  "number": "49",
   "title": "Limit of a Quotient.",
   "body": " Limit of a Quotient   If and and , then .   "
 },
@@ -1319,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-19",
   "type": "Remark",
-  "number": "47",
+  "number": "50",
   "title": "No Need for <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " No Need for  This theorem can actually be proved based on earlier rules rather than requiring that we use the - rules for limits because a quotient is the same as a product of with a reciprocal .  "
 },
@@ -1331,6 +1367,105 @@ var ptx_lunr_docs = [
   "number": "5",
   "title": "",
   "body": " Because and , the limit rule for a reciprocal guarantees . Then since and , we can use the limit rule of products to know   "
+},
+{
+  "id": "activity-using-limit-rules",
+  "level": "1",
+  "url": "activity-using-limit-rules.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Using Limit Rules",
+  "body": " Using Limit Rules   Until now we have found limits from graphs, tables, and algebraic simplification. Proving a limit directly from the epsilon-delta definition is far too slow to do for every formula we meet. Today we learn to justify a limit by listing the limit rules that build it, one step at a time.  The rules below are the only tools we need. Keep this page handy, because every justification today is a list of true limit statements, each with the name of the rule that makes it true.    Section 1: The Limit Rules and Deconstructing a Formula    Elementary Limits      Limit of a Constant Function:       Limit of the Identity Function:       Limit of a Linear Function:         Limits of Combinations  Prior to each limit of combination, we must first know the limits of the parts that are being combined, which we represent as and .    Limit of a Constant Multiple:  .     Limit of a Reciprocal: If , then .     Limit of a Sum:  .     Limit of a Difference:  .     Limit of a Product:  .     Limit of a Quotient: If , then .     Limit of a Continuous Composition: If and is continuous at , then .      We can justify limits without writing epsilon-delta proofs if we use these rules instead. The limits of the elementary functions (constant, identity, and linear) were proved, so we justify such a limit by identifying the elementary function in play and naming the corresponding rule.  All of the more complicated algebraic functions are built from elementary functions by combining them with arithmetic or composition. Powers of the independent variable are repeated multiplication, so they are justified by repeated use of the product rule. We can therefore justify a limit by identifying how the formula is constructed and naming the appropriate limit rules.  Notice that each combination rule requires that we already know the limits of the component parts before we can combine them. In practice we think through a formula starting from its last operation. A logical justification, however, goes the other way: we first list the elementary pieces and then combine them one step at a time.  Our first example is . To begin, we deconstruct the formula by asking what the last operation is, and then doing the same for each piece.     The formula is a sum . Which two formulas are being added? Which of them is a linear function, so that we can use an elementary limit?      The other formula in the sum is . Explain why it is a constant multiple of . What is the constant?      Explain why is a product of two copies of the identity function.      Section 2: Building a Justification for a Sum   A justification is a numbered list of limit statements that we know are true, each followed by the reason. We start from the elementary pieces and work up to the full formula. For we begin with two elementary limits, and then each new step uses results from earlier steps.  Write each step in the form limit statement, then (rule used) . In the combination steps, also name the earlier step numbers that you are combining.      Step 1. Write the limit of the identity function as , and name the rule.       Step 2. Write the limit of the linear formula as , and name the rule.       Step 3. Use the product rule with and and Step 1 to find .       Step 4. Use the constant multiple rule with Step 3 to find .       Step 5. Use the sum rule with from Step 4 and from Step 2 to find .      Section 3: Building a Justification for a Quotient   Now consider . The last operation is a quotient, so we will eventually use the quotient rule.   Check the Denominator  The quotient rule only applies when the limit of the denominator is not zero . Before using the quotient rule, we must write down the limit of the denominator and note that it is nonzero. If it is zero, the quotient rule cannot be used, and we need a different method, such as the factoring and cancelling from the previous activity.      Deconstruct the formula.    The numerator is a product. What are the two factors? Which factor is a linear function, and which is a constant multiple of a power?    The denominator is a difference. Which two formulas are being subtracted? (Hint: group together.) Which of them is linear?        Start the justification with the elementary limits as .     Step 1. The identity function.     Step 2. The linear formula .     Step 3. The linear formula .        Build the limit of the numerator.     Step 4. Find (product rule).     Step 5. Find (constant multiple rule).     Step 6. Find (product rule).         Step 7. Build the limit of the denominator. Use the difference rule with from Step 4 and from Step 3 to find . Is this limit nonzero?       Step 8. Use the quotient rule with Steps 6 and 7 to find the original limit. State the condition on the denominator that lets you use the rule.      Find the limit of the denominator as and as . Can the quotient rule be used for the original fraction at those -values? What would you try instead?      Section 4: Starting from a Given Limit   Sometimes a problem does not give us a formula for every piece. Consider where we are told that .   A Given Limit Is Not a Function Value  We are not saying that . We are not even saying that , since might be undefined at or might have a different value there.  We are simply treating the statement as if it were a new elementary limit that we get to start with, because the problem gave it to us. In a justification, the reason for this step is given .      Deconstruct the formula.    What is the last operation? Name the numerator and the denominator.    The numerator is a product. What are its two factors? Which factor involves a constant multiple of , and which is a sum?    The denominator is a product of two copies of what linear formula?        Start the justification with the limits we get to begin with, as .     Step 1. The limit of . (What is the reason for this step?)     Step 2. The identity function.     Step 3. The linear formula .        Build the limit of the numerator.     Step 4. Find (constant multiple rule with Step 1).     Step 5. Find (product rule with Step 2).     Step 6. Find (sum rule with Step 5 and the constant function).     Step 7. Find (product rule with Steps 4 and 6).         Step 8. Build the limit of the denominator. Use the product rule with Step 3 used for both factors to find . Is this limit nonzero?       Step 9. Use the quotient rule with Steps 7 and 8 to find the original limit. Simplify your answer.      Section 5: Practice with Computer Feedback   Practice justifying limits with similar problems at the web page below. It gives you feedback on your choices of rules as you build each justification.    QR code linking to the limit rules practice web page.          Use this space to record one problem from the practice page and your justification for it.     "
+},
+{
+  "id": "ex-limit-rules-summary",
+  "level": "2",
+  "url": "activity-using-limit-rules.html#ex-limit-rules-summary",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: The Limit Rules and Deconstructing a Formula.",
+  "body": " Section 1: The Limit Rules and Deconstructing a Formula    Elementary Limits      Limit of a Constant Function:       Limit of the Identity Function:       Limit of a Linear Function:         Limits of Combinations  Prior to each limit of combination, we must first know the limits of the parts that are being combined, which we represent as and .    Limit of a Constant Multiple:  .     Limit of a Reciprocal: If , then .     Limit of a Sum:  .     Limit of a Difference:  .     Limit of a Product:  .     Limit of a Quotient: If , then .     Limit of a Continuous Composition: If and is continuous at , then .      We can justify limits without writing epsilon-delta proofs if we use these rules instead. The limits of the elementary functions (constant, identity, and linear) were proved, so we justify such a limit by identifying the elementary function in play and naming the corresponding rule.  All of the more complicated algebraic functions are built from elementary functions by combining them with arithmetic or composition. Powers of the independent variable are repeated multiplication, so they are justified by repeated use of the product rule. We can therefore justify a limit by identifying how the formula is constructed and naming the appropriate limit rules.  Notice that each combination rule requires that we already know the limits of the component parts before we can combine them. In practice we think through a formula starting from its last operation. A logical justification, however, goes the other way: we first list the elementary pieces and then combine them one step at a time.  Our first example is . To begin, we deconstruct the formula by asking what the last operation is, and then doing the same for each piece.     The formula is a sum . Which two formulas are being added? Which of them is a linear function, so that we can use an elementary limit?      The other formula in the sum is . Explain why it is a constant multiple of . What is the constant?      Explain why is a product of two copies of the identity function.    "
+},
+{
+  "id": "ex-limit-rules-sum-example",
+  "level": "2",
+  "url": "activity-using-limit-rules.html#ex-limit-rules-sum-example",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Building a Justification for a Sum.",
+  "body": " Section 2: Building a Justification for a Sum   A justification is a numbered list of limit statements that we know are true, each followed by the reason. We start from the elementary pieces and work up to the full formula. For we begin with two elementary limits, and then each new step uses results from earlier steps.  Write each step in the form limit statement, then (rule used) . In the combination steps, also name the earlier step numbers that you are combining.      Step 1. Write the limit of the identity function as , and name the rule.       Step 2. Write the limit of the linear formula as , and name the rule.       Step 3. Use the product rule with and and Step 1 to find .       Step 4. Use the constant multiple rule with Step 3 to find .       Step 5. Use the sum rule with from Step 4 and from Step 2 to find .    "
+},
+{
+  "id": "ex-limit-rules-quotient-example",
+  "level": "2",
+  "url": "activity-using-limit-rules.html#ex-limit-rules-quotient-example",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: Building a Justification for a Quotient.",
+  "body": " Section 3: Building a Justification for a Quotient   Now consider . The last operation is a quotient, so we will eventually use the quotient rule.   Check the Denominator  The quotient rule only applies when the limit of the denominator is not zero . Before using the quotient rule, we must write down the limit of the denominator and note that it is nonzero. If it is zero, the quotient rule cannot be used, and we need a different method, such as the factoring and cancelling from the previous activity.      Deconstruct the formula.    The numerator is a product. What are the two factors? Which factor is a linear function, and which is a constant multiple of a power?    The denominator is a difference. Which two formulas are being subtracted? (Hint: group together.) Which of them is linear?        Start the justification with the elementary limits as .     Step 1. The identity function.     Step 2. The linear formula .     Step 3. The linear formula .        Build the limit of the numerator.     Step 4. Find (product rule).     Step 5. Find (constant multiple rule).     Step 6. Find (product rule).         Step 7. Build the limit of the denominator. Use the difference rule with from Step 4 and from Step 3 to find . Is this limit nonzero?       Step 8. Use the quotient rule with Steps 6 and 7 to find the original limit. State the condition on the denominator that lets you use the rule.      Find the limit of the denominator as and as . Can the quotient rule be used for the original fraction at those -values? What would you try instead?    "
+},
+{
+  "id": "ex-limit-rules-given-example",
+  "level": "2",
+  "url": "activity-using-limit-rules.html#ex-limit-rules-given-example",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: Starting from a Given Limit.",
+  "body": " Section 4: Starting from a Given Limit   Sometimes a problem does not give us a formula for every piece. Consider where we are told that .   A Given Limit Is Not a Function Value  We are not saying that . We are not even saying that , since might be undefined at or might have a different value there.  We are simply treating the statement as if it were a new elementary limit that we get to start with, because the problem gave it to us. In a justification, the reason for this step is given .      Deconstruct the formula.    What is the last operation? Name the numerator and the denominator.    The numerator is a product. What are its two factors? Which factor involves a constant multiple of , and which is a sum?    The denominator is a product of two copies of what linear formula?        Start the justification with the limits we get to begin with, as .     Step 1. The limit of . (What is the reason for this step?)     Step 2. The identity function.     Step 3. The linear formula .        Build the limit of the numerator.     Step 4. Find (constant multiple rule with Step 1).     Step 5. Find (product rule with Step 2).     Step 6. Find (sum rule with Step 5 and the constant function).     Step 7. Find (product rule with Steps 4 and 6).         Step 8. Build the limit of the denominator. Use the product rule with Step 3 used for both factors to find . Is this limit nonzero?       Step 9. Use the quotient rule with Steps 7 and 8 to find the original limit. Simplify your answer.    "
+},
+{
+  "id": "ex-limit-rules-practice",
+  "level": "2",
+  "url": "activity-using-limit-rules.html#ex-limit-rules-practice",
+  "type": "Worksheet Exercise",
+  "number": "5",
+  "title": "Section 5: Practice with Computer Feedback.",
+  "body": " Section 5: Practice with Computer Feedback   Practice justifying limits with similar problems at the web page below. It gives you feedback on your choices of rules as you build each justification.    QR code linking to the limit rules practice web page.          Use this space to record one problem from the practice page and your justification for it.    "
+},
+{
+  "id": "activity-intro-derivative",
+  "level": "1",
+  "url": "activity-intro-derivative.html",
+  "type": "Worksheet",
+  "number": "",
+  "title": "Tangent Lines and the Derivative",
+  "body": " Tangent Lines and the Derivative   A line has one slope, and that slope is the same everywhere along it. A curved graph is different: it is steeper in some places and shallower in others, and sometimes it is perfectly horizontal. So the slope of the graph only makes sense for each particular point.  In this activity we measure the slope of a graph at a point by drawing a tangent line there. Then we collect those slopes into a brand new function, one that takes an -value and reports how steep the graph is at that -value. This new function is the central object of the rest of the course.    Section 1: Zooming in on a curve   Imagine zooming in on a smooth curve at one of its points. The closer we look, the straighter the curve appears. The line that the curve turns into is the line we want.   Tangent Line  A tangent line to the graph of at is a line that passes through the point and that looks like the graph of when we zoom in close enough to that point.   The following three views are centered at the same point on a graph. The solid curve is the graph of . The dashed line is the tangent line at that point. Each view is zoomed in more than the one before it.   Zooming in on a graph at    Window width 3   A square view of a solid curve and a dashed line crossing at a dot in the center. The curve bends noticeably away from the dashed line toward both edges of the view.      Window width 1.2   A square view of a solid curve and a dashed line crossing at a dot in the center. The curve stays close to the dashed line and separates only slightly near the edges.      Window width 0.2   A square view of a solid curve and a dashed line crossing at a dot in the center. The curve and the dashed line are on top of each other and cannot be told apart.          Describe what happens to the solid curve compared to the dashed line as we zoom in. Why is the dashed line a good description of the graph near the dot, but only when we are zoomed in?      In the views above, is the slope of the tangent line positive, negative, or zero? How can you tell without any numbers on the axes?      Section 2: Tangent slopes along a graph   Here is the graph of a function shown for . The dots mark the points where is , , , , , , and . Each grid square is 1 unit wide and 1 unit tall, with lighter lines halfway between.   The graph of   A smooth W-shaped graph for x from -4 to 4 on a grid. It has a local minimum at the point (-3,-4), rises to a local maximum at (0,0), and falls to a second local minimum at (3,-4). Dots mark the points at x = -4, -3, -1.5, 0, 1.5, 3, and 4, with y-values about -1.58, -4, -1.75, 0, -1.75, -4, and about -1.58.     We will measure the slope of the tangent line at each dot, record the slopes in a table, and then plot them. Estimates are fine. Use a straightedge and draw each tangent line so that it matches the graph as closely as possible at its dot.   Estimated slopes of tangent lines of              Slope               Find the dots where the tangent line is horizontal. Draw those tangent lines on and record their slopes in the table. What is the slope of any horizontal line?      Draw the tangent lines at and on . These dots are close to the inflection points of , where the graph switches from bending one way to bending the other and is as steep as it gets between the horizontal tangents. Pick two points on each tangent line you drew, use rise over run to estimate its slope, and record the slopes in the table.      Draw the tangent lines at the two end dots, and . Estimate their slopes and record them in the table. How do these slopes compare with the ones at ?      Plot the seven points from your table on the axes below. Then sketch a smooth curve through them, ending at and .   Axes for the slope of the tangent line   Blank axes on a grid for x from -4 to 4 and for slope values from -6 to 6. The horizontal scale matches the graph of f(x).         Section 3: The derivative function   The curve you just sketched takes each -value and reports the slope of the tangent line to the graph of at that -value. That makes it a function in its own right, and it has a name.   The Derivative  The derivative of is the function (read prime of ) whose output at each is the slope of the tangent line to the graph of at the point . In particular, the graph of has a horizontal tangent line at exactly when .  When we learned about the concavity of , we discussed the idea that is concave up when the slope is increasing. That is, must increase on any interval where is concave up. Similarly, must decrease on any interval where is concave down. Consequently, inflection points of correspond to turning points for , where switches between increasing and decreasing.   The input of is a position along the graph of , and its output is a slope. Read as the slope of the tangent line to at . Keep the two functions apart: is a height and is a slope.     Find the -values where your sketch of crosses the -axis. Where do those -values show up on the graph of ? Explain the connection.      Use your sketch of to estimate and . Write what each value tells you about the graph of .      Section 4: When a tangent line does not exist   A tangent line to at needs two things. There must be a point for the line to pass through, and the graph must look like a line when we zoom in. Here we study a graph with a point that is present but where the graph never looks like a line.   The graph of   A graph made of two parabola arcs that meet at a sharp corner at the point (0,2). For x from -3 to 0 the graph is part of a downward-opening parabola with its peak at (-1,3), falling from (-3,-1) up to the peak and back down to (0,2). For x from 0 to 4 the graph rises from the corner, reaches a peak at (2,4), and falls to (4,2).     The graph has a sharp corner at . No matter how far we zoom in on a corner, it still looks like a corner and never like a single line. The pieces on either side do each look like a line, though, so we can still ask about the slope that each side is heading toward. We write for the slope of the tangent line to the piece of the graph immediately to the left of , and for the slope of the tangent line to the piece immediately to the right.     On , draw the tangent line to the left piece of the graph at the point , and the tangent line to the right piece at the same point. Estimate their slopes and complete the statements.       Is there a single number that can be the slope of the tangent line to at ? Explain why does not exist even though does.      Sketch for on the axes below. Use the horizontal tangent lines to place the zeros of . Estimate the slope at and at . At , mark the two one-sided values from above with open points.   Axes for the slope of the tangent line to   Blank axes on a grid for x from -3 to 4 and for slope values from -4 to 4. The horizontal scale matches the graph of g(x).        "
+},
+{
+  "id": "ex-derivative-tangent",
+  "level": "2",
+  "url": "activity-intro-derivative.html#ex-derivative-tangent",
+  "type": "Worksheet Exercise",
+  "number": "1",
+  "title": "Section 1: Zooming in on a curve.",
+  "body": " Section 1: Zooming in on a curve   Imagine zooming in on a smooth curve at one of its points. The closer we look, the straighter the curve appears. The line that the curve turns into is the line we want.   Tangent Line  A tangent line to the graph of at is a line that passes through the point and that looks like the graph of when we zoom in close enough to that point.   The following three views are centered at the same point on a graph. The solid curve is the graph of . The dashed line is the tangent line at that point. Each view is zoomed in more than the one before it.   Zooming in on a graph at    Window width 3   A square view of a solid curve and a dashed line crossing at a dot in the center. The curve bends noticeably away from the dashed line toward both edges of the view.      Window width 1.2   A square view of a solid curve and a dashed line crossing at a dot in the center. The curve stays close to the dashed line and separates only slightly near the edges.      Window width 0.2   A square view of a solid curve and a dashed line crossing at a dot in the center. The curve and the dashed line are on top of each other and cannot be told apart.          Describe what happens to the solid curve compared to the dashed line as we zoom in. Why is the dashed line a good description of the graph near the dot, but only when we are zoomed in?      In the views above, is the slope of the tangent line positive, negative, or zero? How can you tell without any numbers on the axes?    "
+},
+{
+  "id": "ex-derivative-slopes",
+  "level": "2",
+  "url": "activity-intro-derivative.html#ex-derivative-slopes",
+  "type": "Worksheet Exercise",
+  "number": "2",
+  "title": "Section 2: Tangent slopes along a graph.",
+  "body": " Section 2: Tangent slopes along a graph   Here is the graph of a function shown for . The dots mark the points where is , , , , , , and . Each grid square is 1 unit wide and 1 unit tall, with lighter lines halfway between.   The graph of   A smooth W-shaped graph for x from -4 to 4 on a grid. It has a local minimum at the point (-3,-4), rises to a local maximum at (0,0), and falls to a second local minimum at (3,-4). Dots mark the points at x = -4, -3, -1.5, 0, 1.5, 3, and 4, with y-values about -1.58, -4, -1.75, 0, -1.75, -4, and about -1.58.     We will measure the slope of the tangent line at each dot, record the slopes in a table, and then plot them. Estimates are fine. Use a straightedge and draw each tangent line so that it matches the graph as closely as possible at its dot.   Estimated slopes of tangent lines of              Slope               Find the dots where the tangent line is horizontal. Draw those tangent lines on and record their slopes in the table. What is the slope of any horizontal line?      Draw the tangent lines at and on . These dots are close to the inflection points of , where the graph switches from bending one way to bending the other and is as steep as it gets between the horizontal tangents. Pick two points on each tangent line you drew, use rise over run to estimate its slope, and record the slopes in the table.      Draw the tangent lines at the two end dots, and . Estimate their slopes and record them in the table. How do these slopes compare with the ones at ?      Plot the seven points from your table on the axes below. Then sketch a smooth curve through them, ending at and .   Axes for the slope of the tangent line   Blank axes on a grid for x from -4 to 4 and for slope values from -6 to 6. The horizontal scale matches the graph of f(x).       "
+},
+{
+  "id": "ex-derivative-naming",
+  "level": "2",
+  "url": "activity-intro-derivative.html#ex-derivative-naming",
+  "type": "Worksheet Exercise",
+  "number": "3",
+  "title": "Section 3: The derivative function.",
+  "body": " Section 3: The derivative function   The curve you just sketched takes each -value and reports the slope of the tangent line to the graph of at that -value. That makes it a function in its own right, and it has a name.   The Derivative  The derivative of is the function (read prime of ) whose output at each is the slope of the tangent line to the graph of at the point . In particular, the graph of has a horizontal tangent line at exactly when .  When we learned about the concavity of , we discussed the idea that is concave up when the slope is increasing. That is, must increase on any interval where is concave up. Similarly, must decrease on any interval where is concave down. Consequently, inflection points of correspond to turning points for , where switches between increasing and decreasing.   The input of is a position along the graph of , and its output is a slope. Read as the slope of the tangent line to at . Keep the two functions apart: is a height and is a slope.     Find the -values where your sketch of crosses the -axis. Where do those -values show up on the graph of ? Explain the connection.      Use your sketch of to estimate and . Write what each value tells you about the graph of .    "
+},
+{
+  "id": "ex-derivative-corner",
+  "level": "2",
+  "url": "activity-intro-derivative.html#ex-derivative-corner",
+  "type": "Worksheet Exercise",
+  "number": "4",
+  "title": "Section 4: When a tangent line does not exist.",
+  "body": " Section 4: When a tangent line does not exist   A tangent line to at needs two things. There must be a point for the line to pass through, and the graph must look like a line when we zoom in. Here we study a graph with a point that is present but where the graph never looks like a line.   The graph of   A graph made of two parabola arcs that meet at a sharp corner at the point (0,2). For x from -3 to 0 the graph is part of a downward-opening parabola with its peak at (-1,3), falling from (-3,-1) up to the peak and back down to (0,2). For x from 0 to 4 the graph rises from the corner, reaches a peak at (2,4), and falls to (4,2).     The graph has a sharp corner at . No matter how far we zoom in on a corner, it still looks like a corner and never like a single line. The pieces on either side do each look like a line, though, so we can still ask about the slope that each side is heading toward. We write for the slope of the tangent line to the piece of the graph immediately to the left of , and for the slope of the tangent line to the piece immediately to the right.     On , draw the tangent line to the left piece of the graph at the point , and the tangent line to the right piece at the same point. Estimate their slopes and complete the statements.       Is there a single number that can be the slope of the tangent line to at ? Explain why does not exist even though does.      Sketch for on the axes below. Use the horizontal tangent lines to place the zeros of . Estimate the slope at and at . At , mark the two one-sided values from above with open points.   Axes for the slope of the tangent line to   Blank axes on a grid for x from -3 to 4 and for slope values from -4 to 4. The horizontal scale matches the graph of g(x).       "
 },
 {
   "id": "handouts",
