@@ -272,6 +272,10 @@
           The <term>derivative</term> of <m>f(x)</m> is the function <m>f'(x)</m> (read <q><m>f</m> prime of <m>x</m></q>) whose output at each <m>x=a</m> is the slope of the tangent line to the graph of <m>f(x)</m> at the point <m>(a, f(a))</m>.
           In particular, the graph of <m>f(x)</m> has a horizontal tangent line at <m>x=a</m> exactly when <m>f'(a)=0</m>.
         </p>
+
+        <p>
+          When we learned about the concavity of <m>f(x)</m>, we discussed the idea that <m>f(x)</m> is concave up when the slope is increasing. That is, <m>f'(x)</m> must increase on any interval where <m>f(x)</m> is concave up. Similarly, <m>f'(x)</m> must decrease on any interval where <m>f(x)</m> is concave down. Consequently, inflection points of <m>f(x)</m> correspond to turning points for <m>f'(x)</m>, where <m>f'(x)</m> switches between increasing and decreasing.
+        </p>
       </assemblage>
 
       <p>
