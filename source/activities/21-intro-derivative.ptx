@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<worksheet xml:id="activity-intro-derivative">
+  <title>Tangent Lines and the Derivative</title>
+
+  <introduction>
+    <p>
+      A line has one slope, and that slope is the same everywhere along it.
+      A curved graph is different: it is steeper in some places and shallower in others, and sometimes it is perfectly horizontal.
+      So <q>the slope of the graph</q> only makes sense for each particular point.
+    </p>
+    <p>
+      In this activity we measure the slope of a graph at a point by drawing a tangent line there.
+      Then we collect those slopes into a brand new function, one that takes an <m>x</m>-value and reports how steep the graph is at that <m>x</m>-value.
+      This new function is the central object of the rest of the course.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-derivative-tangent" workspace="0in">
+    <title>Section 1: Zooming in on a curve</title>
+    <introduction>
+      <p>
+        Imagine zooming in on a smooth curve at one of its points.
+        The closer we look, the straighter the curve appears.
+        The line that the curve turns into is the line we want.
+      </p>
+
+      <assemblage>
+        <title>Tangent Line</title>
+        <p>
+          A <term>tangent line</term> to the graph of <m>f(x)</m> at <m>x=a</m> is a line that passes through the point <m>(a, f(a))</m> and that looks like the graph of <m>f(x)</m> when we zoom in close enough to that point.
+        </p>
+      </assemblage>
+
+      <p>
+        The following three views are centered at the same point <m>(1.5, f(1.5))</m> on a graph.
+        The solid curve is the graph of <m>f(x)</m>.
+        The dashed line is the tangent line at that point.
+        Each view is zoomed in more than the one before it.
+      </p>
+
+      <figure xml:id="fig-derivative-zoom">
+        <caption>Zooming in on a graph at <m>(1.5, f(1.5))</m></caption>
+        <sidebyside widths="30% 30% 30%">
+          <figure xml:id="fig-derivative-zoom-1">
+            <caption>Window width 3</caption>
+            <image xml:id="image-derivative-zoom-1">
+              <shortdescription>
+                A square view of a solid curve and a dashed line crossing at a dot in the center.
+                The curve bends noticeably away from the dashed line toward both edges of the view.
+              </shortdescription>
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[x=1.4cm, y=1.4cm]
+                  \def\h{1.5}
+                  \draw (-1,-1) rectangle (1,1);
+                  \draw[very thick, domain=-1:1, samples=60] plot (\x, {-0.8*\x + \h*(-2*\x*\x/9 + 8*\h*\x*\x*\x/27 + 4*\h*\h*\x*\x*\x*\x/81)/2.5});
+                  \draw[thick, dashed] (-1,0.8) -- (1,-0.8);
+                  \filldraw (0,0) circle (2pt);
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+          </figure>
+          <figure xml:id="fig-derivative-zoom-2">
+            <caption>Window width 1.2</caption>
+            <image xml:id="image-derivative-zoom-2">
+              <shortdescription>
+                A square view of a solid curve and a dashed line crossing at a dot in the center.
+                The curve stays close to the dashed line and separates only slightly near the edges.
+              </shortdescription>
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[x=1.4cm, y=1.4cm]
+                  \def\h{0.6}
+                  \draw (-1,-1) rectangle (1,1);
+                  \draw[very thick, domain=-1:1, samples=60] plot (\x, {-0.8*\x + \h*(-2*\x*\x/9 + 8*\h*\x*\x*\x/27 + 4*\h*\h*\x*\x*\x*\x/81)/2.5});
+                  \draw[thick, dashed] (-1,0.8) -- (1,-0.8);
+                  \filldraw (0,0) circle (2pt);
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+          </figure>
+          <figure xml:id="fig-derivative-zoom-3">
+            <caption>Window width 0.2</caption>
+            <image xml:id="image-derivative-zoom-3">
+              <shortdescription>
+                A square view of a solid curve and a dashed line crossing at a dot in the center.
+                The curve and the dashed line are on top of each other and cannot be told apart.
+              </shortdescription>
+              <latex-image>
+                <![CDATA[
+                \begin{tikzpicture}[x=1.4cm, y=1.4cm]
+                  \def\h{0.1}
+                  \draw (-1,-1) rectangle (1,1);
+                  \draw[very thick, domain=-1:1, samples=60] plot (\x, {-0.8*\x + \h*(-2*\x*\x/9 + 8*\h*\x*\x*\x/27 + 4*\h*\h*\x*\x*\x*\x/81)/2.5});
+                  \draw[thick, dashed] (-1,0.8) -- (1,-0.8);
+                  \filldraw (0,0) circle (2pt);
+                \end{tikzpicture}
+                ]]>
+              </latex-image>
+            </image>
+          </figure>
+        </sidebyside>
+      </figure>
+    </introduction>
+    <task xml:id="task-derivative-zoom-describe" workspace="1in">
+      <statement>
+        <p>
+          Describe what happens to the solid curve compared to the dashed line as we zoom in.
+          Why is the dashed line a good description of the graph near the dot, but only when we are zoomed in?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-zoom-slope" workspace="0.75in">
+      <statement>
+        <p>
+          In the views above, is the slope of the tangent line positive, negative, or zero?
+          How can you tell without any numbers on the axes?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-derivative-slopes" workspace="0in">
+    <title>Section 2: Tangent slopes along a graph</title>
+    <introduction>
+      <p>
+        Here is the graph of a function <m>f(x)</m> shown for <m>-4 \le x \le 4</m>.
+        The dots mark the points where <m>x</m> is <m>-4</m>, <m>-3</m>, <m>-1.5</m>, <m>0</m>, <m>1.5</m>, <m>3</m>, and <m>4</m>.
+        Each grid square is 1 unit wide and 1 unit tall, with lighter lines halfway between.
+      </p>
+
+      <figure xml:id="fig-derivative-quartic">
+        <caption>The graph of <m>f(x)</m></caption>
+        <image xml:id="image-derivative-quartic" width="60%">
+          <shortdescription>
+            A smooth W-shaped graph for x from -4 to 4 on a grid.
+            It has a local minimum at the point (-3,-4), rises to a local maximum at (0,0), and falls to a second local minimum at (3,-4).
+            Dots mark the points at x = -4, -3, -1.5, 0, 1.5, 3, and 4, with y-values about -1.58, -4, -1.75, 0, -1.75, -4, and about -1.58.
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=0.9cm, y=0.9cm, >=stealth]
+              \path (-5.8,-5.4) rectangle (5.8,2.4);
+              \draw[step=0.5, gray!25, very thin] (-5,-5) grid (5,2);
+              \draw[step=1, gray!60, thin] (-5,-5) grid (5,2);
+              \draw[->] (-5.3,0) -- (5.5,0) node[right] {$x$};
+              \draw[->] (0,-5.2) -- (0,2.3) node[above] {$y$};
+              \foreach \x in {-5,-4,-3,-2,-1,1,2,3,4,5} {
+                \node[below=1pt, font=\small, fill=white, inner sep=1pt] at (\x,0) {$\x$};
+              }
+              \foreach \y in {-5,-4,-3,-2,-1,1,2} {
+                \node[left=1pt, font=\small, fill=white, inner sep=1pt] at (0,\y) {$\y$};
+              }
+              \draw[very thick, domain=-4.3:4.3, samples=100] plot (\x, {4*\x*\x*\x*\x/81 - 8*\x*\x/9});
+              \foreach \x/\y in {-4/-1.58, -3/-4, -1.5/-1.75, 0/0, 1.5/-1.75, 3/-4, 4/-1.58} {
+                \filldraw (\x,\y) circle (2.4pt);
+              }
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+
+      <p>
+        We will measure the slope of the tangent line at each dot, record the slopes in a table, and then plot them.
+        Estimates are fine.
+        Use a straightedge and draw each tangent line so that it matches the graph as closely as possible at its dot.
+      </p>
+
+      <table xml:id="table-derivative-slopes">
+        <title>Estimated slopes of tangent lines of <m>f(x)</m></title>
+        <tabular>
+          <row header="yes" bottom="minor">
+            <cell><m>x</m></cell>
+            <cell><m>-4</m></cell>
+            <cell><m>-3</m></cell>
+            <cell><m>-1.5</m></cell>
+            <cell><m>0</m></cell>
+            <cell><m>1.5</m></cell>
+            <cell><m>3</m></cell>
+            <cell><m>4</m></cell>
+          </row>
+          <row>
+            <cell>Slope</cell>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+            <cell/>
+          </row>
+        </tabular>
+      </table>
+    </introduction>
+    <task xml:id="task-derivative-slopes-horizontal" workspace="0.25in">
+      <statement>
+        <p>
+          Find the dots where the tangent line is horizontal.
+          Draw those tangent lines on <xref ref="fig-derivative-quartic"/> and record their slopes in the table.
+          What is the slope of any horizontal line?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-slopes-steepest" workspace="0.25in">
+      <statement>
+        <p>
+          Draw the tangent lines at <m>x=-1.5</m> and <m>x=1.5</m> on <xref ref="fig-derivative-quartic"/>.
+          These dots are close to the <term>inflection points</term> of <m>f(x)</m>, where the graph switches from bending one way to bending the other and is as steep as it gets between the horizontal tangents.
+          Pick two points on each tangent line you drew, use rise over run to estimate its slope, and record the slopes in the table.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-slopes-ends" workspace="0.25in">
+      <statement>
+        <p>
+          Draw the tangent lines at the two end dots, <m>x=-4</m> and <m>x=4</m>.
+          Estimate their slopes and record them in the table.
+          How do these slopes compare with the ones at <m>x=\pm 1.5</m>?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-slopes-plot" workspace="0in">
+      <statement>
+        <p>
+          Plot the seven points <m>(x, \text{slope})</m> from your table on the axes below.
+          Then sketch a smooth curve through them, ending at <m>x=-4</m> and <m>x=4</m>.
+        </p>
+        <figure xml:id="fig-derivative-slope-axes">
+          <caption>Axes for the slope of the tangent line</caption>
+          <image xml:id="image-derivative-slope-axes" width="60%">
+            <shortdescription>
+              Blank axes on a grid for x from -4 to 4 and for slope values from -6 to 6.
+              The horizontal scale matches the graph of f(x).
+            </shortdescription>
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}[x=0.9cm, y=0.45cm, >=stealth]
+                \path (-4.8,-6.8) rectangle (4.8,6.8);
+                \draw[step=1, gray!60, thin] (-4,-6) grid (4,6);
+                \draw[->] (-4.3,0) -- (4.5,0) node[right] {$x$};
+                \draw[->] (0,-6.3) -- (0,6.5) node[above] {slope};
+                \foreach \x in {-4,-3,-2,-1,1,2,3,4} {
+                  \node[below=1pt, font=\small, fill=white, inner sep=1pt] at (\x,0) {$\x$};
+                }
+                \foreach \y in {-6,-4,-2,2,4,6} {
+                  \node[left=1pt, font=\small, fill=white, inner sep=1pt] at (0,\y) {$\y$};
+                }
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </figure>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-derivative-naming" workspace="0in">
+    <title>Section 3: The derivative function</title>
+    <introduction>
+      <p>
+        The curve you just sketched takes each <m>x</m>-value and reports the slope of the tangent line to the graph of <m>f(x)</m> at that <m>x</m>-value.
+        That makes it a function in its own right, and it has a name.
+      </p>
+
+      <assemblage>
+        <title>The Derivative</title>
+        <p>
+          The <term>derivative</term> of <m>f(x)</m> is the function <m>f'(x)</m> (read <q><m>f</m> prime of <m>x</m></q>) whose output at each <m>x=a</m> is the slope of the tangent line to the graph of <m>f(x)</m> at the point <m>(a, f(a))</m>.
+          In particular, the graph of <m>f(x)</m> has a horizontal tangent line at <m>x=a</m> exactly when <m>f'(a)=0</m>.
+        </p>
+      </assemblage>
+
+      <p>
+        The input of <m>f'(x)</m> is a position along the graph of <m>f(x)</m>, and its output is a slope.
+        Read <m>f'(3)</m> as <q>the slope of the tangent line to <m>f(x)</m> at <m>x=3</m></q>.
+        Keep the two functions apart: <m>f(3)</m> is a height and <m>f'(3)</m> is a slope.
+      </p>
+    </introduction>
+    <task xml:id="task-derivative-naming-zeros" workspace="1in">
+      <statement>
+        <p>
+          Find the <m>x</m>-values where your sketch of <m>f'(x)</m> crosses the <m>x</m>-axis.
+          Where do those <m>x</m>-values show up on the graph of <m>f(x)</m>?
+          Explain the connection.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-naming-estimate" workspace="1in">
+      <statement>
+        <p>
+          Use your sketch of <m>f'(x)</m> to estimate <m>f'(-2)</m> and <m>f'(3.5)</m>.
+          Write what each value tells you about the graph of <m>f(x)</m>.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-derivative-corner" workspace="0in">
+    <title>Section 4: When a tangent line does not exist</title>
+    <introduction>
+      <p>
+        A tangent line to <m>g(x)</m> at <m>x=a</m> needs two things.
+        There must be a point <m>(a, g(a))</m> for the line to pass through, and the graph must look like a line when we zoom in.
+        Here we study a graph with a point that is present but where the graph never looks like a line.
+      </p>
+
+      <figure xml:id="fig-derivative-corner">
+        <caption>The graph of <m>g(x)</m></caption>
+        <image xml:id="image-derivative-corner" width="60%">
+          <shortdescription>
+            A graph made of two parabola arcs that meet at a sharp corner at the point (0,2).
+            For x from -3 to 0 the graph is part of a downward-opening parabola with its peak at (-1,3), falling from (-3,-1) up to the peak and back down to (0,2).
+            For x from 0 to 4 the graph rises from the corner, reaches a peak at (2,4), and falls to (4,2).
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=0.9cm, y=0.8cm, >=stealth]
+              \path (-3.6,-2.4) rectangle (4.6,5.4);
+              \draw[step=0.5, gray!25, very thin] (-3,-2) grid (4,5);
+              \draw[step=1, gray!60, thin] (-3,-2) grid (4,5);
+              \draw[->] (-3.2,0) -- (4.4,0) node[right] {$x$};
+              \draw[->] (0,-2.2) -- (0,5.2) node[above] {$y$};
+              \foreach \x in {-3,-2,-1,1,2,3,4} {
+                \node[below=1pt, font=\small, fill=white, inner sep=1pt] at (\x,0) {$\x$};
+              }
+              \foreach \y in {-2,-1,1,2,3,4,5} {
+                \node[left=1pt, font=\small, fill=white, inner sep=1pt] at (0,\y) {$\y$};
+              }
+              \draw[very thick, domain=-3:0, samples=60] plot (\x, {3 - (\x+1)*(\x+1)});
+              \draw[very thick, domain=0:4, samples=60] plot (\x, {2 + 2*\x - \x*\x/2});
+              \filldraw (0,2) circle (2.4pt);
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+
+      <p>
+        The graph has a sharp <term>corner</term> at <m>x=0</m>.
+        No matter how far we zoom in on a corner, it still looks like a corner and never like a single line.
+        The pieces on either side do each look like a line, though, so we can still ask about the slope that each side is heading toward.
+        We write <m>\displaystyle \lim_{x \to 0^-} g'(x)</m> for the slope of the tangent line to the piece of the graph immediately to the left of <m>x=0</m>, and <m>\displaystyle \lim_{x \to 0^+} g'(x)</m> for the slope of the tangent line to the piece immediately to the right.
+      </p>
+    </introduction>
+    <task xml:id="task-derivative-corner-sides" workspace="1in">
+      <statement>
+        <p>
+          On <xref ref="fig-derivative-corner"/>, draw the tangent line to the left piece of the graph at the point <m>(0, 2)</m>, and the tangent line to the right piece at the same point.
+          Estimate their slopes and complete the statements.
+          <md>
+            <mrow>\lim_{x \to 0^-} g'(x) \amp = \underline{\qquad\quad}</mrow>
+            <mrow>\lim_{x \to 0^+} g'(x) \amp = \underline{\qquad\quad}</mrow>
+          </md>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-corner-exists" workspace="1in">
+      <statement>
+        <p>
+          Is there a single number that can be the slope of the tangent line to <m>g(x)</m> at <m>x=0</m>?
+          Explain why <m>g'(0)</m> does not exist even though <m>g(0)</m> does.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-derivative-corner-sketch" workspace="0in">
+      <statement>
+        <p>
+          Sketch <m>g'(x)</m> for <m>-3 \lt x \lt 4</m> on the axes below.
+          Use the horizontal tangent lines to place the zeros of <m>g'(x)</m>.
+          Estimate the slope at <m>x=-3</m> and at <m>x=4</m>.
+          At <m>x=0</m>, mark the two one-sided values from above with open points.
+        </p>
+        <figure xml:id="fig-derivative-corner-axes">
+          <caption>Axes for the slope of the tangent line to <m>g(x)</m></caption>
+          <image xml:id="image-derivative-corner-axes" width="60%">
+            <shortdescription>
+              Blank axes on a grid for x from -3 to 4 and for slope values from -4 to 4.
+              The horizontal scale matches the graph of g(x).
+            </shortdescription>
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}[x=0.9cm, y=0.5cm, >=stealth]
+                \path (-3.6,-4.8) rectangle (4.6,4.8);
+                \draw[step=1, gray!60, thin] (-3,-4) grid (4,4);
+                \draw[->] (-3.2,0) -- (4.4,0) node[right] {$x$};
+                \draw[->] (0,-4.3) -- (0,4.5) node[above] {slope};
+                \foreach \x in {-3,-2,-1,1,2,3,4} {
+                  \node[below=1pt, font=\small, fill=white, inner sep=1pt] at (\x,0) {$\x$};
+                }
+                \foreach \y in {-4,-3,-2,-1,1,2,3,4} {
+                  \node[left=1pt, font=\small, fill=white, inner sep=1pt] at (0,\y) {$\y$};
+                }
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+          </image>
+        </figure>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
