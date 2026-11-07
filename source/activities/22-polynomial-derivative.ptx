@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Telling-and-practice activity: derivatives of polynomials.
+     Arc: observe in Desmos (Section 1), name the operator and the
+     observed rules, then practice (Section 2), then use the formulas
+     to find critical points by factoring (Section 3).
+
+     Timing: aim for about 30 minutes of material. Section 1 is short
+     on purpose (about 8 to 10 minutes with whole-class debrief).
+     Sections 2 and 3 are mostly telling plus practice. If the period
+     runs long, trim Section 2 tasks 3 and 4, then Section 3 task 5.
+
+     Desmos: students use the plain calculator at desmos.com/calculator.
+     Desmos computes f'(x) directly once f(x) is defined, so no saved
+     graph or QR image is needed. A saved page with sliders could be
+     added later following activities 05 and 06.
+
+     Answer key
+     Section 1: f'(x) = m for mx+b; x^2 gives 2x; x^3 gives 3x^2;
+       x^4 gives 4x^3. Degree drops by one. Conjecture n x^(n-1).
+       3x^2 gives 6x; x^2+5 gives 2x; x^3+x^2 gives 3x^2+2x.
+     Section 2: 30x^4 - 12x^2; 4x^3 + 6x - 9; 2x^3 - 2x^2;
+       (x+2)(x-3) = x^2 - x - 6 gives 2x - 1;
+       f(x) = x^3 - 6x^2 + 5 has f'(x) = 3x^2 - 12x, f'(1) = -9,
+       f'(4) = 0.
+     Section 3 worked example: 3x^2 - 12x = 3x(x-4), x = 0, 4.
+       Task 1: 3x^2 - 12 = 3(x-2)(x+2), x = -2, 2.
+       Task 2: 6x^2 - 18x + 12 = 6(x-1)(x-2), x = 1, 2.
+       Task 3: 4x^3 - 12x^2 = 4x^2(x-3), x = 0, 3.
+       Task 4: 3x^2 - 6x - 3 = 3(x^2 - 2x - 1), x = 1 +/- sqrt(2).
+       Task 5: 3x^2 + 3 = 3(x^2+1), no real roots, no critical points.
+     Task 3 has a repeated factor x^2 and task 2 has two simple
+     factors. These are deliberately set up for sign analysis of f'(x)
+     in the next activity, so students should keep the factored forms. -->
+<worksheet xml:id="activity-polynomial-derivative">
+  <title>Derivatives of Polynomials and Critical Points</title>
+
+  <introduction>
+    <p>
+      Last time we defined the derivative <m>f'(x)</m> as the function whose output at each <m>x</m>-value is the slope of the tangent line to the graph of <m>f(x)</m>.
+      We found it by drawing tangent lines and estimating slopes, which is slow and imprecise.
+    </p>
+    <p>
+      Today we use technology to look for patterns in the derivatives of polynomials, and we state those patterns as rules that give exact formulas.
+      Then we use the formulas to find the <m>x</m>-values where the graph of <m>f(x)</m> has a horizontal tangent line.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-polyderiv-observe" workspace="0in">
+    <title>Section 1: Observing derivatives in Desmos</title>
+    <introduction>
+      <p>
+        Open the Desmos graphing calculator at
+        <url href="https://www.desmos.com/calculator" visual="desmos.com/calculator"/>
+        and follow these steps.
+      </p>
+      <ol>
+        <li><p>On line 1, enter <c>f(x)=mx+b</c>. When Desmos offers to add sliders, choose <q>all</q>.</p></li>
+        <li><p>On line 2, enter <c>f'(x)</c>. Desmos graphs the derivative of <m>f(x)</m> for you. (Type the apostrophe next to the Enter key.)</p></li>
+        <li><p>Turn on both graphs and zoom out until you can see the overall shape of each.</p></li>
+      </ol>
+      <p>
+        Keep the graph of <m>f(x)</m> and the graph of <m>f'(x)</m> in mind as two different functions.
+        The first reports heights and the second reports slopes of the first.
+      </p>
+      <table xml:id="table-polyderiv-observations">
+        <title>Derivatives observed in Desmos</title>
+        <tabular halign="center">
+          <row header="yes" bottom="minor">
+            <cell><m>f(x)</m></cell>
+            <cell><m>f'(x)</m></cell>
+          </row>
+          <row>
+            <cell><m>mx+b</m></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell><m>x^2</m></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell><m>x^3</m></cell>
+            <cell/>
+          </row>
+          <row>
+            <cell><m>x^4</m></cell>
+            <cell/>
+          </row>
+        </tabular>
+      </table>
+    </introduction>
+    <task xml:id="task-polyderiv-linear" workspace="1in">
+      <statement>
+        <p>
+          Move the sliders for <m>m</m> and <m>b</m> and watch the graph of <m>f'(x)</m>.
+          What formula describes <m>f'(x)</m> for <m>f(x)=mx+b</m>?
+          Record it in <xref ref="table-polyderiv-observations"/>, and explain why this makes sense for the graph of a line.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-powers" workspace="0.5in">
+      <statement>
+        <p>
+          Change line 1 to <c>f(x)=x^2</c>, then <c>f(x)=x^3</c>, then <c>f(x)=x^4</c>.
+          For each one, use the graph of <m>f'(x)</m> to decide what its formula is, and record it in <xref ref="table-polyderiv-observations"/>.
+          To check a guess, enter it on line 3 (for example <c>g(x)=2x</c>) and see whether its graph lands exactly on the graph of <m>f'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-conjecture" workspace="1.5in">
+      <statement>
+        <ol marker="a.">
+          <li><p>Compare the degree of each <m>f(x)</m> in the table with the degree of its derivative <m>f'(x)</m>. What do you notice?</p></li>
+          <li><p>Make a conjecture: if <m>f(x)=x^n</m>, then <m>f'(x)=\underline{\qquad\qquad}</m>. Predict <m>f'(x)</m> for <m>f(x)=x^5</m> and check your prediction in Desmos.</p></li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-combine" workspace="1.5in">
+      <statement>
+        <p>
+          Your conjecture is only about <m>x^n</m> on its own.
+          Predict, then check in Desmos, the derivative of each function below.
+        </p>
+        <ol marker="a.">
+          <li><p><m>f(x)=3x^2</m></p></li>
+          <li><p><m>f(x)=x^2+5</m></p></li>
+          <li><p><m>f(x)=x^3+x^2</m></p></li>
+        </ol>
+        <p>
+          In words, what happens to a coefficient, to an added constant, and to a sum of terms when we take the derivative?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-polyderiv-rules" workspace="0in">
+    <title>Section 2: Derivative formulas</title>
+    <introduction>
+      <p>
+        Taking a derivative is an operation we perform on a formula, just as taking a limit is.
+        We give it an operator symbol.
+      </p>
+
+      <assemblage>
+        <title>The Differentiation Operator</title>
+        <p>
+          The notation <m>\dfrac{d}{dx}\left[ u \right]</m> means <q>the derivative of the formula <m>u</m> with respect to <m>x</m></q>.
+          If <m>f(x)</m> is a function, then
+          <md>
+            <mrow>f'(x) = \frac{d}{dx}\left[ f(x) \right]</mrow>
+          </md>.
+          The operator acts on a formula, so we can use it without giving the formula a function name.
+        </p>
+      </assemblage>
+
+      <p>
+        What you saw in Desmos can be stated as rules.
+        These are observed patterns for now.
+        We will prove them once we have the definition of the derivative.
+      </p>
+
+      <assemblage>
+        <title>The Power Rule</title>
+        <p>
+          For any positive integer <m>n</m>,
+          <md>
+            <mrow>\frac{d}{dx}\left[ x^n \right] = n x^{n-1}</mrow>
+          </md>.
+          In particular <m>\dfrac{d}{dx}\left[ x \right] = 1</m>.
+          For a constant <m>k</m>, the graph of <m>y=k</m> is a horizontal line, so <m>\dfrac{d}{dx}\left[ k \right] = 0</m>.
+        </p>
+      </assemblage>
+
+      <assemblage>
+        <title>The Sum Rule and the Constant Multiple Rule</title>
+        <p>
+          Let <m>u</m> and <m>v</m> be formulas and let <m>k</m> be a constant.
+          <md>
+            <mrow>\frac{d}{dx}\left[ u + v \right] \amp = \frac{d}{dx}\left[ u \right] + \frac{d}{dx}\left[ v \right]</mrow>
+            <mrow>\frac{d}{dx}\left[ k\,u \right] \amp = k\,\frac{d}{dx}\left[ u \right]</mrow>
+          </md>.
+          Subtraction is covered by these two rules, since <m>u - v = u + (-1)v</m>.
+        </p>
+        <p>
+          We often use both the sum and constant multiple rules in a single step.
+          When combined, it is often called the <term>linearity</term> of the derivative.
+          Suppose <m>c_1</m> and <m>c_2</m> are any constants and <m>u</m> and <m>v</m> represent formulas:
+          <md>
+            \frac{d}{dx}\left[ c_1 u + c_2 v \right] = c_1 \frac{d}{dx}[u] + c_2 \frac{d}{dx}[v]
+          </md>
+          
+        </p>
+        <p>
+          
+        </p>
+      </assemblage>
+
+      <p>
+        Together, these let us differentiate any polynomial one term at a time.
+        <md>
+          <mrow>\frac{d}{dx}\left[ 5x^4 - 3x^2 + 7x - 2 \right] \amp = 5\,\frac{d}{dx}\left[ x^4 \right] - 3\,\frac{d}{dx}\left[ x^2 \right] + 7\,\frac{d}{dx}\left[ x \right] - \frac{d}{dx}\left[ 2 \right]</mrow>
+          <mrow>\amp = 5(4x^3) - 3(2x) + 7(1) - 0</mrow>
+          <mrow>\amp = 20x^3 - 6x + 7</mrow>
+        </md>.
+        With practice you will skip the middle line and write the answer directly.
+        Notice that the degree of the polynomial dropped by one, as you observed.
+      </p>
+    </introduction>
+    <task xml:id="task-polyderiv-practice-1" workspace="0.75in">
+      <statement>
+        <p>
+          <m>\displaystyle \frac{d}{dx}\left[ 6x^5 - 4x^3 \right]</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-practice-2" workspace="0.75in">
+      <statement>
+        <p>
+          <m>\displaystyle \frac{d}{dx}\left[ x^4 + 3x^2 - 9x + 8 \right]</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-practice-fractions" workspace="0.75in">
+      <statement>
+        <p>
+          <m>\displaystyle \frac{d}{dx}\left[ \tfrac{1}{2}x^4 - \tfrac{2}{3}x^3 + 5 \right]</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-practice-expand" workspace="1in">
+      <statement>
+        <p>
+          <m>\displaystyle \frac{d}{dx}\left[ (x+2)(x-3) \right]</m>
+        </p>
+        <p>
+          The rules above do not tell us how to differentiate a product of two formulas.
+          What must you do to the formula first?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-practice-slopes" workspace="1.5in">
+      <statement>
+        <p>
+          Let <m>f(x)=x^3-6x^2+5</m>.
+        </p>
+        <ol marker="a.">
+          <li><p>Find <m>f'(x)</m>.</p></li>
+          <li><p>Compute <m>f'(1)</m> and <m>f'(4)</m>. Write a formula for the tangent line of <m>f(x)</m> at each point.</p></li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-polyderiv-critical" workspace="0in">
+    <title>Section 3: Critical points</title>
+    <introduction>
+      <p>
+        In the last task you found that <m>f'(4)=0</m>, so the graph of <m>f(x)</m> has a horizontal tangent line at <m>x=4</m>.
+        The <m>x</m>-values where the slope is zero, or where there is no slope exists, are the places where the behavior of a graph can change direction.
+        We give them a name.
+      </p>
+
+      <assemblage>
+        <title>Critical Points</title>
+        <p>
+          A <term>critical point</term> of <m>f(x)</m> is an <m>x</m>-value <m>x=a</m> in the domain of <m>f(x)</m> where either <m>f'(a)=0</m> or <m>f'(a)</m> does not exist.
+        </p>
+      </assemblage>
+
+      <p>
+        The graph with the corner from last class has a critical point at its corner, because the tangent line does not exist there.
+        For a polynomial, however, <m>f'(x)</m> is again a polynomial, so it exists for every <m>x</m>.
+        That means the critical points of a polynomial are exactly the roots of <m>f'(x)</m>.
+      </p>
+
+      <assemblage>
+        <title>Finding Critical Points of a Polynomial</title>
+        <p>
+          <ol>
+            <li><p>Compute <m>f'(x)</m> using the derivative rules.</p></li>
+            <li><p>Factor <m>f'(x)</m> completely. Pull out the greatest common factor first, including any constant, and then factor what remains.</p></li>
+            <li><p>A product is zero only when one of its factors is zero. Set each factor containing <m>x</m> equal to zero and solve.
+              <ul>
+                <li><p>A constant factor is never zero, so it adds no roots.</p></li>
+                <li><p>If a quadratic factor does not factor, use the quadratic formula.</p></li>
+              </ul></p></li>
+          </ol>
+        </p>
+      </assemblage>
+
+      <p>
+        For <m>f(x)=x^3-6x^2+5</m> we found <m>f'(x)=3x^2-12x</m>, and so
+        <md>
+          <mrow>f'(x) \amp = 3x^2-12x = 3x(x-4)</mrow>
+          <mrow>3x(x-4) = 0 \amp \quad\Longrightarrow\quad x=0 \text{ or } x=4</mrow>
+        </md>.
+        The critical points of <m>f(x)</m> are <m>x=0</m> and <m>x=4</m>.
+        Keep the factored form of <m>f'(x)</m>. Next we will use it to decide where <m>f'(x)</m> is positive and negative.
+      </p>
+
+      <p>
+        For each function below, answer the following.
+        <ol marker="a.">
+          <li><p>Find <m>f'(x)</m>.</p></li>
+          <li><p>Factor <m>f'(x)</m> completely.</p></li>
+          <li><p>Solve <m>f'(x)=0</m> and list the critical points of <m>f(x)</m>.</p></li>
+        </ol>
+      </p>
+    </introduction>
+    <task xml:id="task-polyderiv-critical-1" workspace="1.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^3-12x+4</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-critical-2" workspace="1.5in">
+      <statement>
+        <p>
+          <m>f(x)=2x^3-9x^2+12x+1</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-critical-3" workspace="1.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^4-4x^3+7</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-critical-quadratic-formula" workspace="2in">
+      <statement>
+        <p>
+          <m>f(x)=x^3-3x^2-3x+4</m>
+        </p>
+        <p>
+          After pulling out the common factor, the remaining quadratic does not factor with integers.
+          Use the quadratic formula to find its roots.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-polyderiv-critical-none" workspace="1.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^3+3x</m>
+        </p>
+        <p>
+          How many critical points does <m>f(x)</m> have?
+          What does that tell you about the tangent lines to its graph?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-polyderiv-practice-web" workspace="0in">
+    <title>Section 4: More Practice with Computer Feedback</title>
+    <introduction>
+      <p>
+        Practice computing derivatives of polynomials and other algebraic formulas with similar problems at the web page below.
+      </p>
+      <image source="images/qr-derivative-practice.png" width="20%" margins="0% 80%">
+        <description>
+          <p>QR code linking to the derivative practice web page.</p>
+        </description>
+      </image>
+      <p>
+        <url href="https://dbrianwalton.github.io/home/webapp/derivs_algebraic.html"
+             visual="dbrianwalton.github.io/home/webapp/derivs_algebraic.html"/>
+      </p>
+    </introduction>
+    <task xml:id="task-polyderiv-practice-web-notes" workspace="2in">
+      <statement>
+        <p>
+          Use this space to record one problem from the practice page and your work on it.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
