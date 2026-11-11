@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Telling-and-practice activity: velocity, acceleration, and concavity.
+     Arc: the derivative as a rate of change (Section 1), direction of
+     motion from sign analysis of v(t) (Section 2), the second derivative
+     as acceleration and the increasing or decreasing behavior of v(t)
+     (Section 3), then concavity from the sign of the second derivative,
+     applied to sketching position from velocity (Section 4).
+
+     Timing: aim for about 30 minutes of material. Section 1 is a quick
+     interpretation check. Sections 2 and 3 are the core sign analysis
+     practice. Section 4 is mostly the two sketches. If the period runs
+     long, trim in this order: Section 2 task 2 (the quadratic formula
+     example), the second sketch in Section 4, then Section 1.
+
+     Convention: t is allowed to be any real number (negative t means
+     time before the clock was started), so every sign analysis is done
+     on all real numbers and critical points of v(t) are interior.
+
+     Answer key
+     Section 1: units of s'(t) are meters per second. s'(5) = -3 means
+       the cyclist is moving west (toward smaller position values) at
+       3 meters per second at t = 5. s'(8) = 0 means the cyclist is
+       momentarily at rest at t = 8, possibly turning around.
+     Section 2 task 1: s(t) = t^3 - 6t^2 + 9t.
+       v(t) = 3t^2 - 12t + 9 = 3(t-1)(t-3), t = 1, 3.
+       v positive on (-inf, 1) and (3, inf), negative on (1, 3).
+       s increasing on (-inf, 1) and (3, inf), decreasing on (1, 3).
+       (s(1) = 4 and s(3) = 0, for reference.)
+     Section 2 task 2: s(t) = t^3 - 3t^2 - 6t + 10.
+       v(t) = 3t^2 - 6t - 6 = 3(t^2 - 2t - 2), which does not factor
+       over the integers. Quadratic formula gives t = 1 +/- sqrt(3),
+       about -0.73 and 2.73. v positive on (-inf, 1-sqrt(3)) and
+       (1+sqrt(3), inf), negative between. s increasing, decreasing,
+       increasing in that order.
+     Section 3: v(t) = 4 - t^2 = (2-t)(2+t), zeros at t = -2, 2.
+       v negative on (-inf, -2), positive on (-2, 2), negative on
+       (2, inf). So s decreasing, then increasing, then decreasing.
+       a(t) = v'(t) = -2t, zero at t = 0 (the critical point of v).
+       a positive on (-inf, 0), so v increasing there. a negative on
+       (0, inf), so v decreasing there. In words: on (-inf, 0) the slope
+       of the graph of s is increasing, and on (0, inf) it is
+       decreasing. This sets up concavity in Section 4.
+     Section 4 sketch 1: v(t) = 4 - t^2, with s(0) = 0 the position is
+       s(t) = 4t - t^3/3 (students do not need the formula).
+       Local minimum at t = -2 (s = -16/3), local maximum at t = 2
+       (s = 16/3). Concave up on (-inf, 0), concave down on (0, inf),
+       inflection point at t = 0 with s = 0 and a nonzero (steepest)
+       slope v(0) = 4. The graph is symmetric through the origin.
+     Section 4 sketch 2: v(t) = 6t - t^3 = t(6 - t^2), zeros at t = 0
+       and t = +/- sqrt(6), about +/- 2.45. v positive on (-inf, -sqrt6),
+       negative on (-sqrt6, 0), positive on (0, sqrt6), negative on
+       (sqrt6, inf). So s is increasing, decreasing, increasing,
+       decreasing. a(t) = 6 - 3t^2 = 3(2 - t^2), zeros at t = +/- sqrt(2),
+       about +/- 1.41. a negative on (-inf, -sqrt2), positive on
+       (-sqrt2, sqrt2), negative on (sqrt2, inf). So s is concave down,
+       concave up, concave down.
+       With s(0) = 0, s(t) = 3t^2 - t^4/4. Local maxima at t = +/- sqrt6
+       with s = 9, local minimum at t = 0 with s = 0, inflection points
+       at t = +/- sqrt2 with s = 5. The graph is symmetric about the
+       vertical axis and looks like an M. -->
+<worksheet xml:id="activity-velocity-acceleration">
+  <title>Velocity, Acceleration, and Concavity</title>
+
+  <introduction>
+    <p>
+      So far we have thought of the derivative <m>f'(x)</m> graphically, as the slope of the tangent line to the graph of <m>f(x)</m>.
+      A slope computes the ratio of a change in the output to a change in the input, 
+      which means it measures how fast the output is changing with respect to the input.
+      In this activity we give the derivative a physical meaning in the setting of motion, where a rate of change is its own measurable quantity (velocity).
+    </p>
+    <p>
+      Because the derivative (velocity) is itself a measurable function of time, 
+      we can talk about <em>its</em> derivative.
+      That gives us a way to describe how the slope itself is changing, which is exactly what concavity means.
+      Throughout this activity, we allow the time <m>t</m> to be any real number, where negative values mean times before the clock was started.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-motion-velocity" workspace="0in">
+    <title>Section 1: Rate of change as velocity</title>
+    <introduction>
+      <p>
+        Suppose an object moves along a straight line, such as a road or a number line.
+        It could be horizontal like a track or vertical like a ball thrown up into the air.
+        Let <m>s(t)</m> measure the object's position at time <m>t</m>.
+        The slope of the graph of <m>s(t)</m> gives the rate of change in position with respect to the change in time.
+        If position is measured in meters and time in seconds, then the slope has units of meters per second.
+        That should be a familiar kind of quantity.
+      </p>
+
+      <assemblage>
+        <title>Velocity</title>
+        <p>
+          If <m>s(t)</m> is the position of an object at time <m>t</m>, then the derivative
+          <md>
+            <mrow>v(t) = s'(t)</mrow>
+          </md>
+          is the <term>velocity</term> of the object.
+          Graphically, <m>v(t)</m> gives the slope of the graph of <m>s(t)</m> at each value <m>t</m>.
+          Physically, <m>v(t)</m> is the rate of change of position, with units of distance per unit of time.
+        </p>
+      </assemblage>
+
+      <p>
+        Velocity has a sign, and the sign tells us the direction of motion.
+        If <m>v(t)</m> is positive, then the object is moving toward the positive direction, so <m>s(t)</m> is increasing.
+        If <m>v(t)</m> is negative, then the position <m>s(t)</m> is decreasing and the object is moving in the negative direction.
+        If <m>v(t)=0</m>, then the object is instantaneously not moving in either direction. This typically corresponds to a critical point of position where it might change direction.
+      </p>
+    </introduction>
+    <task xml:id="task-motion-units" workspace="2in">
+      <statement>
+        <p>
+          A cyclist rides along a straight road.
+          Let <m>s(t)</m> be the cyclist's distance in meters east of a signpost, <m>t</m> seconds after a stopwatch is started.
+        </p>
+        <ol marker="a.">
+          <li><p>What are the units of <m>s'(t)</m>?</p></li>
+          <li><p>Suppose <m>s'(5)=-3</m>. Describe in words what the cyclist is doing at <m>t=5</m>.</p></li>
+          <li><p>Suppose <m>s'(8)=0</m>. What can you say about the cyclist at <m>t=8</m>?</p></li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-motion-direction" workspace="0in">
+    <title>Section 2: Direction of motion</title>
+    <introduction>
+      <p>
+        We can use critical points and sign analysis, as we did when we studied graph behavior, to find the intervals of time on which the position is increasing and decreasing.
+      </p>
+
+      <assemblage>
+        <title>Direction of Motion from the Velocity</title>
+        <p>
+          <ol>
+            <li><p>Compute the velocity <m>v(t)=s'(t)</m>.</p></li>
+            <li><p>Factor <m>v(t)</m> completely and solve <m>v(t)=0</m>. These are the critical points of <m>s(t)</m>, where the object is momentarily at rest.</p></li>
+            <li><p>Use sign analysis of <m>v(t)</m> on the intervals between the critical points.</p></li>
+            <li><p>On intervals where <m>v(t)\gt 0</m>, the position <m>s(t)</m> is increasing. On intervals where <m>v(t)\lt 0</m>, the position <m>s(t)</m> is decreasing.</p></li>
+          </ol>
+        </p>
+      </assemblage>
+
+      <p>
+        For each position function below, with <m>s</m> in meters and <m>t</m> in seconds, answer the following.
+        <ol marker="a.">
+          <li><p>Find the velocity <m>v(t)=s'(t)</m>.</p></li>
+          <li><p>Factor <m>v(t)</m> completely and solve <m>v(t)=0</m>. Use the quadratic formula if the quadratic factor does not factor.</p></li>
+          <li><p>Use sign analysis to find the intervals where <m>v(t)</m> is positive and where it is negative.</p></li>
+          <li><p>State the intervals where <m>s(t)</m> is increasing and where it is decreasing, and describe the direction of motion on each interval in words.</p></li>
+        </ol>
+      </p>
+    </introduction>
+    <task xml:id="task-motion-direction-1" workspace="2.5in">
+      <statement>
+        <p>
+          <m>s(t)=t^3-6t^2+9t</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-motion-direction-2" workspace="2.5in">
+      <statement>
+        <p>
+          <m>s(t)=t^3-3t^2-6t+10</m>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-motion-acceleration" workspace="0in">
+    <title>Section 3: Acceleration and the second derivative</title>
+    <introduction>
+      <p>
+        The velocity <m>v(t)</m> is itself a function of time, so it has a derivative too.
+        The rate of change of velocity measures the change in velocity per unit of time.
+        With velocity in meters per second and time in seconds, its units are meters per second per second, written m/s<m>^2</m>.
+      </p>
+
+      <assemblage>
+        <title>Acceleration and the Second Derivative</title>
+        <p>
+          The rate of change of velocity is called the <term>acceleration</term> of the object:
+          <md>
+            <mrow>a(t) = v'(t)</mrow>
+          </md>.
+          In calculus, the derivative of a derivative is called the <term>second derivative</term>.
+          Since <m>v(t)=s'(t)</m>, acceleration is the second derivative of position with respect to time,
+          <md>
+            <mrow>a(t) = s''(t)</mrow>
+          </md>.
+          The number of primes tells us how many derivatives have been taken.
+        </p>
+      </assemblage>
+
+      <p>
+        We can apply the same tools to velocity that we applied to position.
+        The solutions of <m>v'(t)=0</m> are the critical points of the velocity.
+        Sign analysis of <m>a(t)=v'(t)</m> tells us where <m>v(t)</m> is increasing (where <m>a(t)\gt 0</m>) and where <m>v(t)</m> is decreasing (where <m>a(t)\lt 0</m>).
+      </p>
+      <p>
+        <em>Note:</em> Velocity has a sign that depends on the direction of motion.
+        So <q><m>v(t)</m> is increasing</q> means that the value of <m>v(t)</m> moves to the right on the number line, as when it goes from <m>-5</m> to <m>-1</m> or from <m>-1</m> to <m>3</m>.
+        It is not about getting faster or slower.
+        For example, a velocity that goes from <m>-1</m> to <m>-5</m> is decreasing, even though the object is moving faster.
+      </p>
+      <p>
+        Suppose an object has velocity <m>v(t)=4-t^2</m> meters per second.
+      </p>
+    </introduction>
+    <task xml:id="task-motion-accel-sign" workspace="2in">
+      <statement>
+        <ol marker="a.">
+          <li><p>Factor <m>v(t)</m> and solve <m>v(t)=0</m>.</p></li>
+          <li><p>On what intervals is <m>v(t)</m> positive? On what intervals is it negative?</p></li>
+          <li><p>What does this tell you about how the position <m>s(t)</m> is changing on each interval?</p></li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-motion-accel-trend" workspace="2in">
+      <statement>
+        <ol marker="a.">
+          <li><p>Find the acceleration <m>a(t)=v'(t)</m>, and solve <m>v'(t)=0</m> to find the critical points of the velocity.</p></li>
+          <li><p>Use sign analysis of <m>a(t)</m> to find the intervals where <m>v(t)</m> is increasing and where it is decreasing.</p></li>
+          <li><p>What does this tell you about how the position <m>s(t)</m> is changing on each interval? Remember that <m>v(t)</m> is the slope of the graph of <m>s(t)</m>, and describe what is happening to that slope.</p></li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-motion-concavity" workspace="0in">
+    <title>Section 4: Concavity and sketching position from velocity</title>
+    <introduction>
+      <p>
+        In the last task you described how the slope of the graph of <m>s(t)</m> was changing.
+        That is the idea behind concavity, and it applies to any function, not just to position.
+      </p>
+
+      <assemblage>
+        <title>Concavity and the Second Derivative</title>
+        <p>
+          Concavity is defined by how the slope is changing.
+          A function <m>f(x)</m> is <term>concave up</term> on an interval if the derivative <m>f'(x)</m> is increasing on that interval.
+          A function <m>f(x)</m> is <term>concave down</term> on an interval if the derivative <m>f'(x)</m> is decreasing on that interval.
+        </p>
+        <p>
+          Because <m>f''(x)</m> is what we use to find where <m>f'(x)</m> is increasing or decreasing, sign analysis of <m>f''(x)</m> determines the concavity:
+        </p>
+        <ul>
+          <li><p>If <m>f''(x)</m> is positive on an interval, then <m>f(x)</m> is concave up on the interval.</p></li>
+          <li><p>If <m>f''(x)</m> is negative on an interval, then <m>f(x)</m> is concave down on the interval.</p></li>
+        </ul>
+        <p>
+          A point where the concavity changes is an inflection point, so it occurs where <m>f''(x)</m> changes sign.
+        </p>
+      </assemblage>
+
+      <p>
+        For position, <m>f''</m> is the acceleration.
+        Together, the sign of the velocity <m>v(t)=s'(t)</m> and the sign of the acceleration <m>a(t)=s''(t)</m> describe the full shape of the graph of <m>s(t)</m>.
+      </p>
+      <p>
+        For each velocity function below, sketch a graph of the position <m>s(t)</m> by following these steps.
+      </p>
+      <ol>
+        <li><p>Use sign analysis of <m>v(t)</m> to find the intervals where <m>s(t)</m> is increasing and decreasing.</p></li>
+        <li><p>Find <m>a(t)=v'(t)</m> and use sign analysis to find the intervals where <m>s(t)</m> is concave up and concave down.</p></li>
+        <li><p>Record both results on number lines with the break points marked, as in the charts from the graph behavior activity.</p></li>
+        <li><p>Sketch <m>s(t)</m> so that it has all of the behavior on your number lines. Velocity only tells us how position changes, so assume <m>s(0)=0</m>.</p></li>
+        <li><p>Mark and label each local maximum, local minimum, and inflection point on your sketch, and state the <m>t</m>-value where each occurs.</p></li>
+      </ol>
+    </introduction>
+    <task xml:id="task-motion-sketch-1" workspace="3.5in">
+      <statement>
+        <p>
+          <m>v(t)=4-t^2</m>
+        </p>
+        <p>
+          You already did most of the sign analysis for this velocity in Section 3.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-motion-sketch-2" workspace="3.5in">
+      <statement>
+        <p>
+          <m>v(t)=6t-t^3</m>
+        </p>
+        <p>
+          Start by pulling out the common factor <m>t</m> in <m>v(t)</m>.
+          To solve <m>a(t)=0</m>, isolate <m>t^2</m> and take square roots.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
