@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: denver                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Velocity, Acceleration, and Concavity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: false,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Calculus with Functions I">
+<meta property="og:title" content="Calculus with Functions I">
+<meta property="book:title" content="Calculus with Functions I">
+<meta name="twitter:description" content="MATH 231-0002 Fall 2026">
+<meta property="og:description" content="MATH 231-0002 Fall 2026">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.53"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.53"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.4.0';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.7e2ee203f2ecd6c8.bundle.js"></script><script src="_static/prefix-23.7d27cb317c36911a.bundle.js"></script><script src="_static/prefix-runestone.35a40fea06647cf2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-runestone.7062ede5334282a6.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="root-1-2.html"><span class="title">Calculus with Functions I</span> <span class="subtitle">MATH 231-0002 Fall 2026</span></a></div>
+<p class="byline">Dr. Brian Walton</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-embed-button" class="ptx-embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><dialog class="ptx-dialog ptx-embed-popup" id="ptx-embed-popup"><div class="ptx-embed-popup-controls">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<button class="ptx-embed-close-button button" id="ptx-embed-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-embed-code-container">
+<textarea class="ptx-embed-code-textbox" id="ptx-embed-code-textbox" readonly aria-label="Embed"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button autofocus="autofocus" class="ptx-embed-copy-button button" id="ptx-embed-copy-button" title="Copy"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div></dialog><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="activity-polynomial-derivative.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="activities.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="activity-polynomial-antiderivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-documents.html" class="internal"><span class="title">Course Documents</span></a></div>
+<ul id="ptx-toc-group-course-documents" class="structural toc-item-list"><li class="toc-item toc-section">
+<div class="toc-title-box"><a href="syllabus.html" class="internal"><span class="title">Syllabus</span></a></div>
+<ul id="ptx-toc-group-syllabus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-course-info" class="internal"><span class="title">Course Information</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="syllabus.html#sec-assessments" class="internal"><span class="title">Assessments and Grades</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="course-objectives.html" class="internal"><span class="title">Course Learning Objectives</span></a></div>
+<ul id="ptx-toc-group-course-objectives" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="course-objectives-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-01.html" class="internal"><span class="title">Week 1 and Week 2</span></a></div>
+<ul id="ptx-toc-group-notes-week-01" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-3" class="internal"><span class="title">P1 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-4" class="internal"><span class="title">P2 Intervals and Set Operations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-01.html#notes-week-01-5" class="internal"><span class="title">P3 Formula Structure, Inverses and Isolation</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-02.html" class="internal"><span class="title">Week 3 and Week 4</span></a></div>
+<ul id="ptx-toc-group-notes-week-02" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-3" class="internal"><span class="title">P4 Linear Modeling</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-4" class="internal"><span class="title">F1 Function Notation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-02.html#notes-week-02-5" class="internal"><span class="title">F2 Function Domain</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-03.html" class="internal"><span class="title">Week 5 and Week 6</span></a></div>
+<ul id="ptx-toc-group-notes-week-03" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-3" class="internal"><span class="title">F3 Function Deconstruction</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-4" class="internal"><span class="title">F4 Function Inverses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-03.html#notes-week-03-5" class="internal"><span class="title">F5 Describing Functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-08-09.html" class="internal"><span class="title">Week 8 and Week 9</span></a></div>
+<ul id="ptx-toc-group-notes-week-08-09" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-3" class="internal"><span class="title">L1 Piecewise Limits and Continuity</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-4" class="internal"><span class="title">L2 Limits of Rational Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-08-09.html#notes-week-08-09-5" class="internal"><span class="title">L3 Limits at Infinity</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="notes-week-10-11.html" class="internal"><span class="title">Week 10 and Week 11</span></a></div>
+<ul id="ptx-toc-group-notes-week-10-11" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-3" class="internal"><span class="title">L4 Illustrating the Limit Definition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-4" class="internal"><span class="title">L5 Justifying Limits with Limit Rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="notes-week-10-11.html#notes-week-10-11-5" class="internal"><span class="title">D3 Sketching the Derivative Graph</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="activities.html" class="internal"><span class="title">In-Class Activities</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-activities">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="activities-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-linear-relations-slope.html" class="internal"><span class="title">Building Linear Relations from Change</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-interval-union-intersection.html" class="internal"><span class="title">Union and Intersection of Intervals</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-operations.html" class="internal"><span class="title">Method of Isolation: Solving by Inverse Operations</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Factored Polynomials</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-rational-sign-behavior.html" class="internal"><span class="title">Sign Behavior of Rational Expressions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-solve-rational-inequality.html" class="internal"><span class="title">Solving Rational Inequalities</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-notation.html" class="internal"><span class="title">Function Notation: Graphs, Tables, and Formulas</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-domain.html" class="internal"><span class="title">Domain of a Function</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-composition.html" class="internal"><span class="title">Composition of Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-deconstruction.html" class="internal"><span class="title">Sum, Difference, Product, Quotient, or Composition?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-inverse-functions.html" class="internal"><span class="title">Inverse Functions</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-function-behavior.html" class="internal"><span class="title">Describing Function Behavior</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-intuitive-limits.html" class="internal"><span class="title">Introducing Limits and Continuity</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-algebraic-limits.html" class="internal"><span class="title">Finding Limits Algebraically</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limits-at-infinity.html" class="internal"><span class="title">Limits at Infinity</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limit-definition.html" class="internal"><span class="title">The Definition of a Limit</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-limit-error-tolerance.html" class="internal"><span class="title">Limits as Error Tolerance</span></a></div></li>
+<li class="toc-item toc-handout"><div class="toc-title-box"><a href="handout-limit-proofs.html" class="internal"><span class="title">Proving Limits with the Definition</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-using-limit-rules.html" class="internal"><span class="title">Using Limit Rules</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-intro-derivative.html" class="internal"><span class="title">Tangent Lines and the Derivative</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-derivative.html" class="internal"><span class="title">Derivatives of Polynomials and Critical Points</span></a></div></li>
+<li class="toc-item toc-worksheet active"><div class="toc-title-box"><a href="activity-velocity-acceleration.html" class="internal"><span class="title">Velocity, Acceleration, and Concavity</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="activity-polynomial-antiderivative.html" class="internal"><span class="title">Antiderivatives of Polynomials</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="handouts.html" class="internal"><span class="title">Handouts</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="homework.html" class="internal"><span class="title">Homework</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<div class="print-preview-header">
+<h2 class="print-preview">Print preview</h2>
+<div class="print-controls">
+<div class="print-controls-toggles">
+<form class="papersize-select" id="papersize-select">
+<span class="name">Paper size</span><label><input type="radio" name="papersize" value="a4">A4
+        </label><label><input type="radio" name="papersize" value="letter">Letter
+        </label>
+</form>
+<details class="print-options"><summary>Additional printing options</summary><div class="header-footer-options">
+<div class="header-option">
+<span class="title">Print headers</span><label>First page<input type="checkbox" id="print-first-page-header-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-header-checkbox" checked></label>
+</div>
+<div class="footer-option">
+<span class="title">Print footers</span><label>First page<input type="checkbox" id="print-first-page-footer-checkbox" checked></label><label>Running<input type="checkbox" id="print-running-footer-checkbox" checked></label>
+</div>
+</div>
+<div class="highlight-workspace-option">
+<label for="highlight-workspace-checkbox">Highlight workspace</label><input type="checkbox" id="highlight-workspace-checkbox">
+</div></details>
+</div>
+<button class="print-button" title="Print" onClick="window.print()"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span><span class="name">Print</span></button>
+</div>
+</div>
+<section class="worksheet" id="activity-velocity-acceleration" data-margins="0.75in 0.75in 0.75in 0.75in">
+<h1 class="heading hide-type">
+<span class="type">Worksheet</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Velocity, Acceleration, and Concavity</span><div class="print-links"><a href="?printpreview=activity-velocity-acceleration" class="print-link" title="Print preview"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8ad;</span></a></div>
+</h1>
+<section class="introduction" id="activity-velocity-acceleration-2">
+<div class="para" id="activity-velocity-acceleration-2-1">So far we have thought of the derivative <span class="process-math">\(f'(x)\)</span> graphically, as the slope of the tangent line to the graph of <span class="process-math">\(f(x)\text{.}\)</span> A slope computes the ratio of a change in the output to a change in the input, which means it measures how fast the output is changing with respect to the input. In this activity we give the derivative a physical meaning in the setting of motion, where a rate of change is its own measurable quantity (velocity).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-velocity-acceleration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="activity-velocity-acceleration-2-2">Because the derivative (velocity) is itself a measurable function of time, we can talk about <em class="emphasis">its</em> derivative. That gives us a way to describe how the slope itself is changing, which is exactly what concavity means. Throughout this activity, we allow the time <span class="process-math">\(t\)</span> to be any real number, where negative values mean times before the clock was started.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#activity-velocity-acceleration-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section>
+<article class="exercise exercise-like" id="ex-motion-velocity"><h2 class="heading">
+<span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 1: Rate of change as velocity.</span>
+</h2>
+<div class="introduction" id="ex-motion-velocity-2">
+<div class="para" id="ex-motion-velocity-2-1">Suppose an object moves along a straight line, such as a road or a number line. It could be horizontal like a track or vertical like a ball thrown up into the air. Let <span class="process-math">\(s(t)\)</span> measure the object’s position at time <span class="process-math">\(t\text{.}\)</span> The slope of the graph of <span class="process-math">\(s(t)\)</span> gives the rate of change in position with respect to the change in time. If position is measured in meters and time in seconds, then the slope has units of meters per second. That should be a familiar kind of quantity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-velocity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="ex-motion-velocity-2-2"><h3 class="heading"><span class="title">Velocity.</span></h3>
+<div class="para logical" id="ex-motion-velocity-2-2-2">
+<div class="para">If <span class="process-math">\(s(t)\)</span> is the position of an object at time <span class="process-math">\(t\text{,}\)</span> then the derivative</div>
+<div class="displaymath process-math" id="ex-motion-velocity-2-2-2-3">
+\begin{gather*}
+v(t) = s'(t)
+\end{gather*}
+</div>
+<div class="para">is the <dfn class="terminology">velocity</dfn> of the object. Graphically, <span class="process-math">\(v(t)\)</span> gives the slope of the graph of <span class="process-math">\(s(t)\)</span> at each value <span class="process-math">\(t\text{.}\)</span> Physically, <span class="process-math">\(v(t)\)</span> is the rate of change of position, with units of distance per unit of time.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-velocity-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Velocity"><a tabindex="-1" href="#ex-motion-velocity-2-2" title="Copy heading and permalink for Assemblage: Velocity" aria-label="Copy heading and permalink for Assemblage: Velocity">🔗</a></div>
+</article>
+<div class="para" id="ex-motion-velocity-2-3">Velocity has a sign, and the sign tells us the direction of motion. If <span class="process-math">\(v(t)\)</span> is positive, then the object is moving toward the positive direction, so <span class="process-math">\(s(t)\)</span> is increasing. If <span class="process-math">\(v(t)\)</span> is negative, then the position <span class="process-math">\(s(t)\)</span> is decreasing and the object is moving in the negative direction. If <span class="process-math">\(v(t)=0\text{,}\)</span> then the object is instantaneously not moving in either direction. This typically corresponds to a critical point of position where it might change direction.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-velocity-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-motion-units"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-motion-units-1-1">A cyclist rides along a straight road. Let <span class="process-math">\(s(t)\)</span> be the cyclist’s distance in meters east of a signpost, <span class="process-math">\(t\)</span> seconds after a stopwatch is started.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-units-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-motion-units-1-2">
+<li id="task-motion-units-1-2-1">
+<div class="para" id="task-motion-units-1-2-1-1">What are the units of <span class="process-math">\(s'(t)\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-units-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1.a"><a tabindex="-1" href="#task-motion-units-1-2-1" title="Copy heading and permalink for Item 1.a" aria-label="Copy heading and permalink for Item 1.a">🔗</a></div>
+</li>
+<li id="task-motion-units-1-2-2">
+<div class="para" id="task-motion-units-1-2-2-1">Suppose <span class="process-math">\(s'(5)=-3\text{.}\)</span> Describe in words what the cyclist is doing at <span class="process-math">\(t=5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-units-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1.b"><a tabindex="-1" href="#task-motion-units-1-2-2" title="Copy heading and permalink for Item 1.b" aria-label="Copy heading and permalink for Item 1.b">🔗</a></div>
+</li>
+<li id="task-motion-units-1-2-3">
+<div class="para" id="task-motion-units-1-2-3-1">Suppose <span class="process-math">\(s'(8)=0\text{.}\)</span> What can you say about the cyclist at <span class="process-math">\(t=8\text{?}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-units-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1.c"><a tabindex="-1" href="#task-motion-units-1-2-3" title="Copy heading and permalink for Item 1.c" aria-label="Copy heading and permalink for Item 1.c">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 1.a"><a tabindex="-1" href="#task-motion-units" title="Copy heading and permalink for Task 1.a" aria-label="Copy heading and permalink for Task 1.a">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 1: Section 1: Rate of change as velocity"><a tabindex="-1" href="#ex-motion-velocity" title="Copy heading and permalink for Worksheet Exercise 1: Section 1: Rate of change as velocity" aria-label="Copy heading and permalink for Worksheet Exercise 1: Section 1: Rate of change as velocity">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-motion-direction"><h2 class="heading">
+<span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 2: Direction of motion.</span>
+</h2>
+<div class="introduction" id="ex-motion-direction-2">
+<div class="para" id="ex-motion-direction-2-1">We can use critical points and sign analysis, as we did when we studied graph behavior, to find the intervals of time on which the position is increasing and decreasing.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="ex-motion-direction-2-2"><h3 class="heading"><span class="title">Direction of Motion from the Velocity.</span></h3>
+<div class="para logical" id="ex-motion-direction-2-2-2">
+<ol class="decimal" id="ex-motion-direction-2-2-2-1">
+<li id="ex-motion-direction-2-2-2-1-1">
+<div class="para" id="ex-motion-direction-2-2-2-1-1-1">Compute the velocity <span class="process-math">\(v(t)=s'(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.1"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-1" title="Copy heading and permalink for Item 2.1" aria-label="Copy heading and permalink for Item 2.1">🔗</a></div>
+</li>
+<li id="ex-motion-direction-2-2-2-1-2">
+<div class="para" id="ex-motion-direction-2-2-2-1-2-1">Factor <span class="process-math">\(v(t)\)</span> completely and solve <span class="process-math">\(v(t)=0\text{.}\)</span> These are the critical points of <span class="process-math">\(s(t)\text{,}\)</span> where the object is momentarily at rest.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.2"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-2" title="Copy heading and permalink for Item 2.2" aria-label="Copy heading and permalink for Item 2.2">🔗</a></div>
+</li>
+<li id="ex-motion-direction-2-2-2-1-3">
+<div class="para" id="ex-motion-direction-2-2-2-1-3-1">Use sign analysis of <span class="process-math">\(v(t)\)</span> on the intervals between the critical points.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.3"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-3" title="Copy heading and permalink for Item 2.3" aria-label="Copy heading and permalink for Item 2.3">🔗</a></div>
+</li>
+<li id="ex-motion-direction-2-2-2-1-4">
+<div class="para" id="ex-motion-direction-2-2-2-1-4-1">On intervals where <span class="process-math">\(v(t)\gt 0\text{,}\)</span> the position <span class="process-math">\(s(t)\)</span> is increasing. On intervals where <span class="process-math">\(v(t)\lt 0\text{,}\)</span> the position <span class="process-math">\(s(t)\)</span> is decreasing.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.4"><a tabindex="-1" href="#ex-motion-direction-2-2-2-1-4" title="Copy heading and permalink for Item 2.4" aria-label="Copy heading and permalink for Item 2.4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Direction of Motion from the Velocity"><a tabindex="-1" href="#ex-motion-direction-2-2" title="Copy heading and permalink for Assemblage: Direction of Motion from the Velocity" aria-label="Copy heading and permalink for Assemblage: Direction of Motion from the Velocity">🔗</a></div>
+</article>
+<div class="para logical" id="ex-motion-direction-2-3">
+<div class="para">For each position function below, with <span class="process-math">\(s\)</span> in meters and <span class="process-math">\(t\)</span> in seconds, answer the following.</div>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="ex-motion-direction-2-3-3">
+<li id="ex-motion-direction-2-3-3-1">
+<div class="para" id="ex-motion-direction-2-3-3-1-1">Find the velocity <span class="process-math">\(v(t)=s'(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-3-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.a"><a tabindex="-1" href="#ex-motion-direction-2-3-3-1" title="Copy heading and permalink for Item 2.a" aria-label="Copy heading and permalink for Item 2.a">🔗</a></div>
+</li>
+<li id="ex-motion-direction-2-3-3-2">
+<div class="para" id="ex-motion-direction-2-3-3-2-1">Factor <span class="process-math">\(v(t)\)</span> completely and solve <span class="process-math">\(v(t)=0\text{.}\)</span> Use the quadratic formula if the quadratic factor does not factor.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-3-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.b"><a tabindex="-1" href="#ex-motion-direction-2-3-3-2" title="Copy heading and permalink for Item 2.b" aria-label="Copy heading and permalink for Item 2.b">🔗</a></div>
+</li>
+<li id="ex-motion-direction-2-3-3-3">
+<div class="para" id="ex-motion-direction-2-3-3-3-1">Use sign analysis to find the intervals where <span class="process-math">\(v(t)\)</span> is positive and where it is negative.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-3-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.c"><a tabindex="-1" href="#ex-motion-direction-2-3-3-3" title="Copy heading and permalink for Item 2.c" aria-label="Copy heading and permalink for Item 2.c">🔗</a></div>
+</li>
+<li id="ex-motion-direction-2-3-3-4">
+<div class="para" id="ex-motion-direction-2-3-3-4-1">State the intervals where <span class="process-math">\(s(t)\)</span> is increasing and where it is decreasing, and describe the direction of motion on each interval in words.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-3-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2.d"><a tabindex="-1" href="#ex-motion-direction-2-3-3-4" title="Copy heading and permalink for Item 2.d" aria-label="Copy heading and permalink for Item 2.d">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-direction-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-motion-direction-1"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-motion-direction-1-1-1">
+<span class="process-math">\(s(t)=t^3-6t^2+9t\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-direction-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.a"><a tabindex="-1" href="#task-motion-direction-1" title="Copy heading and permalink for Task 2.a" aria-label="Copy heading and permalink for Task 2.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-motion-direction-2"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-motion-direction-2-1-1">
+<span class="process-math">\(s(t)=t^3-3t^2-6t+10\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-direction-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="2.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 2.b"><a tabindex="-1" href="#task-motion-direction-2" title="Copy heading and permalink for Task 2.b" aria-label="Copy heading and permalink for Task 2.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 2: Section 2: Direction of motion"><a tabindex="-1" href="#ex-motion-direction" title="Copy heading and permalink for Worksheet Exercise 2: Section 2: Direction of motion" aria-label="Copy heading and permalink for Worksheet Exercise 2: Section 2: Direction of motion">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-motion-acceleration"><h2 class="heading">
+<span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 3: Acceleration and the second derivative.</span>
+</h2>
+<div class="introduction" id="ex-motion-acceleration-2">
+<div class="para" id="ex-motion-acceleration-2-1">The velocity <span class="process-math">\(v(t)\)</span> is itself a function of time, so it has a derivative too. The rate of change of velocity measures the change in velocity per unit of time. With velocity in meters per second and time in seconds, its units are meters per second per second, written m/s<span class="process-math">\(^2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-acceleration-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="ex-motion-acceleration-2-2"><h3 class="heading"><span class="title">Acceleration and the Second Derivative.</span></h3>
+<div class="para logical" id="ex-motion-acceleration-2-2-2">
+<div class="para">The rate of change of velocity is called the <dfn class="terminology">acceleration</dfn> of the object:</div>
+<div class="displaymath process-math" id="ex-motion-acceleration-2-2-2-2">
+\begin{gather*}
+a(t) = v'(t)\text{.}
+\end{gather*}
+</div>
+<div class="para">In calculus, the derivative of a derivative is called the <dfn class="terminology">second derivative</dfn>. Since <span class="process-math">\(v(t)=s'(t)\text{,}\)</span> acceleration is the second derivative of position with respect to time,</div>
+<div class="displaymath process-math" id="ex-motion-acceleration-2-2-2-5">
+\begin{gather*}
+a(t) = s''(t)\text{.}
+\end{gather*}
+</div>
+<div class="para">The number of primes tells us how many derivatives have been taken.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-acceleration-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Acceleration and the Second Derivative"><a tabindex="-1" href="#ex-motion-acceleration-2-2" title="Copy heading and permalink for Assemblage: Acceleration and the Second Derivative" aria-label="Copy heading and permalink for Assemblage: Acceleration and the Second Derivative">🔗</a></div>
+</article>
+<div class="para" id="ex-motion-acceleration-2-3">We can apply the same tools to velocity that we applied to position. The solutions of <span class="process-math">\(v'(t)=0\)</span> are the critical points of the velocity. Sign analysis of <span class="process-math">\(a(t)=v'(t)\)</span> tells us where <span class="process-math">\(v(t)\)</span> is increasing (where <span class="process-math">\(a(t)\gt 0\)</span>) and where <span class="process-math">\(v(t)\)</span> is decreasing (where <span class="process-math">\(a(t)\lt 0\)</span>).<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-acceleration-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-motion-acceleration-2-4">
+<em class="emphasis">Note:</em> Velocity has a sign that depends on the direction of motion. So “<span class="process-math">\(v(t)\)</span> is increasing” means that the value of <span class="process-math">\(v(t)\)</span> moves to the right on the number line, as when it goes from <span class="process-math">\(-5\)</span> to <span class="process-math">\(-1\)</span> or from <span class="process-math">\(-1\)</span> to <span class="process-math">\(3\text{.}\)</span> It is not about getting faster or slower. For example, a velocity that goes from <span class="process-math">\(-1\)</span> to <span class="process-math">\(-5\)</span> is decreasing, even though the object is moving faster.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-acceleration-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-motion-acceleration-2-5">Suppose an object has velocity <span class="process-math">\(v(t)=4-t^2\)</span> meters per second.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-acceleration-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+</div>
+<article class="task exercise-like" id="task-motion-accel-sign"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-motion-accel-sign-1-1">
+<li id="task-motion-accel-sign-1-1-1">
+<div class="para" id="task-motion-accel-sign-1-1-1-1">Factor <span class="process-math">\(v(t)\)</span> and solve <span class="process-math">\(v(t)=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-accel-sign-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.a"><a tabindex="-1" href="#task-motion-accel-sign-1-1-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
+</li>
+<li id="task-motion-accel-sign-1-1-2">
+<div class="para" id="task-motion-accel-sign-1-1-2-1">On what intervals is <span class="process-math">\(v(t)\)</span> positive? On what intervals is it negative?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-accel-sign-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.b"><a tabindex="-1" href="#task-motion-accel-sign-1-1-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
+</li>
+<li id="task-motion-accel-sign-1-1-3">
+<div class="para" id="task-motion-accel-sign-1-1-3-1">What does this tell you about how the position <span class="process-math">\(s(t)\)</span> is changing on each interval?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-accel-sign-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.c"><a tabindex="-1" href="#task-motion-accel-sign-1-1-3" title="Copy heading and permalink for Item 3.c" aria-label="Copy heading and permalink for Item 3.c">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.a"><a tabindex="-1" href="#task-motion-accel-sign" title="Copy heading and permalink for Task 3.a" aria-label="Copy heading and permalink for Task 3.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-motion-accel-trend"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<ol class="lower-alpha" style="list-style: ptx-marker-1;" id="task-motion-accel-trend-1-1">
+<li id="task-motion-accel-trend-1-1-1">
+<div class="para" id="task-motion-accel-trend-1-1-1-1">Find the acceleration <span class="process-math">\(a(t)=v'(t)\text{,}\)</span> and solve <span class="process-math">\(v'(t)=0\)</span> to find the critical points of the velocity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-accel-trend-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.a"><a tabindex="-1" href="#task-motion-accel-trend-1-1-1" title="Copy heading and permalink for Item 3.a" aria-label="Copy heading and permalink for Item 3.a">🔗</a></div>
+</li>
+<li id="task-motion-accel-trend-1-1-2">
+<div class="para" id="task-motion-accel-trend-1-1-2-1">Use sign analysis of <span class="process-math">\(a(t)\)</span> to find the intervals where <span class="process-math">\(v(t)\)</span> is increasing and where it is decreasing.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-accel-trend-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.b"><a tabindex="-1" href="#task-motion-accel-trend-1-1-2" title="Copy heading and permalink for Item 3.b" aria-label="Copy heading and permalink for Item 3.b">🔗</a></div>
+</li>
+<li id="task-motion-accel-trend-1-1-3">
+<div class="para" id="task-motion-accel-trend-1-1-3-1">What does this tell you about how the position <span class="process-math">\(s(t)\)</span> is changing on each interval? Remember that <span class="process-math">\(v(t)\)</span> is the slope of the graph of <span class="process-math">\(s(t)\text{,}\)</span> and describe what is happening to that slope.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-accel-trend-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3.c"><a tabindex="-1" href="#task-motion-accel-trend-1-1-3" title="Copy heading and permalink for Item 3.c" aria-label="Copy heading and permalink for Item 3.c">🔗</a></div>
+</li>
+</ol>
+<div class="workspace" data-space="2in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 3.b"><a tabindex="-1" href="#task-motion-accel-trend" title="Copy heading and permalink for Task 3.b" aria-label="Copy heading and permalink for Task 3.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 3: Section 3: Acceleration and the second derivative"><a tabindex="-1" href="#ex-motion-acceleration" title="Copy heading and permalink for Worksheet Exercise 3: Section 3: Acceleration and the second derivative" aria-label="Copy heading and permalink for Worksheet Exercise 3: Section 3: Acceleration and the second derivative">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ex-motion-concavity"><h2 class="heading">
+<span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Section 4: Concavity and sketching position from velocity.</span>
+</h2>
+<div class="introduction" id="ex-motion-concavity-2">
+<div class="para" id="ex-motion-concavity-2-1">In the last task you described how the slope of the graph of <span class="process-math">\(s(t)\)</span> was changing. That is the idea behind concavity, and it applies to any function, not just to position.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="ex-motion-concavity-2-2"><h3 class="heading"><span class="title">Concavity and the Second Derivative.</span></h3>
+<div class="para" id="ex-motion-concavity-2-2-2">Concavity is defined by how the slope is changing. A function <span class="process-math">\(f(x)\)</span> is <dfn class="terminology">concave up</dfn> on an interval if the derivative <span class="process-math">\(f'(x)\)</span> is increasing on that interval. A function <span class="process-math">\(f(x)\)</span> is <dfn class="terminology">concave down</dfn> on an interval if the derivative <span class="process-math">\(f'(x)\)</span> is decreasing on that interval.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-motion-concavity-2-2-3">Because <span class="process-math">\(f''(x)\)</span> is what we use to find where <span class="process-math">\(f'(x)\)</span> is increasing or decreasing, sign analysis of <span class="process-math">\(f''(x)\)</span> determines the concavity:<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-motion-concavity-2-2-5">A point where the concavity changes is an inflection point, so it occurs where <span class="process-math">\(f''(x)\)</span> changes sign.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Assemblage: Concavity and the Second Derivative"><a tabindex="-1" href="#ex-motion-concavity-2-2" title="Copy heading and permalink for Assemblage: Concavity and the Second Derivative" aria-label="Copy heading and permalink for Assemblage: Concavity and the Second Derivative">🔗</a></div>
+</article>
+<div class="para" id="ex-motion-concavity-2-3">For position, <span class="process-math">\(f''\)</span> is the acceleration. Together, the sign of the velocity <span class="process-math">\(v(t)=s'(t)\)</span> and the sign of the acceleration <span class="process-math">\(a(t)=s''(t)\)</span> describe the full shape of the graph of <span class="process-math">\(s(t)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="ex-motion-concavity-2-4">For each velocity function below, sketch a graph of the position <span class="process-math">\(s(t)\)</span> by following these steps.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<ol class="decimal" id="ex-motion-concavity-2-5">
+<li id="ex-motion-concavity-2-5-1">
+<div class="para" id="ex-motion-concavity-2-5-1-1">Use sign analysis of <span class="process-math">\(v(t)\)</span> to find the intervals where <span class="process-math">\(s(t)\)</span> is increasing and decreasing.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.1"><a tabindex="-1" href="#ex-motion-concavity-2-5-1" title="Copy heading and permalink for Item 4.1" aria-label="Copy heading and permalink for Item 4.1">🔗</a></div>
+</li>
+<li id="ex-motion-concavity-2-5-2">
+<div class="para" id="ex-motion-concavity-2-5-2-1">Find <span class="process-math">\(a(t)=v'(t)\)</span> and use sign analysis to find the intervals where <span class="process-math">\(s(t)\)</span> is concave up and concave down.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.2"><a tabindex="-1" href="#ex-motion-concavity-2-5-2" title="Copy heading and permalink for Item 4.2" aria-label="Copy heading and permalink for Item 4.2">🔗</a></div>
+</li>
+<li id="ex-motion-concavity-2-5-3">
+<div class="para" id="ex-motion-concavity-2-5-3-1">Record both results on number lines with the break points marked, as in the charts from the graph behavior activity.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.3"><a tabindex="-1" href="#ex-motion-concavity-2-5-3" title="Copy heading and permalink for Item 4.3" aria-label="Copy heading and permalink for Item 4.3">🔗</a></div>
+</li>
+<li id="ex-motion-concavity-2-5-4">
+<div class="para" id="ex-motion-concavity-2-5-4-1">Sketch <span class="process-math">\(s(t)\)</span> so that it has all of the behavior on your number lines. Velocity only tells us how position changes, so assume <span class="process-math">\(s(0)=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.4"><a tabindex="-1" href="#ex-motion-concavity-2-5-4" title="Copy heading and permalink for Item 4.4" aria-label="Copy heading and permalink for Item 4.4">🔗</a></div>
+</li>
+<li id="ex-motion-concavity-2-5-5">
+<div class="para" id="ex-motion-concavity-2-5-5-1">Mark and label each local maximum, local minimum, and inflection point on your sketch, and state the <span class="process-math">\(t\)</span>-value where each occurs.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ex-motion-concavity-2-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4.5"><a tabindex="-1" href="#ex-motion-concavity-2-5-5" title="Copy heading and permalink for Item 4.5" aria-label="Copy heading and permalink for Item 4.5">🔗</a></div>
+</li>
+</ol>
+</div>
+<article class="task exercise-like" id="task-motion-sketch-1"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<div class="para" id="task-motion-sketch-1-1-1">
+<span class="process-math">\(v(t)=4-t^2\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-sketch-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="task-motion-sketch-1-1-2">You already did most of the sign analysis for this velocity in Section 3.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-sketch-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="3.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.a"><a tabindex="-1" href="#task-motion-sketch-1" title="Copy heading and permalink for Task 4.a" aria-label="Copy heading and permalink for Task 4.a">🔗</a></div>
+</article>
+<article class="task exercise-like" id="task-motion-sketch-2"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="task-motion-sketch-2-1-1">
+<span class="process-math">\(v(t)=6t-t^3\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-sketch-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="task-motion-sketch-2-1-2">Start by pulling out the common factor <span class="process-math">\(t\)</span> in <span class="process-math">\(v(t)\text{.}\)</span> To solve <span class="process-math">\(a(t)=0\text{,}\)</span> isolate <span class="process-math">\(t^2\)</span> and take square roots.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#task-motion-sketch-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="workspace" data-space="3.5in"></div>
+<div class="autopermalink" aria-hidden="true" data-description="Task 4.b"><a tabindex="-1" href="#task-motion-sketch-2" title="Copy heading and permalink for Task 4.b" aria-label="Copy heading and permalink for Task 4.b">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet Exercise 4: Section 4: Concavity and sketching position from velocity"><a tabindex="-1" href="#ex-motion-concavity" title="Copy heading and permalink for Worksheet Exercise 4: Section 4: Concavity and sketching position from velocity" aria-label="Copy heading and permalink for Worksheet Exercise 4: Section 4: Concavity and sketching position from velocity">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Worksheet: Velocity, Acceleration, and Concavity"><a tabindex="-1" href="#activity-velocity-acceleration" title="Copy heading and permalink for Worksheet: Velocity, Acceleration, and Concavity" aria-label="Copy heading and permalink for Worksheet: Velocity, Acceleration, and Concavity">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="activity-polynomial-derivative.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="activity-polynomial-antiderivative.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
