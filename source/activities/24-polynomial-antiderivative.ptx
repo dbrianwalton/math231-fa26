@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Short (half-class) telling-and-practice activity: antiderivatives of
+     polynomials and particular antiderivatives.
+     Arc: reverse the derivative by guess and check (Section 1), name the
+     antiderivative and invert the power rule with a flow chart (Section 2),
+     then use a data point to find the constant C (Section 3).
+
+     Timing: aim for about 15 minutes of material, since this is meant to
+     fill roughly half of a class period. If it runs long, trim in this
+     order: Section 2 task 4 (the product), Section 3 task 3 (the position
+     application), then Section 1 task 2 part c.
+
+     Notation: the antidifferentiation operator is written in bracket form
+     to match d/dx[ ], as in \int dx[ a x^n ]. The introduction of Section 2
+     mentions the usual form \int a x^n dx so students can recognize it later.
+
+     Convention: no data point in Section 3 uses x=0 (or t=0), so students
+     do not conclude that C always equals the given data value. In each
+     example C differs from the data value.
+
+     Answer key
+     Section 1 task 1: all three derivatives are 2x. Knowing only f'(x)=2x
+       does not determine f(x). The candidates differ by a constant.
+     Section 1 task 2: a. 3x^4   b. 2x^5   c. 7x.
+     Section 1 task 3: the exponent goes up by 1. The coefficient is divided
+       by the new exponent: 12/4 = 3, 10/5 = 2, 7/1 = 7 (7 = 7x^0 becomes 7x^1).
+     Section 2 worked example: \int dx[ 12x^3 - 10x + 3 ] = 3x^4 - 5x^2 + 3x + C.
+     Section 2 task 1: 8x^3 gives 2x^4 + C.
+     Section 2 task 2: 6x^2 - 4x + 7 gives 2x^3 - 2x^2 + 7x + C.
+     Section 2 task 3: 9x^2 - 5x + 4 gives 3x^3 - (5/2)x^2 + 4x + C.
+     Section 2 task 4: (x+1)(x+3) = x^2 + 4x + 3 gives
+       (1/3)x^3 + 2x^2 + 3x + C.
+     Section 3 worked example: f'(x) = 6x^2 - 2, f(2) = 10.
+       f(x) = 2x^3 - 2x + C, f(2) = 12 + C = 10, C = -2, f(x) = 2x^3 - 2x - 2.
+     Section 3 task 1: f'(x) = 4x^3 - 6x, f(1) = 5.
+       f(x) = x^4 - 3x^2 + C, f(1) = -2 + C = 5, C = 7, f(x) = x^4 - 3x^2 + 7.
+     Section 3 task 2: f'(x) = 3x^2 + 4x - 1, f(-2) = 3.
+       f(x) = x^3 + 2x^2 - x + C, f(-2) = 2 + C = 3, C = 1,
+       f(x) = x^3 + 2x^2 - x + 1.
+     Section 3 task 3: v(t) = 3t^2 - 4t, s(3) = 4.
+       s(t) = t^3 - 2t^2 + C, s(3) = 9 + C = 4, C = -5,
+       s(t) = t^3 - 2t^2 - 5. Then s(1) = 1 - 2 - 5 = -6 meters. -->
+<worksheet xml:id="activity-polynomial-antiderivative">
+  <title>Antiderivatives of Polynomials</title>
+
+  <introduction>
+    <p>
+      The derivative operator <m>\dfrac{d}{dx}\left[\ \right]</m> takes a function <m>f(x)</m> as its input and produces the derivative function <m>f'(x)</m>.
+      If we know an object's position as a function of time <m>s(t)</m>, we can find a formula for its velocity <m>v(t)</m>, and then a formula for its acceleration <m>a(t)</m>.
+    </p>
+    <p>
+      Inverse operations are a major idea in mathematics, so we ask about the reverse process.
+      If we know the derivative, can we find the original function?
+      Knowing the acceleration, can we recover the velocity, and then the position?
+      Today we learn to do this for polynomials.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-antideriv-explore" workspace="0in">
+    <title>Section 1: Running the derivative backward</title>
+    <introduction>
+      <p>
+        Finding a derivative follows a set of rules, and each rule can be run in reverse.
+        We start by trying to undo a derivative with guess and check.
+      </p>
+    </introduction>
+    <task xml:id="task-antideriv-same-derivative" workspace="1.25in">
+      <statement>
+        <p>
+          Find the derivative of each function.
+        </p>
+        <ol marker="a.">
+          <li><p><m>f(x)=x^2+1</m></p></li>
+          <li><p><m>f(x)=x^2-4</m></p></li>
+          <li><p><m>f(x)=x^2+10</m></p></li>
+        </ol>
+        <p>
+          Suppose someone tells you only that <m>f'(x)=2x</m>.
+          Can you tell which function <m>f(x)</m> they started with?
+          Explain.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-antideriv-guess-check" workspace="1.25in">
+      <statement>
+        <p>
+          For each formula, find a function whose derivative is that formula.
+          Check each guess by taking its derivative.
+        </p>
+        <ol marker="a.">
+          <li><p><m>12x^3</m></p></li>
+          <li><p><m>10x^4</m></p></li>
+          <li><p><m>7</m></p></li>
+        </ol>
+      </statement>
+    </task>
+    <task xml:id="task-antideriv-pattern" workspace="1.25in">
+      <statement>
+        <p>
+          Compare each formula in the previous task with the function you found for it.
+          What happened to the exponent of <m>x</m>?
+          What happened to the coefficient?
+          (For part c, remember that <m>7=7x^0</m>.)
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-antideriv-rule" workspace="0in">
+    <title>Section 2: The antiderivative of a polynomial</title>
+    <introduction>
+      <assemblage>
+        <title>Antiderivative</title>
+        <p>
+          A function <m>F(x)</m> is an <term>antiderivative</term> of <m>f(x)</m> if <m>F'(x)=f(x)</m>.
+        </p>
+        <p>
+          The derivative of a constant is <m>0</m>, so if <m>F(x)</m> is an antiderivative of <m>f(x)</m>, then so is <m>F(x)+C</m> for any constant <m>C</m>.
+          That is why you could not pin down <m>f(x)</m> in the first task.
+          We cannot speak of <em>the</em> antiderivative, so we write the whole family of antiderivatives with an arbitrary constant <m>C</m>:
+          <md>
+            <mrow>\int dx\left[ f(x) \right] = F(x) + C</mrow>
+          </md>.
+        </p>
+      </assemblage>
+
+      <p>
+        The symbol <m>\displaystyle\int dx\left[\ \right]</m> is the reverse of <m>\dfrac{d}{dx}\left[\ \right]</m>.
+        (Later courses write this same operation as <m>\int f(x)\,dx</m>.)
+        To find the rule for a single term, we compare what the derivative does to <m>a x^n</m> with what the antiderivative must do to undo it.
+        The derivative performs three steps, and the antiderivative reverses each one, in reverse order.
+      </p>
+
+      <figure xml:id="fig-antideriv-flowchart">
+        <caption>Differentiating and antidifferentiating <m>a x^n</m></caption>
+        <image xml:id="image-antideriv-flowchart" width="100%">
+          <shortdescription>
+            A flow chart with two rows of boxes. The top row, labeled derivative, starts with a x to the n,
+            then step 1 keep the constant a, step 2 multiply by the power n, step 3 lower the power of x from n to n minus 1,
+            and ends with a n x to the n minus 1. The bottom row, labeled antiderivative, starts with a x to the n,
+            then step 3 prime raise the power of x from n to n plus 1, step 2 prime divide by the new power n plus 1,
+            step 1 prime keep the constant a, and ends with a over n plus 1 times x to the n plus 1, plus C.
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[>=stealth, node distance=0.5cm,
+                io/.style={draw, rounded corners=6pt, minimum height=1.3cm, minimum width=2.2cm, align=center, inner sep=3pt, fill=gray!12},
+                proc/.style={draw, rectangle, minimum height=1.3cm, text width=2.2cm, align=center, inner sep=3pt, font=\footnotesize}]
+              % Derivative row
+              \node[font=\small\bfseries, anchor=south west] at (0,1.0) {Derivative: $\dfrac{d}{dx}\left[ a x^n \right]$};
+              \node[io] (d0) at (0,0) {$a\,x^n$};
+              \node[proc, right=of d0] (d1) {\textbf{(1)} Keep the constant $a$};
+              \node[proc, right=of d1] (d2) {\textbf{(2)} Multiply by the power $n$};
+              \node[proc, right=of d2] (d3) {\textbf{(3)} Lower the power of $x$ from $n$ to $n-1$};
+              \node[io, right=of d3] (d4) {$a\,n\,x^{n-1}$};
+              \draw[->, thick] (d0) -- (d1);
+              \draw[->, thick] (d1) -- (d2);
+              \draw[->, thick] (d2) -- (d3);
+              \draw[->, thick] (d3) -- (d4);
+              % Antiderivative row
+              \node[font=\small\bfseries, anchor=south west] at (0,-2.0) {Antiderivative: $\displaystyle \int dx\left[ a x^n \right]$};
+              \node[io] (a0) at (0,-3.0) {$a\,x^n$};
+              \node[proc, right=of a0] (a1) {\textbf{(3$'$)} Raise the power of $x$ from $n$ to $n+1$};
+              \node[proc, right=of a1] (a2) {\textbf{(2$'$)} Divide by the new power $n+1$};
+              \node[proc, right=of a2] (a3) {\textbf{(1$'$)} Keep the constant $a$};
+              \node[io, right=of a3] (a4) {$\dfrac{a}{n+1}\,x^{n+1} + C$};
+              \draw[->, thick] (a0) -- (a1);
+              \draw[->, thick] (a1) -- (a2);
+              \draw[->, thick] (a2) -- (a3);
+              \draw[->, thick] (a3) -- (a4);
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+
+      <assemblage>
+        <title>The Power Rule for Antiderivatives</title>
+        <p>
+          For a constant <m>a</m> and a power <m>n=0,1,2,\dots</m>,
+          <md>
+            <mrow>\int dx\left[ a x^n \right] = \frac{a}{n+1}\,x^{n+1} + C</mrow>
+          </md>.
+          Step <m>(1')</m> is the constant multiple rule, and the sum rule lets us work one term at a time.
+          We add a single <m>+C</m> at the end, since a sum of constants is again an arbitrary constant.
+          A constant term is a power with <m>n=0</m>, so <m>\displaystyle\int dx\left[ a \right] = a x + C</m>.
+        </p>
+      </assemblage>
+
+      <assemblage>
+        <title>Checking an Antiderivative</title>
+        <p>
+          If <m>\displaystyle\int dx\left[ f(x) \right] = F(x)+C</m>, check your work by computing <m>\dfrac{d}{dx}\left[ F(x) \right]</m> and verifying that it matches <m>f(x)</m>.
+          The <m>C</m> disappears when you differentiate.
+        </p>
+      </assemblage>
+
+      <p>
+        Here is an example, with its check.
+        <md>
+          <mrow>\int dx\left[ 12x^3 - 10x + 3 \right] \amp = \frac{12}{4}x^4 - \frac{10}{2}x^2 + \frac{3}{1}x + C = 3x^4 - 5x^2 + 3x + C</mrow>
+          <mrow>\frac{d}{dx}\left[ 3x^4 - 5x^2 + 3x \right] \amp = 12x^3 - 10x + 3 \quad\checkmark</mrow>
+        </md>.
+      </p>
+      <p>
+        Find each antiderivative, and check each answer by differentiating.
+      </p>
+    </introduction>
+    <task xml:id="task-antideriv-practice-1" workspace="1in">
+      <statement>
+        <p>
+          <m>\displaystyle \int dx\left[ 8x^3 \right]</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-antideriv-practice-2" workspace="1in">
+      <statement>
+        <p>
+          <m>\displaystyle \int dx\left[ 6x^2 - 4x + 7 \right]</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-antideriv-practice-fractions" workspace="1in">
+      <statement>
+        <p>
+          <m>\displaystyle \int dx\left[ 9x^2 - 5x + 4 \right]</m>
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-antideriv-practice-expand" workspace="1.25in">
+      <statement>
+        <p>
+          <m>\displaystyle \int dx\left[ (x+1)(x+3) \right]</m>
+        </p>
+        <p>
+          We have no rule for a product, so what must you do to the formula first?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-antideriv-particular" workspace="0in">
+    <title>Section 3: Finding a particular antiderivative</title>
+    <introduction>
+      <p>
+        Sometimes we know the formula for <m>f'(x)</m> and also one specific value of <m>f(x)</m>, such as <m>f(a)</m> at a particular <m>x=a</m>.
+        The general antiderivative could have <em>any</em> constant added, but the data point singles out the one constant that matches.
+      </p>
+
+      <assemblage>
+        <title>Finding a Particular Antiderivative</title>
+        <p>
+          <ol>
+            <li><p>Find the general antiderivative <m>f(x)=F(x)+C</m>, keeping the symbol <m>C</m> in the formula.</p></li>
+            <li><p>Evaluate the formula at <m>x=a</m>, with <m>C</m> still present, to get <m>F(a)+C</m>.</p></li>
+            <li><p>Set <m>F(a)+C</m> equal to the known value of <m>f(a)</m>, and solve the equation for <m>C</m>.</p></li>
+            <li><p>Write the final formula for <m>f(x)</m> using that particular value of <m>C</m>.</p></li>
+          </ol>
+        </p>
+      </assemblage>
+
+      <p>
+        <em>Example.</em>
+        Find <m>f(x)</m> if <m>f'(x)=6x^2-2</m> and <m>f(2)=10</m>.
+        <md>
+          <mrow>f(x) \amp = \int dx\left[ 6x^2 - 2 \right] = 2x^3 - 2x + C</mrow>
+          <mrow>f(2) \amp = 2(2)^3 - 2(2) + C = 12 + C</mrow>
+          <mrow>12 + C \amp = 10 \quad\Longrightarrow\quad C = -2</mrow>
+          <mrow>f(x) \amp = 2x^3 - 2x - 2</mrow>
+        </md>.
+        Notice that <m>C=-2</m> is not the given value <m>10</m>.
+        The data value is <m>f(2)</m>, which is the whole formula evaluated at <m>x=2</m>, and <m>C</m> is only one piece of it.
+        As a check, <m>f(2)=16-4-2=10</m>.
+      </p>
+    </introduction>
+    <task xml:id="task-antideriv-particular-1" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>f(x)</m> if <m>f'(x)=4x^3-6x</m> and <m>f(1)=5</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-antideriv-particular-2" workspace="1.5in">
+      <statement>
+        <p>
+          Find <m>f(x)</m> if <m>f'(x)=6x^2+4x-1</m> and <m>f(-2)=3</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-antideriv-particular-position" workspace="1.75in">
+      <statement>
+        <p>
+          An object moves along a line with velocity <m>v(t)=3t^2-4t</m> meters per second.
+          At time <m>t=3</m> seconds, its position is <m>s(3)=4</m> meters.
+        </p>
+        <ol marker="a.">
+          <li><p>Find the position function <m>s(t)</m>.</p></li>
+          <li><p>Where is the object at time <m>t=1</m> seconds?</p></li>
+        </ol>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
