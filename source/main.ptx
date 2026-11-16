@@ -73,6 +73,7 @@
       <xi:include href="./activities/22-polynomial-derivative.ptx"/>
       <xi:include href="./activities/23-velocity-acceleration.ptx"/>
       <xi:include href="./activities/24-polynomial-antiderivative.ptx"/>
+      <xi:include href="./activities/25-global-extreme-values.ptx"/>
 
       <!-- Add more xi:include files here to include them in the main course -->
     </chapter>

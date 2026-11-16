@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Telling-and-practice activity: local extreme tests and global extreme values.
+     Arc: the First and Second Derivative Tests for local extremes, compared
+     on one example (Section 1), the definition of global extremes and the
+     boundary strategy, illustrated with x^2 on [-1,2) (Section 2), the
+     Extreme Value Theorem (Section 3), then practice finding the range and
+     the global extremes of polynomials on closed, open, and mixed intervals
+     (Section 4).
+
+     Timing: this is a lot of content for one period. Aim for Sections 1 and 2
+     as the core, Section 3 as a short statement, and Section 4 as the
+     practice. If the period runs long, trim in this order: Section 4 task 5
+     (critical points outside the interval), Section 4 task 2 (ties), then
+     the closing reflection in Section 1.
+
+     Convention: a limit at an excluded end point of a formula that is
+     continuous there is written with the evaluation bar, as in activity 15.
+     For the quartic on all real numbers, the boundary is behavior at
+     +/- infinity, handled with limits at infinity (activity 16).
+
+     Answer key
+     Section 1: f(x) = x^3 - 12x + 4.
+       f'(x) = 3x^2 - 12 = 3(x-2)(x+2), critical points x = -2, 2.
+       Sign chart of f': positive on (-inf,-2), negative on (-2,2),
+       positive on (2,inf). So +/- at x = -2 (local maximum, f(-2) = 20)
+       and -/+ at x = 2 (local minimum, f(2) = -12).
+       f''(x) = 6x. f''(-2) = -12 is negative, concave down, local maximum.
+       f''(2) = 12 is positive, concave up, local minimum. The tests agree.
+       Reflection: the second derivative test needs no sign chart, but it
+       says nothing if f''(a) = 0 (for example f(x) = x^4 at x = 0, a local
+       minimum, and f(x) = x^3 at x = 0, neither), and it does not apply
+       where f'(a) does not exist. The first derivative test always works.
+     Section 2 example (worked in the text): range [0,4), global minimum 0
+       at x = 0, no global maximum.
+     Section 4 (all polynomials; f' is easy to factor)
+       Task 1: f(x) = x^3 - 12x on [-3,5]. f' = 3(x-2)(x+2), critical
+         points -2, 2, both in the interval. f(-3) = 9, f(-2) = 16,
+         f(2) = -16, f(5) = 65. Range [-16,65]. Global maximum 65 at
+         x = 5, global minimum -16 at x = 2.
+       Task 2: f(x) = x^3 - 3x^2 on [-1,3]. f' = 3x(x-2), critical points
+         0, 2. f(-1) = -4, f(0) = 0, f(2) = -4, f(3) = 0. Range [-4,0].
+         Global maximum 0 at x = 0 and at x = 3. Global minimum -4 at
+         x = -1 and at x = 2. The extreme value can occur at more than one
+         x-value.
+       Task 3: f(x) = x^3 - 12x on (-3,5). Same critical points as task 1.
+         Limit as x goes to -3 is 9, limit as x goes to 5 is 65 (neither
+         attained). Values 16 and -16 at the critical points. Range
+         [-16,65). Global minimum -16 at x = 2. No global maximum, since
+         65 is only a limit.
+       Task 4: f(x) = x^3 - 3x on (-3,2]. f' = 3(x-1)(x+1), critical
+         points -1, 1. Limit as x goes to -3 is -18 (not attained),
+         f(-1) = 2, f(1) = -2, f(2) = 2. Range (-18,2]. Global maximum 2 at
+         x = -1 and at x = 2. No global minimum, since -18 is only a limit.
+       Task 5: f(x) = x^3 - 3x on (1,3). Critical points -1 and 1 are not
+         in the interval (1 is an excluded end point). Limit as x goes to 1
+         is -2, limit as x goes to 3 is 18. f is increasing on the interval.
+         Range (-2,18). No global maximum and no global minimum.
+       Task 6: f(x) = x^4 - 8x^2 + 10 on (-inf,inf). f' = 4x(x-2)(x+2),
+         critical points -2, 0, 2. f(-2) = -6, f(0) = 10, f(2) = -6.
+         Limits as x goes to +/- infinity are +infinity. Range [-6,+inf).
+         Global minimum -6 at x = -2 and at x = 2. No global maximum. The
+         local maximum at x = 0 (value 10) is not a global maximum. -->
+<worksheet xml:id="activity-global-extreme-values">
+  <title>Global Extreme Values</title>
+
+  <introduction>
+    <p>
+      We have used the sign of <m>f'(x)</m> to find where a function has a local maximum or a local minimum.
+      Now we ask a different kind of question: what is the very highest or the very lowest value the function reaches over a whole set of inputs?
+      That is the question behind finding the cheapest design, the largest area, or the greatest height.
+      In this activity we review the tests for local extremes, then define and find global extremes.
+    </p>
+  </introduction>
+
+  <exercise xml:id="ex-extremes-local-tests" workspace="0in">
+    <title>Section 1: Two tests for local extremes</title>
+    <introduction>
+      <p>
+        Recall that critical points are the only places where a local extreme can occur.
+        Once we have a critical point, there are two ways to decide what happens there.
+        The first is the sign chart of <m>f'(x)</m> that we have already used.
+      </p>
+
+      <assemblage>
+        <title>First Derivative Test for Local Extremes</title>
+        <p>
+          Let <m>x=a</m> be a critical point of <m>f(x)</m>, and look at the sign chart of <m>f'(x)</m> around <m>x=a</m>.
+          <ul>
+            <li><p>If <m>f'(x)</m> changes from positive to negative (<m>+/-</m>) at <m>x=a</m>, then <m>f(x)</m> has a local maximum at <m>x=a</m>.</p></li>
+            <li><p>If <m>f'(x)</m> changes from negative to positive (<m>-/+</m>) at <m>x=a</m>, then <m>f(x)</m> has a local minimum at <m>x=a</m>.</p></li>
+            <li><p>If <m>f'(x)</m> does not change sign at <m>x=a</m>, then <m>f(x)</m> has neither at <m>x=a</m>.</p></li>
+          </ul>
+        </p>
+      </assemblage>
+
+      <p>
+        The second test uses concavity, which we measure with the second derivative <m>f''(x)</m>.
+        A graph that is concave up near a horizontal tangent looks like the bottom of a bowl, and one that is concave down looks like the top of a hill.
+      </p>
+
+      <assemblage>
+        <title>Second Derivative Test for Local Extremes</title>
+        <p>
+          <ul>
+            <li><p>If <m>f'(a)=0</m> and <m>f''(a)</m> is positive (think: concave up), then <m>f(x)</m> has a local minimum at <m>x=a</m>.</p></li>
+            <li><p>If <m>f'(a)=0</m> and <m>f''(a)</m> is negative (think: concave down), then <m>f(x)</m> has a local maximum at <m>x=a</m>.</p></li>
+          </ul>
+          If <m>f''(a)=0</m>, the test does not tell us anything.
+        </p>
+      </assemblage>
+    </introduction>
+    <task xml:id="task-extremes-compare-tests" workspace="3in">
+      <statement>
+        <p>
+          Use both tests on the function <m>f(x)=x^3-12x+4</m>.
+          <ol marker="a.">
+            <li><p>Find <m>f'(x)</m>, factor it completely, and list the critical points.</p></li>
+            <li><p>Make a sign chart of <m>f'(x)</m>. Use the First Derivative Test to classify each critical point, and find the <m>y</m>-value at each one.</p></li>
+            <li><p>Find <m>f''(x)</m>. Use the Second Derivative Test to classify each critical point. Do the two tests agree?</p></li>
+            <li><p>Which test took less work here? Describe a situation where the Second Derivative Test cannot decide, but the First Derivative Test can.</p></li>
+          </ol>
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-extremes-global-def" workspace="0in">
+    <title>Section 2: Global extreme values</title>
+    <introduction>
+      <p>
+        A local extreme only needs to be the highest or lowest value of the function in a small neighborhood surrounding that point.
+        A <term>global extreme</term> is the highest or lowest value of the function over an entire specified set, such as an interval or the whole domain.
+      </p>
+
+      <assemblage>
+        <title>Global Extreme Values</title>
+        <p>
+          A function <m>f(x)</m> has a <term>global maximum</term> on a set <m>S</m> at <m>x=a</m> means that <m>f(a) \ge f(x)</m> for all other <m>x</m> in <m>S</m>.
+        </p>
+        <p>
+          A function <m>f(x)</m> has a <term>global minimum</term> on a set <m>S</m> at <m>x=a</m> means that <m>f(a) \le f(x)</m> for all other <m>x</m> in <m>S</m>.
+        </p>
+      </assemblage>
+
+      <p>
+        Notice that <m>a</m> must belong to <m>S</m>, so the extreme value must actually be a value that the function takes.
+        Where can such a point be?
+        If <m>a</m> is an interior point of <m>S</m>, then <m>f(a)</m> is also a local extreme, so <m>a</m> must be a critical point.
+        Otherwise <m>a</m> is on the boundary of <m>S</m>.
+      </p>
+
+      <assemblage>
+        <title>Strategy for Finding Global Extremes</title>
+        <p>
+          <ol>
+            <li><p>Find the critical points of <m>f(x)</m> that lie inside the set. Ignore any that lie outside.</p></li>
+            <li><p>Find the boundary points of the set. At a boundary point that is included in the set and where <m>f(x)</m> is continuous, find the function value <m>f(a)</m>. At a boundary point that is not included, or where <m>f(x)</m> is not continuous, find the limit of <m>f(x)</m> as <m>x</m> approaches it instead.</p></li>
+            <li><p>Compare the <m>y</m>-values from steps 1 and 2 to determine the range of the function on the set.</p></li>
+            <li><p>A global maximum or minimum exists only if the highest or lowest <m>y</m>-value is actually reached by a function value. A value that is only a limit is not reached.</p></li>
+          </ol>
+        </p>
+      </assemblage>
+
+      <p>
+        <em>Example.</em> Find the global extremes of <m>f(x)=x^2</m> on the set <m>[-1,2)</m>.
+      </p>
+      <p>
+        Since <m>f'(x)=2x=0</m> at <m>x=0</m>, there is one critical point and <m>f(0)=0</m>.
+        There are two boundary points.
+        The point <m>x=-1</m> is included, and <m>f(-1)=(-1)^2=1</m>.
+        The point <m>x=2</m> is not included, so we cannot use <m>f(2)</m>.
+        Instead we use a limit, <m>\displaystyle \lim_{x \to 2^-} x^2 = \left. (x^2) \right|_{x=2} = 4</m>.
+      </p>
+
+      <table xml:id="table-extremes-parabola-values">
+        <title>Candidates for global extremes of <m>x^2</m> on <m>[-1,2)</m></title>
+        <tabular halign="center" bottom="minor">
+          <row header="yes" bottom="minor">
+            <cell><m>x</m></cell>
+            <cell>Why it matters</cell>
+            <cell><m>y</m>-value</cell>
+          </row>
+          <row>
+            <cell><m>0</m></cell>
+            <cell>critical point</cell>
+            <cell><m>0</m></cell>
+          </row>
+          <row>
+            <cell><m>-1</m></cell>
+            <cell>included boundary point</cell>
+            <cell><m>1</m></cell>
+          </row>
+          <row>
+            <cell><m>2</m></cell>
+            <cell>excluded boundary point</cell>
+            <cell><m>4</m> (as a limit only)</cell>
+          </row>
+        </tabular>
+      </table>
+
+      <figure xml:id="fig-extremes-parabola">
+        <caption>The graph of <m>f(x)=x^2</m> on <m>[-1,2)</m></caption>
+        <image xml:id="image-extremes-parabola" width="45%">
+          <shortdescription>
+            The part of the parabola y equals x squared for x from -1 to 2.
+            There is a filled point at (-1,1), a filled point at the vertex (0,0), and an open point at (2,4).
+          </shortdescription>
+          <latex-image>
+            <![CDATA[
+            \begin{tikzpicture}[x=1.3cm, y=0.65cm, font=\small]
+              \draw[->] (-1.6,0) -- (2.7,0) node[right] {$x$};
+              \draw[->] (0,-0.7) -- (0,4.9) node[above] {$y$};
+              \draw[very thick, domain=-1:2, samples=60, smooth] plot (\x,{\x*\x});
+              \fill (-1,1) circle (2.5pt) node[left] {$(-1,1)$};
+              \fill (0,0) circle (2.5pt) node[below right] {$(0,0)$};
+              \draw[fill=white] (2,4) circle (2.5pt) node[right] {$(2,4)$};
+              \draw (-1,0.12) -- (-1,-0.12) node[below] {$-1$};
+              \draw (2,0.12) -- (2,-0.12) node[below] {$2$};
+            \end{tikzpicture}
+            ]]>
+          </latex-image>
+        </image>
+      </figure>
+
+      <p>
+        The value <m>y=0</m> is the lowest value, and <m>y=4</m> is the highest value, but only as a limit, so the range is <m>[0,4)</m>.
+        The function <m>f(x)</m> has a global minimum of <m>0</m> at <m>x=0</m>, but <m>f(x)</m> does not have a global maximum.
+        We can reach any <m>y</m>-value with <m>0 \le y \lt 4</m>, but for every <m>x</m> in the set there is always another <m>x</m>-value closer to <m>2</m> that reaches an even higher value.
+      </p>
+    </introduction>
+    <task xml:id="task-extremes-parabola-check" workspace="1.5in">
+      <statement>
+        <p>
+          In the example, the point <m>x=-1</m> gave the value <m>y=1</m>, which is neither the global maximum nor the global minimum.
+          Suppose the set is changed to <m>[-1,2]</m>, which now includes <m>x=2</m>.
+          What is the range, and where are the global maximum and global minimum?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-extremes-evt" workspace="0in">
+    <title>Section 3: The Extreme Value Theorem</title>
+    <introduction>
+      <p>
+        In the example, the global maximum failed to exist because the right end of the set was not included.
+        If the set includes both of its boundary points and the function has no breaks, that problem cannot happen.
+      </p>
+
+      <assemblage>
+        <title>Extreme Value Theorem</title>
+        <p>
+          If <m>f(x)</m> is a continuous function on a closed interval <m>[a,b]</m>, then <m>f(x)</m> <em>will</em> have both a global maximum and a global minimum on <m>[a,b]</m>.
+        </p>
+      </assemblage>
+
+      <p>
+        When the theorem applies, we are guaranteed that the strategy above will produce a global maximum and a global minimum.
+        We simply compare the function values at the critical points in the interval and at the two end points, and the largest and smallest of them are the global extremes.
+        When the theorem does not apply, because the interval is not closed or the function is not continuous, we must be careful.
+        A global extreme might exist, or might not, and we decide by finding the range.
+      </p>
+    </introduction>
+    <task xml:id="task-extremes-evt-conditions" workspace="1.5in">
+      <statement>
+        <p>
+          The function <m>f(x)=x^2</m> on <m>[-1,2)</m> has no global maximum.
+          Which condition of the Extreme Value Theorem fails?
+          Then give your own example of a function that is not continuous on a closed interval <m>[0,2]</m> and has no global maximum there.
+        </p>
+      </statement>
+    </task>
+  </exercise>
+
+  <exercise xml:id="ex-extremes-practice" workspace="0in">
+    <title>Section 4: Finding the range and global extremes</title>
+    <introduction>
+      <p>
+        For each function and set below, answer the following.
+        <ol marker="a.">
+          <li><p>Find <m>f'(x)</m>, factor it, and list the critical points that lie inside the set.</p></li>
+          <li><p>Find the <m>y</m>-value at each of those critical points. Then find the <m>y</m>-value (a function value or a limit) at each boundary point.</p></li>
+          <li><p>Use these <m>y</m>-values to state the range of the function on the set.</p></li>
+          <li><p>State whether there is a global maximum and whether there is a global minimum. If so, give the value and the <m>x</m>-value where it occurs.</p></li>
+        </ol>
+      </p>
+    </introduction>
+    <task xml:id="task-extremes-practice-closed" workspace="2.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^3-12x</m> on the interval <m>[-3,5]</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-extremes-practice-ties" workspace="2.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^3-3x^2</m> on the interval <m>[-1,3]</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-extremes-practice-open" workspace="2.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^3-12x</m> on the interval <m>(-3,5)</m>.
+          Compare your answers with the first task. What changed when the end points were removed?
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-extremes-practice-mixed" workspace="2.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^3-3x</m> on the interval <m>(-3,2]</m>.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-extremes-practice-outside" workspace="2.5in">
+      <statement>
+        <p>
+          <m>f(x)=x^3-3x</m> on the interval <m>(1,3)</m>.
+          Be careful about which critical points belong to the set.
+        </p>
+      </statement>
+    </task>
+    <task xml:id="task-extremes-practice-quartic" workspace="3in">
+      <statement>
+        <p>
+          <m>f(x)=x^4-8x^2+10</m> on the set <m>(-\infty,\infty)</m>.
+          The boundary of this set is the behavior of <m>f(x)</m> as <m>x \to -\infty</m> and as <m>x \to +\infty</m>, so use limits at infinity for those <m>y</m>-values.
+          Is the local maximum a global maximum?
+        </p>
+      </statement>
+    </task>
+  </exercise>
+</worksheet>
