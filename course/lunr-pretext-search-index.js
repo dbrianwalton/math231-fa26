@@ -280,6 +280,60 @@ var ptx_lunr_docs = [
   "body": " D3   The graph of is shown for . Each grid square is 1 unit wide and 1 unit tall.   An M-shaped graph for x from -3 to 4 on a grid. It rises from about (-3, -0.8) to a local maximum at (-2, 2), falls to a local minimum at (0, 0), rises to a higher local maximum at (3, 5.9), and then falls to (4, 2).    Sketch the graph of on the axes below. Mark the -values where and your graph should show clearly where is increasing and decreasing, with reasonable estimates for actual values at extremes.   Blank axes on a grid for x from -3 to 4 and for slope values from -10 to 8. The horizontal scale matches the graph of f(x).      The graph of has horizontal tangent lines at , , and , so at those three -values.  The graph of is increasing on and , so is positive there. It is decreasing on and , so is negative there. The graph of therefore crosses the -axis at each of the three -values, and it has the shape of a cubic with a negative leading coefficient.  The graph of is steepest between the horizontal tangent lines near its inflection points, at about and . On the graph is falling, so has a local minimum near with a slope of about . On the graph is rising, so has a local maximum near with a slope of about . The graph of is rising fairly steeply at and falling steeply at , so is about at and at .   A graph for x from -3 to 4 that crosses the x-axis at x = -2, 0, and 3. It is positive and falling for x less than -2, then negative between -2 and 0 with a local minimum near (-1.1, -1.5), then positive between 0 and 3 with a local maximum near (1.8, 3), and then negative and falling for x greater than 3.     "
 },
 {
+  "id": "notes-week-12-13",
+  "level": "1",
+  "url": "notes-week-12-13.html",
+  "type": "Section",
+  "number": "",
+  "title": "Week 12 and Week 13",
+  "body": " Week 12 and Week 13   During these weeks, we used the derivative to describe the shape of a graph and then used that shape to answer optimization questions. We used the sign of the first derivative to find where a function increases and decreases, and the sign of the second derivative to find where it is concave up and concave down. We also learned to invert the derivative process to find antiderivatives of polynomials, and we used a known function value to determine the unknown constant. Finally, we found the global extremes a function reaches on an interval.    A1 Analyzing a Function with Its Derivatives   A1  I can analyze a function using the derivative to determine its intervals of monotonicity and concavity, including analysis based on the graph of the derivative.   What do I need to understand?   The values of where or is not defined are called the critical points of . They are the potential points where  might change direction.    We use sign analysis of , with the critical points of as the dividing points, to find the intervals on which is increasing or decreasing. Where , the function is increasing. Where , the function is decreasing.    The correct phrase is is increasing on the interval or is decreasing on the interval . Increasing and decreasing are based on comparing any two -values chosen from the specified set, so they describe an interval and not an individual point.    We use sign analysis of , with the critical points of as the dividing points, to find the intervals on which is concave up or concave down.    A function is concave up when the slope itself is increasing, so when . A function is concave down when the slope is decreasing, so when .    A local maximum occurs at a point where is increasing on the left and decreasing on the right. A local minimum occurs at a point where is decreasing on the left and increasing on the right. In terms of the derivative, changes sign at the point.    An inflection point occurs at a point where the concavity changes. It is a place where changes sign, so alone is not enough.    When we are given the graph of instead of a formula, we read the same information from the graph. Where the graph of is above the -axis, is increasing, and where it is below the -axis, is decreasing. Where the graph of is rising, is concave up, and where it is falling, is concave down. The local maximums and local minimums of the graph of are the inflection points of .      A1   A function has a derivative Using information about the derivatives and , describe the intervals on which is increasing, decreasing, concave up, and concave down, and identify the -coordinates of any local extremes.    The derivative is defined everywhere, so the critical points of are the zeros of the factored form : , , and .  We test the sign of on each interval, using the factored form to keep the arithmetic simple.    Interval        Sign of        Behavior of  increasing  decreasing  increasing  decreasing    So is increasing on and on , and is decreasing on and on .  The function changes from increasing to decreasing at and at , so has a local maximum at each of those -values. The function changes from decreasing to increasing at , so has a local minimum at .  For concavity we differentiate the expanded form again: . The critical points of are the zeros of , which are and . Testing the sign of gives the following sign chart.    Interval       Sign of       Concavity of  concave down  concave up  concave down    So is concave up on and concave down on and on . The concavity changes at and at , so these are the -coordinates of the inflection points.      A2 Antiderivatives with an Initial Condition   A2  I can find an antiderivative for a polynomial with initial condition.   What do I need to understand?   The reverse power rule undoes the power rule for derivatives. For , The exponent goes up by 1, and the coefficient is divided by the new exponent. A constant term is a power with , so the antiderivative of is .    The sum rule and constant multiple rule let us work one term at a time. This works as long as the expression only involves addition and multiplication by constants. A product such as must be expanded into terms first.    An antiderivative always has an unknown constant , because functions that differ only by a constant have the same derivative. Knowing alone does not determine a single function .    To find the constant, evaluate the antiderivative formula at the given input, set the result equal to the given output value, and solve for . Then write the final formula with the value of included.    You can check an antiderivative by taking its derivative. The result should be the original , and evaluating your final formula should match the given value.      A2   Find the function such that and .    We use the reverse power rule on each term.   Now we use to find .   Therefore .      A4 Global Extreme Values on an Interval   A4  I can find the global extreme values of a function on a specified interval.   What do I need to understand?   A global maximum on an interval is the highest value that the function actually takes on that interval, and a global minimum is the lowest value it actually takes. A local extreme only has to be highest or lowest nearby, so a local maximum is not always a global maximum.    For a continuous function on a closed interval , the Extreme Value Theorem guarantees that both a global maximum and a global minimum exist. Polynomials are continuous, so this applies to every polynomial on a closed interval.    A global extreme can only occur at a critical point inside the interval or at one of the two end points. Find the critical points of by solving , and keep only the ones that lie in the interval. A critical point outside the interval is ignored.    Evaluate the original function , not , at each critical point in the interval and at both end points. The largest of these values is the global maximum and the smallest is the global minimum.    An answer has two parts: the extreme value , which is a -value, and the -value where it occurs. An extreme can occur at an end point, and the same extreme value can occur at more than one -value.      A4   Find the global maximum and the global minimum of on the interval , if they exist. For each one that exists, state the value of the extreme and the -value where it occurs.    The interval is not closed, so the Extreme Value Theorem does not guarantee that both extremes exist. We find the range of the function on the interval and then decide.  We find the critical points: . The derivative is zero at and . Only lies in , so we ignore .  The end point is included, so we use the function value . The end point is not included, so we cannot use . Instead we use a limit.      Why it matters  -value     included end point      critical point      excluded end point  (as a limit only)    The highest value is , and it is reached at . The lowest value, , is only a limit as approaches from the left. The range is .  The global maximum is , which occurs at . There is no global minimum. The function is decreasing on , so for every in the interval there is another -value closer to with a lower output, and the value is never reached.     "
+},
+{
+  "id": "notes-week-12-13-3-3",
+  "level": "2",
+  "url": "notes-week-12-13.html#notes-week-12-13-3-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "critical points concave up concave down local maximum local minimum inflection point "
+},
+{
+  "id": "A1-checkpoint",
+  "level": "2",
+  "url": "notes-week-12-13.html#A1-checkpoint",
+  "type": "Checkpoint",
+  "number": "19",
+  "title": "A1.",
+  "body": " A1   A function has a derivative Using information about the derivatives and , describe the intervals on which is increasing, decreasing, concave up, and concave down, and identify the -coordinates of any local extremes.    The derivative is defined everywhere, so the critical points of are the zeros of the factored form : , , and .  We test the sign of on each interval, using the factored form to keep the arithmetic simple.    Interval        Sign of        Behavior of  increasing  decreasing  increasing  decreasing    So is increasing on and on , and is decreasing on and on .  The function changes from increasing to decreasing at and at , so has a local maximum at each of those -values. The function changes from decreasing to increasing at , so has a local minimum at .  For concavity we differentiate the expanded form again: . The critical points of are the zeros of , which are and . Testing the sign of gives the following sign chart.    Interval       Sign of       Concavity of  concave down  concave up  concave down    So is concave up on and concave down on and on . The concavity changes at and at , so these are the -coordinates of the inflection points.   "
+},
+{
+  "id": "A2-checkpoint",
+  "level": "2",
+  "url": "notes-week-12-13.html#A2-checkpoint",
+  "type": "Checkpoint",
+  "number": "20",
+  "title": "A2.",
+  "body": " A2   Find the function such that and .    We use the reverse power rule on each term.   Now we use to find .   Therefore .   "
+},
+{
+  "id": "notes-week-12-13-5-3",
+  "level": "2",
+  "url": "notes-week-12-13.html#notes-week-12-13-5-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "global maximum global minimum "
+},
+{
+  "id": "A4-checkpoint",
+  "level": "2",
+  "url": "notes-week-12-13.html#A4-checkpoint",
+  "type": "Checkpoint",
+  "number": "21",
+  "title": "A4.",
+  "body": " A4   Find the global maximum and the global minimum of on the interval , if they exist. For each one that exists, state the value of the extreme and the -value where it occurs.    The interval is not closed, so the Extreme Value Theorem does not guarantee that both extremes exist. We find the range of the function on the interval and then decide.  We find the critical points: . The derivative is zero at and . Only lies in , so we ignore .  The end point is included, so we use the function value . The end point is not included, so we cannot use . Instead we use a limit.      Why it matters  -value     included end point      critical point      excluded end point  (as a limit only)    The highest value is , and it is reached at . The lowest value, , is only a limit as approaches from the left. The range is .  The global maximum is , which occurs at . There is no global minimum. The function is decreasing on , so for every in the interval there is another -value closer to with a lower output, and the value is never reached.   "
+},
+{
   "id": "activity-linear-relations-slope",
   "level": "1",
   "url": "activity-linear-relations-slope.html",
@@ -329,7 +383,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-linear-relations-slope.html#def-slope-point-slope",
   "type": "Definition",
-  "number": "19",
+  "number": "22",
   "title": "",
   "body": "  The constant rate you found in Model 2 is called the slope of the relation, or its average rate of change . The equation you built in Task 4 has the same structure as called point-slope form , where is any known point on the relation and is the slope. It says exactly what you wrote: a new value equals a starting value plus the slope times how far you've moved from that starting point.   "
 },
@@ -833,7 +887,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "activity-inverse-functions.html#def-inverse-function",
   "type": "Definition",
-  "number": "22",
+  "number": "25",
   "title": "Inverse function.",
   "body": " Inverse function   For a given function , the function is the inverse function to if   for every in the domain of , and  for every in the domain of .    "
 },
@@ -1139,7 +1193,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#def-handout-limit",
   "type": "Definition",
-  "number": "31",
+  "number": "34",
   "title": "Limit.",
   "body": " Limit    means that for every there exists a such that .   "
 },
@@ -1148,7 +1202,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-3-4",
   "type": "Remark",
-  "number": "32",
+  "number": "35",
   "title": "Strategy.",
   "body": " Strategy  A proof states the value or method to find as soon as we state we are given the value of . In practice, we have to work backward on scratch paper. We start from the desired output inequality and rewrite it so that the expression appears, usually by factoring. The value is usually multiplied by some value or formula which we need to bound so that we get some multiple of . We choose our value of so that when multiplying by this bound we stay smaller than . Then we return to the actual proof and proceed forward, beginning with , stating , assuming and ending with .  "
 },
@@ -1157,7 +1211,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#ex-handout-limit-linear",
   "type": "Example",
-  "number": "33",
+  "number": "36",
   "title": "A Linear Function.",
   "body": " A Linear Function   Prove .     Scratch work. We want . Simplifying the left side means we want . We will be choosing and know that , which will then be multiplied by 2. This suggests we want .   Let and choose . If , then . Since was arbitrary, the limit statement is true.    "
 },
@@ -1166,7 +1220,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#ex-handout-limit-quadratic",
   "type": "Example",
-  "number": "34",
+  "number": "37",
   "title": "A Quadratic Function.",
   "body": " A Quadratic Function   Prove .     Scratch work. We want . Factoring gives . The factor is not constant, so we bound it. If we require , then we will work with , then and , so . Then , and we need . This suggests we also need . We meet both of our requirements by choosing .   Let and choose . If , we know that and . Because , we know . Together, we now know . Since was arbitrary, the limit statement is true.    "
 },
@@ -1184,7 +1238,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-constant",
   "type": "Theorem",
-  "number": "35",
+  "number": "38",
   "title": "Limit of a Constant.",
   "body": " Limit of a Constant   For any constant , .    Let . Any positive works, so choose . If , then .   "
 },
@@ -1193,7 +1247,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-identity",
   "type": "Theorem",
-  "number": "36",
+  "number": "39",
   "title": "Limit of the Identity Function.",
   "body": " Limit of the Identity Function    .    Let and choose . If , then .   "
 },
@@ -1202,7 +1256,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-linear",
   "type": "Theorem",
-  "number": "37",
+  "number": "40",
   "title": "Limit of a Linear Function.",
   "body": " Limit of a Linear Function   For constants and , .    Let and choose . If , then .   "
 },
@@ -1211,7 +1265,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-6-5",
   "type": "Remark",
-  "number": "38",
+  "number": "41",
   "title": "Continuity.",
   "body": " Continuity  In each of these results the value of the limit is the same as the value of the function at . For the constant function the value is , for the identity function the value is , and for the linear function the value is . This means that these elementary functions are continuous at every point .  "
 },
@@ -1220,7 +1274,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-scalar-multiple",
   "type": "Theorem",
-  "number": "39",
+  "number": "42",
   "title": "Limit of a Scalar Multiple.",
   "body": " Limit of a Scalar Multiple   If and is a constant, then .   "
 },
@@ -1229,7 +1283,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-4",
   "type": "Remark",
-  "number": "40",
+  "number": "43",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get .  "
 },
@@ -1247,7 +1301,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#ex-handout-snacks",
   "type": "Example",
-  "number": "41",
+  "number": "44",
   "title": "Buying Snacks.",
   "body": " Buying Snacks   You and a friend are buying snacks. You are supposed to buy of snacks and your friend is supposed to buy of snacks, but prices vary slightly so it is hard to be exact. You agree in advance that you will each stay within of your target. How far away can the total combined cost be from ?    Each of you are going to be spending a value between $2.90 and $3.10. The cheapest scenario is that you each spend $2.90 for a total cost of $5.80. The most expensive scenario results in a total cost of $6.20. The total error can be as large as $0.20.   "
 },
@@ -1256,7 +1310,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-triangle-inequality",
   "type": "Theorem",
-  "number": "42",
+  "number": "45",
   "title": "Triangle Inequality.",
   "body": " Triangle Inequality   For any values and , .   "
 },
@@ -1265,7 +1319,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-sum",
   "type": "Theorem",
-  "number": "43",
+  "number": "46",
   "title": "Limit of a Sum.",
   "body": " Limit of a Sum   If and , then .   "
 },
@@ -1274,7 +1328,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-10",
   "type": "Remark",
-  "number": "44",
+  "number": "47",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the sum uses .  "
 },
@@ -1292,7 +1346,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-product",
   "type": "Theorem",
-  "number": "45",
+  "number": "48",
   "title": "Limit of a Product.",
   "body": " Limit of a Product   If and , then .   "
 },
@@ -1301,7 +1355,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-13",
   "type": "Remark",
-  "number": "46",
+  "number": "49",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get . Use the - rule for with the tolerance to get . The rule for the product uses .  "
 },
@@ -1319,7 +1373,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-reciprocal",
   "type": "Theorem",
-  "number": "47",
+  "number": "50",
   "title": "Limit of a Reciprocal.",
   "body": " Limit of a Reciprocal   If and , then .   "
 },
@@ -1328,7 +1382,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-16",
   "type": "Remark",
-  "number": "48",
+  "number": "51",
   "title": "Finding <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " Finding  Given , use the - rule for with the tolerance to get .  "
 },
@@ -1346,7 +1400,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#thm-limit-quotient",
   "type": "Theorem",
-  "number": "49",
+  "number": "52",
   "title": "Limit of a Quotient.",
   "body": " Limit of a Quotient   If and and , then .   "
 },
@@ -1355,7 +1409,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "handout-limit-proofs.html#handout-limit-proofs-7-19",
   "type": "Remark",
-  "number": "50",
+  "number": "53",
   "title": "No Need for <span class=\"process-math\">\\(\\delta\\)<\/span>.",
   "body": " No Need for  This theorem can actually be proved based on earlier rules rather than requiring that we use the - rules for limits because a quotient is the same as a product of with a reciprocal .  "
 },
