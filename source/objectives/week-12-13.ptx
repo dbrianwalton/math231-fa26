@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Answer key and notes for the checkpoint examples.
+     A1: f'(x) = -2x^3 - 4x^2 + 30x = -2x(x+5)(x-3), given in both forms.
+       Critical points of f: x = -5, 0, 3. f' is positive, negative,
+       positive, negative on the four intervals, from left to right.
+       f is increasing on (-inf, -5) and (0, 3).
+       f is decreasing on (-5, 0) and (3, inf).
+       Local maximums at x = -5 and x = 3. Local minimum at x = 0.
+       f''(x) = -6x^2 - 8x + 30 = -2(3x-5)(x+3). Critical points of f' are
+       x = -3 and x = 5/3. f'' is negative, positive, negative.
+       f is concave down on (-inf, -3) and (5/3, inf), concave up on
+       (-3, 5/3). Inflection points at x = -3 and x = 5/3.
+     A2: f(x) = 2x^5 - 2x^3 + 2x + C, f(1) = 2 + C = 4, C = 2.
+       f(x) = 2x^5 - 2x^3 + 2x + 2.
+     A4: f(x) = x^3 - 3x^2 - 9x + 2 on [-2,2).
+       f'(x) = 3(x-3)(x+1), critical points x = -1 and x = 3. Only x = -1
+       is in the interval. f(-2) = 0, f(-1) = 7, and the limit as x goes to
+       2 from the left is -20 (not attained). Range (-20, 7]. Global
+       maximum 7 at x = -1. No global minimum. (f(3) = -25 would be a trap,
+       since 3 is outside the interval.)
+     The A4 checkpoint uses a half-open interval so that the value at x = 2
+     is a limit that the function never reaches. -->
+<section xml:id="notes-week-12-13">
+  <title>Week 12 and Week 13</title>
+
+  <introduction>
+    <p>
+      During these weeks, we used the derivative to describe the shape of a graph and then used that shape to answer optimization questions.
+      We used the sign of the first derivative to find where a function increases and decreases, and the sign of the second derivative to find where it is concave up and concave down.
+      We also learned to invert the derivative process to find antiderivatives of polynomials, and we used a known function value to determine the unknown constant.
+      Finally, we found the global extremes a function reaches on an interval.
+    </p>
+  </introduction>
+
+  <subsection>
+    <title>A1 Analyzing a Function with Its Derivatives</title>
+
+    <assemblage xml:id="assemblage-A1">
+      <title>A1</title>
+      <p>
+        I can analyze a function using the derivative to determine its intervals of monotonicity and concavity, including analysis based on the graph of the derivative.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            The values of <m>x</m> where <m>f'(x)=0</m> or <m>f'(x)</m> is not defined are called the <term>critical points</term> of <m>f(x)</m>.
+            They are the potential points where <m>f(x)</m> <em>might</em> change direction.
+          </p>
+        </li>
+        <li>
+          <p>
+            We use sign analysis of <m>f'(x)</m>, with the critical points of <m>f(x)</m> as the dividing points, to find the intervals on which <m>f(x)</m> is increasing or decreasing.
+            Where <m>f'(x) \gt 0</m>, the function is increasing.
+            Where <m>f'(x) \lt 0</m>, the function is decreasing.
+          </p>
+        </li>
+        <li>
+          <p>
+            The correct phrase is <q><m>f(x)</m> is increasing on the interval</q> or <q><m>f(x)</m> is decreasing on the interval</q>.
+            Increasing and decreasing are based on comparing any two <m>x</m>-values chosen from the specified set, so they describe an interval and not an individual point.
+          </p>
+        </li>
+        <li>
+          <p>
+            We use sign analysis of <m>f''(x)</m>, with the critical points of <m>f'(x)</m> as the dividing points, to find the intervals on which <m>f(x)</m> is concave up or concave down.
+          </p>
+        </li>
+        <li>
+          <p>
+            A function is <term>concave up</term> when the slope itself is increasing, so when <m>f''(x) \gt 0</m>.
+            A function is <term>concave down</term> when the slope is decreasing, so when <m>f''(x) \lt 0</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            A <term>local maximum</term> occurs at a point where <m>f(x)</m> is increasing on the left and decreasing on the right.
+            A <term>local minimum</term> occurs at a point where <m>f(x)</m> is decreasing on the left and increasing on the right.
+            In terms of the derivative, <m>f'(x)</m> changes sign at the point.
+          </p>
+        </li>
+        <li>
+          <p>
+            An <term>inflection point</term> occurs at a point where the concavity changes.
+            It is a place where <m>f''(x)</m> changes sign, so <m>f''(x)=0</m> alone is not enough.
+          </p>
+        </li>
+        <li>
+          <p>
+            When we are given the graph of <m>f'(x)</m> instead of a formula, we read the same information from the graph.
+            Where the graph of <m>f'(x)</m> is above the <m>x</m>-axis, <m>f(x)</m> is increasing, and where it is below the <m>x</m>-axis, <m>f(x)</m> is decreasing.
+            Where the graph of <m>f'(x)</m> is rising, <m>f(x)</m> is concave up, and where it is falling, <m>f(x)</m> is concave down.
+            The local maximums and local minimums of the graph of <m>f'(x)</m> are the inflection points of <m>f(x)</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise label="A1-checkpoint">
+      <title>A1</title>
+      <statement>
+        <p>
+          A function <m>f(x)</m> has a derivative
+          <md>
+            <mrow>f'(x) \amp = -2x^3 -4x^2 + 30x = -2x(x+5)(x-3).</mrow>
+          </md>
+          Using information about the derivatives <m>f'</m> and <m>f''</m>, describe the intervals on which <m>f(x)</m> is increasing, decreasing, concave up, and concave down, and identify the <m>x</m>-coordinates of any local extremes.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The derivative is defined everywhere, so the critical points of <m>f(x)</m> are the zeros of the factored form <m>f'(x) = -2x(x+5)(x-3)</m>: <m>x=-5</m>, <m>x=0</m>, and <m>x=3</m>.
+        </p>
+        <p>
+          We test the sign of <m>f'(x)</m> on each interval, using the factored form to keep the arithmetic simple.
+        </p>
+        <tabular halign="center" bottom="minor">
+          <row header="yes" bottom="minor">
+            <cell>Interval</cell>
+            <cell><m>(-\infty,-5)</m></cell>
+            <cell><m>(-5,0)</m></cell>
+            <cell><m>(0,3)</m></cell>
+            <cell><m>(3,\infty)</m></cell>
+          </row>
+          <row>
+            <cell>Sign of <m>f'(x)</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>-</m></cell>
+          </row>
+          <row>
+            <cell>Behavior of <m>f(x)</m></cell>
+            <cell>increasing</cell>
+            <cell>decreasing</cell>
+            <cell>increasing</cell>
+            <cell>decreasing</cell>
+          </row>
+        </tabular>
+        <p>
+          So <m>f(x)</m> is increasing on <m>(-\infty,-5)</m> and on <m>(0,3)</m>, and <m>f(x)</m> is decreasing on <m>(-5,0)</m> and on <m>(3,\infty)</m>.
+        </p>
+        <p>
+          The function changes from increasing to decreasing at <m>x=-5</m> and at <m>x=3</m>, so <m>f(x)</m> has a local maximum at each of those <m>x</m>-values.
+          The function changes from decreasing to increasing at <m>x=0</m>, so <m>f(x)</m> has a local minimum at <m>x=0</m>.
+        </p>
+        <p>
+          For concavity we differentiate the expanded form again: <m>f''(x) = -6x^2-8x+30 = -2(3x^2+4x-15) = -2(3x-5)(x+3)</m>.
+          The critical points of <m>f'(x)</m> are the zeros of <m>f''(x)</m>, which are <m>x=-3</m> and <m>x=\frac{5}{3}</m>.
+          Testing the sign of <m>f''(x)</m> gives the following sign chart.
+        </p>
+        <tabular halign="center" bottom="minor">
+          <row header="yes" bottom="minor">
+            <cell>Interval</cell>
+            <cell><m>(-\infty,-3)</m></cell>
+            <cell><m>\left(-3,\frac{5}{3}\right)</m></cell>
+            <cell><m>\left(\frac{5}{3},\infty\right)</m></cell>
+          </row>
+          <row>
+            <cell>Sign of <m>f''(x)</m></cell>
+            <cell><m>-</m></cell>
+            <cell><m>+</m></cell>
+            <cell><m>-</m></cell>
+          </row>
+          <row>
+            <cell>Concavity of <m>f(x)</m></cell>
+            <cell>concave down</cell>
+            <cell>concave up</cell>
+            <cell>concave down</cell>
+          </row>
+        </tabular>
+        <p>
+          So <m>f(x)</m> is concave up on <m>\left(-3,\frac{5}{3}\right)</m> and concave down on <m>(-\infty,-3)</m> and on <m>\left(\frac{5}{3},\infty\right)</m>.
+          The concavity changes at <m>x=-3</m> and at <m>x=\frac{5}{3}</m>, so these are the <m>x</m>-coordinates of the inflection points.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>A2 Antiderivatives with an Initial Condition</title>
+
+    <assemblage xml:id="assemblage-A2">
+      <title>A2</title>
+      <p>
+        I can find an antiderivative for a polynomial with initial condition.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            The reverse power rule undoes the power rule for derivatives.
+            For <m>n \ne -1</m>,
+            <md>
+              <mrow>\int dx\left[ a x^n \right] \amp = \frac{a}{n+1} x^{n+1} + C</mrow>
+            </md>
+            The exponent goes up by 1, and the coefficient is divided by the new exponent.
+            A constant term is a power with <m>n=0</m>, so the antiderivative of <m>7</m> is <m>7x</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The sum rule and constant multiple rule let us work one term at a time.
+            This works as long as the expression only involves addition and multiplication by constants.
+            A product such as <m>(x+1)(x+3)</m> must be expanded into terms first.
+          </p>
+        </li>
+        <li>
+          <p>
+            An antiderivative always has an unknown constant <m>C</m>, because functions that differ only by a constant have the same derivative.
+            Knowing <m>f'(x)</m> alone does not determine a single function <m>f(x)</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            To find the constant, evaluate the antiderivative formula at the given input, set the result equal to the given output value, and solve for <m>C</m>.
+            Then write the final formula with the value of <m>C</m> included.
+          </p>
+        </li>
+        <li>
+          <p>
+            You can check an antiderivative by taking its derivative.
+            The result should be the original <m>f'(x)</m>, and evaluating your final formula should match the given value.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise label="A2-checkpoint">
+      <title>A2</title>
+      <statement>
+        <p>
+          Find the function <m>f(x)</m> such that <m>f'(x) = 10x^4 - 6x^2 + 2</m> and <m>f(1) = 4</m>.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          We use the reverse power rule on each term.
+          <md>
+            <mrow>f(x) \amp = \int dx\left[ 10x^4 - 6x^2 + 2 \right]</mrow>
+            <mrow>\amp = \frac{10}{5}x^5 - \frac{6}{3}x^3 + 2x + C</mrow>
+            <mrow>\amp = 2x^5 - 2x^3 + 2x + C</mrow>
+          </md>
+        </p>
+        <p>
+          Now we use <m>f(1)=4</m> to find <m>C</m>.
+          <md>
+            <mrow>f(1) \amp = 2(1)^5 - 2(1)^3 + 2(1) + C = 2 + C</mrow>
+            <mrow>2 + C \amp = 4</mrow>
+            <mrow>C \amp = 2</mrow>
+          </md>
+        </p>
+        <p>
+          Therefore <m>f(x) = 2x^5 - 2x^3 + 2x + 2</m>.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+
+  <subsection>
+    <title>A4 Global Extreme Values on an Interval</title>
+
+    <assemblage xml:id="assemblage-A4">
+      <title>A4</title>
+      <p>
+        I can find the global extreme values of a function on a specified interval.
+      </p>
+    </assemblage>
+
+    <p>
+      What do I need to understand?
+      <ul>
+        <li>
+          <p>
+            A <term>global maximum</term> on an interval is the highest value that the function actually takes on that interval, and a <term>global minimum</term> is the lowest value it actually takes.
+            A local extreme only has to be highest or lowest nearby, so a local maximum is not always a global maximum.
+          </p>
+        </li>
+        <li>
+          <p>
+            For a continuous function on a closed interval <m>[a,b]</m>, the Extreme Value Theorem guarantees that both a global maximum and a global minimum exist.
+            Polynomials are continuous, so this applies to every polynomial on a closed interval.
+          </p>
+        </li>
+        <li>
+          <p>
+            A global extreme can only occur at a critical point inside the interval or at one of the two end points.
+            Find the critical points of <m>f(x)</m> by solving <m>f'(x)=0</m>, and keep only the ones that lie in the interval.
+            A critical point outside the interval is ignored.
+          </p>
+        </li>
+        <li>
+          <p>
+            Evaluate the original function <m>f(x)</m>, not <m>f'(x)</m>, at each critical point in the interval and at both end points.
+            The largest of these values is the global maximum and the smallest is the global minimum.
+          </p>
+        </li>
+        <li>
+          <p>
+            An answer has two parts: the extreme <em>value</em>, which is a <m>y</m>-value, and the <m>x</m>-value where it occurs.
+            An extreme can occur at an end point, and the same extreme value can occur at more than one <m>x</m>-value.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <exercise label="A4-checkpoint">
+      <title>A4</title>
+      <statement>
+        <p>
+          Find the global maximum and the global minimum of <m>f(x) = x^3 - 3x^2 - 9x + 2</m> on the interval <m>[-2,2)</m>, if they exist.
+          For each one that exists, state the value of the extreme and the <m>x</m>-value where it occurs.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          The interval is not closed, so the Extreme Value Theorem does not guarantee that both extremes exist.
+          We find the range of the function on the interval and then decide.
+        </p>
+        <p>
+          We find the critical points: <m>f'(x) = 3x^2 - 6x - 9 = 3(x-3)(x+1)</m>.
+          The derivative is zero at <m>x=3</m> and <m>x=-1</m>.
+          Only <m>x=-1</m> lies in <m>[-2,2)</m>, so we ignore <m>x=3</m>.
+        </p>
+        <p>
+          The end point <m>x=-2</m> is included, so we use the function value <m>f(-2)=0</m>.
+          The end point <m>x=2</m> is not included, so we cannot use <m>f(2)</m>.
+          Instead we use a limit.
+          <md>
+            <mrow>\lim_{x \to 2^-} f(x) \amp = \left. (x^3 - 3x^2 - 9x + 2) \right|_{x=2} = 8 - 12 - 18 + 2 = -20</mrow>
+          </md>
+        </p>
+        <tabular halign="center" bottom="minor">
+          <row header="yes" bottom="minor">
+            <cell><m>x</m></cell>
+            <cell>Why it matters</cell>
+            <cell><m>y</m>-value</cell>
+          </row>
+          <row>
+            <cell><m>-2</m></cell>
+            <cell>included end point</cell>
+            <cell><m>0</m></cell>
+          </row>
+          <row>
+            <cell><m>-1</m></cell>
+            <cell>critical point</cell>
+            <cell><m>7</m></cell>
+          </row>
+          <row>
+            <cell><m>2</m></cell>
+            <cell>excluded end point</cell>
+            <cell><m>-20</m> (as a limit only)</cell>
+          </row>
+        </tabular>
+        <p>
+          The highest value is <m>7</m>, and it is reached at <m>x=-1</m>.
+          The lowest value, <m>-20</m>, is only a limit as <m>x</m> approaches <m>2</m> from the left.
+          The range is <m>(-20,7]</m>.
+        </p>
+        <p>
+          The global maximum is <m>7</m>, which occurs at <m>x=-1</m>.
+          There is no global minimum.
+          The function is decreasing on <m>(-1,2)</m>, so for every <m>x</m> in the interval there is another <m>x</m>-value closer to <m>2</m> with a lower output, and the value <m>-20</m> is never reached.
+        </p>
+      </solution>
+    </exercise>
+  </subsection>
+</section>
